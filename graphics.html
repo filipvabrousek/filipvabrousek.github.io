@@ -33,18 +33,30 @@
         </div>
     </section>
     
+        <h1 class="about">Design</h1>
     
-        <h1 class="about">Filip Vabrousek</h1>
+        <p>Secondary grammar school final graphic project</p>
+        <img class="highlight" src="images/result.png">
+    
+        <p>Magazine design idea</p>
+        <img class="highlight" src="images/magazine.png">
+    
         
-        <p>Hi, I am Swift and JavaScript developer. My coding journey has begun on September 1st 2015 in 7:48, when I first sat down to the school desk at high school in Zlin, I took out my notepad, and with smile on my face began my journey as a JavaScript programmer. In July 2016, I also began learning Swift and since the I stopped for nothing. On 12th December 2018, my first app - Swimrun World has been accepted on the AppStore, and the experience has encouraged me to keep coding. Aside from coding I am an avid runner, climber, and sometimes I try out graphic design.</p>
     
-   
-        <section id="images">
-            <img src="images/nymburk-2019.jpg">
-            <img src="images/dubrovnik-2016.jpg">
-            <img src="images/bratislava-2019.jpg"> 
-        </section>
-
+    
+      <h1 class="about">Tutorials</h1>
+    
+      <h3 class="tut ae">After Effects</h3>
+       <a class="tar" href="#more">More</a>
+      
+    <h3 class="tut pr">Premiere Pro</h3>
+       <a class="tar" href="#more">More</a>
+    
+    <h3 class="tut ps">Photoshop</h3>
+      <a class="tar" href="#more">More</a>
+    
+    <h3 class="tut ai">Illustrator</h3>
+  <a class="tar" href="#more">More</a>
 
     
     
@@ -65,8 +77,6 @@
 
     <section class="block block-img">
         <h2 class="sub gr">Block</h2>
-
-       
         
         <img src="https://www.teamphenomenalhope.org/wp-content/uploads/2015/11/southern-alps-pf-new-zealand-1-1024x531.jpg">
 
@@ -95,11 +105,6 @@
     </section>
 
     <section class="block F-showcase">
-       
-
-
-
-       
         <div class="product card-title">
             <h4>Wanaka</h4>
          
@@ -149,12 +154,68 @@
 
     </footer>
     <style>
+        
     * {
 	margin: 0;
 	padding: 0;
 	font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-
+        .ae {
+            color: mediumpurple;
+        }
+        
+        .pr {
+            color: purple;
+        }
+        
+        .ps {
+            color: #00a4e4;
+        }
+        
+        .ai {
+            color: #fbb034;
+        }
+        
+        .more {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        .tut {
+            font-size: 2em;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        
+ .tar {
+ 	display: block;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	font-weight: bold;
+ 	color: white;
+ 	background: #3498db;
+ 	margin: 1em;
+ 	padding: 1em;
+ 	width: 3em;
+ 	border-radius: 0.5em;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+        
+        p {
+            text-align: center;
+        }
+        
+        .highlight {
+            width: 60vw;
+            margin-left: 20vw;
+        }
+        
+        
         #images {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -897,8 +958,8 @@ footer {
 
 
 
-        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/petrvabrousek/?hl=en", "_top"));
-        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/PetrVabrousek/", "_top"));
+        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/filipvabrousek/"));
+        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/filipvabrousek"));
 
         /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
         S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
