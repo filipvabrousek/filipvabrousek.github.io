@@ -513,7 +513,6 @@ img {
 
 
 @media (max-device-width: 415px) {
-    
      #h {
         font-size: 6em;
         background: none;
@@ -521,8 +520,10 @@ img {
     }
     
     .tar {
-        background: orange;
         font-size: 3em;
+        width: 6em;
+        height: 4em;
+        padding: 0.5em;
     }
     
 	.btn-nav {
