@@ -354,6 +354,10 @@ img {
 	font-size: 2em;
 }
 
+.tar {
+    font-size: 1.5em;
+    padding: 0.3em;
+}
 
 
 @media only screen and (max-width: 70em) {
@@ -494,6 +498,7 @@ img {
 		background-repeat: no-repeat;
 		border: none;
 	}
+    
 	#navback {
 		display: none;
 		width: 100%;
@@ -502,6 +507,8 @@ img {
 		z-index: 10;
 		position: relative;
 	}
+    
+   
 }
 
 @media (max-width: 40em) {
