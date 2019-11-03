@@ -521,9 +521,14 @@ img {
     
     .tar {
         font-size: 3em;
-        width: 6em;
-        height: 4em;
         padding: 0.5em;
+        margin-bottom: 3em;
+        margin-top: 0;
+        
+    }
+    
+    .desc {
+        padding-bottom: 1em;
     }
     
 	.btn-nav {
