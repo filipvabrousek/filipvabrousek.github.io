@@ -24,7 +24,7 @@
                 <button class="btn-nav" id="close">×</button>
                 <a class="btn-nav" href="index.html">Home</a>
                 <a class="btn-nav" href="work.html">Work</a>
-                <a class="btn-nav" href="graphics.html">Graphic</a>
+                <a class="btn-nav" href="graphics.html">Design</a>
                 <a class="btn-nav" href="about.html">About</a>
             </div>
 
@@ -32,37 +32,90 @@
     </section>
     
     
-        <h1 class="about">True detective intro</h1>
+        <h1 class="about">Advanced AE</h1>
         <p class="date">29/10/2019</p>
     
    
-       <ul>
-           <li>1) Import background</li>
-           <li>2) Import image without background</li>
-           <li>3) Place front below Factory and precompose</li>
-           <li>4) Duplicate Front and place it above first front (Layer 3)</li>
-           <li>5) Track Matte to alpha matte on 4th layer</li>
-           <li>6) On Layer 3 (front) make mask in the center of the face and feather it</li>
-           <li>7) Animate scale of Factory layer from 100 to 150%</li>
-        </ul>
-
-      <img class="tut-image" src="images/true2.png">
-    <img class="tut-image" src="images/true1.png">
-  
    
-    
-    
-    <h2>Shape morph</h2>
-    
-    
-     <ul>
-         <li>1) Create Rectangle and using the pan behind tool drag center to the center</li>
-         <li>2) Click path -> Convert to Bezier path, same for square</li>
-         <li>3) Click Circle add path keyrame - go forward in time -</li>
+     <h2 class="tut-sub">Spliced text</h2>    
+       <ul>
+           <li>1 - create Main and Text compositions, type text, open Main and drag text into main</li>
+           <li>2 - create green rectangle around the text, click add -> Trim path</li>
+           <li>3 - animate its end property from 0 to 100 over 1s, and offset -90 to 0 over 1s (ease in and edit speed graph), click</li>
+           <li>4 - animate Text position fly to to the rectangle from out</li>
+           <li>5 - create new gray rectangle, drag under line (layers: line - M - Text)</li>
+           <li>6 - click Text - Alpha matte M</li>
+           <li>7 - create green line (Stroke) and animate it through center of the rectangle, add Trim Path, and animate from 0 (3s) to 100 (4s)</li>
+           <li>8 - create new adjustment layer, (R) and rotate it to match the left side of slied image</li>
+           <li>9 - add transform to it, hit position keyframe, drag to desired position and change order to: Stroke, R, Line, M, Text</li>
+           <li>10 - select all layers -> pre compose, crop to where animation ends, duplicate</li>
+           <li>11 - click first - Time reverse, drag in time behind the first</li>
+             <li> 22/8/2018</li>
+           <p>SOURCE: https://www.youtube.com/watch?v=I7kBf8q8EB8&list=PLgXLFndHG444Ps96WKlAmpjOL5WwcLI6M&t=26s&index=28</p>
         </ul>
 
-     <img class="tut-image" src="images/morph1.png">
+      <img class="tut-image" src="images/spliced.png">
+
+   
+    <h2 class="tut-sub">Plexus effect</h2>
     
+    
+       <ul>
+           <li> 1 - new composition, 3 circles on separate layers</li>
+           <li>2 - center their anchor points (Y - Pan Behind)</li>
+           <li>3 - P, alt + click stopwatch and write wiggle(1, 400)</li>
+           <li>4 - new Solid (cmd + y), effect - generate - beam (black, width 100%)</li>
+           <li>5 - alt + click starting and ending points, drag with whip tool (starting point - circle 1 position, ending - circle 2 position)</li>
+           <li>6 - duplicate the solid and change start and end values</li>
+           <li>so: beam 1: start c2, end c1, beam 2: start c3, end c1, beam 3: start c3, end c2</li>
+            <li> 22/8/2018</li>
+        </ul>
+
+      <img class="tut-image" src="images/motiontrack-A.png">
+    
+    
+  <h2 class="tut-sub">Motion tracking</h2>
+    
+       <ul>
+           <li>1) Import footage of fingers with a dot by sharpee</li>
+           <li>2) Tracker -> Track motion button, move the track point to the dot on the finger (repeat for the second finger)</li>
+           <li>3) Create 2 new null objects</li>
+           <li>4) In tracker panel -> motion source (the clip)</li>
+           <li>5) Edit target (choose the null) -> apply -> OK</li>
+           <li>6) add new  solid</li>
+           <li>7) Effect -> generate -> beam</li>
+           <li>8) alt + click the stopwatch in effects control to access expressions</li>
+           <li>9) drag from the "whip button" of the starting point to the position property of the null 5 object (repeat twice)</li>
+        </ul>
+
+      <img class="tut-image" src="images/motiontrack-A.png">
+    
+    
+ <h2 class="tut-sub">Shield effect</h2>
+    
+       <ul>
+           <li>1) new new solid</li>
+           <li>2) Turbulent noise dynamic progressive</li>
+           <li><b>contrast: 96
+               brightness: 14
+               aninmate moving right to left
+               alt click evolution.. type in "time * 250"</b></li>
+        
+           <li>3) effect  -> perspective -> CC Sphere</li>
+           <li>Shading: ambient: 100, difusion: 0</li>
+           <li>Render: inside</li>
+
+           <li>4) select solid -> screen mode</li>
+           <li>5) Gaussian blur: 10, Vector blur: 70, constant length</li>
+            <li>6) Duplicate layers -> pre compose -> screen mode</li>
+            <li>7) Edit transparency blur</li>
+            <li>8) create 2 masks (left and bottom of the sphere) - feather</li>
+            <li>9) new adjustment layer -> displacement map -> apply to shield (68, 16)</li>
+            <li>10) animate scale (33 - 100 - 95) to create blend in effect</li>
+        </ul>
+      <li> 1/1/2018</li>
+
+      <img class="tut-image" src="images/shield.png">
     
 <style>
 
