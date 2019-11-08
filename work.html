@@ -20,10 +20,10 @@
     
     
     
-<h1 class="about">Apps</h1>
+<h1 class="about fade hidden">Apps</h1>
     
 <section id="apps">
-<section class="app">
+<section class="app fade hidden">
 <img class="app-img" src="images/relayworld.png">
 <h3 class="app-title">Relay World</h3>
 <p class="desc">World's first sports app written in SwiftUI</p>
@@ -37,7 +37,7 @@
     <a href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813"><img class="appstore" src="images/download.png"/></a>
 </section> 
     
-<section class="app">
+<section class="app fade hidden">
 
 <img class="app-img" src="images/r.png">  
 <h3 class="app-title">Runny</h3>
@@ -47,7 +47,7 @@
 </section>    
 
     
-<section class="app">
+<section class="app fade hidden">
 <img class="app-img" src="images/sr.png">
 <h3 class="app-title">Swimrun World</h3>
 <p class="desc">Find a swimrun partner for any race in the world!</p>
@@ -57,12 +57,12 @@
 </section>
     
     
-<h1 class="about bottom-about">Web</h1>
+<h1 class="about bottom-about-web fade hidden">Web</h1>
 
-<section class="js-app">
-<h3>Think.js</h3>
+<section class="js-app fade hidden">
+<h3 class="app-title">Think.js</h3>
 <p class="desc">JS ML and Shape recognition library</p>
-<a class="tar" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">API</a>
+<a class="tar tar-small" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">API</a>
 </section>
     
 <!--
@@ -82,32 +82,37 @@
 </section>
     --->    
 
-<section class="js-app">
-<h3>petrvabrousek.eu</h3>
+<section class="js-app fade hidden">
+<h3 class="app-title app-title-web">petrvabrousek.eu</h3>
 <p class="desc">Website of a czech triathlete</p>
-<a class="tar" target="_blank" href="http://www.petrvabrousek.cz/">More</a>
+<a class="tar tar-small" target="_blank" href="http://www.petrvabrousek.cz/">More</a>
 </section>
     
-<section class="js-app">
-<h3>swimrunworld.co</h3>
+<section class="js-app fade hidden">
+<h3 class="app-title app-title-web">swimrunworld.co</h3>
 <p class="desc">Web version of Swimrun World</p>
-<a class="tar" target="_blank" href="http://swimrunworld.co/">More</a>
+<a class="tar tar-small" target="_blank" href="http://swimrunworld.co/">More</a>
+</section>
+    
+<section class="js-app fade hidden">
+<h3 class="app-title app-title-web">pul-maraton.cz</h3>
+<p class="desc">Website redesign</p>
+<a class="tar tar-small" target="_blank" href="http://pul-maraton.cz/">More</a>
 </section>
 
-    
-    
-<h1 class="about bottom-about">Other</h1>
-<h3>Peak.css</h3>
-<p class="desc">Modern CSS framework</p>
-<a class="tar" target="_blank" href="https://github.com/filipvabrousek/Libraries/tree/master/Peak">API</a>
 
-<h3>Pin.swift</h3>
-<p class="desc">Autolayout library for apps before SwiftUI</p>
-<a class="tar" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
+<h1 class="about bottom-about fade hidden">Other</h1>
+<h3 class="app-title fade hidden">Peak.css</h3>
+<p class="desc fade hidden">Modern CSS framework</p>
+<a class="tar tar-small fade hidden" target="_blank" href="https://github.com/filipvabrousek/Libraries/tree/master/Peak">API</a>
+
+<h3 class="app-title app-title-web fade hidden">Pin.swift</h3>
+<p class="desc fade hidden">Autolayout library for apps before SwiftUI</p>
+<a class="tar tar-small fade hidden" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
     
-<h3>Create your own React</h3>
-<p class="desc">Udemy course</p>
-<a class="tar" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
+<h3 class="app-title app-title-web fade hidden">Create your own React</h3>
+<p class="desc fade hidden">Udemy course</p>
+<a class="tar tar-small bottom-btn fade hidden" target="_blank" href="https://www.udemy.com/course/create-your-own-react/">More</a>
     
     
     <footer>
@@ -135,6 +140,10 @@
  .app-img {
  	width: 12em;
  }
+    
+    .bottom-btn {
+        margin-bottom: 8em !important;
+    }
 
  .app {
  	padding-bottom: 3em;
@@ -185,8 +194,17 @@
         margin-top: 0.5em;
     }
     
+      .app-title-web {
+        margin-top: 1.5em;
+    }
+    
     .bottom-about {
     margin-top: 2em;
+    }
+    
+    
+    .bottom-about-web {
+    margin-top: 1em;
     }
     
     
@@ -194,6 +212,54 @@
     .smaller {
         margin-top: 2em;
         margin-bottom: 0.5em;
+    }
+    
+         
+    .hidden {
+        opacity: 0;
+    }
+        
+    .fade-in {
+        animation: fade 1.2s;
+    }
+        
+    
+ /*   @keyframes fade {
+        from {
+            transform: scale(.7, .7);
+            opacity: 0;
+        }
+        
+        to {
+            opacity: 1;
+        }
+    }*/
+    
+    @keyframes fade {
+        
+        from {
+            opacity: 0;
+            transform: translate3d(0,40px, 0);
+        }
+        
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        
+    /*     from {
+        opacity: 0;
+        transform: translate3d(0,40px,0)
+            
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }*/
+        
+        
+        
     }
     
     @media (max-device-width: 415px)  {
@@ -205,6 +271,8 @@
             font-size: 3em;
         }
     }
+    
+    
     
     
 
@@ -308,6 +376,41 @@
 
             }
         });    
+    
+    
+/*Fade in */
+    
+    var els = document.querySelectorAll(".fade");
+var height = window.innerHeight;
+
+function addEL() {
+    window.addEventListener("load", () => {
+        els.forEach((el, i) => {
+            var top = el.getBoundingClientRect().top;
+
+            if (top - height <= 0) {
+                els[i].className = els[i].className.replace("hidden", "fade-in");
+            }
+        });
+    });
+}
+        
+        
+function addPEL() {
+    window.addEventListener("scroll", () => {
+        els.forEach((el, i) => {
+            var top = el.getBoundingClientRect().top;
+
+            if (top - height <= 0) {
+                els[i].className = els[i].className.replace("hidden", "fade-in");
+            }
+        });
+    });
+}
+
+
+addEL();
+addPEL();
 </script>
     
     

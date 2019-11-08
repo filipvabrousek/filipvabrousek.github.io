@@ -24,6 +24,13 @@
  	margin-right: auto;
  }
 
+.tar-small {
+ 	width: 6em;
+    background: none;
+    border: 3px solid #3498db;
+    color: #3498db;
+ }
+
 
 .about {
     color: black;
@@ -533,6 +540,10 @@ img {
         margin-bottom: 3em;
         margin-top: 0;
         
+    }
+    
+    .tar-small {
+        padding: 0.5em;
     }
     
     .desc {
