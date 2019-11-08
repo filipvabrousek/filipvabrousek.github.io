@@ -22,6 +22,9 @@ margin-top: 1em;
     margin-top: 1em;
 }
 
+.bottom {
+    margin-bottom: 3em;
+}
  @media (max-width: 70em){
      .tut-image {
          width: 90vw;
