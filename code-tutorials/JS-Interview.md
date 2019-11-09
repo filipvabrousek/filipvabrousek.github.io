@@ -16,7 +16,7 @@ printing();
 
 
 ## Closures
-* fix this code to return You clicked element: #1
+* fix this code to return You clicked element: #1, etc.
 
 ```js
 var nodes = document.getElementsByTagName('button');
@@ -24,6 +24,18 @@ for (var i = 0; i < nodes.length; i++) {
 nodes[i].addEventListener('click', function() {
 console.log('You clicked element #' + i);
 });
+}
+```
+
+### Solution
+```js
+var nodes = document.getElementsByTagName('button');
+for (var i = 0; i < nodes.length; i++) {
+     nodes[i].addEventListener('click', (function(i) {
+          return function() {
+       console.log('You clicked element #' + i);
+}
+})(i));
 }
 ```
 
