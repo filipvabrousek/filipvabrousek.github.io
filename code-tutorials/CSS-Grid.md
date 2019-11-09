@@ -94,6 +94,60 @@ grid-area: c;
 
 ```
 
+## Grid-column-span
+
+```html
+<section class="wrapper">
+<div class="header">Header</div>
+<div class="menu">Menu</div>
+<div class="content">Content</div>
+<div class="footer">Footer</div>
+</section>
+```
+
+```css
+.wrapper {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: 3em 8em 3em;
+grid-gap: 0.6em;
+color: #fff;
+}
+div {
+background: #1abc9c;
+padding: 1em;
+}
+.header {
+grid-column: span 12;
+}
+.menu {
+grid-column: span 4;
+background: #3498db;
+}
+.content {
+grid-column: span 8;
+background: #3498db;
+}
+.footer {
+grid-column: span 12;
+}
+
+/*---------------------change the layout on smaller screens--------------*/
+@media only screen and (max-width: 680px) {
+.header {
+grid-column: span 6;
+}
+.menu {
+grid-row: 1;
+grid-column: span 6;
+}
+.content {
+grid-column: span 12;
+}
+}
+```
+
+## Nested grid
 ```css
 section {
 display: grid;
