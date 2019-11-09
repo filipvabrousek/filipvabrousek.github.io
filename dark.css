@@ -14,4 +14,16 @@
      #social {
          background: black !important;
      }
+     
+     #navback {
+         background: black !important;
+     }
+     
+      #left a {
+        background: none;
+     }
+     
+     #h {
+         background: none;
+     }
  }
