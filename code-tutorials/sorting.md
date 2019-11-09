@@ -75,3 +75,5 @@ console.log(qs);
 * 4, 5, 9, 13, 1, 6 // compare all to 4, until we reach the head
 * 1, 4, 5, 9, 13, 6 // compare all to 1, until we reach the head
 * 1, 4, 5, 6, 9, 13 // first smaller item is 5, place 6 before it
+
+* Source: https://hackernoon.com/programming-with-js-insertion-sort-1316df8354f5
