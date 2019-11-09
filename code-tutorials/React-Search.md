@@ -11,9 +11,7 @@ this.setState({
 searchString: e.target.value
 });
 }
-```
 
-```js
 render() {
 var libraries = this.props.items,
 searchString = this.state.searchString.trim().toLowerCase();
