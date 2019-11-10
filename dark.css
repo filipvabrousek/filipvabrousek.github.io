@@ -26,4 +26,8 @@
      #h {
          background: none;
      }
+     
+     .app-image {
+         border: 1.5px solid gray;
+     }
  }
