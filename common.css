@@ -35,6 +35,12 @@
 .about {
     color: black;
     text-align: center;
+    background: linear-gradient(to bottom, #3498db, #0675bf);
+  /*  background: linear-gradient(45deg, #3498db, #);*/
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:7em;
 }
 
 #h {
@@ -130,7 +136,7 @@
 
 .maintitle {
 	font-size: 4em;
-	margin-top: -4em;
+	margin-top: -3em;
 	text-align: center;
 	width: 100vw;
 }
@@ -184,17 +190,18 @@ p {
 }
 
 .center-select {
-	padding-top: 9em;
+	
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 2em;
-	background-image: url(images/main.jpg);
+	
+	/*background-image: url(images/main.jpg);*/
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30em;
+	height: 17em;
+    padding-top: 10em;
 }
 
 #races li {
@@ -527,6 +534,10 @@ img {
 
 
 @media (max-device-width: 415px) {
+    .maintitle {
+        margin-top: -2em;
+    }
+    
      #h {
         font-size: 6em;
         padding-right: 2em;

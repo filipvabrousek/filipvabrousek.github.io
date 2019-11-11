@@ -35,14 +35,14 @@
         <h1 class="maintitle">I make apps that <span class="high">run</span>.</h1>
        
           
-           <a class="down" href="#apps">Scroll</a>
+           <button class="down">Scroll down ↓</button>
         
     </div>
     
-    
+   <section id="apps"> 
 <h1 class="about fade hidden">Apps</h1>
     
-<section id="apps">
+
 <section class="app fade hidden">
 <img class="app-img" src="images/relays-orig.png">
 <h3 class="app-title">Relays</h3>
@@ -145,9 +145,20 @@
         
         .down {
             text-decoration: none;
+           font-size: 1em;
+            padding: 1em;
+            color: #3498db;
             font-weight: bold;
             margin-top: 3em;
-            color: green;
+            border-radius: 0.5em;
+            background: none;
+            border: 2px solid #3498Db;
+        }
+        
+        .down:hover {
+            background: #3498db;
+            color: white;
+            transition: 0.7s;
         }
         
         .tar-outline {
@@ -226,6 +237,9 @@
         margin-bottom: 1em;
     }
     
+    .about:nth-child(1){
+        margin-top: 0;
+    }
     
     h3 {
         margin-top: 0.5em;
@@ -430,7 +444,7 @@
     
 
 <link rel="stylesheet" href="common.css">
-<link rel="stylesheet" href="dark.css">
+<!---<link rel="stylesheet" href="dark.css">-->
 
 
     <script>
@@ -599,6 +613,10 @@ function addPEL() {
 
 addEL();
 addPEL();
+        S(".down").addEventListener("click", () => {
+           S("#apps").scrollIntoView({behavior: "smooth", speed:100});
+        });
+
 </script>
 
 
