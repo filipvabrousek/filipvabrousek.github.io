@@ -534,7 +534,7 @@ img {
 
 @media (max-device-width: 415px) {
     .maintitle {
-      
+      margin-top: 0.5em;
     }
     
     #apps {
