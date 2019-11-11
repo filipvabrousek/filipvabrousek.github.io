@@ -40,7 +40,7 @@
 #h {
 	font-weight: bold;
 	border: none;
-	background: clear;
+	background: none !important;
 	font-size: 3em;
 	margin-left: 90vw;
 	display: none;
@@ -530,10 +530,7 @@ img {
 @media (max-device-width: 415px) {
      #h {
         font-size: 6em;
-        background: none;
         padding-right: 2em;
-         background: none;
-         
     }
     
     .tar {
