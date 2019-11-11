@@ -136,7 +136,6 @@
 
 .maintitle {
 	font-size: 4em;
-	margin-top: -3em;
 	text-align: center;
 	width: 100vw;
 }
@@ -535,7 +534,11 @@ img {
 
 @media (max-device-width: 415px) {
     .maintitle {
-        margin-top: -2em;
+      
+    }
+    
+    #apps {
+        margin-top: 13em;
     }
     
      #h {
@@ -549,6 +552,10 @@ img {
         margin-bottom: 3em;
         margin-top: 0;
         
+    }
+    
+    .down {
+        margin-top: 3em;
     }
     
     .tar-small {
@@ -631,6 +638,8 @@ img {
 	#hide {
 		font-size: 4em;
 	}
+    
+    
 } 
 
 
