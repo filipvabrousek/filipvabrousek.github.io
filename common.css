@@ -551,7 +551,10 @@ img {
         padding: 0.5em;
         margin-bottom: 3em;
         margin-top: 0;
-        
+    }
+    
+    .about {
+        font-size: 10.5em;
     }
     
     .down {
