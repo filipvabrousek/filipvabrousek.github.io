@@ -21,8 +21,8 @@
 
             <div id="left">
                 <button class="btn-nav" id="close">×</button>
-                <a class="btn-nav" href="index.html">Home</a>
-                <a class="btn-nav" href="work.html">Work</a>
+              <!--  <a class="btn-nav" href="index.html">Home</a>-->
+                <a class="btn-nav" href="#apps">Work</a>
                 <a class="btn-nav" href="design.html">Design</a>
                 <a class="btn-nav" href="about.html">About</a>
             </div>
@@ -33,21 +33,129 @@
 
     <div class="center-select">
         <h1 class="maintitle">I make apps that <span class="high">run</span>.</h1>
-        <div id="add-wrapper">
+       
           
-            <button class="btn-main tar-outline">Work</button>
-        </div>
+           <a class="down" href="#apps">Scroll</a>
+        
     </div>
+    
+    
+<h1 class="about fade hidden">Apps</h1>
+    
+<section id="apps">
+<section class="app fade hidden">
+<img class="app-img" src="images/relays-orig.png">
+<h3 class="app-title">Relays</h3>
+<p class="desc">World's first sports app written in SwiftUI</p>
+<!---<img class="appstore relays" src = "images/download.png">--->
+   <!--- <a href="https://apps.apple.com/us/app/relays-find-a-relay-partner/id1483402813"><img class="appstore" src="images/download.png"/></a>   --->
+   
+    
+    
+    <!---<a href="https://apps.apple.com/us/app/relays-find-a-relay-partner/id1483402813"></a>--->
+    
+    <a href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813"><img class="appstore" src="images/download.png"/></a>
+</section> 
+    
+<section class="app fade hidden">
+
+<img class="app-img" src="images/runny-orig.png">  
+<h3 class="app-title">Runny</h3>
+<p class="desc">The most effective running app on the market</p>
+<!---<img class="appstore runny" src = "images/download.png">-->
+ <a href="https://apps.apple.com/us/app/runny/id1460395908"><img class="appstore" src="images/download.png"/></a>
+</section>    
+
+    
+<section class="app fade hidden">
+<img class="app-img" src="images/sr-orig.png">
+<h3 class="app-title">Swimrun World</h3>
+<p class="desc">Find a swimrun partner for any race in the world!</p>
+<!----<img class="appstore swimrunworld" src = "images/download.png">--->
+<a href="https://apps.apple.com/cz/app/swimrun-world/id1445475693"><img class="appstore" src="images/download.png"/></a>
+</section>
+</section>
+    
+    
+<h1 class="about bottom-about-web fade hidden">Web</h1>
+
+<section class="js-app fade hidden">
+<h3 class="app-title">Think.js</h3>
+<p class="desc">JS ML and Shape recognition library</p>
+<a class="tar tar-small" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">API</a>
+</section>
+    
+<!--
+<section class="js-app">
+<h3>Create you own React</h3>
+<p class="desc">Udemy course</p>
+<a class="tar" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">More</a>
+</section>
+    --->
+    
+    <!--
+<section id="web">
+<h3>Websites</h3>
+<a class="link" target="_blank" href="http://www.swimrunworld.co">swimrunworld.co</a>  
+<a class="link" target="_blank" href="http://www.petrvabrousek.cz">petrvabrousek.cz</a>  
+<a class="link" target="_blank" href="http://www.pul-maraton.cz">pul-maraton.cz</a> 
+</section>
+    --->    
+
+<section class="js-app fade hidden">
+<h3 class="app-title app-title-web">petrvabrousek.eu</h3>
+<p class="desc">Website of a czech triathlete</p>
+<a class="tar tar-small" target="_blank" href="http://www.petrvabrousek.cz/">More</a>
+</section>
+    
+<section class="js-app fade hidden">
+<h3 class="app-title app-title-web">swimrunworld.co</h3>
+<p class="desc">Web version of Swimrun World</p>
+<a class="tar tar-small" target="_blank" href="http://swimrunworld.co/">More</a>
+</section>
+    
+<section class="js-app fade hidden">
+<h3 class="app-title app-title-web">pul-maraton.cz</h3>
+<p class="desc">Website redesign</p>
+<a class="tar tar-small" target="_blank" href="http://pul-maraton.cz/">More</a>
+</section>
+
+
+<h1 class="about bottom-about fade hidden">Other</h1>
+<h3 class="app-title fade hidden">Peak.css</h3>
+<p class="desc fade hidden">Modern CSS framework</p>
+<a class="tar tar-small fade hidden" target="_blank" href="https://github.com/filipvabrousek/Libraries/tree/master/Peak">API</a>
+
+<h3 class="app-title app-title-web fade hidden">Pin.swift</h3>
+<p class="desc fade hidden">Autolayout library for apps before SwiftUI</p>
+<a class="tar tar-small fade hidden" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
+    
+<h3 class="app-title app-title-web fade hidden">Create your own React</h3>
+<p class="desc fade hidden">Udemy course</p>
+<a class="tar tar-small fade hidden" target="_blank" href="https://www.udemy.com/course/create-your-own-react/">More</a>
+    
+<h3 class="app-title app-title-web fade hidden">Code tutorials</h3>
+<p class="desc fade hidden">GitHub</p>
+<a class="tar tar-small bottom-btn fade hidden" target="_blank" href="https://github.com/filipvabrousek/filipvabrousek.github.io/tree/master/code-tutorials">More</a>
+    
+    
 
     
     <style>
+        
+        .down {
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 3em;
+            color: green;
+        }
+        
         .tar-outline {
             background: white !important;
             color: #3498db !important;
             border:4px solid #3498db !important;
             
         }
-    
         
         footer {
            padding-bottom: 0em;
@@ -57,6 +165,167 @@
     </style>
     
 
+    
+<style>
+    
+   
+    
+    
+    
+ .app-img {
+ 	width: 12em;
+     border-radius: 45px;
+     border: 1.5px solid gray;
+ }
+    
+    .bottom-btn {
+        margin-bottom: 8em !important;
+    }
+
+ .app {
+ 	padding-bottom: 3em;
+      text-align: center;
+ }
+    
+    .app-title {
+        font-size: 3em;
+    }
+
+ 
+    .appstore {
+        width: 10em;
+        margin: 1em;
+    }
+    
+     
+    
+    h3, .desc {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+    .link {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        color: #3498db;
+        text-align: center;
+        padding: 1em;
+    }
+    
+    
+    .item {
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .about {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+    
+    
+    h3 {
+        margin-top: 0.5em;
+    }
+    
+      .app-title-web {
+        margin-top: 1.5em;
+    }
+    
+    .bottom-about {
+    margin-top: 2em;
+    }
+    
+    
+    .bottom-about-web {
+    margin-top: 1em;
+    }
+    
+    
+    
+    .smaller {
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+    }
+    
+         
+    .hidden {
+        opacity: 0;
+    }
+        
+    .fade-in {
+        animation: fade 1.2s;
+    }
+        
+    
+ /*   @keyframes fade {
+        from {
+            transform: scale(.7, .7);
+            opacity: 0;
+        }
+        
+        to {
+            opacity: 1;
+        }
+    }*/
+    
+    @keyframes fade {
+        
+        from {
+            opacity: 0;
+            transform: translate3d(0,40px, 0);
+        }
+        
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        
+    /*     from {
+        opacity: 0;
+        transform: translate3d(0,40px,0)
+            
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }*/
+        
+        
+        
+    }
+    
+    @media (max-device-width: 415px)  {
+        .app-img {
+            width: 20em;
+        }
+        
+        .item {
+            font-size: 3em;
+        }
+        
+        .appstore {
+            width: 20em;
+            margin-left: 50vw - 10em;
+        }
+        
+         .down {
+            font-size: 3em;
+             margin-top: 3em;
+    }
+        
+       
+    }
+    
+    
+    
+    
+
+</style>
 
 
 <!--
@@ -244,7 +513,7 @@
 
         
        
-        S(".btn-main").addEventListener("click", () => window.open("work.html", "_top"));
+      //  S(".btn-main").addEventListener("click", () => window.open("work.html", "_top"));
         
         
         
@@ -295,6 +564,42 @@
 
     </script>
 
+    <script>
+    
+    
+    
+var els = document.querySelectorAll(".fade");
+var height = window.innerHeight;
+
+function addEL() {
+    window.addEventListener("load", () => {
+        els.forEach((el, i) => {
+            var top = el.getBoundingClientRect().top;
+
+            if (top - height <= 0) {
+                els[i].className = els[i].className.replace("hidden", "fade-in");
+            }
+        });
+    });
+}
+        
+        
+function addPEL() {
+    window.addEventListener("scroll", () => {
+        els.forEach((el, i) => {
+            var top = el.getBoundingClientRect().top;
+
+            if (top - height <= 0) {
+                els[i].className = els[i].className.replace("hidden", "fade-in");
+            }
+        });
+    });
+}
+
+
+addEL();
+addPEL();
+</script>
 
 
 

@@ -386,7 +386,6 @@ img {
 	.maintitle {
 		font-family: "Roboto";
 		position: absolute;
-		margin-top: -2.7em;
 		z-index: 1;
 		color: black;
 	}
