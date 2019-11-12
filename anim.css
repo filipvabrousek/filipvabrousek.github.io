@@ -29,5 +29,11 @@
 .fade-in {
    animation: none;
 } 
+    
+@media (pointer:none), (pointer:coarse) {
+    .fade-in {
+        animation: none;
+    }
+}
 }
 
