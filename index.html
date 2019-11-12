@@ -113,8 +113,8 @@
   <!--  </div>-->
     
       <section id="main">
-          <h1 class="maintitle">I make apps that <span class="high">run</span>.</h1>
-           <button class="down">Scroll down ↓</button>
+          <h1 class="maintitle fade hidden">I make apps that <span class="high">run</span>.</h1>
+           <button class="down fade hidden">Scroll down ↓</button>
 </section>
     
     
@@ -581,6 +581,37 @@
         });
 
         
+    var els = document.querySelectorAll(".fade");
+var height = window.innerHeight;
+
+function addEL() {
+    window.addEventListener("load", () => {
+        els.forEach((el, i) => {
+            var top = el.getBoundingClientRect().top;
+
+            if (top - height <= 0) {
+                els[i].className = els[i].className.replace("hidden", "fade-in");
+            }
+        });
+    });
+}
+        
+        
+function addPEL() {
+    window.addEventListener("scroll", () => {
+        els.forEach((el, i) => {
+            var top = el.getBoundingClientRect().top;
+
+            if (top - height <= 0) {
+                els[i].className = els[i].className.replace("hidden", "fade-in");
+            }
+        });
+    });
+}
+
+
+addEL();
+addPEL();
        
     S(".down").addEventListener("click", () => {
            S("#apps").scrollIntoView({behavior: "smooth", speed:100});
@@ -590,7 +621,7 @@
     
 
 </script>
-
-<script src="animation.js"></script>
+<!--
+<script src="animation.js"></script>-->
 
 </body>
