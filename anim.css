@@ -1,14 +1,37 @@
 
 .hidden {
-    opacity: 0;
+    opacity: 1;
 }
 
-.fade-in {
+
+
+/*Enable animation only on large screens */
+@media (min-device-width: 71em){
+   .hidden {
+    opacity: 0;
+} 
+    
+    .fade-in {
+       
     animation: fade 1.6s;
     transition: 1s;
 }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
 
 
+/*
 @keyframes fade {
     from {
         opacity: 0;
@@ -42,4 +65,4 @@
     }
 }
 }
-
+*/
