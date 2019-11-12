@@ -1,8 +1,3 @@
-
-
-    
-
-    
 var els = document.querySelectorAll(".fade");
 var height = window.innerHeight;
 
