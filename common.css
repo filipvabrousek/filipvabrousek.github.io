@@ -4,6 +4,12 @@
 	font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
         
+#left a:hover {
+        color: #3498db;
+        text-decoration:overline;
+        transition: 0.4s ease-in-out;
+}
+    
 .high {
     color: #3498db;
 }
