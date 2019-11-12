@@ -118,7 +118,7 @@
     
       <section id="main">
           <h1 class="maintitle hidden fade-in">I make apps that <span class="high">run</span>.</h1>
-           <button class="down hidden fade-in">Scroll down ↓</button>
+           <button class="down hidden fade-in arrow">↓</button>
 </section>
     
     
@@ -235,17 +235,23 @@
             margin-left: auto;
         }
         
-        .down:hover {
-            background: #3498db;
-            color: white;
-            transition: 0.7s;
+        
+        
+        .down:focus {
+            outline: none;
         }
         
         .tar-outline {
             background: white !important;
             color: #3498db !important;
             border:4px solid #3498db !important;
-            
+        }
+        
+        .arrow {
+            border: none;
+            font-weight: bold;
+            font-size: 2em;
+          
         }
         
         footer {

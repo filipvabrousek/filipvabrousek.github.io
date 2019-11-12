@@ -16,6 +16,17 @@
     animation: fade 1.6s;
     transition: 1s;
 }
+    
+    .down:hover {
+            font-size: 2.2em;
+             transition: 0.7s;
+            
+           /* background: #3498db;
+            color: white;
+            transition: 0.7s;*/
+        }
+    
+    
 }
 
 @keyframes fade {
