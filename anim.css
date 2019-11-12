@@ -21,5 +21,13 @@
     }
 }
 
+@media (max-device-width: 415px){
+   .hidden {
+    opacity: 1;
+}
 
+.fade-in {
+   animation: none;
+} 
+}
 
