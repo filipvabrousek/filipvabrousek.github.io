@@ -743,6 +743,28 @@ li {
 	}
 }
 
+.hidden {
+        opacity: 0;
+    }
+        
+    .fade-in {
+        animation: fade 1.2s;
+        transition: 0.6s ease-in-out;
+    }
+        
+    @keyframes fade {
+        
+        from {
+            opacity: 0;
+            transform: translate3d(0,30px, 0);
+        }
+        
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+
 /*
         @media only screen and (max-width:40em) {
 

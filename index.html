@@ -16,22 +16,79 @@
     <section id="align">
         <div id="center-buttons">
             <div id="navback"></div>
-            
             <button id="h">☰</button>
 
             <div id="left">
                 <button class="btn-nav" id="close">×</button>
               <!--  <a class="btn-nav" href="index.html">Home</a>-->
-                <a class="btn-nav" href="#apps">Work</a>
+               <a class="btn-nav" href="index.html">Work</a>
                 <a class="btn-nav" href="design.html">Design</a>
                 <a class="btn-nav" href="about.html">About</a>
             </div>
-
         </div>
     </section>
     
     
     <style>
+      /*   #left a {
+            
+            transition: 1.4s;
+            
+            border-radius: 0px;
+             position: relative;
+           
+        }
+        
+                
+        #left a:before {
+            content: attr(data-hover);
+        }
+        
+        #left a:after {
+        content: attr(data-hover);
+            position: absolute;
+            color: aquamarine;
+            left: 0;
+            width: 0;
+            transition: width 1s;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        #left a:hover:after {
+            width: 100%;
+        }*/
+        /*
+         #left a {
+            color: #3498db;
+            transition: 1.4s;
+            
+            border-radius: 0px;
+             position: relative;
+           
+        }
+        
+        
+        #left a:before {
+            content: attr(data-hover);
+        }
+        #left a:after {
+        content: attr(data-hover);
+            position: absolute;
+            color: aquamarine;
+            left: 0;
+            width: 0;
+            transition: width 1s;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        #left a:after:after {
+            width: 100%;
+        }
+        */
+        
+       
         
         #main button {
             width: 10em;
@@ -56,10 +113,10 @@
   <!--  </div>-->
     
       <section id="main">
-    <h1 class="maintitle">I make apps that <span class="high">run</span>.</h1>
+    <h1 class="maintitle fade hidden">I make apps that <span class="high">run</span>.</h1>
        
           
-           <button class="down">Scroll down ↓</button>
+           <button class="down fade hidden">Scroll down ↓</button>
 </section>
     
     
@@ -208,12 +265,16 @@
     
    
     
-    
+    #left a:hover {
+        color: #3498db;
+        text-decoration:overline;
+        transition: 0.4s ease-in-out;
+    }
     
  .app-img {
  	width: 12em;
      border-radius: 45px;
-     border: 1.5px solid gray;
+     border: 1px solid gray;
  }
     
     .bottom-btn {
@@ -293,52 +354,7 @@
     }
     
          
-    .hidden {
-        opacity: 0;
-    }
-        
-    .fade-in {
-        animation: fade 1.2s;
-    }
-        
     
- /*   @keyframes fade {
-        from {
-            transform: scale(.7, .7);
-            opacity: 0;
-        }
-        
-        to {
-            opacity: 1;
-        }
-    }*/
-    
-    @keyframes fade {
-        
-        from {
-            opacity: 0;
-            transform: translate3d(0,40px, 0);
-        }
-        
-        to {
-            transform: translate3d(0, 0, 0);
-            opacity: 1;
-        }
-        
-    /*     from {
-        opacity: 0;
-        transform: translate3d(0,40px,0)
-            
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }*/
-        
-        
-        
-    }
     
     @media (max-device-width: 415px)  {
         .app-img {
@@ -568,98 +584,15 @@
 
         
        
-      //  S(".btn-main").addEventListener("click", () => window.open("work.html", "_top"));
-        
-        
-        
-        
-        /* if (window.matchMedia("(max-width: 70.5em)")){
-           S("#h").style.display = "block";
-     
-        };
-        
-         if (window.matchMedia("(min-width: 71em)")){
-           S("#h").style.display = "none";
-     
-        };
-        */
-
-
-        /*
-        function resize() {
-            var w = window.innerWidth / 16;
-            if (w < 70) {
-                SA(".spacer").forEach((el, i) => {
-                    el.style.display = "none";
-                });
-            } else {
-                SA(".spacer").forEach((el, i) => {
-                    el.style.display = "block";
-                });
-            }
-        }
-
-        window.addEventListener("resize", resize);
-            
-            
-        if (window.matchMedia("(min-width: 70.5em)")){
-            SA(".spacer").forEach((el, i) => {
-            el.style.display = "block";
-        });
-        }
-            
-            
-        if (window.matchMedia("(max-width: 70em)")){
-            SA(".spacer").forEach((el, i) => {
-            el.style.display = "none";
-        });
-        }
-
-        */
-
-    </script>
-
-    <script>
-    
-    
-    
-var els = document.querySelectorAll(".fade");
-var height = window.innerHeight;
-
-function addEL() {
-    window.addEventListener("load", () => {
-        els.forEach((el, i) => {
-            var top = el.getBoundingClientRect().top;
-
-            if (top - height <= 0) {
-                els[i].className = els[i].className.replace("hidden", "fade-in");
-            }
-        });
-    });
-}
-        
-        
-function addPEL() {
-    window.addEventListener("scroll", () => {
-        els.forEach((el, i) => {
-            var top = el.getBoundingClientRect().top;
-
-            if (top - height <= 0) {
-                els[i].className = els[i].className.replace("hidden", "fade-in");
-            }
-        });
-    });
-}
-
-
-addEL();
-addPEL();
-        S(".down").addEventListener("click", () => {
+    S(".down").addEventListener("click", () => {
            S("#apps").scrollIntoView({behavior: "smooth", speed:100});
         });
 
+    
+    
+
 </script>
 
-
+<script src="animation.js"></script>
 
 </body>
