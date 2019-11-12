@@ -549,6 +549,10 @@ img {
       margin-top: 0.5em;
     }
     
+    .down {
+         font-weight: 800;
+    }
+    
     #apps {
         margin-top: 13em;
     }
