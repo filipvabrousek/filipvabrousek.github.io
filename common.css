@@ -150,6 +150,12 @@
 	align-items: center;
 }
 
+#left a:hover {
+        color: #3498db;
+        text-decoration:overline;
+        transition: 0.4s ease-in-out;
+    }
+
 .title {
 	float: left;
 	color: #fff;
