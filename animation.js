@@ -1,4 +1,4 @@
-var els = document.querySelectorAll(".fade");
+var els = document.querySelectorAll(".hidden");
 var height = window.innerHeight;
 
 function addEL() {
