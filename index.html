@@ -127,37 +127,76 @@
     
 <h1 class="about hidden">Apps</h1>
     
-
+<section class="side">
 <section class="app">
 <img class="app-img hidden" src="images/relays-orig.png">
 <h3 class="app-title hidden">Relays</h3>
 <p class="desc hidden">World's first sports app written in SwiftUI</p>
-
-  <!---  <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813"><img class="appstore hidden" src="images/download.png"/></a>-->
-     <a class="hidden" href="https://itunes.apple.com/us/app/relays-find-a-relay-partner/id1483402813"><img class="appstore hidden" src="images/download.png"/></a>
-    
-
+ <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813"><img class="appstore hidden" src="images/download.png"/></a> 
 </section> 
     
+      
 <section class="app">
-
 <img class="app-img hidden" src="images/runny-orig.png">  
 <h3 class="app-title hidden">Runny</h3>
 <p class="desc hidden">The most effective running app on the market</p>
-<!---<img class="appstore runny" src = "images/download.png">-->
  <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908"><img class="appstore hidden" src="images/download.png"/></a>
 </section>    
 
-    
+     
 <section class="app hidden">
-<img class="app-img" src="images/sr-orig.png">
-<h3 class="app-title">Swimrun World</h3>
-<p class="desc">Find a swimrun partner for any race in the world!</p>
-<!----<img class="appstore swimrunworld" src = "images/download.png">--->
-<a class="hidden" href="https://apps.apple.com/cz/app/swimrun-world/id1445475693"><img class="appstore" src="images/download.png"/></a>
+<img class="app-img hidden" src="images/sr-orig.png">
+<h3 class="app-title hidden">Swimrun World</h3>
+<p class="desc hidden">Find a swimrun partner for any race in the world!</p>
+<a class="hidden" href="https://apps.apple.com/cz/app/swimrun-world/id1445475693"><img class="appstore hidden" src="images/download.png"/></a>
+</section>
 </section>
 </section>
     
+    <style>
+    /*desc: font.size: 1em remove */
+        .side {
+            display: flex;
+            width: 100vw;
+            justify-content: space-around;
+        }
+        
+        .app h3 {
+                height: 1.2em;
+            }
+        
+        .app p {
+            height: 1.2em;
+        }
+        
+        .app {
+            margin: 0;
+            padding: 0;
+           
+            width: 30vw;
+            
+            
+        }
+        
+        
+        @media (max-width: 70em){
+            .side {
+                flex-direction: column;
+            }
+            
+             .app {
+        
+            margin-bottom: 3em;
+            width: 100vw;
+                 
+        }
+            
+            
+        
+        }
+        
+        
+    </style>
     
 <h1 class="about bottom-about-web hidden">Web</h1>
 
@@ -294,6 +333,10 @@
         margin: 1em;
     }
     
+        
+        .desc {
+            font-size: 1em;
+        }
      
     
     h3, .desc {
