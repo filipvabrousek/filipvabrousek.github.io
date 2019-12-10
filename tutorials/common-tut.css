@@ -1,0 +1,39 @@
+ .tut-image {
+     width: 60vw;
+     margin-left: 20vw;
+}
+ .date {
+     text-align: center;
+     font-weight: bold;
+     padding: 1em;
+}
+ h2 {
+     padding-left: 0.3em;
+     padding-top: 1em;
+}
+ ul {
+     padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
+}
+
+.tut-sub {
+margin-top: 1em;    
+}
+
+.about {
+    margin-top: 1em;
+}
+
+.bottom {
+    margin-bottom: 3em;
+}
+ @media (max-width: 70em){
+     .tut-image {
+         width: 90vw;
+         margin-left: 5vw;
+         padding-bottom: 2em;
+    }
+}
+
+    

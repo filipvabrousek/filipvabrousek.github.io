@@ -1,0 +1,29 @@
+ @media (prefers-color-scheme: dark) {
+     * {
+         color: white !important;
+     }
+
+     body {
+         background: black;
+     }
+
+     footer {
+         background: black !important;
+     }
+
+     #social {
+         background: black !important;
+     }
+     
+     #navback {
+         background: black !important;
+     }
+     
+      #left a {
+        background: none;
+     }
+     
+     #h {
+         background: none;
+     }
+ }
