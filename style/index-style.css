@@ -78,6 +78,8 @@
         font-size: 3em;
     }
    
+        
+         
            
         }
         
@@ -87,9 +89,11 @@
 
 
 .side {
-            display: flex;
-            width: 100vw;
-            justify-content: space-around;
+            display: grid;
+           grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-bottom: 3em;
         }
         
         .app h3 {
@@ -97,32 +101,26 @@
             }
         
         .app p {
-            height: 1.2em;
+            height: 1.5em;
         }
         
         .app {
             margin: 0;
             padding: 0;
-            width: 30vw;
+          /* width: 30vw;*/
         }
         
         
         @media (max-width: 70em){
             .side {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                  margin-bottom: 0em;
             }
             
              .app {
-        
             margin-bottom: 3em;
-            width: 100vw;
-                 
+            width: 100vw;        
         }
-            
-            
-            
-            
-        
         }
         
         .down {
@@ -289,6 +287,10 @@
     @media (max-width: 70em){
         .down {
             margin-top: 10em;
+        }
+        
+        .side {
+            margin-left: 0;
         }
         
         
