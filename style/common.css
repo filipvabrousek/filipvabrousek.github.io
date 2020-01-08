@@ -353,7 +353,7 @@ img {
 
 #wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 1em;
 }
 
@@ -553,9 +553,7 @@ img {
          font-weight: 800;
     }
     
-    #apps {
-        margin-top: 13em;
-    }
+   
     
      #h {
         font-size: 6em;
