@@ -56,8 +56,39 @@
     
         <p class="pad fade hidden">Aside from developing apps, I am also an avid runner and climber. You can see my biggest achievements below. </p>
 
-	 <ul class="pad fade hidden">
+	
+
+	
+	
+	
+	<!-----<h2 class="fade hidden centerText">Personal bests</h2>---->
+	
+	
+	
+	<section class="pb fade hidden sides">
+		<div class="pb">
+		  <p class="dist">800m</p>
+		  <p class="time">2:03</p>
+		</div>
 		
+		<div class="pb">
+		  <p class="dist">5K</p>
+		  <p class="time">15:40</p>
+		</div>
+		<div class="pb">
+		  <p class="dist">10K</p>
+		  <p class="time">32:57</p>
+		</div>
+		<div class="pb">
+		  <p class="dist">21.1K</p>
+		  <p class="time">1:13:47</p>
+		</div>
+		
+		
+		
+	</section>
+	  
+	 <ul class="pad fade hidden">
 	 <li><b>1st</b> place Moravian-Silesian Championships 5000m 2018 (Juniors)</li>
 	 <li><b>1st</b> place Moravian-Silesian Championships 5000m 2019 (Men)</li>
 	 <li><b>2nd</b> place Czech Republic 10000m Championships 2018 (Juniors) </li>
@@ -66,13 +97,10 @@
 	 <li><b>1st</b> place Běhej Lesy Lednice and Karlštejn 2019 </li>
 	 <li><b>1st</b> place Swimrun Slapy </li>
 	 <li><b>8- UIAA</b> my highest grade climbed indoors in Vertikon</li>
-	
 	</ul>
 	
 	
-	
-	
-	
+		<!---<h2 class="fade hidden centerText">Gallery</h2>-->
         <section class="below">
 			<div class="backImage fade hidden" id="backImage-01"></div>
 			<div class="backImage fade hidden" id="backImage-02"></div>
@@ -263,9 +291,47 @@
 		}
 		
 		
+		.pb {
+			padding: 1em;
+			font-size: 1.33rem;
+			
+		}
+		
+		.pb p {
+		text-align: center;
+		}
+		
+		.pb .time {
+			font-weight: bold;
+		}
+		
+		
+		.sides {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			justify-items: center;  
+			
+			
+		}
+		
+		.sides div {
+			
+			border: 4px solid #3498Db;
+			width: 6em;
+			margin-bottom: 1em;
+			
+			
+		}
+		
+		
+		
+		
+		.centerText {
+			text-align: center;
+		}
+		
+		
 		@media only screen and (max-width: 70em){
-			
-			
 			.below {
 				grid-template-columns: 1fr;
 			}
@@ -274,6 +340,25 @@
 				height: 70vw;
 			}
 		}
+			
+			@media only screen and (max-width: 50em){
+				.sides {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+			
+		@media only screen and (max-device-width: 415px){
+			.sides div {
+			font-size: 2em;
+			}
+			
+			.sides {
+			grid-template-columns: 1fr 1fr;
+		}
+			
+		}
+		
+		
 		
 		
 		
