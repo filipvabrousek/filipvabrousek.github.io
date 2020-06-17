@@ -37,7 +37,9 @@
               <!--  <a class="btn-nav" href="index.html">Home</a>-->
                 <a class="btn-nav" href="index.html">Work</a>
                 <a class="btn-nav" href="design.html">Design</a>
+				 <a class="btn-nav" href="sport.html">Sport</a>
                 <a class="btn-nav" href="about.html">About</a>
+				
             </div>
         </div>
     </section>
@@ -67,7 +69,7 @@
 <section class="app">
 <img class="app-img hidden" src="images/relays-orig.png">
 <h3 class="app-title hidden">Relays</h3>
-<p class="desc hidden">World's first sports app written in SwiftUI</p>
+<p class="desc hidden">World's first chat app written in SwiftUI</p>
  <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
      <img class="appstore hidden" src="images/download.png"/></a> 
 </section> 
@@ -197,7 +199,7 @@
     
     <footer>
         <p class="footer-t">Filip Vabroušek</p>
-        <p class="footer-em">2019</p>
+        <p class="footer-em"></p>
 
         <div id="social">
             <img id="fba" src="tutorials/footer/fb.png">
@@ -229,6 +231,13 @@
             return document.querySelectorAll(el);
         }
 
+		
+		// I do not wanna update this each year :D
+		S(".footer-em").innerHTML = new Date().getFullYear();
+		
+		
+		
+		
         S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/filipvabrousek/"));
         S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/filipvabrousek"));
 

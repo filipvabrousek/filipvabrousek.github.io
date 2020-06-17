@@ -38,7 +38,9 @@
                <!-- <a class="btn-nav" href="index.html">Home</a>-->
                 <a class="btn-nav" href="index.html">Work</a>
                 <a class="btn-nav" href="design.html">Design</a>
+							<a class="btn-nav" href="sport.html">Sport</a>
                 <a class="btn-nav" href="about.html">About</a>
+	
             </div>
 
         </div>
@@ -47,18 +49,23 @@
         <h1 class="about fade hidden">Design</h1>
     
         <h3 class="design-center fade hidden">iOS 13 Concept</h3>
-        <img class="design fade hidden" src="images/result.png">
-    
-    
+        <img class="design fade hidden" src="images/iOS-13-new.png">
     
     <h3 class="design-center fade hidden">Moon Ballon</h3>
     
         <img class="design fade hidden" src="images/moonBallon-8-11-19.png">
    <p class="small-source fade hidden">Source images: https://unsplash.com/@austinban, https://unsplash.com/@mikepetrucci, https://unsplash.com/@paititi</p>
     
-    
+	
+	 <h3 class="design-center fade hidden">Blender - Physical animations FAI</h3>
+        <img class="design fade hidden" src="images/blender.gif">    
+	
+	
         <h3 class="design-center fade hidden">Magazine design idea</h3>
         <img class="design fade hidden" src="images/magazine.png">    
+	
+	
+	
     
     <h3 class="design-center fade hidden">Logo design idea</h3>
     <img class="design fade hidden" src="images/monogram.png">
@@ -124,6 +131,9 @@
         }
 
 
+		
+		// I do not wanna update this each year :D
+		S(".footer-em").innerHTML = new Date().getFullYear();
 
         S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/filipvabrousek/"));
         S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/filipvabrousek"));
