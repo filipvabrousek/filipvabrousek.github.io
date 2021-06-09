@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
+<!---22/1/2019 23:00 end :) -->
+
+
+<head>
+    <title>SwiftUI-Canvas</title>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143592417-2');
+</script>
+
+	
+   
+
+
+
+
+    
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-swift.min.js"></script>
+    
+    
+    
+
+
+
+
+	 <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css">
+</head>
+
+
+<body>
+    <section id="align">
+        <div id="center-buttons">
+            <div id="navback"></div>
+            
+            <button id="h">☰</button>
+
+            <div id="left">
+                <button class="btn-nav" id="close">×</button>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/">Work</a>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/design.html">Design</a>
+				    <a class="btn-nav" href="https://filipvabrousek.github.io/sport.html">Sport</a>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/about.html">About</a>
+            </div>
+
+        </div>
+    </section>
+    
+    
+        <h1 class="about">Canvas in SwiftUI</h1>
+        <p class="date">09/06/2021</p>
+    
+
+<!---------------------------------------------------- ISOMETRIC LOGO ---------------------------------------------------->
+<section id="tut-section">
+<h2>Get started</h2>    
+    <p class="pad">On WWDC 2021, Apple has released a welcome addition to the SwiftUI framework, Canvas API.
+Canvas replace drawRect(:_) method from Core Graphics, and allows you to draw advanced graphics in your apps.
+ 
+	</p>
+    
+    <h2>Animation example</h2>
+    <p class="pad">Here is an example of a simple animation. First, we use the <code>TimelineView</code> with the <code>.animation</code> property.
+        Then, we define the <code>Canvas</code> with two closure arguments context and size. We get current time since reference date, compute the angle, and a use the <i>cos</i> function to create oscillation effect. We then use the image of the star. using <code>context.resolve</code>. <br>
+        Finally we create the <code>frame</code>, set the opacity and use <code>context.fill</code> to create the ellipse of cyan colour and draw the image in our frame using <code>context.draw</code>.
+ </p>
+	
+<pre>
+<code class="language-swift">
+struct AnimationView: View {
+    var body: some View {
+        TimelineView(.animation){ timeline in
+            Canvas { context, size in
+                let now = timeline.date.timeIntervalSinceReferenceDate
+                let angle = Angle.degrees(now.remainder(dividingBy: 3) * 120)
+                let x = cos(angle.radians)
+                
+                let image = context.resolve(Image(systemName: "star"))
+                let imageSize = image.size
+            
+                let frame = CGRect(x: 0.5 * size.width + Double(3) * imageSize.width * x,
+                                   y: 0.5 * size.height,
+                                   width: imageSize.width,
+                                   height: imageSize.height)
+
+                context.opacity = 0.5
+                context.fill(Ellipse().path(in: frame), with: .color(.cyan))
+                context.draw(image, in: frame)
+            }
+        }
+    }
+}
+    </code>
+</pre>
+
+<img class="eighty" src="tut-images/animation.png">
+
+    
+    <h2>Reacting to taps</h2>
+    
+    <p class="pad">In the second example, we create an array of locations. Then, we loop through the locations, define the point, and draw it in each location. <br>
+
+Then use the DragGesture() with minimumDistance of 0, to append current location of the touch to locations array.
+When you tap the screen, a small black circle appears at the position of your finger.</p>
+
+    
+
+<pre>
+
+<code class="language-swift">
+   struct TouchCanvas: View {
+    @State var locations =  [CGPoint]()
+    
+    var body: some View {
+            Canvas { context, size in
+                for loc in locations {
+                    let point = CGRect(x: loc.x, y: loc.y, width: 30, height: 30)
+                    context.fill(Ellipse().path(in: point), with: .foreground)
+                }
+            }.gesture(DragGesture(minimumDistance: 0).onEnded { val in
+                locations.append(val.startLocation)
+            })
+        }
+}
+    </code>
+</pre>
+
+    
+    
+
+<img class="eighty" src="tut-images/taps.png">
+
+
+ <p class="pad">Thanks for reading, and enjoy the rest of WWDC 2021!</p>
+    
+
+<style>
+    
+	.pad {
+		padding: 1em;
+		}
+    
+    code {
+        width: 100%;
+        overflow-x: scroll;
+		font-family: Consolas, Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    }
+    
+    
+    .eighty {
+		width: 30%;
+		margin-left: 35%;
+        box-shadow: 20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+        padding-top: 2em;
+        padding-bottom: 2em;
+	}
+    
+    
+    
+    
+    
+        @media only screen and (max-width: 70em){
+    .eighty {
+		width: 90%;
+		margin-left: 5%;
+	}
+    }
+    
+    @media (max-device-width: 400px) {
+       code[class*=language-] {
+            font-size: 2.2em !important;
+        }
+		
+		p code {
+            font-size: 1em;
+        }
+    }
+	
+	
+	
+    </style>
+</section>
+    
+<style>
+    .sides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sub-image {
+        width: 40vw;
+        border-radius: 1em;
+    }
+	
+	
+    @media only screen and (max-width: 70em){
+        .sides {
+              grid-template-columns: 1fr;
+        }
+        
+        .sub-image {
+            width: 70vw;
+            margin-left: 15vw;
+            margin-bottom: 4em;
+        }
+    }
+	
+	
+	/*@media only screen and (max-device-width: 415px){
+		.language-js {
+			font-size: 1em;
+		}
+	}*/
+   
+</style>
+    
+  <link rel="stylesheet" href="common.css">  
+  <link rel="stylesheet" href = "common-tut.css">
+ <!--<link rel="stylesheet" href="dark.css">-->
+    
+    
+
+<!--
+    <section class="block">
+
+        <p>Welcome!
+
+            You can find brief overview of my bio, past results and racing plans here. There is also some brief description of all the equipment I use. For more pictures please visit my Facebook gallery.</p>
+
+      
+    </section>
+
+
+    <section class="block block-img">
+        <h2 class="sub gr">Block</h2>
+
+       
+        
+        <img src="https://www.teamphenomenalhope.org/wp-content/uploads/2015/11/southern-alps-pf-new-zealand-1-1024x531.jpg">
+
+        <br><br><br>
+
+        <h2 class="sm-title">Age</h2>
+        <p class="race-t">46</p>
+
+        <h2 class="sm-title">Education:</h2>
+        <p class="race-t">Master degree in Econonmy – MU Brno<br>
+            Master degree in Marketing – UTB Zlin</p>
+
+
+        <h2 class="sm-title">Langugages</h2>
+        <p class="race-t">English, German, Spanish, Russian, Slovak</p>
+
+    </section>
+
+
+
+
+    <section class="block">
+        <h2 class="sub gr">Cards</h2>
+
+
+    </section>
+
+    <section class="block F-showcase">
+       
+
+
+
+       
+        <div class="product card-title">
+            <h4>Wanaka</h4>
+         
+            
+            <div class="iw">
+                <img src="images/wanaka.jpg">
+            </div>
+              
+            
+          
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         <div class="product card-title">
+            <h4>Iceland</h4>
+         
+           
+              <div class="iw">
+             
+                  <img src="images/iceland.jpg">
+            </div>
+            
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         
+
+    </section>
+-->
+
+    <footer>
+
+
+        <p class="footer-t">Filip Vabroušek</p>
+        <p class="footer-em"></p>
+
+        <div id="social">
+            <img id="fba" src="footer/fb.png">
+            <img src="footer/spacer.png">
+            <img id="insta" src="footer/insta.png">
+        </div>
+
+
+        <div id="sp">
+
+        </div>
+
+    </footer>
+   
+    
+  
+
+
+
+
+
+
+    <script>
+        // alert(Number(window.innerWidth) / 16);
+
+
+        function S(el) {
+            return document.querySelector(el);
+        }
+
+        function SA(el) {
+            return document.querySelectorAll(el);
+        }
+
+
+
+        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/petrvabrousek/?hl=en", "_top"));
+        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/PetrVabrousek/", "_top"));
+
+        /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
+        S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
+        S("#edit").addEventListener("click", () => window.open("#season-en.html", "_top"));
+        S("#signout").addEventListener("click", () => window.open("#support-en.html", "_top"));
+*/
+
+
+
+        var isHidden = true;
+        S("#close").addEventListener("click", () => {
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+
+            if (isHidden == true) {
+
+                S("#left").style.display = "none";
+                S("#navback").style.display = "none";
+                S("#h").innerHTML = "&#9776;";
+                /* S("#hide").style.position = "absolute";
+                 S("#hide").marginTop = "20px";*/
+               // S(".block").style.display = "block";
+               // S(".block-img").style.display = "block";
+
+            } else {
+                /* S("#hide").style.position = "absolute";*/
+                /*S("#hide").marginTop = "3em";*/
+                S("#left").style.display = "block";
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+               // S(".block").style.display = "none";
+               // S(".block-img").style.display = "none";
+            }
+        });
+
+
+
+        S("#h").addEventListener("click", () => {
+
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+            if (isHidden == true) {
+                S("#left").style.display = "none";
+                S("#left").style.visibility = "hidden";
+                S("#navback").style.display = "none";
+                S(".block").style.display = "block";
+                S(".block-img").style.display = "block";
+                S("#h").innerHTML = "&#9776;";
+                S("#h").marginTop = "20px"; // do not set position to absolute
+            } else {
+               S("#left").style.display = "flex"; 
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+                S(".block").style.display = "none";
+                S(".block-img").style.display = "none";
+                S("#h").marginTop = "3em";
+                S("#h").marginRight = "2em";
+
+            }
+        });
+
+		
+		
+		
+		
+		
+		function writeDate(){
+			document.querySelector(".footer-em").innerText = new Date().getFullYear();
+		}
+		
+		
+		
+		writeDate();
+        
+        /* if (window.matchMedia("(max-width: 70.5em)")){
+           S("#h").style.display = "block";
+     
+        };
+        
+         if (window.matchMedia("(min-width: 71em)")){
+           S("#h").style.display = "none";
+     
+        };
+        */
+
+
+        /*
+        function resize() {
+            var w = window.innerWidth / 16;
+            if (w < 70) {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "none";
+                });
+            } else {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "block";
+                });
+            }
+        }
+
+        window.addEventListener("resize", resize);
+            
+            
+        if (window.matchMedia("(min-width: 70.5em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "block";
+        });
+        }
+            
+            
+        if (window.matchMedia("(max-width: 70em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "none";
+        });
+        }
+
+        */
+
+    </script>
+
+
+
+
+</body>
