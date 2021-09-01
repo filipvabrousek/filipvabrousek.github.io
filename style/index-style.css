@@ -182,6 +182,17 @@
     .appstore {
         width: 10em;
         margin: 1em;
+        object-fit: contain;
+    }
+
+    .macinformer {
+        height: 3.2rem;
+    }
+
+    .macinformerSection{
+        display: flex;
+         justify-content: center; 
+         align-items: center;
     }
     
         
