@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
+<!---22/1/2019 23:00 end :) -->
+
+
+<head>
+    <title>SwiftUI-Layout</title>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143592417-2');
+</script>
+
+	
+	<!--<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/prism.min.js"></script>-->
+	<!---<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" rel="stylesheet" />-->
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/a11y-dark.min.css" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+     <script>hljs.highlightAll();</script>
+   
+    </head>
+
+
+<body>
+    <section id="align">
+        <div id="center-buttons">
+            <div id="navback"></div>
+            
+            <button id="h">☰</button>
+
+            <div id="left">
+                <button class="btn-nav" id="close">×</button>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/">Work</a>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/design.html">Design</a>
+				    <a class="btn-nav" href="https://filipvabrousek.github.io/sport.html">Sport</a>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/about.html">About</a>
+            </div>
+
+        </div>
+    </section>
+    
+
+
+    
+        <h1 class="about">Layout in SwiftUI</h1>
+        <p class="date">09/06/2022</p>
+    
+
+<!---------------------------------------------------- ISOMETRIC LOGO ---------------------------------------------------->
+<section id="tut-section">
+<h2>Get started</h2>    
+    <p class="pad">At WWDC 2022 Apple 
+		announced new ways to create custom layouts in SwiftUI. This article should give you a basic intro into to custom layout creation. 
+	</p>
+	
+    <style>
+        .inlineCode {
+            background: black;
+            color: white;
+            padding: 1px;
+            border-radius: 9px;
+            font-size: 0.7em;
+        }
+
+        /*https://developer.apple.com/videos/play/wwdc2022/10056/*/
+    </style>
+	
+	<p class="pad">
+        To make your own layout we can now define structure conforming to the new <code class="inlineCode">Layout</code> protocol.
+        We have to use mandatory methods <code class="inlineCode">sizeThatFits</code> and <code class="inlineCode">placeSubviews</code>:
+      
+        <br> </br>
+        <code class="inlineCode">sizeThatFits</code> indicates how much space the container needs to arrange its subviews</li>
+       <br>
+       <code class="inlineCode">placeSubviews</code> assigns positions to each of the layout’s subviews.</li>
+      
+        </p>
+            <p class="pad">
+            In <code class="inlineCode">sizeThatFits</code> we calculate the sizes of our <code class="inlineCode">VStack</code> using reduce.
+        The line <code class="inlineCode">subview.sizeThatFits(.unspecified)</code> means, that views should use and report their ideal size.
+        In the <code class="inlineCode">placeSubviews</code> method we can set the start to 50 pixels from the top and increase the offset using <code class="inlineCode">+= bounds.height</code> in each iteration.
+        Then we place each point in its respective position using <code class="inlineCode">place(at:)</code>.
+        </p>
+
+	
+<pre>
+<code class="language-swift">
+private struct MyVStack: Layout {
+    func sizeThatFits(
+        proposal: ProposedViewSize,
+        subviews: Subviews,
+        cache: inout ()) -> CGSize {
+        subviews.reduce(CGSize.zero) { result, subview in
+            let size = subview.sizeThatFits(.unspecified)
+            return CGSize(
+                width: max(result.width, size.width),
+                height: result.height + size.height)
+        }
+    }
+    
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        
+        var start: CGFloat = 50;
+
+        for sub in subviews {
+            sub.place(at: CGPoint(x: 30, y: start), proposal: proposal)
+            start += bounds.height
+        }
+    }
+}
+    </code>
+</pre>
+
+
+<p class="pad">
+    Finally, our stack accepts a single view, so we need to wrap our circles in a <b>Group</b>.
+</p>
+	
+<pre>
+<code class="language-js">
+    MyVStack {
+        Group {
+           Circle().frame(width: 30)
+           Circle().frame(width: 30)
+           Circle().frame(width: 30)
+        }
+    }
+</code>
+</pre>
+
+<img class="eighty" src="tut-images/WWDC-22/MyVStack.png">
+
+
+
+	
+	<h2>AnyLayout</h2>
+	<p class="pad">
+        We can also use the new <code class="inlineCode">AnyLayout</code> struct to specify the container to use within our layout.
+        We create the <code class="inlineCode">layout</code> variable and provide some condition.
+        We can then choose whether to use <code class="inlineCode">VStack</code> or  <code class="inlineCode">HStack</code> depending on our condition.
+
+    </p>
+	
+
+
+<pre>
+<code class="language-js">
+    struct MyLayout: View {
+        var body: some View {
+            let layout = true ? AnyLayout(VStack()) : AnyLayout(HStack())
+            
+            layout {
+                Circle()
+                    .frame(width: 30)
+                    .foregroundColor(.green)
+                
+                Circle()
+                    .frame(width: 30)
+                    .foregroundColor(.orange)
+            }
+        }
+    }
+    </code>
+</pre>
+
+
+
+
+
+
+
+<h2>ViewThatFits</h2>
+<p class="pad">
+    Using <code class="inlineCode">ViewThatFits</code> we can let SwiftUI choose the View that fits the screen.
+    When running this app on iPhone 13 Pro simulator, the rectangle with width of 100 points is shown.
+    After rotating the device to the side, the larger rectangle with width of 400 points is shown.
+</p>
+<pre>
+<code class="language-js">
+    struct ThatFits: View {
+        var body: some View {
+            ViewThatFits {
+                Rectangle()
+                    .frame(width: 400, height: 20)
+                
+                Rectangle()
+                    .frame(width: 100, height: 20)
+            }
+        }
+    }
+</code>
+ </pre>
+
+ <h2>Grid</h2>
+<p class="pad">
+    Using <code class="inlineCode">Grid</code> we can align multiple views in both axes.
+    We use <code class="inlineCode">.leadingFirstTextBaseline</code> to align the 2nd column to the left.
+    Then we use the <code class="inlineCode">Color</code>  with <code class="inlineCode">gridCellUnsizedAxes</code> to stop it from expanding over the entire screen.
+    I have used the orange border color for clarity.
+</p>
+<pre>
+<code class="language-js">
+    struct MacGrid: View {
+        var body: some View {
+            Grid(alignment: .leadingFirstTextBaseline) {
+                GridRow {
+                    Text("First row")
+                        .gridColumnAlignment(.trailing) 
+                    Text("Text")
+                    Button("Select...") { }
+                }
+                
+                GridRow {
+                    Text("Other row")
+                    Text("Text")
+                    Button("Select...") { }
+                }
+                
+                GridRow {
+                    Color
+                        .clear
+                        .gridCellUnsizedAxes([.vertical, .horizontal])
+                        .border(Color.orange)
+                    Toggle("Aligned with 2nd column", isOn: .constant(true))
+                        .gridCellColumns(2)
+                }
+            }
+        }
+    }
+</code>
+ </pre>
+
+
+ <img class="eighty" src="tut-images/WWDC-22/Grid.png">
+ 
+ <p class="pad">Thanks for reading and enjoy the rest of WWDC!</p>
+    
+
+<style>
+    
+    .pad {
+		padding: 1em;
+		}
+    
+    code {
+        width: 80%;
+        overflow-x: scroll;
+		font-family: Consolas, Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1em;
+    }
+    
+    
+    .eighty {
+		width: 30%;
+		margin-left: 35%;
+        box-shadow: 20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+        padding-top: 2em;
+        padding-bottom: 2em;
+	}
+    
+    @media only screen and (max-width: 70em){
+    .eighty {
+		width: 90%;
+		margin-left: 5%;
+	}
+    }
+    
+    @media (max-device-width: 400px) {
+       code[class*=language-] {
+            font-size: 2.2em !important;
+        }
+		
+		p code {
+            font-size: 1em;
+        }
+    }
+	
+
+    
+	
+	
+	
+    </style>
+</section>
+    
+<style>
+    .sides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sub-image {
+        width: 40vw;
+        border-radius: 1em;
+    }
+	
+	
+    @media only screen and (max-width: 70em){
+        .sides {
+              grid-template-columns: 1fr;
+        }
+        
+        .sub-image {
+            width: 70vw;
+            margin-left: 15vw;
+            margin-bottom: 4em;
+        }
+    }
+	
+	
+	/*@media only screen and (max-device-width: 415px){
+		.language-js {
+			font-size: 1em;
+		}
+	}*/
+   
+</style>
+    
+  <link rel="stylesheet" href="common.css">  
+  <link rel="stylesheet" href = "common-tut.css">
+ <!--<link rel="stylesheet" href="dark.css">-->
+    
+    
+
+<!--
+    <section class="block">
+
+        <p>Welcome!
+
+            You can find brief overview of my bio, past results and racing plans here. There is also some brief description of all the equipment I use. For more pictures please visit my Facebook gallery.</p>
+
+      
+    </section>
+
+
+    <section class="block block-img">
+        <h2 class="sub gr">Block</h2>
+
+       
+        
+        <img src="https://www.teamphenomenalhope.org/wp-content/uploads/2015/11/southern-alps-pf-new-zealand-1-1024x531.jpg">
+
+        <br><br><br>
+
+        <h2 class="sm-title">Age</h2>
+        <p class="race-t">46</p>
+
+        <h2 class="sm-title">Education:</h2>
+        <p class="race-t">Master degree in Econonmy – MU Brno<br>
+            Master degree in Marketing – UTB Zlin</p>
+
+
+        <h2 class="sm-title">Langugages</h2>
+        <p class="race-t">English, German, Spanish, Russian, Slovak</p>
+
+    </section>
+
+
+
+
+    <section class="block">
+        <h2 class="sub gr">Cards</h2>
+
+
+    </section>
+
+    <section class="block F-showcase">
+       
+
+
+
+       
+        <div class="product card-title">
+            <h4>Wanaka</h4>
+         
+            
+            <div class="iw">
+                <img src="images/wanaka.jpg">
+            </div>
+              
+            
+          
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         <div class="product card-title">
+            <h4>Iceland</h4>
+         
+           
+              <div class="iw">
+             
+                  <img src="images/iceland.jpg">
+            </div>
+            
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         
+
+    </section>
+-->
+
+    <footer>
+
+
+        <p class="footer-t">Filip Vabroušek</p>
+        <p class="footer-em"></p>
+
+        <div id="social">
+            <img id="fba" src="footer/fb.png">
+            <img src="footer/spacer.png">
+            <img id="insta" src="footer/insta.png">
+        </div>
+
+
+        <div id="sp">
+
+        </div>
+
+    </footer>
+   
+    
+  
+
+
+
+
+
+
+    <script>
+        // alert(Number(window.innerWidth) / 16);
+
+
+        function S(el) {
+            return document.querySelector(el);
+        }
+
+        function SA(el) {
+            return document.querySelectorAll(el);
+        }
+
+
+
+        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/petrvabrousek/?hl=en", "_top"));
+        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/PetrVabrousek/", "_top"));
+
+        /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
+        S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
+        S("#edit").addEventListener("click", () => window.open("#season-en.html", "_top"));
+        S("#signout").addEventListener("click", () => window.open("#support-en.html", "_top"));
+*/
+
+
+
+        var isHidden = true;
+        S("#close").addEventListener("click", () => {
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+
+            if (isHidden == true) {
+
+                S("#left").style.display = "none";
+                S("#navback").style.display = "none";
+                S("#h").innerHTML = "&#9776;";
+                /* S("#hide").style.position = "absolute";
+                 S("#hide").marginTop = "20px";*/
+               // S(".block").style.display = "block";
+               // S(".block-img").style.display = "block";
+
+            } else {
+                /* S("#hide").style.position = "absolute";*/
+                /*S("#hide").marginTop = "3em";*/
+                S("#left").style.display = "block";
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+               // S(".block").style.display = "none";
+               // S(".block-img").style.display = "none";
+            }
+        });
+
+
+
+        S("#h").addEventListener("click", () => {
+
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+            if (isHidden == true) {
+                S("#left").style.display = "none";
+                S("#left").style.visibility = "hidden";
+                S("#navback").style.display = "none";
+                S(".block").style.display = "block";
+                S(".block-img").style.display = "block";
+                S("#h").innerHTML = "&#9776;";
+                S("#h").marginTop = "20px"; // do not set position to absolute
+            } else {
+               S("#left").style.display = "flex"; 
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+                S(".block").style.display = "none";
+                S(".block-img").style.display = "none";
+                S("#h").marginTop = "3em";
+                S("#h").marginRight = "2em";
+
+            }
+        });
+
+		
+		
+		
+		
+		
+		function writeDate(){
+			document.querySelector(".footer-em").innerText = new Date().getFullYear();
+		}
+		
+		
+		
+		writeDate();
+        
+        /* if (window.matchMedia("(max-width: 70.5em)")){
+           S("#h").style.display = "block";
+     
+        };
+        
+         if (window.matchMedia("(min-width: 71em)")){
+           S("#h").style.display = "none";
+     
+        };
+        */
+
+
+        /*
+        function resize() {
+            var w = window.innerWidth / 16;
+            if (w < 70) {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "none";
+                });
+            } else {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "block";
+                });
+            }
+        }
+
+        window.addEventListener("resize", resize);
+            
+            
+        if (window.matchMedia("(min-width: 70.5em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "block";
+        });
+        }
+            
+            
+        if (window.matchMedia("(max-width: 70em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "none";
+        });
+        }
+
+        */
+
+    </script>
+
+
+
+
+</body>
