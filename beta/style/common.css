@@ -747,15 +747,23 @@ li {
 
 
 
-        footer {
-	padding-top: 2.5em;
-	background: #ecf0f1;
+footer {
 	text-align: center;
+	padding-top: 10em;
 	padding-bottom: 10em;
+	color: white;
+	font-weight: bold;
 }
 
+
+
+.footer-t, .footer-em {
+color: black;
+}
+
+
 #social {
-	background: #ecf0f1;
+	margin-top:2em;
 }
 
 #social img {
