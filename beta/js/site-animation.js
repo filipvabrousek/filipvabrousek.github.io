@@ -161,9 +161,20 @@ function typeWriter(id, text) {
 }
 
 
-const filipOffset = 200;
-const descOffset = 4 * 16;
-const myNameOffset = 220;
+
+let media = window.matchMedia("(max-device-width: 415px)");
+
+let filipOffset = 200;
+let descOffset = 4 * 16;
+let myNameOffset = 220;
+
+
+
+if (media.matches){
+filipOffset = 0;
+descOffset = 0;
+myNameOffset = 0;
+}
 
 let hasDisappeared = false;
 
