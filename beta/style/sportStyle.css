@@ -1,0 +1,115 @@
+
+    .sportTitle {
+        margin-left: 0.4em;
+    }
+
+		.two {
+			padding-left: 0.8em;
+		}
+		
+		.blue {
+			color: blue;
+		}
+		
+		.firstTitle {
+			font-size: 2em;
+			text-align: center;
+			color: black;
+			padding-top: 1em;
+		}
+		
+		.below {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			
+			grid-gap: 1em;
+		}
+		
+		
+		.backImage {
+			width: auto;
+			height: 30vw;
+			background-position: center;
+			background-size: cover;
+			
+		}
+		
+		
+		
+		.pb {
+			padding: 1em;
+			font-size: 1.33rem;
+			
+		}
+		
+		.pb p {
+		text-align: center;
+		}
+		
+		.pb .time {
+			font-weight: bold;
+            -webkit-text-stroke: 2px rgb(11, 122, 182);
+    color: white;
+    font-style: italic;
+		}
+		
+		
+		.sides {
+            display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+			
+			
+		}
+        
+
+		
+		.sides div {
+			
+			/*border: 4px solid #3498Db;*/
+			width: 6em;
+			margin-bottom: 1em;
+            border-radius: 0.5em;
+			margin: 1em;
+			
+		}
+		
+		
+		
+		
+		.centerText {
+			text-align: center;
+		}
+		
+		
+		@media only screen and (max-width: 70em){
+			.below {
+				grid-template-columns: 1fr;
+			}
+			
+			.backImage {
+				height: 70vw;
+			}
+		}
+			
+			@media only screen and (max-width: 50em){
+				.sides {
+			/*grid-template-columns: 1fr 1fr;*/
+		}
+	}
+			
+		@media only screen and (max-device-width: 415px){
+			.sides div {
+			font-size: 2em;
+			}
+			
+			.sides {
+			grid-template-columns: 1fr 1fr;
+		}
+			
+		}
+		
+		
+		
+		
+		
