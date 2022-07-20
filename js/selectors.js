@@ -1,0 +1,1 @@
+const S = (e) => document.querySelector(e);
