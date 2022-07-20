@@ -9,6 +9,7 @@
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 6em;
   }
 
   .leftAppWrapper{
@@ -447,7 +448,9 @@ border-radius: 1em;
 @media (max-device-width: 415px) {
 
 
-   
+    .sm-a {
+        margin-left: 30px;
+    }
 
     .floatContent .filipName {
         font-size: 7rem;
@@ -472,7 +475,7 @@ border-radius: 1em;
 
     .sm-a{
       /*  font-size: 3rem; */
-        width: auto;
+       /* width: auto;*/
     }
 
     .boldLarge {
@@ -558,6 +561,14 @@ border-radius: 1em;
     }*/
 
 @media (max-width: 70em) {
+
+    .leftIcon h2 {
+        text-align: center;
+    }
+
+    .leftAppWrapper{
+        margin-left: 0em;
+          }
 
     .leftIcon {
         
@@ -765,9 +776,13 @@ h3 {
 @media (max-device-width: 415px) {
 
     #designTop336 {
-        margin-top: 948px;
+        margin-top: 1036px;
     }
 
+
+    .boldLarge {
+        margin-top: 157px;
+    }
 
 
 .leftIcon h2 {
