@@ -8,6 +8,7 @@ let alreadyScaledUp = false;
 
 let isGoingUp = false;
 let isGoingDown = false;
+let opacityFlag = false;
 
 setTimeout(() => {
     S(".filipName").animate([
@@ -180,6 +181,22 @@ let hasDisappeared = false;
 
 
 
+
+
+const scrollLimit = 100; // 250
+let end = scrollLimit + 100;
+
+function convertRange(value, oldRange, newRange) {
+    let ret = ((value - oldRange.min) * (newRange.max - newRange.min)) / (oldRange.max - oldRange.min) + newRange.min;
+    if (ret > 1){
+        ret = 1;
+    }
+
+    return ret;
+
+}
+
+  
 // Check the direction and reverse it
 function moveScaleOnScroll(){
 
@@ -235,21 +252,69 @@ function moveScaleOnScroll(){
 
 
 
-
-    const scrollLimit = 250;
+/*
+ console.log("Scroll start to scroll end is " + scrollLimit + " " + end);
+        console.log("Really scrolled:" + window.scrollY);
+*/
 
     S(".aboutWrapper").style.marginTop = `${scrollLimit}px`; // was 400px
     
      if (window.scrollY > scrollLimit) {
 
-        SA(".noScale").forEach(el => {
-            const op = Math.abs(1 - (window.scrollY - scrollLimit) / 100);
-            el.style.opacity = `${op - 1.8}`;
-        });
+        let conv = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
 
-        const opad = Math.abs(1 - (window.scrollY - scrollLimit) / 100);
-        S(".scale").style.opacity = `${opad - 1.8}`;
+        SA(".noScale")[0].style.transform = `scale(${conv})`;
+        SA(".noScale")[0].style.transform = `opacity(${conv})`;
+
+
+
+        let up = 0;
+        for (var i = 0; i < 11; i++){
+            up += 50;
+            if (window.scrollY > scrollLimit + up){
+                let conv = convertRange(window.scrollY, {min: scrollLimit + up, max: end + up}, {min: 0, max: 1});
+                SA(".noScale")[i].style.transform = `scale(${conv}) translateY(-${conv * 10}px)`;
+                SA(".noScale")[i].style.opacity = `${conv}`;
+            } else {
+                SA(".noScale")[i].style.transform = `scale(${0}) translateY(-10px)`;
+                SA(".noScale")[i].style.opacity = `0`;
+            }
+        }
+/*
+        if (window.scrollY > scrollLimit + 100){
+            let conv = convertRange(window.scrollY, {min: scrollLimit + 100, max: end}, {min: 0, max: 1});
+            SA(".noScale")[1].style.transform = `scale(${conv})`;
+            SA(".noScale")[1].style.transform = `opacity(${conv})`;
+        } else {
+            SA(".noScale")[1].style.transform = `scale(${0})`;
+            SA(".noScale")[1].style.transform = `opacity(${0})`;
+        }
+*/
+
+       
+
+        
+       // let opa = Math.abs(window.scrollY / 100);
+       // opa -= 2.50;
+       // opa += 1;
+
+       // let calc = 0.5 + opa / 4;
+       
+        // S(".boldLarge").style.transform = `scale(${opa /2 })`;
+        
+      
+
+      /*  let opad = Math.abs(1 - (window.scrollY - scrollLimit) / 100);
+        let val = 1 - opad - 1.8;
+        S(".scale").style.opacity = `${val}`;
+
+        if (val > 1){
+            console.log("Descrease");
+        }*/
         S(".aboutWrapper").style.opacity = `1`;
+
+
+
         // S(".aboutWrapper").style.marginTop = `${Math.abs(filipOffset)}px`;
     }
 
@@ -271,13 +336,13 @@ if (!hasDisappeared){
     }
 */
 
-
+/*
     if (window.scrollY > 600) {
         S(".scale").style.marginTop = `${4 * fraction * distance.xDist}px`;
         S(".scale").style.marginLeft = (-100 * fraction) + "px";
         S(".scale").style.transform = `scale(${fraction + 1})`;
         S(".scale").style.opacity = `${1 - fraction}`;
-    }
+    }*/
 
     /*S(".aboutWrapper").animate([
         { transform: 'scale(0.0)', opacity: "0.0" },
@@ -435,7 +500,7 @@ scrollEventThrottle((scrollPos, previousScrollPos) => {
     // S(".scale").style.setProperty('--percentage', `${scrolled * 100 * 20}%`);
 
     let fraction = (scrolled * 100 * 20) / 100;
-    console.clear();
+    // console.clear();
    // console.log(`Fraction of transform ${fraction} ${distance.xDist} ${fraction * distance.xDist}`);
 
    // if (fraction < 1 && fraction * distance.yDist > -500) {
@@ -464,15 +529,15 @@ scrollEventThrottle((scrollPos, previousScrollPos) => {
            // S(".scale").style.marginTop = `${fraction * distance.xDist}px`;
        // }
 
-        console.clear();
+      //  console.clear();
       //  console.log("myOffset(S(.scale)).left: " + myOffset(S(".scale")).left + " HALF:" + half + "");
-console.log(fraction);
+//console.log(fraction);
        /* S(".scale").style.marginLeft = (-100 * fraction) + "px";
 
         S(".scale").style.transform = `scale(${fraction + 1})`;
         S(".scale").style.opacity = `${1 - fraction}`;
 */
-        console.log(`scale(2 * ${fraction} + 1)`);
+       // console.log(`scale(2 * ${fraction} + 1)`);
 
 //if (myOffset(S(".scale")).left > half){
     //const amount = half - Math.abs(half - myOffset(S(".scale")).left);
