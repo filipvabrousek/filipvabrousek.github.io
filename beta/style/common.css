@@ -71,7 +71,7 @@
 	border: none;
 	background: none !important;
 	font-size: 3em;
-	margin-left: 90vw;
+	
 	display: none;
 }
 
@@ -588,7 +588,7 @@ img {
     }
     
     .tar {
-        font-size: 2em;
+        
         padding: 0.5em;
         margin-bottom: 3em;
         margin-top: 0;
@@ -744,17 +744,14 @@ li {
 }
 
 
-
-
-
 footer {
 	text-align: center;
 	padding-top: 10em;
 	padding-bottom: 10em;
 	color: white;
 	font-weight: bold;
+	font-size: 1em;
 }
-
 
 
 .footer-t, .footer-em {
@@ -771,7 +768,6 @@ color: black;
 }
 
 .footer-t {
-	font-size: 2em;
 	font-weight: bold;
 }
 

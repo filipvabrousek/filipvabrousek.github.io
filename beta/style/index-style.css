@@ -4,6 +4,43 @@
     
 }
 
+.leftIcon {
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .leftAppWrapper{
+margin-left: 1em;
+  }
+
+.stores {
+  display: flex;
+  flex-direction: row;
+}
+
+.appDesc {
+    color: white;
+}
+
+.stores img {
+  width: 70%;
+}
+
+.clear {
+    border: none;
+}
+
+
+#designTop336 {
+  margin-top: 447px;
+}
+
+.leftIcon h2 {
+    color: white;
+}
+
 .indexFooter .footer-t {
     color: white;
 }
@@ -16,6 +53,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 83px;
+    margin-top: 200px;
 }
 
 .boldLarge p {
@@ -23,7 +61,11 @@
 }
 
 .noScale {
-  color: white;
+  /*color: white;*/
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+ -webkit-text-fill-color: white;
+ font-size: 2.5rem;
 }
 
 body {
@@ -31,11 +73,15 @@ body {
     background: #abe3ff;
     background: #58b6e7;
     background: #5fa4c8;
+    background: #ecf0f1;
+    background: #4894ae;
 }
 
+
+/*
 .boldLarge {
-  margin-top: 200px;
-}
+  margin-top: 300px;
+}*/
 
 .appsWrapper {
   margin-top: 400px;
@@ -51,7 +97,6 @@ body {
 .sidesImages {
     display: flex;
     flex-direction: column;
-    width: 80%;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -287,7 +332,7 @@ border-radius: 1em;
 }
 
 .boldLarge {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
@@ -327,6 +372,7 @@ border-radius: 1em;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 402px;
 }
 
 .smp {
@@ -389,6 +435,7 @@ border-radius: 1em;
   /* color: #abe3ff;*/
 
   color: #5fa4c8;
+  color: #4894ae
 
 }
 
@@ -399,6 +446,8 @@ border-radius: 1em;
 
 @media (max-device-width: 415px) {
 
+
+   
 
     .floatContent .filipName {
         font-size: 7rem;
@@ -509,6 +558,18 @@ border-radius: 1em;
     }*/
 
 @media (max-width: 70em) {
+
+    .leftIcon {
+        
+        flex-direction: column;
+    }
+
+    #designTop336 {
+        margin-top: 338px;
+    }
+   
+   
+
 .aboutWrapper {
     position: absolute;
     top: 600px;
@@ -613,11 +674,11 @@ footer {
 
 .desc {
     font-size: 1em;
+    text-align: center;
 }
 
 
-h3,
-.desc {
+h3 {
     text-align: center;
 }
 
@@ -703,8 +764,29 @@ h3 {
 
 @media (max-device-width: 415px) {
 
+    #designTop336 {
+        margin-top: 948px;
+    }
+
+
+
+.leftIcon h2 {
+font-size: 2em;
+text-align: center;
+margin-top:1em
+}
+
+    .appDesc {
+        font-size: 1em;
+        padding: 1em;
+       
+    }
+
 /*141239 19/07/2022 Done*/
 
+.leftIcon {
+    width: 100%;
+}
     .aboutWrapper {
         width: 90%;
     margin-left: 5%;
@@ -733,13 +815,14 @@ h3 {
     }
 
     .desc {
-        font-size: 1.9em;
+        font-size: 1.2em;
         margin-bottom: 0.8em;
+        text-align: center;
 
     }
 
     .app-title {
-        font-size: 4em;
+        font-size: 2em;
 
     }
 
