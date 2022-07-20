@@ -258,7 +258,7 @@ function moveScaleOnScroll(){
 
 let fNameOpacity = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
 
-if (fNameOpacity > 0) {
+if (fNameOpacity > 0 && window.scrollY > 0) {
     S(".floatContent").style.opacity = 1 - (fNameOpacity);
 }
 
