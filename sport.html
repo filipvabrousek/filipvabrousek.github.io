@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="stylesheet" href="style/sportStyle.css"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -39,17 +41,19 @@
                 <button class="btn-nav" id="close">×</button>
               <!--  <a class="btn-nav" href="index.html">Home</a>-->
                 <a class="btn-nav" href="index.html">Work</a>
-                <a class="btn-nav" href="design.html">Design</a>
+               <!--- <a class="btn-nav" href="design.html">Design</a> --->
 				<a class="btn-nav" href="sport.html">Sport</a>
-                <a class="btn-nav" href="about.html">About</a>
+                <!--- <a class="btn-nav" href="about.html">About</a> --->
 				
+
+                <!--224513-->
             </div>
 
         </div>
     </section>
     
     
-        <h1 class="about fade hidden">Sport</h1>
+        <h1 class="about fade hidden sportTitle">Sport</h1>
         
     <!--- 1/9/2015 - 7:48 --->
     <!----july 2016 iOS apps---->
@@ -80,28 +84,35 @@
             <p class="dist">3K</p>
             <p class="time">8:55</p>
           </div>
-</section>
 
-
-
-<section class="pb fade hidden sides">
 
 		<div class="pb">
 		  <p class="dist">5K</p>
 		  <p class="time">15:26</p>
 		</div>
+
 		<div class="pb">
 		  <p class="dist">10K</p>
 		  <p class="time">32:57</p>
 		</div>
+
 		<div class="pb">
 		  <p class="dist">21.1K</p>
 		  <p class="time">1:13:47</p>
 		</div>
+
+        
 		
 		
 		
 	</section>
+
+    <section class="pb fade hidden sides">
+        <div class="pb">
+        <p class="dist">Climbing</p>
+        <p class="time">8- UIAA</p>
+    </div>
+    </section>
 	  
 	 <ul class="pad fade hidden">
 	 <li><b>1st</b> place Moravian-Silesian Championships 5000m 2018 (Juniors)</li>
@@ -112,7 +123,6 @@
 	 <li><b>1st</b> place Běhej Lesy Lednice and Bílá 2018 </li>
 	 <li><b>1st</b> place Běhej Lesy Lednice and Karlštejn 2019 </li>
 	 <li><b>1st</b> place Swimrun Slapy </li>
-	 <li><b>8- UIAA</b> my highest grade climbed indoors in Vertikon</li>
 	</ul>
 	
 	
@@ -132,6 +142,10 @@
 
 	
 
+
+
+
+        <link rel="stylehseet" href="images.css"/>
 <!--
     <section class="block">
 
@@ -236,290 +250,14 @@
 	
 	
 	
-	<style>
-	
-		.two {
-			padding-left: 0.8em;
-		}
-		
-		.blue {
-			color: blue;
-		}
-		
-		.firstTitle {
-			font-size: 2em;
-			text-align: center;
-			color: black;
-			padding-top: 1em;
-		}
-		
-		.below {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			
-			grid-gap: 1em;
-		}
-		
-		
-		.backImage {
-			width: auto;
-			height: 30vw;
-			background-position: center;
-			background-size: cover;
-			
-		}
-		
-		
-		#backImage-01 {
-			background-image: url(images/antarctica.JPG);
-		}
-		
-		#backImage-02 {
-			background-image: url(images/iceland.JPG);
-		}
-		
-		#backImage-03 {
-			background-image: url(images/night-run.jpg);
-		}
-		
-		#backImage-04 {
-			background-image: url(images/CapeTown.JPG);
-		}
-		
-		#backImage-05 {
-			background-image: url(images/swimrun.jpg);
-		}
-		
-		#backImage-06 {
-			background-image: url(images/dubrovnik.jpg);
-		}
-		
-		#backImage-07 {
-			background-image: url(images/cruise.jpg);
-		}
-		
-		#backImage-08 {
-			background-image: url(images/madeira.jpg);
-		}
-		
-		#backImage-09 {
-			background-image: url(images/5K-race.JPG);
-		}
-		
-		
-		.pb {
-			padding: 1em;
-			font-size: 1.33rem;
-			
-		}
-		
-		.pb p {
-		text-align: center;
-		}
-		
-		.pb .time {
-			font-weight: bold;
-		}
-		
-		
-		.sides {
-            display: flex;
-            justify-content: center;
-			/*display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			justify-items: center; */ 
-			
-			
-		}
-		
-		.sides div {
-			
-			/*border: 4px solid #3498Db;*/
-			width: 6em;
-			margin-bottom: 1em;
-            border-radius: 0.5em;
-			margin: 1em;
-			
-		}
-		
-		
-		
-		
-		.centerText {
-			text-align: center;
-		}
-		
-		
-		@media only screen and (max-width: 70em){
-			.below {
-				grid-template-columns: 1fr;
-			}
-			
-			.backImage {
-				height: 70vw;
-			}
-		}
-			
-			@media only screen and (max-width: 50em){
-				.sides {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-			
-		@media only screen and (max-device-width: 415px){
-			.sides div {
-			font-size: 2em;
-			}
-			
-			.sides {
-			grid-template-columns: 1fr 1fr;
-		}
-			
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-	</style>
-
-    <script>
-        // alert(Number(window.innerWidth) / 16);
-
-
-        function S(el) {
-            return document.querySelector(el);
-        }
-
-        function SA(el) {
-            return document.querySelectorAll(el);
-        }
-
-// I do not wanna update this each year :D
-		S(".footer-em").innerHTML = new Date().getFullYear();
-
-        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/petrvabrousek/?hl=en", "_top"));
-        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/PetrVabrousek/", "_top"));
-
-        /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
-        S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
-        S("#edit").addEventListener("click", () => window.open("#season-en.html", "_top"));
-        S("#signout").addEventListener("click", () => window.open("#support-en.html", "_top"));
-*/
 
 
 
-        var isHidden = true;
-        S("#close").addEventListener("click", () => {
-            if (isHidden == true) {
-                isHidden = false
-            } else {
-                isHidden = true;
-            }
-
-
-            if (isHidden == true) {
-
-                S("#left").style.display = "none";
-                S("#navback").style.display = "none";
-                S("#h").innerHTML = "&#9776;";
-                /* S("#hide").style.position = "absolute";
-                 S("#hide").marginTop = "20px";*/
-               // S(".block").style.display = "block";
-               // S(".block-img").style.display = "block";
-
-            } else {
-                /* S("#hide").style.position = "absolute";*/
-                /*S("#hide").marginTop = "3em";*/
-                S("#left").style.display = "block";
-                S("#navback").style.display = "block";
-                S("#h").innerHTML = "&#10006;";
-               // S(".block").style.display = "none";
-               // S(".block-img").style.display = "none";
-            }
-        });
-
-
-
-        S("#h").addEventListener("click", () => {
-
-            if (isHidden == true) {
-                isHidden = false
-            } else {
-                isHidden = true;
-            }
-
-            if (isHidden == true) {
-                S("#left").style.display = "none";
-                S("#left").style.visibility = "hidden";
-                S("#navback").style.display = "none";
-                S(".block").style.display = "block";
-                S(".block-img").style.display = "block";
-                S("#h").innerHTML = "&#9776;";
-                S("#h").marginTop = "20px"; // do not set position to absolute
-            } else {
-               S("#left").style.display = "flex"; 
-                S("#navback").style.display = "block";
-                S("#h").innerHTML = "&#10006;";
-                S(".block").style.display = "none";
-                S(".block-img").style.display = "none";
-                S("#h").marginTop = "3em";
-                S("#h").marginRight = "2em";
-
-            }
-        });
-
-        
-        /* if (window.matchMedia("(max-width: 70.5em)")){
-           S("#h").style.display = "block";
-     
-        };
-        
-         if (window.matchMedia("(min-width: 71em)")){
-           S("#h").style.display = "none";
-     
-        };
-        */
-
-
-        /*
-        function resize() {
-            var w = window.innerWidth / 16;
-            if (w < 70) {
-                SA(".spacer").forEach((el, i) => {
-                    el.style.display = "none";
-                });
-            } else {
-                SA(".spacer").forEach((el, i) => {
-                    el.style.display = "block";
-                });
-            }
-        }
-
-        window.addEventListener("resize", resize);
-            
-            
-        if (window.matchMedia("(min-width: 70.5em)")){
-            SA(".spacer").forEach((el, i) => {
-            el.style.display = "block";
-        });
-        }
-            
-            
-        if (window.matchMedia("(max-width: 70em)")){
-            SA(".spacer").forEach((el, i) => {
-            el.style.display = "none";
-        });
-        }
-
-        */
-
-    </script>
-
+<script src="js/selectors.js"></script>
+<script src="js/navigation.js"></script>
 <script src="js/animation.js"></script>
+<script src="js/footer.js"></script>
 
+<link rel="stylesheet" href="style/images.css">
 
 </body>
