@@ -1,4 +1,6 @@
-
+.dist, .time {
+	font-size: 1em;
+}
     .sportTitle {
         margin-left: 0.4em;
     }
