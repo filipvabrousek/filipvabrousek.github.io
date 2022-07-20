@@ -1,263 +1,784 @@
+.noUnderline {
+    text-decoration: none;
+    font-weight: bold;
+    color: #053c59;
+}
 
-   /*   #left a {
-            
-            transition: 1.4s;
-            
-            border-radius: 0px;
-             position: relative;
-           
-        }
-        
-                
-        #left a:before {
-            content: attr(data-hover);
-        }
-        
-        #left a:after {
-        content: attr(data-hover);
-            position: absolute;
-            color: aquamarine;
-            left: 0;
-            width: 0;
-            transition: width 1s;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        
-        #left a:hover:after {
-            width: 100%;
-        }*/
-        /*
-         #left a {
-            color: #3498db;
-            transition: 1.4s;
-            
-            border-radius: 0px;
-             position: relative;
-           
-        }
-        
-        
-        #left a:before {
-            content: attr(data-hover);
-        }
-        #left a:after {
-        content: attr(data-hover);
-            position: absolute;
-            color: aquamarine;
-            left: 0;
-            width: 0;
-            transition: width 1s;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        
-        #left a:after:after {
-            width: 100%;
-        }
-        */
-       
-        
-        #main button {
-            width: 10em;
-            margin-left: calc(50vw - 5em);
-        }
-        
-        #main {
-            padding-top: 7em;
-            padding-bottom: 7em;
-        }
-        
-        
-        @media (max-device-width: 415px) {
-            #main button {
-                margin-top: 8em;
-            }
-            
-             .arrow {
-        font-size: 3em;
+.indexFooter {
+    margin-top: 8em;
+	padding-top: 0em;
+    
+}
+
+.smallCorner {
+    border-radius: 14px;
+}
+
+.storess {
+    display: flex;
+    justify-content: start;
+}
+
+.leftIcon {
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6em;
+  }
+
+  .leftAppWrapper{
+margin-left: 5em;
+width:600px;
+  }
+
+.stores {
+  display: flex;
+  flex-direction: row;
+}
+
+.appDesc {
+    color: white;
+}
+
+.stores img {
+  width: 70%;
+}
+
+.clear {
+    border: none;
+}
+
+
+#designTop336 {
+  margin-top: 447px;
+}
+
+.leftIcon h2 {
+    color: white;
+}
+
+.indexFooter .footer-t {
+    color: white;
+}
+
+.indexFooter .footer-em {
+    color: white;
+}
+
+.boldLarge {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 83px;
+    margin-top: 200px;
+}
+
+.boldLarge p {
+    margin: 0.1em;
+}
+
+.noScale {
+  /*color: white;*/
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+ -webkit-text-fill-color: white;
+ font-size: 2.5rem;
+}
+
+body {
+    background: #2f5bdc;
+    background: #abe3ff;
+    background: #58b6e7;
+    background: #5fa4c8;
+    background: #ecf0f1;
+    background: #4894ae;
+}
+
+
+/*
+.boldLarge {
+  margin-top: 300px;
+}*/
+
+.appsWrapper {
+  margin-top: 400px;
+}
+
+.modernSection {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 14px;
     }
-   
-        
-         
-           
+
+.sidesImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#design #makeBig {
+    transform: scale(0);
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+
+
+/*  typing 3.5s steps(40, end), */
+
+@keyframes typing { /* 20:34:00 */
+    from {width: 0}
+    to {width: 100%}
+}
+/*
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}*/
+
+.designBtn {
+    width: 6em;
+    margin-top: 6em;
+    background-color: white !important;
+    color: #3498DB;
+}
+        #onTop {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            align-items: center;
+            
         }
-        
-        /*--------DIVA--------*/
+
+        #onTop img {
+            grid-area: 1/1;
+            width: 600px;
+        }
+
+        #onTop h2 {
+            grid-area: 1/1;
+            text-align: center;
+        }
+
+        #onTop button {
+            grid-area: 1/1;
+            
+        }
+
+        .clear {
+                border: none;
+            }
+
+#apps {
+    position: absolute;
+    background: #cee9f8;
+   /* height: 3058px;*/
+    border-radius: 60px;
+    z-index: -1;
+    width: 100%;
+}
 
 
+
+
+
+/*
+#design {
+    background: #ffffff;
+}
+*/
+
+.square {
+
+   
+
+    grid-area: 1/1;
+    z-index: -1;
+    width: 80%;
+    opacity: 80%;
+border-radius: 1em;
+
+    /* width: initial;*/
+    /* 232155*/
+}
+
+.dots {
+    width: 200px;
+    margin-left: 300px;
+    filter: none;
+    opacity: 0.25;
+}
+
+.floatingSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*border: 3px solid blue;*/
+    margin-left: 10%;
+   /* width: 500px;*/
+}
+
+.sm-a {
+    font-size: 1.33rem;
+    color: #ffffff;
+    margin-left: 220px;
+    margin-bottom: -20px;
+    width: 143px;
+    height: 50px;
+}
+
+.floatingSection .floatContent {
+    grid-area: 1/1;
+    margin-top: 50px;
+}
+
+.floatContent .filipName {
+    font-size: 10rem;
+    color: rgb(78, 149, 215);
+    margin-left: 200px;
+    font-family: 'Poppins';
+    font-style: italic;
+    -webkit-text-stroke: 2px rgb(11, 122, 182);
+    color: white;
+    transform: scale(0.0);
+    opacity: 0.0;
+}
+
+.dots {
+    transform: scale(0.0);
+    opacity: 0.0;
+}
+
+.floatDescription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*border: 1px solid orange;*/
+    width: 500px; /*CUPLRIT 1*/ 
+
+    /*floatDescription + floatingSection*/
+    margin-left: 30px;
+}
+
+/*floatDescription BY ITSELF IS THE CULPRIT + .appWrapper*/
+
+.floatDescription img {
+    grid-area: 1/1;
+}
+
+.floatDescription p {
+    grid-area: 1/1;
+}
+
+.floatingSectionWrapper {
+    display: flex;
+    flex-direction: row;
+    /* 225815*/
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.floatingSectionWrapper p {
+    /*border: 2px solid orange;*/
+    margin-right: 10%;
+    font-weight: bold;
+    margin-left: 64px;
+    width: 313px;
+    height: 200px;
+}
+
+.motionWrapper {
+    position: sticky;
+    top: 0;
+
+}
+
+/* #apps {
+             position: absolute;
+             background: #3498db;
+             width: 100%;
+             height: 900px;
+             z-index: -1;
+         } */
+
+
+.outerW {
+    position: relative;
+}
+
+#images {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.blur {
+    position: absolute;
+    top: 0;
+    width: 100%;
+   /* height: 100em;*/
+    /*height: 100%;*/
+    /*background: white;*/
+
+    backdrop-filter: blur(2px);
+    opacity: 0.0;
+    pointer-events: none;
+}
+
+.aboutWrapper {
+    position: absolute;
+    top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+    width: 60%;
+    margin-left: 20%;
+    /*transform: scale(0);*/
+    opacity: 0.0;
+}
+
+.boldLarge {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+
+.sh {
+    margin-top: 9rem;
+}
+
+.aboutMe {
+    padding: 0.5em;
+    background: #0a7ab6 !important;
+    border: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 300px;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    width: 8em;
+    z-index: 999;
+}
+
+.closeModal {
+    border: none;
+    padding: 1em;
+    background: none;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: auto;
+}
+
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 402px;
+}
+
+.smp {
+    width: 30px;
+    height: 30px;
+}
+
+.pad {
+    margin: 1em;
+    margin-bottom: 0.5em;
+}
+
+
+.adobeRow {
+    display: flex;
+    justify-content: center;
+}
+
+
+.whiteNav {
+    color: white;
+}
+
+
+
+
+
+
+.adobeRow>* {
+    margin: 0.5em;
+}
+
+.graphicTitle {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 3em;
+    color: white;
+}
+
+#main button {
+    width: 10em;
+    margin-left: calc(50vw - 5em);
+}
+
+#main {
+    padding-top: 7em;
+    
+}
+
+.designTitle {
+    font-size: 5rem;
+    color:white;
+    
+    /*-webkit-text-stroke: 3px #508bc9;*/
+}
+
+.whiteColor {
+    /*color: white;*/
+
+  /* color: #abe3ff;*/
+
+  color: #5fa4c8;
+  color: #4894ae
+
+}
+
+.adobeIcon {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-device-width: 415px) {
+
+
+   
+
+
+    .sm-a {
+        margin-left: 30px;
+    }
+
+    .floatContent .filipName {
+        font-size: 7rem;
+        margin-left: 0px;
+    }
+
+    .floatDescription p {
+        margin-left: 0px;
+    }
+    
+    /*
+    onTopFloat => FirstPage => AppsWrapper
+    FloatingSectionWrapper
+
+    S(".appsWrapper").style.display = "none"
+     S(".appsWrapper").style.display = "block"
+
+    S(".floatingSectionWrapper").style.display = "none";
+    S(".floatingSectionWrapper").style.display = "block";
+
+    */
+
+    .sm-a{
+      /*  font-size: 3rem; */
+       /* width: auto;*/
+    }
+
+    .boldLarge {
+        margin-top: 250px;
+    }
+
+    .appsWrapper {
+        margin-top: 800px;
+    }
+    
+    .floatingSectionWrapper p {
+       /* font-size: 3rem; */
+       /* width: 500px;*/
+    }
+
+    .boldLarge {
+        display: flex;
+        flex-wrap: wrap;
+       /* margin-left: 179px; */
+    }
+
+    .smallCorner {
+        border-radius: 8px;
+    }
+
+
+
+    .app-img {
+        border-radius: 20px;
+    }
+
+    .adobeIcon {
+        width: 60px;
+        height: 60px;
+    }
+
+    #main button {
+        margin-top: 8em;
+    }
+
+    .arrow {
+      /*  font-size: 3em; */
+    }
+
+}
+
+/*--------DIVA--------*/
 
 
 .side {
-            display: grid;
-           grid-template-columns: 1fr 1fr;
-    width: 80vw;
-    margin-left: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 3em;
-        }
+}
+
+.app h3 {
+    height: 1.2em;
+}
+
+.app p {
+    height: 1.5em;
+}
+
+.app {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+.myDescription {
+    color: rgb(11 72 93);
+}
+/*
+@media (max-width: 1471px) {
+.filipName {
+    position: absolute;
+    margin-bottom: 3em;
+    border: 2px solid orange;
+}
+}
+
+@media (max-width: 1134px) {
+    .filipName {
+        position: absolute;
+        margin-bottom: -8em;
+        border: 2px solid rgb(40, 175, 146);
+    }
+    }*/
+
+@media (max-width: 70em) {
+
+
+.storess {
+    display: flex;
+    justify-content: center;
+}
+
+.storess img {
+    width: 250px
+}
+
+    .leftIcon h2 {
+        text-align: center;
+    }
+
+    .leftAppWrapper{
+        margin-left: 0em;
+        width: auto;
+          }
+
+    .leftIcon {
         
-        .app h3 {
-                height: 1.2em;
-            }
-        
-        .app p {
-            height: 1.5em;
-        }
-        
-        .app {
-            margin: 0;
-            padding: 0;
-          /* width: 30vw;*/
-        }
-        
-        
-        @media (max-width: 70em){
-            .side {
-                grid-template-columns: 1fr;
-                  margin-bottom: 0em;
-            }
-            
-             .app {
-            margin-bottom: 3em;
-            width: 100vw;        
-        }
-        }
-        
-        .down {
-            text-decoration: none;
-            font-size: 1em;
-            padding: 1em;
-            color: #3498db;
-            font-weight: bold;
-            margin-top: 3em;
-            border-radius: 0.5em;
-            background: none;
-            border: 2px solid #3498Db;
-            margin-left: auto;
-        }
-        
-        
-        .down:focus {
-            outline: none;
-        }
-        
-        .tar-outline {
-            background: white !important;
-            color: #3498db !important;
-            border:4px solid #3498db !important;
-        }
-        
-        .arrow {
-            border: none;
-            font-weight: bold;
-            font-size: 2em;
-          
-        }
-        
-        footer {
-         /*  padding-bottom: 0em;  */
-            margin-top: 10em;
-        }
+        flex-direction: column;
+    }
+
+    #designTop336 {
+        margin-top: 338px;
+    }
    
- .app-img {
- 	width: 12em;
-     border-radius: 45px;
-     border: 1px solid gray;
- }
+   
+
+.aboutWrapper {
+    position: absolute;
+    top: 600px;
+}
+   
+
+    .sh {
+        margin-top: 4rem;
+    }
     
-    .bottom-btn {
-        margin-bottom: 8em !important;
+    .side {
+        grid-template-columns: 1fr;
+        margin-bottom: 0em;
     }
 
- .app {
- 	padding-bottom: 3em;
-      text-align: center;
- }
-    
-    .app-title {
-        font-size: 3em;
+    .app {
+        margin-bottom: 3em;
     }
 
- 
-    .appstore {
-        width: 10em;
-        margin: 1em;
-        object-fit: contain;
+    .aboutWrapper {
+        width: 85%;
+    margin-left: 7.5%;
     }
+}
 
-    .macinformer {
-        height: 3.2rem;
-    }
+.down {
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em;
+    color: #3498db;
+    font-weight: bold;
+    border-radius: 0.5em;
+    background: none;
+    border: 2px solid #3498Db;
+    /* margin-left: auto;*/
+}
 
-    .macinformerSection{
-        display: flex;
-         justify-content: center; 
-         align-items: center;
-    }
-    
-        
-        .desc {
-            font-size: 1em;
-        }
-     
-    
-    h3, .desc {
-        text-align: center;
-    }
 
-    h3 {
-        font-size: 2em;
-    }
-    .link {
-        display: block;
-        font-weight: bold;
-        text-decoration: none;
-        color: #3498db;
-        text-align: center;
-        padding: 1em;
-    }
-    
-    
-    .item {
-        text-align: center;
-        font-weight: bold;
-    }
-    
-    .about {
-        margin-top: 0.5em;
-        margin-bottom: 1em;
-    }
-    
-    .about:nth-child(1){
-        margin-top: 0;
-    }
-    
-    h3 {
-        margin-top: 0.5em;
-    }
-    
-      .app-title-web {
-        margin-top: 1.5em;
-    }
-    
-    .bottom-about {
+.down:focus {
+    outline: none;
+}
+
+.tar-outline {
+    background: white !important;
+    color: #3498db !important;
+    border: 4px solid #3498db !important;
+}
+
+.arrow {
+    border: none;
+    font-weight: bold;
+    font-size: 2em;
+
+}
+
+footer {
+    /*  padding-bottom: 0em;  */
+    margin-top: 10em;
+}
+
+.app-img {
+    width: 12em;
+    border-radius: 45px;
+    border: 1px solid gray;
+}
+
+.bottom-btn {
+    margin-bottom: 8em !important;
+}
+
+.app {
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+.app-title {
+    font-size: 3em;
+    color: white;
+}
+
+.desc {
+    color: white;
+}
+
+
+.appstore {
+    width: 10em;
+    margin: 1em;
+    object-fit: contain;
+}
+
+.macinformer {
+    height: 3.2rem;
+}
+
+.macinformerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.desc {
+    font-size: 1em;
+    text-align: center;
+}
+
+
+h3 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.link {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3498db;
+    text-align: center;
+    padding: 1em;
+}
+
+
+.item {
+    text-align: center;
+    font-weight: bold;
+}
+
+.about {
+    margin-top: 6rem;
+    /*margin-bottom: 1em;*/
+   /* margin-left: 2rem; */
+   text-align: center;
+}
+
+h3 {
+    margin-top: 0.5em;
+}
+
+.app-title-web {
+    margin-top: 1.5em;
+}
+
+.bottom-about {
     margin-top: 2em;
-    }
-    
-    
-    .bottom-about-web {
+}
+
+
+.bottom-about-web {
     margin-top: 1em;
-    }
-    
-    
-    
-    .smaller {
-        margin-top: 2em;
-        margin-bottom: 0.5em;
-    }
-    
-         
-    /*
+}
+
+
+
+.smaller {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+
+/*
         RANKING FUNCTIONS
         
         
@@ -265,66 +786,156 @@
         ENTILE
         
         RANK()*/
-    
-    @media (max-device-width: 415px)  {
-        .app-img {
-            width: 20em;
-        }
-        
-        .item {
-            font-size: 3em;
-        }
-        
-        .appstore {
-            width: 20em;
-            margin-left: 50vw - 10em;
-        }
-        
-         .down {
-            font-size: 3em;
-             margin-top: 3em;
-    }
-        
-       
-    }
-    
-    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
-        .down {
-            margin-top: 8em;
-        }
-}
-    
 
-    @media (max-width: 70em){
-        .down {
-            margin-top: 10em;
-        }
-        
-        .side {
-            margin-left: 0;
-        }
-        
-        
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    .down {
+        margin-top: 8em;
     }
-        
-         @media (max-device-width: 415px){
+}
+
+
+@media (max-width: 70em) {
+    .down {
+        /* margin-top: 10em;*/
+    }
+
+    .side {
+        margin-left: 0;
+    }
+
+    .appDesc {
+        text-align: center;
+    }
+
+}
+
+@media (max-device-width: 415px) {
+
+    #designTop336 {
+        margin-top: 1036px;
+    }
+
+
+    .boldLarge {
+        margin-top: 157px;
+    }
+
+    .tar {
+        font-size: 1.1em;
+    }
+
+
+.leftIcon h2 {
+font-size: 2em;
+text-align: center;
+margin-top:1em
+}
+
+    .appDesc {
+        font-size: 1em;
+        padding: 1em;
        
-        
-       .desc {
-          
-            font-size: 3em;
-        }
-             
-             .app-title {
-                 font-size: 4em;
-            
-             }
-             
-             .app .desc {
-                 margin-bottom: 0.5em;
-             }
-             
-             .app {
-                 margin-bottom: 8em;
-             }
     }
+
+/*141239 19/07/2022 Done*/
+
+.leftIcon {
+    width: 100%;
+}
+    .aboutWrapper {
+        width: 90%;
+    margin-left: 5%;
+    }
+
+    #apps {
+       /* height: 6058px;*/
+    }
+
+    .app-img {
+        width: 10em;
+        border-radius: 32px;
+    }
+
+    .item {
+        font-size: 3em;
+    }
+
+    .appstore {
+        width: 16em;
+        margin-left: 50vw - 10em;
+    }
+
+    .down {
+        font-size: 3em;
+        margin-top: 3em;
+    }
+
+    .desc {
+        font-size: 1.2em;
+        margin-bottom: 0.8em;
+        text-align: center;
+
+    }
+
+    .app-title {
+        font-size: 2em;
+
+    }
+
+    .app .desc {
+        margin-bottom: 0.5em;
+    }
+
+    .app {
+        margin-bottom: 8em;
+    }
+
+    .aboutMe {
+        font-size: 1.8em;
+    }
+}
+
+
+
+
+
+/*
+.appsWrapper {
+    display: none !important; LIKELY NO PROBLEM 
+}*/
+/*
+.floatDescription {
+    display: none !important;
+}*/
+
+
+.appsWrapper {
+    /*DOES NOT OFFSET PAGE IS OKAY !!! */
+   /* display: none !important; */
+}
+
+
+
+.floatingSectionWrapper {
+   /* display: none !important; */
+}
+
+/*.floatingSection {
+  width: 500px; 
+} 
+
+.floatContent {
+    display: none;
+}*/
+
+
+
+
+/*appsWrapper + .floatingSection {
+    width: 500px;
+    indexStyle.css 160
+} is BAD*/
+
+
