@@ -3,14 +3,23 @@
 <!---22/1/2019 23:00 end :) -->
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip Vabrousek - Work</title>
     <meta name="referrer" content="no-referrer" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/index-style.css">
+    <!--<link rel="stylesheet" href="style/about-style.css">-->
     <link rel="stylesheet" href="style/anim.css">
     <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-3"></script>
@@ -18,15 +27,19 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-143592417-3');
 </script>
-
-
 </head>
 
 <body>
 
+
+
+
+  <div id="onTopFloat">
+  <section id="firstPage">
+
+    <!------NAVIGATION------->
     <section id="align">
         <div id="center-buttons">
             <div id="navback"></div>
@@ -34,62 +47,664 @@
 
             <div id="left">
                 <button class="btn-nav" id="close">×</button>
-              <!--  <a class="btn-nav" href="index.html">Home</a>-->
-                <a class="btn-nav" href="index.html">Work</a>
-                <a class="btn-nav" href="design.html">Design</a>
-				 <a class="btn-nav" href="sport.html">Sport</a>
-                <a class="btn-nav" href="about.html">About</a>
-				
+                <a class="btn-nav whiteNav" href="index.html">Work</a>
+				        <a class="btn-nav whiteNav" href="sport.html">Sport</a>
             </div>
         </div>
     </section>
-    
-    
-    <style>
-        
+  <!------END OF NAVIGATION------->
+
+
+  <!------INTRO SECTION------->
+<section class="floatingSectionWrapper">
+  <section class="floatingSection" id="main">
+
+    <img class="square prlx" value="6" style="display: none"
+      src="https://www.azocleantech.com/images/Article_Images/ImageForArticle_227_15820269818147731.png" />
+
+    <div class="floatContent prlx" value="3">
+      <h2 class="sm-a prlx" value="5">My name is</h2>
+      <h2 class="filipName prlx" value="6">Filip</h2>
+    </div>
+  </section>
+
+  <div class="floatDescription">
+    <!---<img class="dots prlx" value="4" src="images/dots.png" />--->
+    <p class="prlx myDescription" style="display: none" value="7">Developer and motion designer from the Czech Republic</p>
+  </div>
+
+  <div class="prlx smp" value="3"></div>
+</section>
+  <!------INTRO SECTION------->
+
+  <div class="blur">
+  </div>
+<!---
+  <div class="centered">
+    <button class="aboutMe" id="aboutButton">About me →</button>
+  </div>-->
+
+  
+
+
+  <!------ABOUT SECTION------->
+
+
+
+
+<div class="aboutWrapper">
+  <span id="age" style="display: none"></span>
+    <div class="centered sh">
    
-       
-    </style>
-   <!-- <div class="center-select">-->
+      <!--<p class="boldLarge pad fade hidden" id="cv">-->
         
         
-  <!--  </div>-->
-    
-      <section id="main">
-          <h1 class="maintitle hidden">I make apps that <span class="high">run</span>.</h1>
+        <!--<span class="noScale">I am a 22 year old developer who loves building
+      </span> <span class="scale">apps</span><span class="noScale">.
+      I also run and climb.</span></p>-->
+
+
+      <!--210721 Houdini.js in the browser-->
+
+      <div class="boldLarge pad">
+      <p class="noScale">I</p>
+      <p class="noScale">am</p>
+      <p class="noScale">a</p>
+      <p class="noScale">22</p>
+      <p class="noScale">year</p>
+      <p class="noScale">old</p>
+      <p class="noScale">developer</p>
+      <p class="noScale">who</p>
+      <p class="noScale">loves</p>
+      <p class="noScale" id="build">building</p>
+      <p class="noScale">apps.</p>
+   
+     
+
+
+
+      </div>
+
+      <style>
+.scale {
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+  background-size: 300% 100%;
+  background-position-x: calc(100% - var(--percentage));
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin-top: 7px;
+
+  color: rgb(11 108 173);
+}
+
+      </style>
+    <section id="images" style="display: none">
+      <img class="fade hidden" src="images/nymburk-2019.jpg">
+      <img class="fade hidden" src="images/dubrovnik-2016.jpg">
+      <img class="fade hidden" src="images/bratislava-2019.jpg">
+    </section>
+  
+  
+    <!---
+    <div class="centered pad">
+      <button class="aboutMe" id="workButton">My work →</button>
+    </div>
+  -->
+
+
+  </div>
+</div>
+
+<style>
+.appCentered {
+  display: flex;
+flex-direction: row;
+/*justify-content: center;*/
+/*justify-content: center; THIS IS THE CULPRIT*/
+  
+}
+
+.appMarginAuto {
+  width: 400px;
+  margin-left: calc(50% - 200px);
+}
+
+</style>
+
+
+<!---
+<div class="newAppsWrapper">
+        <img class="app-img hidden" src="images/relays-orig.png">
+        <h2>Relays</h2>
+</div>
+
+-->
+
+
+
+
+<!---
+<div class="appsWrapper">
+  <h1 class="about hidden designTitle whiteColor">Apps</h1>
+  <div class="centered sh">
+    <section class="side">
+     
+      <section class="app">
+        <img class="app-img hidden" src="images/relays-orig.png">
+        <h3 class="app-title hidden">Relays</h3>
+        <p class="desc hidden">World's first chat app written in SwiftUI</p>
+
+        <div class="macinformerSection">
+          <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
+            <img class="appstore hidden" src="images/download.png" />
+          </a>
+
+          <a class="hidden" href="https://play.google.com/store/apps/details?id=filip.relays">
+            <img class="appstore hidden" src="images/playStore.png" />
+          </a>
+
+        </div>
+      </section>
+
+
+      <section class="app">
+        <img class="app-img hidden" src="images/runny-orig.png">
+        <h3 class="app-title hidden">Runny</h3>
+        <p class="desc hidden">The most effective running app on the market</p>
+        <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908">
+          <img class="appstore hidden" src="images/download.png" /></a>
+      </section>
+    </section>
+  
+
+    <section class="side">
+
+
+
+      <section class="app hidden">
+        <img class="app-img hidden" src="images/sr-orig.png">
+        <h3 class="app-title hidden">Swimrun World</h3>
+        <p class="desc hidden">Find a swimrun partner for any race in the world!</p>
+        <a class="hidden" href="https://apps.apple.com/cz/app/swimrun-world/id1445475693">
+          <img class="appstore hidden" src="images/download.png" /></a>
+      </section>
+
+      <section class="app hidden">
+        <img class="app-img hidden clear" src="images/eveny-orig.png">
+        <h3 class="app-title hidden">Eveny</h3>
+        <p class="desc hidden">Stay on the top of your schedule!</p>
+        <p class="desc hidden">Featured on the <a class="hidden" target="blank"
+            href="https://apps.apple.com/story/id1531962992">AppStore</a> in "Widgets get an upgrade" story</p>
+
+
+        <img src="images/appstore-feature.png" class="appstore hidden">
+
+
+        <div class="macinformerSection">
+          <a class="hidden" href="https://macdownload.informer.com/eveny/">
+            <img id="macinformer" class="appstore" src="images/mac-informer.png" />
+          </a>
+
+        </div>
+
+      </section>
+    </section>
+
+  </div>
+
+</div>
+
+
+--->
+
+      </section>
+  </div>
+
+    <!--<a class="hidden" href="https://apps.apple.com/cz/app/eveny/id1492648115">
+          <img class="appstore hidden" src="images/download.png"/>
+      </a>-->
+      
+      <style>
+      /*desc: font.size: 1em remove */
+         
+          
+      </style>
+      
+
+
+
+<section id="designTop336" class="modernSection">
+
+
+<!------------------RELAYS----------------->
+  <div class="leftIcon">
+    <div class="sidesImages hidden">
+      <img src="images/relays-orig.png" class="app-img" />
+    </div>
+  
+    <div class="leftAppWrapper">
+  
+      <h2 class="hidden">Relays</h2>
+      <p class="appDesc hidden">World's first chat app written in SwiftUI. Find a partner for any relay race in the world.
+      </p>
+  
+      <div class="stores">
+        <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
+          <img class="appstore hidden" src="images/download.png" /></a>
+  
+        <a class="hidden" href="https://play.google.com/store/apps/details?id=filip.relays">
+          <img class="appstore hidden" src="images/playStore.png" /></a>
+      </div>
+    </div>
+  </div>
+
+  <!------------------/RELAYS----------------->
+
+
+
+<!------------------EVENY----------------->
+<div class="leftIcon">
+  <div class="sidesImages hidden">
+    <img src="images/eveny-orig.png" class="app-img" />
+  </div>
+
+  <div class="leftAppWrapper">
+
+    <h2 class="hidden">Eveny</h2>
+    <p class="appDesc hidden">Stay organised with odd/even week scheduling.
+      Featured on the <a class="noUnderline" href="https://apps.apple.com/story/id1531962992">AppStore</a> in "Widgets get an upgrade" story.
+    </p>
+
+    <div class="storess">
+      <a class="hidden" href="https://apps.apple.com/story/id1531962992">
+        <img class="appstore hidden" src="images/download.png" /></a>
+    </div>
+  </div>
+</div>
+<!------------------/EVENY----------------->
+
+
+<!------------------RUNNY----------------->
+<div class="leftIcon">
+  <div class="sidesImages hidden">
+    <img src="images/runny-orig.png" class="app-img" />
+  </div>
+
+  <div class="leftAppWrapper">
+
+    <h2 class="hidden">Runny</h2>
+    <p class="appDesc hidden">Run effectively with effective pace and cadence measuring.
+    </p>
+
+    <div class="storess">
+      <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908">
+        <img class="appstore hidden" src="images/download.png" /></a>
+
+     
+    </div>
+  </div>
+</div>
+<!------------------/RUNNY----------------->
+
+
+<!------------------/SWIMRUN WORLD----------------->
+<div class="leftIcon">
+  <div class="sidesImages hidden">
+    <img src="images/sr-orig.png" class="app-img" />
+  </div>
+
+  <div class="leftAppWrapper">
+
+    <h2 class="hidden">Swimrun World</h2>
+    <p class="appDesc hidden">Find a swimrun partner
+    </p>
+
+    <div class="storess">
+      <a class="hidden" href="https://apps.apple.com/cz/app/swimrun-world/id144547569">
+        <img class="appstore hidden" src="images/download.png" /></a>
+
+     
+    </div>
+  </div>
+</div>
+<!------------------/SWIMRUNWORLD----------------->
+
+
+</section>
+
+
+
+
+<section class="modernSection">
+
+
+
+  <h1 class="about hidden designTitle">Design</h1>
+
+
+
+  <!--
+  <div id="onTop" style="display: none">
+      <img src="images/designClickImage.png" id="makeSmaller">
+      <button class="aboutMe designBtn" id="designButton">Show</button>
+  </div>
+
+  <div id="makeBig">
+
+  <p id="test">A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process or the result of that plan or specification in the form of a prototype, product, or process. The verb to design expresses the process of developing a design. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic design) may also be considered to be a design activity. The design usually has to satisfy certain goals and constraints; may take into account aesthetic, functional, economic, or socio-political considerations; and is expected to interact with a certain environment. Typical examples of designs include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.</p>
+  --->
+
+
+  <!---------------------watchOS 10-----------------
+  <h2 class="graphicTitle hidden">watchOS 10 concept</h2>
+
+  <div class="adobeRow hidden">
+   <img class="adobeIcon" src="images/Adobe_After_Effects_CC_icon.svg.png"/>
+   <img class="adobeIcon" src="images/ai-icon.svg.png"/>
+  </div>
+
+  <div class="sidesImages hidden">
+      <img class="smallCorner" src="images/watchOS-10.png" style="opacity: 1"/>
+</div>
+--->
+
+<!---------------------watchOS 10------------------>
+
+
+<h2 class="graphicTitle hidden">iPhone 14 Pro concept</h2>
+
+<div class="adobeRow hidden">
+ <img class="adobeIcon hidden" src="images/c4d-icon.png"/>
+</div>
+<div class="sidesImages hidden">
+    <img class="smallCorner" src="images/C4D/render-1.png"/>
+</div>
+<!---------------------watchOS 10------------------>
+
+<h2 class="graphicTitle hidden">Moon baloon</h2>
+
+<div class="adobeRow hidden">
+<img class="adobeIcon hidden" src="images/ps-icon.svg.png"/>
+</div>
+<div class="sidesImages hidden">
+  <img class="smallCorner" src="images/moonBallon-8-11-19.png"/>
+</div>
+
+
+
+
+  </div>
+</section>
+
+
+
+  <h1 class="about designTitle bottom-about-web hidden">Web</h1>
+  
+  <section class="js-app hidden">
+  <h3 class="app-title">Think.js</h3>
+  <p class="desc">JS ML and Shape recognition library</p>
+  <a class="tar tar-small" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">API</a>
+  </section>
+      
+  <!--
+  <section class="js-app">
+  <h3>Create you own React</h3>
+  <p class="desc">Udemy course</p>
+  <a class="tar" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">More</a>
+  </section>
+      --->
+      
+      <!--
+  <section id="web">
+  <h3>Websites</h3>
+  <a class="link" target="_blank" href="http://www.swimrunworld.co">swimrunworld.co</a>  
+  <a class="link" target="_blank" href="http://www.petrvabrousek.cz">petrvabrousek.cz</a>  
+  <a class="link" target="_blank" href="http://www.pul-maraton.cz">pul-maraton.cz</a> 
+  </section>
+      --->    
+  
+      
+  <section class="js-app hidden">
+  <h3 class="app-title app-title-web">relays.app</h3>
+  <p class="desc">Web version of Relays</p>
+  <a class="tar tar-small" target="_blank" href="https://relays.app/">More</a>
+  </section>
+      
+      
+  <section class="js-app hidden">
+  <h3 class="app-title app-title-web">petrvabrousek.eu</h3>
+  <p class="desc">Website of a czech triathlete</p>
+  <a class="tar tar-small" target="_blank" href="http://www.petrvabrousek.cz/">More</a>
+  </section>
+      
+
+  <!---
+  <section class="js-app hidden">
+  <h3 class="app-title app-title-web">swimrunworld.co</h3>
+  <p class="desc">Web version of Swimrun World</p>
+  <a class="tar tar-small" target="_blank" href="http://swimrunworld.co/">More</a>
+  </section>
+  --->
+      
+
+  <!---
+  <section class="js-app hidden">
+  <h3 class="app-title app-title-web">pul-maraton.cz</h3>
+  <p class="desc">Website redesign</p>
+  <a class="tar tar-small" target="_blank" href="http://pul-maraton.cz/">More</a>
+  </section>
+
+  --->
+  
+  <!----
+  <h1 class="about designTitle bottom-about hidden">Other</h1>
+  <h3 class="app-title hidden">Peak.css</h3>
+  <p class="desc hidden">Modern CSS framework</p>
+  <a class="tar tar-small hidden fade-in" target="_blank" href="https://github.com/filipvabrousek/Libraries/tree/master/Peak">API</a>
+  --->
+
+  
+  <h3 class="app-title app-title-web hidden">Pin.swift</h3>
+  <p class="desc hidden">Autolayout library for apps before SwiftUI</p>
+  <a class="tar tar-small hidden fade-in" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
+      
+  <h3 class="app-title app-title-web hidden">Create your own React</h3>
+  <p class="desc hidden">Udemy course</p>
+  <a class="tar tar-small hidden" target="_blank" href="https://www.udemy.com/course/create-your-own-react/">More</a>
+      
+
+  <!---
+  <h3 class="app-title app-title-web hidden">Code tutorials</h3>
+  <p class="desc hidden">GitHub</p>
+  <a class="tar tar-small bottom-btn hidden" target="_blank" href="https://github.com/filipvabrousek/filipvabrousek.github.io/tree/master/code-tutorials">More</a>
+  --->
+
+
+
+
+
+
+
+
+</section> <!---HAS HERE-->
+</div>
+
+
+
+
+
+
+
+
+<span class="cursor"></span>
+
+
+
+
+
+
+
+<!---
+  <section id="secondPage">
+
+    <h2 class="secondSectionHidden">Filip Vabrousek</h2>
+
+
+  </section>
+-->
+</div>
+
+<footer class="indexFooter">
+
+  <p class="footer-t">Filip Vabroušek</p>
+  <p class="footer-em"></p>
+
+  <div id="social">
+      <img id="fba" src="tutorials/footer/fb.png">
+      <img src="tutorials/footer/spacer.png">
+      <img id="insta" src="tutorials/footer/insta.png">
+  </div>
+
+  
+
+</footer>
+
+
+
+  <style>
+#onTopFloat {
+  display: grid;
+}
+
+#firstPage {
+  grid-area: 1/1;
+}
+
+.appsWrapper {
+  /*position: absolute;
+    top: 300px;
+    opacity: 0.0;*/
+}
+
+.secondSectionHidden {
+  color: gainsboro;
+  width: 100%;
+}
+
+#thirdContentHidden {
+  opacity: 0;
+  grid-area: 1/1;
+}
+
+.filipName {
+  width: 100%;
+}
+
+
+
+
+  </style>
+  <style>
+/*html {
+  height: 100%; 
+}
+
+body {
+  min-height: 100%; 
+  cursor: none;
+  color: #000;
+  background-color:white 
+}
+
+.cursor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgb(9, 82, 99);
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+mix-blend-mode: hard-light;
+  pointer-events: none;
+}*/
+
+
+/*
+Before it hits the small breakpoint make it to column layout.
+
+
+*/
+
+/*
+.floatingSectionWrapper > * {
+    border: none !important;
+}*/
+/*.square {
+    width: 300;
+    aspect-ratio: 1/1;
+}*/
+/*22:44:00*/
+
+
+
+
+  </style>
+  
+  
+  
+  
+  <!---
+  
+  <section id="main">
+
+          <h1 class="maintitle hidden">I am Filip.</h1>
            <button class="down hidden arrow">↓</button>
 </section>
     
-    
-<section id="apps"> 
-       
-<h1 class="about hidden">Apps</h1>
-    
+    --->
+
+
+
+    <!--
+<section class="modernSection"> 
+
+
+<div class="outerW">
+
+
+    <div id="apps"></div>
+
+<div id="realAppContent"> 
+
+  
+<h1 class="about hidden" style="opacity: 0 !important; color: transparent; -webkit-text-stroke: 1px transparent;">HIDE</h1>
 <section class="side">
+
+    
 <section class="app">
 <img class="app-img hidden" src="images/relays-orig.png">
 <h3 class="app-title hidden">Relays</h3>
 <p class="desc hidden">World's first chat app written in SwiftUI</p>
 
 <div class="macinformerSection">
-
-
-
  <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
      <img class="appstore hidden" src="images/download.png"/>
     </a> 
 
-
-
  <a class="hidden" href="https://play.google.com/store/apps/details?id=filip.relays">
     <img class="appstore hidden" src="images/playStore.png"/>
    </a> 
-
-
     </div>
 </section> 
     
-      
+
+
+     
+
+
 <section class="app">
 <img class="app-img hidden" src="images/runny-orig.png">  
 <h3 class="app-title hidden">Runny</h3>
@@ -99,9 +714,7 @@
 </section>    
        </section>
        
-       <section class="side">
-       
-
+<section class="side">
      
 <section class="app hidden">
 <img class="app-img hidden" src="images/sr-orig.png">
@@ -129,94 +742,167 @@
     <img id="macinformer" class="appstore" src="images/mac-informer.png"/>
     </a>
     
-    
-    <!--<a class="hidden" href="https://apps.apple.com/cz/app/eveny/id1492648115">
-        <img class="appstore hidden" src="images/download.png"/>
-    </a>-->
+   
     
     </div>
+</div>  
+
+</div>  
+    </section>
 </section>
        </section>
+</section> 
+
+
+
+<section id="design" class="modernSection">
+
+
+
+    <h1 class="about hidden designTitle">Design</h1>
+
+
+
+
+
+
+
+    <h2 class="graphicTitle hidden">watchOS 10 concept</h2>
+
+    <div class="adobeRow hidden">
+     <img class="adobeIcon" src="images/Adobe_After_Effects_CC_icon.svg.png"/>
+     <img class="adobeIcon" src="images/ai-icon.svg.png"/>
+    </div>
+
+    <div class="sidesImages hidden">
+        <img src="images/watchOS-10.png" style="opacity: 1"/>
+</div>
+
+  
+
+
+  <h2 class="graphicTitle hidden">iPhone 14 Pro concept</h2>
+
+  <div class="adobeRow hidden">
+   <img class="adobeIcon hidden" src="images/c4d-icon.png"/>
+  </div>
+  <div class="sidesImages hidden">
+      <img src="images/C4D/render-1.png"/>
+</div>
+
+
+<h2 class="graphicTitle hidden">Moon baloon</h2>
+
+<div class="adobeRow hidden">
+ <img class="adobeIcon hidden" src="images/ps-icon.svg.png"/>
+</div>
+<div class="sidesImages hidden">
+    <img src="images/moonBallon-8-11-19.png"/>
+</div>
+
+
+
+
+    </div>
 </section>
     
     <style>
-    /*desc: font.size: 1em remove */
-        .clear {
-                border: none;
-            }
+
+
         
         
     </style>
     
-<h1 class="about bottom-about-web hidden">Web</h1>
 
+
+<h1 class="about fade-in designTitle">Web</h1>
 <section class="js-app hidden">
 <h3 class="app-title">Think.js</h3>
 <p class="desc">JS ML and Shape recognition library</p>
-<a class="tar tar-small" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">API</a>
+
+<div class="centered">
+<a class="aboutMe" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">More</a>
+</div>
 </section>
     
-<!--
+
 <section class="js-app">
 <h3>Create you own React</h3>
 <p class="desc">Udemy course</p>
 <a class="tar" target="_blank" href="https://github.com/filipvabrousek/Algorithms/blob/master/Think/Think.md">More</a>
 </section>
-    --->
-    
-    <!--
+  
 <section id="web">
 <h3>Websites</h3>
 <a class="link" target="_blank" href="http://www.swimrunworld.co">swimrunworld.co</a>  
 <a class="link" target="_blank" href="http://www.petrvabrousek.cz">petrvabrousek.cz</a>  
 <a class="link" target="_blank" href="http://www.pul-maraton.cz">pul-maraton.cz</a> 
 </section>
-    --->    
+ 
 
     
 <section class="js-app hidden">
 <h3 class="app-title app-title-web">relays.app</h3>
 <p class="desc">Web version of Relays</p>
-<a class="tar tar-small" target="_blank" href="https://relays.app/">More</a>
+
+
+<div class="centered">
+<a class="aboutMe" target="_blank" href="https://relays.app/">More</a>
+</div>
 </section>
     
     
 <section class="js-app hidden">
-<h3 class="app-title app-title-web">petrvabrousek.eu</h3>
+<h3 class="app-title app-title-web">petrvabrousek.cz</h3>
 <p class="desc">Website of a czech triathlete</p>
-<a class="tar tar-small" target="_blank" href="http://www.petrvabrousek.cz/">More</a>
+
+<div class="centered">
+<a class="aboutMe" target="_blank" href="http://www.petrvabrousek.cz/">More</a>
+</div>
+
 </section>
     
 <section class="js-app hidden">
 <h3 class="app-title app-title-web">swimrunworld.co</h3>
 <p class="desc">Web version of Swimrun World</p>
-<a class="tar tar-small" target="_blank" href="http://swimrunworld.co/">More</a>
+
+<div class="centered">
+<a class="aboutMe" target="_blank" href="http://swimrunworld.co/">More</a>
+</div>
 </section>
     
 <section class="js-app hidden">
 <h3 class="app-title app-title-web">pul-maraton.cz</h3>
 <p class="desc">Website redesign</p>
-<a class="tar tar-small" target="_blank" href="http://pul-maraton.cz/">More</a>
+
+<div class="centered">
+<a class="aboutMe" target="_blank" href="http://pul-maraton.cz/">More</a>
+</div>
+
 </section>
 
 
 <h1 class="about bottom-about hidden">Other</h1>
 <h3 class="app-title hidden">Peak.css</h3>
 <p class="desc hidden">Modern CSS framework</p>
-<a class="tar tar-small hidden fade-in" target="_blank" href="https://github.com/filipvabrousek/Libraries/tree/master/Peak">API</a>
-
+<div class="centered">
+<a class="aboutMe hidden" target="_blank" href="https://github.com/filipvabrousek/Libraries/tree/master/Peak">API</a>
+</div>
 <h3 class="app-title app-title-web hidden">Pin.swift</h3>
 <p class="desc hidden">Autolayout library for apps before SwiftUI</p>
-<a class="tar tar-small hidden fade-in" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
-    
+
+<div class="centered">
+<a class="aboutMe hidden" target="_blank" href="https://github.com/filipvabrousek/Libraries/blob/master/Pin.md">More</a>
+</div>
+
 <h3 class="app-title app-title-web hidden">Create your own React</h3>
 <p class="desc hidden">Udemy course</p>
-<a class="tar tar-small hidden" target="_blank" href="https://www.udemy.com/course/create-your-own-react/">More</a>
+
+
+<div class="centered">
+<a class="aboutMe hidden" target="_blank" href="https://www.udemy.com/course/create-your-own-react/">More</a>
     
-<h3 class="app-title app-title-web hidden">Code tutorials</h3>
-<p class="desc hidden">GitHub</p>
-<a class="tar tar-small bottom-btn hidden" target="_blank" href="https://github.com/filipvabrousek/filipvabrousek.github.io/tree/master/code-tutorials">More</a>
-    
+</div>
     
 
 
@@ -225,8 +911,8 @@
         
 </style>
   
-<!--
-<link rel="stylesheet" href="anim.css">-->
+
+<link rel="stylesheet" href="anim.css">
     
     
     <footer>
@@ -245,142 +931,26 @@
         </div>
 
     </footer>
- 
-    
+--->
 
-<!---<link rel="stylesheet" href="dark.css">-->
-
-
-    <script>
-        // alert(Number(window.innerWidth) / 16);
-
-
-        function S(el) {
-            return document.querySelector(el);
-        }
-
-        function SA(el) {
-            return document.querySelectorAll(el);
-        }
-
-		
-		// I do not wanna update this each year :D
-		S(".footer-em").innerHTML = new Date().getFullYear();
-		
-		
-		
-		
-        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/filipvabrousek/"));
-        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/filipvabrousek"));
-       // S("#macinformer").addEventListener("click", () => window.open("https://macdownload.informer.com/eveny/"));
-
-
-        var isHidden = true;
-        S("#close").addEventListener("click", () => {
-            if (isHidden == true) {
-                isHidden = false
-            } else {
-                isHidden = true;
-            }
-
-
-            if (isHidden == true) {
-
-                S("#left").style.display = "none";
-                S("#navback").style.display = "none";
-                S("#h").innerHTML = "&#9776;";
-                /* S("#hide").style.position = "absolute";
-                 S("#hide").marginTop = "20px";
-                S(".block").style.display = "block";
-                S(".block-img").style.display = "block";
-                */
-
-            } else {
-                /* S("#hide").style.position = "absolute";*/
-                /*S("#hide").marginTop = "3em";*/
-                S("#left").style.display = "block";
-                S("#navback").style.display = "block";
-                S("#h").innerHTML = "&#10006;";
-              /*  S(".block").style.display = "none";
-                S(".block-img").style.display = "none";*/
-            }
-        });
-
-
-
-        S("#h").addEventListener("click", () => {
-
-            if (isHidden == true) {
-                isHidden = false
-            } else {
-                isHidden = true;
-            }
-
-            if (isHidden == true) {
-                S("#left").style.display = "none";
-                S("#left").style.visibility = "hidden";
-                S("#navback").style.display = "none";
-            //    S(".block").style.display = "block";
-            //    S(".block-img").style.display = "block";
-                S("#h").innerHTML = "&#9776;";
-                S("#h").marginTop = "20px"; // do not set position to absolute
-            } else {
-               S("#left").style.display = "flex"; 
-                
-                S("#navback").style.display = "block";
-                S("#h").innerHTML = "&#10006;";
-              //  S(".block").style.display = "none";
-              //  S(".block-img").style.display = "none";
-                S("#h").marginTop = "3em";
-                S("#h").marginRight = "2em";
-
-            }
-        });
-/*
-     
-    var els = document.querySelectorAll(".hidden");
-var height = window.innerHeight;
-
-function addEL() {
-    window.addEventListener("load", () => {
-        els.forEach((el, i) => {
-            var top = el.getBoundingClientRect().top;
-
-            if (top - height <= 0) {
-                els[i].className = els[i].className.replace("hidden", "fade-in");
-            }
-        });
-    });
-}
-        
-        
-function addPEL() {
-    window.addEventListener("scroll", () => {
-        els.forEach((el, i) => {
-            var top = el.getBoundingClientRect().top;
-
-            if (top - height <= 0) {
-                els[i].className = els[i].className.replace("hidden", "fade-in");
-            }
-        });
-    });
-}
-
-
-addEL();
-addPEL();
-       */
-    S(".down").addEventListener("click", () => {
-           S("#apps").scrollIntoView({behavior: "smooth", speed:100});
-        });
-
-    
-    
-
-</script>
-    
+<script src="js/selectors.js"></script>
+<script src="js/navigation.js"></script>
+<!--<script src="js/down.js"></script>-->
 <script src="js/animation.js"></script>
+<script src="js/site-animation.js"></script>
 
 
+<script src="js/footer.js"></script>
 
 </body>
+
+
+<style>
+
+/*
+  #realAppContent {
+    background: oldlace;
+    opacity: 0.7;
+  } */
+</style>
+
