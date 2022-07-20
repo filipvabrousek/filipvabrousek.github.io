@@ -250,12 +250,18 @@ function moveScaleOnScroll(){
 
 
 
-
-
 /*
  console.log("Scroll start to scroll end is " + scrollLimit + " " + end);
         console.log("Really scrolled:" + window.scrollY);
 */
+
+
+let fNameOpacity = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
+
+if (fNameOpacity > 0) {
+    S(".floatContent").style.opacity = 1 - (fNameOpacity);
+}
+
 
     S(".aboutWrapper").style.marginTop = `${scrollLimit}px`; // was 400px
     
