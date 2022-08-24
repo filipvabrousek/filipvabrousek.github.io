@@ -4,11 +4,60 @@
     color: #053c59;
 }
 
+
+
 .indexFooter {
     margin-top: 8em;
 	padding-top: 0em;
-    
 }
+
+.newFilipName {
+    opacity: 0;
+    transform: scale(0);
+    margin-top: 1rem;
+    font-size: 3.2rem;
+}
+
+
+#hero {
+    margin-top: 50px;
+}
+
+
+#hero h2 {
+    text-align: center;
+   /* -webkit-text-fill-color: white; 
+-webkit-text-stroke-color: rgb(8, 39, 82);*/
+/* Will override color (regardless of order) */
+
+  }
+
+  #hero h4{
+    text-align: center;
+    color: gray;
+    font-size: 1.2rem;
+  }
+
+/*----------------APP ICONS-----------*/
+#hero .app1 {
+    width: 100px;
+    height: auto;
+    margin-left: 60%;
+}
+
+#hero .app2 {
+    width: 100px;
+    height: auto;
+    margin-left: 80%;
+}
+
+
+#hero .app3 {
+    width:100px;
+    height: auto;
+    margin-left: 20%;
+}
+
 
 .smallCorner {
     border-radius: 14px;
@@ -38,7 +87,7 @@ width:600px;
 }
 
 .appDesc {
-    color: white;
+    color: #2f2f2f
 }
 
 .stores img {
@@ -55,22 +104,17 @@ width:600px;
 }
 
 .leftIcon h2 {
-    color: white;
+    color: #2f2f2f
 }
 
-.indexFooter .footer-t {
-    color: white;
-}
 
-.indexFooter .footer-em {
-    color: white;
-}
 
 .boldLarge {
     display: flex;
     flex-wrap: wrap;
     margin-left: 83px;
     margin-top: 200px;
+   
 }
 
 .boldLarge p {
@@ -80,20 +124,18 @@ width:600px;
 .noScale {
   /*color: white;*/
   color: transparent;
-  -webkit-text-stroke: 1.5px white;
- -webkit-text-fill-color: white;
+  
+ -webkit-text-fill-color: rgb(47, 47, 47);
  font-size: 2.5rem;
 }
 
 body {
-    background: #2f5bdc;
-    background: #abe3ff;
-    background: #58b6e7;
-    background: #5fa4c8;
-    background: #ecf0f1;
-    background: #4894ae;
+    background: #ffffff;
 }
 
+nav {
+    color: #3498db;
+}
 
 /*
 .boldLarge {
@@ -227,7 +269,7 @@ border-radius: 1em;
 
 .sm-a {
     font-size: 1.33rem;
-    color: #ffffff;
+    color: #3b3b3b;
     margin-left: 220px;
     margin-bottom: -20px;
     width: 143px;
@@ -333,8 +375,8 @@ border-radius: 1em;
 }
 
 .aboutWrapper {
-    position: absolute;
-    top: 400px;
+    /*position: relative;
+    top: 400px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,7 +429,7 @@ border-radius: 1em;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 402px;
+   /* margin-top: 402px;*/
 }
 
 .smp {
@@ -401,15 +443,18 @@ border-radius: 1em;
 }
 
 
+.boldLarge {
+
+
+margin-bottom: 5em; /*Danger line*/
+}
+
 .adobeRow {
     display: flex;
     justify-content: center;
 }
 
 
-.whiteNav {
-    color: white;
-}
 
 
 
@@ -424,7 +469,7 @@ border-radius: 1em;
     text-align: center;
     font-size: 2em;
     margin-top: 3em;
-    color: white;
+  color: #2f2f2f
 }
 
 #main button {
@@ -439,7 +484,7 @@ border-radius: 1em;
 
 .designTitle {
     font-size: 5rem;
-    color:white;
+    color: #2f2f2f;
     
     /*-webkit-text-stroke: 3px #508bc9;*/
 }
@@ -448,7 +493,6 @@ border-radius: 1em;
     /*color: white;*/
 
   /* color: #abe3ff;*/
-
   color: #5fa4c8;
   color: #4894ae
 
@@ -461,8 +505,16 @@ border-radius: 1em;
 
 @media (max-device-width: 415px) {
 
-
+    #hero .app2 {
+    margin-left: 60%;
+    margin-top: 20px;
+    }
    
+.newFilipName {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
 
 
     .sm-a {
@@ -585,6 +637,9 @@ border-radius: 1em;
 
 @media (max-width: 70em) {
 
+.newFilipName {
+    font-size: 2.4rem;
+}
 
 .storess {
     display: flex;
@@ -614,11 +669,11 @@ border-radius: 1em;
     }
    
    
-
+/*
 .aboutWrapper {
     position: absolute;
     top: 600px;
-}
+}*/
    
 
     .sh {
@@ -692,11 +747,11 @@ footer {
 
 .app-title {
     font-size: 3em;
-    color: white;
+    color: #2f2f2f
 }
 
 .desc {
-    color: white;
+    color: #2f2f2f
 }
 
 
@@ -788,17 +843,31 @@ h3 {
         RANK()*/
 
 
-
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
     .down {
         margin-top: 8em;
     }
 }
 
+@media (max-width: 593px) {
+    #hero .app1 {
+        margin-left: 30%;
+    }
+
+#hero .app2 {
+    margin-left: 60%;
+}
+}
 
 @media (max-width: 70em) {
     .down {
         /* margin-top: 10em;*/
+    }
+
+   
+
+    .newSubtitle {
+        margin-bottom: 1.4rem;
     }
 
     .side {
@@ -813,6 +882,9 @@ h3 {
 
 @media (max-device-width: 415px) {
 
+    .newFilipName {
+        font-size: 2rem;
+    }
     #designTop336 {
         margin-top: 1036px;
     }

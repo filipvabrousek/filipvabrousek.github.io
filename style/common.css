@@ -20,7 +20,7 @@
  	margin-right: auto;
 
 	 background-color: white;
-	 border: none;
+	 border: 3px solid #3498DB;
 	 border-radius: 8px;
 	 font-size: 1em;
 	 padding: 0.6em;
@@ -169,16 +169,22 @@
 }
 
 .btn-nav:hover {
-        color: #3498db;
+	color:  rgb(62, 88, 214);
+	transition: 0.6s ease-in-out;
+}
+
+/*
+.btn-nav:hover {
+        color:  rgb(13, 39, 170);
         transition: 0.4s ease-in-out;
     }
 	
 
 .whiteNav:hover {
-	color: white;
+	color: rgb(13, 39, 170);
 	opacity: 0.3;
 	transition: 0.6s ease-in-out;
-}
+}*/
 	
 	
 
@@ -314,13 +320,13 @@ p {
 .F-content>p {
 	padding-left: 1.9em
 }
-
+/*
 .btn:hover {
 	background: #81D4FA;
 	color: #fff;
 	transition: 0.5s;
 }
-
+*/
 
 
 .outline {
