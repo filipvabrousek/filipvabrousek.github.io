@@ -9,9 +9,9 @@ let alreadyScaledUp = false;
 let isGoingUp = false;
 let isGoingDown = false;
 let opacityFlag = false;
-
+/*
 setTimeout(() => {
-    S(".filipName").animate([
+    S(".newFilipName").animate([
         { transform: 'scale(0.0)', opacity: "0.0" },
         { transform: 'scale(1.2)', opacity: "1" },
         { transform: 'scale(1.0)', opacity: "1" },
@@ -24,23 +24,62 @@ setTimeout(() => {
     }).play();
 
 
-   /* S(".dots").animate([
-        { transform: 'scale(1.0)', opacity: "0.0" },
-        { transform: 'scale(1.0)', opacity: "0.4" }
-    ], {
-        duration: 400,
-        fill: 'forwards'
-    }).play();
 
-*/
 
 }, 400);
+*/
 
 
+S(".newFilipName").animate([
+    { transform: 'scale(3.0)', opacity: "0" },
+        { transform: 'scale(1.2)', opacity: "1" },
+], {
+    duration: 700,
+    fill: 'forwards'
+});
+
+S(".newSubtitle").animate([
+    {transform: 'translateY(30px)', opacity: "0" },
+        {transform: 'translateY(0px)', opacity: "1" },
+], {
+    duration: 900,
+    fill: 'forwards'
+});
+
+
+
+S(".app1").animate([
+    { transform: 'scale(0.0)', opacity: "0" },
+        { transform: 'scale(1.2)', opacity: "1" },
+], {
+    duration: 700,
+    fill: 'forwards'
+});
+
+S(".app2").animate([
+    { transform: 'scale(0.0)', opacity: "0" },
+        { transform: 'scale(1.2)', opacity: "1" },
+], {
+    duration: 800,
+    fill: 'forwards'
+});
+
+S(".app3").animate([
+    { transform: 'scale(0.0)', opacity: "0" },
+        { transform: 'scale(1.2)', opacity: "1" },
+], {
+    duration: 900,
+    fill: 'forwards'
+});
+
+
+
+
+/*
 S(".myDescription").animate([
     { opacity: '0', color: '#000' },
     { opacity: '1', color: '#000' }
-], 800).play();
+], 800).play();*/
 
 
 function perform(event) {
@@ -263,7 +302,8 @@ if (fNameOpacity > 0 && window.scrollY > 0) {
 }
 
 
-    S(".aboutWrapper").style.marginTop = `${scrollLimit}px`; // was 400px
+
+    // S(".aboutWrapper").style.marginTop = `${scrollLimit}px`; // was 400px
     
      if (window.scrollY > scrollLimit) {
 
@@ -500,7 +540,7 @@ scrollEventThrottle((scrollPos, previousScrollPos) => {
     if ((window.pageYOffset > 10 && isGoingDown) || isGoingUp){
 
     
-    let distance = distanceBetweenElements(S(".appsWrapper"), S("#h"));
+    let distance = 0; //etweenElements(S(".appsWrapper"), S("#h"));
 
     let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
     // S(".scale").style.setProperty('--percentage', `${scrolled * 100 * 20}%`);
@@ -525,7 +565,7 @@ scrollEventThrottle((scrollPos, previousScrollPos) => {
     var offseto = fraction * distance.xDist;
     var isSet = false;
 
-    var spanWidth = S(".scale").getBoundingClientRect().width;
+    var spanWidth = 1; //S(".scale").getBoundingClientRect().width;
     var half = window.innerWidth / 2 - spanWidth / 2;
 
     //if (fraction < 1 && fraction > 0.17){
