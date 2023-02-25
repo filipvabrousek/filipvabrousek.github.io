@@ -1,0 +1,42 @@
+  .pad {
+      padding: 1em;
+      padding-left: 10em;
+      padding-right: 5em;
+  }
+
+  #images {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1em;
+      margin-bottom: 4em;
+      margin-left: 2.5vw;
+      margin-right: 2.5vw;
+      width: 95vw;
+  }
+
+  .about {
+      padding-top: 1em;
+  }
+
+
+  @media (max-width: 70em) {
+      #images {
+          grid-template-columns: 1fr;
+          grid-gap: 2em;
+          width: 90vw;
+          margin-left: 5vw;
+
+      }
+
+      .pad {
+          padding: 1em;
+          padding-left: 0.4em;
+          padding-right: 0.4em;
+      }
+
+      .about {
+          font-size: 3em !important;
+      }
+  }
+
+

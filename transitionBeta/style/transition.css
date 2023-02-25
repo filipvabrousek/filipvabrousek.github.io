@@ -1,0 +1,51 @@
+.app1 {
+    view-transition-name: app1;
+    contain: layout; /*independent*/
+  /*  transition: all 6s;*/
+  transform: rotate(45deg);
+  margin-top: -200px;
+margin-left: 1101px;
+/*z-index: -1;
+position: absolute;*/
+}
+
+
+
+@keyframes fade-in {
+    from {opacity: 0;} /* 215526 */
+}
+
+@keyframes fade-out {
+    to {opacity: 0;} /* 215526 */
+}
+
+@keyframes slide-from-right {
+    from {transform: translateX(30px);} /* 215526 */
+}
+
+@keyframes slide-to-left {
+    from {transform: translateX(-30px);} /* 215526 */
+}
+
+::view-transition-old(root){
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+    /*201236, 1249*/
+}
+
+::view-transition-new(root){
+    animation: 500ms cubic-bezier(0, 0, 0.2, 1) 500ms both fade-in,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+    /*201236, 1249*/
+}
+
+/*My trans 16:30:52*/
+::view-transition-old(banner-img),
+::view-transition-new(banner-img){
+    animation: none;
+    mix-blend-mode: normal; /* 20:15*/
+}
+
+::view-transition-image-pair(banner-img){
+    isolation: none;
+}
