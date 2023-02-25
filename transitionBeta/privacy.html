@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
+<!---22/1/2019 23:00 end :) -->
+
+
+<head>
+    <title>About</title>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="style/common.css">  
+     <link rel="stylesheet" href="style/about-style.css">  
+     <link rel="stylesheet" href="style/anim.css">
+<!---<link rel="stylesheet" href="dark.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143592417-3');
+</script>
+
+</head>
+
+
+<body>
+    
+
+    <section id="align">
+        <div id="center-buttons">
+            <div id="navback"></div>
+            
+            <button id="h">☰</button>
+
+            <div id="left">
+                <button class="btn-nav" id="close">×</button>
+              <!--  <a class="btn-nav" href="index.html">Home</a>-->
+                <a class="btn-nav" href="index.html">Work</a>
+                <a class="btn-nav" href="design.html">Design</a>
+				<a class="btn-nav" href="sport.html">Sport</a>
+                <a class="btn-nav" href="about.html">About</a>
+				
+            </div>
+
+        </div>
+    </section>
+    
+    
+        <h1 class="about fade hidden bottomZero">Privacy</h1>
+        
+    <!--- 01/09/2015 - 7:48 --->
+    <!----july 2016 iOS apps---->
+    
+	<p class="pad fade hidden bottomZero appTitle">Runny: Run effectively</p>
+
+    <p class="pad fade hidden bottomZero">EULA</p>
+    
+    <p class="pad fade hidden bottomZero">Last updated on October 25, 2021</p>
+    <p class="pad fade hidden bottomZero">By using the “Runny: Run Effectively” iOS and watchOS apps, you consent to following terms:</p>
+    <p class="pad fade hidden bottomZero">All run data are stored just on your device.</p>
+    <p class="pad fade hidden bottomZero">No data will leave your device until you choose so.</p>
+   
+   <br/>
+    <p class="pad fade hidden bottomZero">The app reads and stores the following data:</p>
+    
+
+    <ul class="privacy-list pad fade hidden">
+    <li>distance travelled</li>
+    <li>running pace</li>
+    <li>running cadence</li>
+    <li>running pace</li>
+    <li>Heart rate with optional Bluetooth compatible HR belt</li>
+    <li>Run duration</li>
+    </ul>
+    
+   <p class="pad fade hidden bottomZero"> The app can also access your music library to play songs for you.</p>   
+    
+   <p class="pad fade hidden bottomZero"> The watchOS app uses HealthKit data to accurately measure the distance travelled.</p>
+       
+    <!----
+    
+     EULA
+    
+    Last updated on April 17, 2019
+    
+    By using the “Runny+” app, you consent to following terms:
+    
+    All run data are stored just on your device.
+    
+    No data will leave your device until you choose so.
+    
+    The app reads and stores the following data:
+    
+    distance travelled
+    running pace
+    running cadence
+    running pace
+    Heart rate with optional Bluetooth compatible HR belt
+    Run duration
+    
+    The app can also access your music library to play songs for you.
+
+    
+    
+    -->
+    <footer>
+
+
+        <p class="footer-t">Filip Vabroušek</p>
+        <p class="footer-em">2019</p>
+
+        <div id="social">
+            <img id="fba" src="tutorials/footer/fb.png">
+            <img src="tutorials/footer/spacer.png">
+            <img id="insta" src="tutorials/footer/insta.png">
+        </div>
+
+
+        <div id="sp">
+
+        </div>
+
+    </footer>
+  
+ 
+
+    <style>
+.bottomZero {
+padding: 0;
+padding-left: 1em;
+padding-right: 1em;
+}
+
+
+
+
+.privacy-list li {
+    padding-left: 1em;
+    list-style-type:disc !important;
+    margin-left: 1em;
+}
+
+.appTitle {
+    color: #3498db;
+    font-weight: bold;
+}
+
+
+    </style>
+
+    <script>
+        // alert(Number(window.innerWidth) / 16);
+
+
+        function S(el) {
+            return document.querySelector(el);
+        }
+
+        function SA(el) {
+            return document.querySelectorAll(el);
+        }
+
+		// I do not wanna update this each year :D
+		S(".footer-em").innerHTML = new Date().getFullYear();
+
+
+        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/petrvabrousek/?hl=en", "_top"));
+        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/PetrVabrousek/", "_top"));
+
+        /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
+        S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
+        S("#edit").addEventListener("click", () => window.open("#season-en.html", "_top"));
+        S("#signout").addEventListener("click", () => window.open("#support-en.html", "_top"));
+*/
+
+
+
+        var isHidden = true;
+        S("#close").addEventListener("click", () => {
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+
+            if (isHidden == true) {
+
+                S("#left").style.display = "none";
+                S("#navback").style.display = "none";
+                S("#h").innerHTML = "&#9776;";
+                /* S("#hide").style.position = "absolute";
+                 S("#hide").marginTop = "20px";*/
+               // S(".block").style.display = "block";
+               // S(".block-img").style.display = "block";
+
+            } else {
+                /* S("#hide").style.position = "absolute";*/
+                /*S("#hide").marginTop = "3em";*/
+                S("#left").style.display = "block";
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+               // S(".block").style.display = "none";
+               // S(".block-img").style.display = "none";
+            }
+        });
+
+
+
+        S("#h").addEventListener("click", () => {
+
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+            if (isHidden == true) {
+                S("#left").style.display = "none";
+                S("#left").style.visibility = "hidden";
+                S("#navback").style.display = "none";
+                S(".block").style.display = "block";
+                S(".block-img").style.display = "block";
+                S("#h").innerHTML = "&#9776;";
+                S("#h").marginTop = "20px"; // do not set position to absolute
+            } else {
+               S("#left").style.display = "flex"; 
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+                S(".block").style.display = "none";
+                S(".block-img").style.display = "none";
+                S("#h").marginTop = "3em";
+                S("#h").marginRight = "2em";
+
+            }
+        });
+
+        
+        /* if (window.matchMedia("(max-width: 70.5em)")){
+           S("#h").style.display = "block";
+     
+        };
+        
+         if (window.matchMedia("(min-width: 71em)")){
+           S("#h").style.display = "none";
+     
+        };
+        */
+
+
+        /*
+        function resize() {
+            var w = window.innerWidth / 16;
+            if (w < 70) {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "none";
+                });
+            } else {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "block";
+                });
+            }
+        }
+
+        window.addEventListener("resize", resize);
+            
+            
+        if (window.matchMedia("(min-width: 70.5em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "block";
+        });
+        }
+            
+            
+        if (window.matchMedia("(max-width: 70em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "none";
+        });
+        }
+
+        */
+
+    </script>
+	
+	
+	<style>
+		.blue {
+			color: #3498db;
+		}
+	
+	</style>
+
+<script src="js/animation.js"></script>
+
+
+</body>
