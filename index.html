@@ -2,14 +2,18 @@
 <!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
 <!---22/1/2019 23:00 end :) -->
 
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip Vabrousek - Work</title>
     <meta name="referrer" content="no-referrer" />
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/sportStyle.css"/>
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/index-style.css">
+    <link rel="stylesheet" href="style/navStyle.css">
     <link rel="stylesheet" href="style/transition.css">
     <!--<link rel="stylesheet" href="style/about-style.css">-->
     <link rel="stylesheet" href="style/anim.css">
@@ -22,6 +26,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-3"></script>
@@ -38,39 +53,221 @@
 
   <script>
     // alert("JOJ")
-
+/*
 if (window.localStorage.getItem("reld") === false){
   window.location.reload(); // 163426
 }
 
 window.localStorage.setItem("reld", "true");
-       
+       */
     </script>
+
+
+<img class="ero" src="images/background-rotate.png"/>
+<img class="erolg" src="images/background-rotate.png"/>
+
+<style>
+.ero, .erolg {
+  display: none;
+}
+
+</style>
+<style>
+
+  .ero {
+    margin-top: 1rem;
+    width: 2100;
+    height: auto;
+    z-index: -2;
+    margin-left: -50%;
+    position: absolute; /*162533*/
+    
+  }
+
+
+  .erolg {
+    margin-top: 1rem;
+    width: 2100;
+    height: auto;
+    z-index: -2;
+    margin-left: 30%;
+    position: absolute; /*162533*/
+  }
+
+
+
+  @media (max-device-width: 415px) {
+    .erolg {
+      margin-left: 0;
+    }
+  }
+
+
+  /* 16:59:34 Nice lines 03/04/2023 */
+</style>
 
   <div id="onTopFloat">
   <section id="firstPage">
 
     <!------NAVIGATION------->
     <section id="align">
-        <div id="center-buttons">
-            <div id="navback"></div>
-            <button id="h">☰</button>
 
-            <div id="left">
-                <button class="btn-nav" id="close">×</button>
-                <a class="btn-nav whiteNav" href="https://filipvabrousek.github.io/">Work</a>
-				        <a class="btn-nav whiteNav" href="sport.html">Sport</a>
+      <div id="onTopLeft">
+
+     
+      <button class="navControl" id="h">☰</button>
+      <button class="navControl" id="l">←</button>
+    </div>
+      
+    
+    <div id="center-buttons">
+            <div id="navback">
+              <div id="col">
+              
+                <div id="workHover" class="withImg">
+                  <a class="sideSmall" href="https://filipvabrousek.github.io/">WORK</a>
+                  <img src="https://media1.giphy.com/media/13GIgrGdslD9oQ/giphy.gif" />
+                </div>
+              
+              
+                <!---211030-->
+                <div id="sportHover" class="withImg">
+                 <a onClick="oladoersWithTimeout()" class="sideSmall">SPORT</a>
+                <!--- <a href="sport.html" class="sideSmall">SPORT</a>--->
+                 
+                <!---
+                <img src="https://thumbs.gfycat.com/FlickeringDimHorsefly-size_restricted.gif" />
+                -->
+              
+              </div>
+              </div>
+
+
+            <script>
+
+// const elo = document.querySelector("#workHover .sideSmall");
+
+
+
+
+
+// 130948 getComputed
+            </script>
             </div>
         </div>
+
+
+
     </section>
   <!------END OF NAVIGATION------->
 
   <section id="hero">
-<img class="app1" src="images/hero-app-1.png" />
-<h2 class="newFilipName">Filip Vabroušek</h2>
-<h4 class="newSubtitle">Developer and motion designer</h4>
+  
+    <div class="opawrap">
+      <img class="app1" src="images/hero-app-1.png" />
+    </div>
+    <div class="lo">
+      <div class="nameWrap">
+
+
+
+        <h2 style="display:none">newFilipName</h2>
+          <p class="floatF">
+            <span>F</span>
+            <span>I</span>
+            <span>L</span>
+            <span>I</span>
+            <span>P</span>
+            <span>&nbsp; </span>
+            <span>V</span>
+            <span>a</span>
+            <span>b</span>
+            <span>r</span>
+            <span>o</span>
+            <span>u</span>
+            <span>š</span>
+            <span>e</span>
+            <span>k</span>
+          </p>
+        
+
+          <span style="display: none" class="lastName">V</span>
+        <!---
+       
+     <h2 style="display:none" class="newFilipName">  </h2> 
+
+
+      <span style="display: none" class="lastName">V</span>
+      <p class="floatF">
+        <span>V</span>
+        <span>a</span>
+        <span>b</span>
+        <span>r</span>
+        <span>o</span>
+        <span>u</span>
+        <span>š</span>
+        <span>e</span>
+        <span>k</span>
+      </p>-->
+   
+      </div>
+
+<div class="nameWrap w80">
+      <h4 class="newSubtitle">Developer and motion designer</h4>
+    </div>
+    </div>
+
+
+<div class="blob upperLeftBlob">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg">                        <defs>                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(98, 239, 249); --darkreader-inline-stopcolor:#f0c895;" data-darkreader-inline-stopcolor=""></stop>                            <stop offset="100%" style="stop-color: rgb(47, 132, 244); --darkreader-inline-stopcolor:#f562a1;" data-darkreader-inline-stopcolor=""></stop>                        </linearGradient>                        </defs>                        <path id="blob" fill="url(#gradient)">                            <animate attributeName="d" dur="8300ms" repeatCount="indefinite" values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;"></animate>                        </path>                    </svg>
+</div>
+
+
+<div class="blob upperBlob">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg">                        <defs>                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(98, 239, 249); --darkreader-inline-stopcolor:#f0c895;" data-darkreader-inline-stopcolor=""></stop>                            <stop offset="100%" style="stop-color: rgb(47, 132, 244); --darkreader-inline-stopcolor:#f562a1;" data-darkreader-inline-stopcolor=""></stop>                        </linearGradient>                        </defs>                        <path id="blob" fill="url(#gradient)">                            <animate attributeName="d" dur="8300ms" repeatCount="indefinite" values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;"></animate>                        </path>                    </svg>
+  </div>
+
+
+  
+  <div class="blob upperRightBlob blob1">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg">                        <defs>                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(98, 239, 249); --darkreader-inline-stopcolor:#f0c895;" data-darkreader-inline-stopcolor=""></stop>                            <stop offset="100%" style="stop-color: rgb(47, 132, 244); --darkreader-inline-stopcolor:#f562a1;" data-darkreader-inline-stopcolor=""></stop>                        </linearGradient>                        </defs>                        <path id="blob" fill="url(#gradient)">                            <animate attributeName="d" dur="8300ms" repeatCount="indefinite" values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;"></animate>                        </path>                    </svg>
+    </div>
+
+    
+
+<!---
+
+    <img style="width:180px" class="blob1" src="images/hero-app-1.png" />
+  
+--->
+
+
+<style>
+
+
+  
+
+ 
+/*
+  .filipName {
+
+  
+ -webkit-transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+  -moz-transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+  -o-transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+  -ms-transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+  transform: scale(1.01) translate3d(0, 0, 0) perspective(1px);
+  }
+*/
+</style>
+
+<div class="opawrap">
+
+
+
 <img class="app2" src="images/hero-app-2.png" />
 <img class="app3" src="images/hero-app-3.png" />
+</div>
   </section>
 
   <!------INTRO SECTION------->
@@ -91,7 +288,7 @@ window.localStorage.setItem("reld", "true");
    
   </section>
 
-
+<!---->
   <div class="floatDescription">
     <img class="dots prlx" value="4" src="images/appa.png" />
     <p class="prlx myDescription" style="display: none" value="7">Developer and motion designer from the Czech Republic</p>
@@ -132,17 +329,52 @@ window.localStorage.setItem("reld", "true");
       <!--210721 Houdini.js in the browser-->
 
       <div class="boldLarge pad">
-      <p class="noScale">I</p>
-      <p class="noScale">am</p>
-      <p class="noScale">a</p>
-      <p class="noScale">23</p>
-      <p class="noScale">year</p>
-      <p class="noScale">old</p>
-      <p class="noScale">developer</p>
-      <p class="noScale">who</p>
-      <p class="noScale">loves</p>
-      <p class="noScale" id="build">building</p>
-      <p class="noScale">apps.</p>
+      <p class="noScale bluens">I</p>
+      <p class="noScale bluens">am</p>
+      <p class="noScale bluens">a</p>
+      <p class="noScale bluens">23</p>
+      <p class="noScale bluens">year</p>
+      <p class="noScale bluens">old</p>
+      <p class="noScale bluens">developer</p>
+      <p class="noScale bluens">who</p>
+      <p class="noScale bluens">loves</p>
+
+
+      <div class="onTopMotion">
+
+     
+    <div>
+      <p  id="prelastP" class="noScale bluens" id="build">building</p>
+      <p id="lastP" class="noScale bluens">apps.</p>
+    </div>
+
+    <div id="motionDesignText">
+      <p id="motion1" class="noScaled">motion</p>
+      <p id="motion2" class="noScaled">design.</p>
+    </div>
+
+    <style>
+.onTopMotion {
+  display: grid;
+
+}
+
+.onTopMotion div {
+ grid-area: 1/1;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+
+
+#motion1, #motion2 {
+  transform: rotate3d(1, 0, 0, -90deg);
+}
+
+
+    </style>
+
+  </div>
    
      
 
@@ -298,101 +530,314 @@ flex-direction: row;
 
 
 
+      <h2 class="largeHidden" id="relaysLarge">Relays</h2>
 <section class="modernSection">
 
 
 <!------------------RELAYS----------------->
-  <div class="leftIcon">
-    <div class="sidesImages hidden">
-      <img src="images/relays-orig.png" class="app-img" />
-    </div>
-  
-    <div class="leftAppWrapper">
-  
-      <h2 class="hidden">Relays</h2>
-      <p class="appDesc hidden">World's first chat app written in SwiftUI. Find a partner for any relay race in the world.
-      </p>
-  
-      <div class="stores">
-        <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
-          <img class="appstore hidden" src="images/download.png" /></a>
-  
-        <a class="hidden" href="https://play.google.com/store/apps/details?id=filip.relays">
-          <img class="appstore hidden" src="images/playStore.png" /></a>
+
+<section id="forRelays" class="modernSection">
+
+  <div style="display:none" class="offGridImageOverlay"></div>
+  <div class="blobImage blobImageRelays"></div>
+
+
+  <img style="display:none" class="offGridImage"
+    src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80">
+
+  <div id="rlso" class="oneMoreOverlay">
+    <div id="relaysOverlay">
+
+      <div id="relaysa" class="leftIcon leftIconRelays">
+        <div class="sidesImages">
+          <img src="images/relays-orig.png" class="app-img" />
+        </div>
+
+        <div class="leftAppWrapper">
+          <h2 class="stroked relaysStroked">Relays</h2>
+          <p class="appDesc">World's first chat app written in SwiftUI. Find a partner for any relay race in the world.
+          </p>
+
+
+          <div class="stores">
+            <a class="" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
+              <img class="appstore" src="images/download.png" /></a>
+
+            <a class="" href="https://play.google.com/store/apps/details?id=filip.relays">
+              <img class="appstore" src="images/playStore.png" /></a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="stores xstores">
+      <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
+        <img class="appstore hidden" src="images/download.png" /></a>
+
+      <a class="hidden" href="https://play.google.com/store/apps/details?id=filip.relays">
+        <img class="appstore hidden" src="images/playStore.png" /></a>
+    </div>
   </div>
+
+</section>
+
+
+
+<style>
+
+</style>
+
+
+<script>
+
+
+
+
+
+//.onmouseover = () => {
+//document.querySelector(".modernSection")
+//.onmouseover = () => {
+  // alert("K")
+
+   /*{ width: "80%" },
+  { width: "100%" },*/
+/*
+  document.querySelector(".modernSection").animate([ // 22:52:40 28/03
+ 
+  
+  { transform: ' scaleX(1)' },
+            { transform: ' scaleX(1.3)' },
+    
+        ], {
+            duration: 1000,
+            fill: 'forwards'
+        });
+}*/
+/*.addEventListener("onmouseover", () => {
+alert("K")
+});*/
+
+</script>
+
 
   <!------------------/RELAYS----------------->
 
 
 
 <!------------------EVENY----------------->
-<div class="leftIcon">
-  <div class="sidesImages hidden">
+
+
+<h2 class="largeHidden" id="evenyLarge">Eveny</h2>
+
+<section id="forRelays" class="modernSection">
+
+  <div style="display:none" class="offGridImageOverlay"></div>
+  <div class="blobImage blobImageEveny"></div>
+
+
+  <img style="display:none" class="offGridImage"
+    src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80">
+   
+  <div id="rlso" class="oneMoreOverlay">
+    <div id="evenyOverlay">
+
+      <div id="evenysa" class="leftIcon leftIconEveny">
+        <div class="sidesImages">
+          <img src="images/eveny-orig.png" class="app-img" />
+        </div>
+
+        <div class="leftAppWrapper">
+          <h2 class="stroked evenyStroked">Eveny</h2>
+          <p class="appDesc">Stay organised with odd/even week scheduling. Text size matters
+          </p>
+
+
+          <div class="stores">
+            <a class="" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
+              <img class="appstore" src="images/download.png" /></a>
+
+            <a class="" href="https://play.google.com/store/apps/details?id=filip.relays">
+              <img class="appstore" src="images/playStore.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stores ystores">
+      <a class="hidden" href="https://apps.apple.com/cz/app/relays-find-a-relay-partner/id1483402813">
+        <img class="appstore hidden" src="images/download.png" /></a>
+
+      <a class="hidden" href="https://play.google.com/store/apps/details?id=filip.relays">
+        <img class="appstore hidden" src="images/playStore.png" /></a>
+    </div>
+  </div>
+
+</section>
+<!----
+<div class="oneMoreOverlay">
+
+  <div class="blobImage blobImageEveny"></div>
+  
+<div id="evenyOverlay">
+
+<div id="evenysa" class="leftIcon leftIconEveny">
+  <div class="sidesImages">
     <img src="images/eveny-orig.png" class="app-img" />
   </div>
 
   <div class="leftAppWrapper">
 
-    <h2 class="hidden">Eveny</h2>
-    <p class="appDesc hidden">Stay organised with odd/even week scheduling.
+    <h2 class="stroked evenyStroked">Eveny</h2>
+    <p class="appDesc">Stay organised with odd/even week scheduling.
       Featured on the <a class="noUnderline" href="https://apps.apple.com/story/id1531962992">AppStore</a> in "Widgets get an upgrade" story.
     </p>
 
-    <div class="storess">
-      <a class="hidden" href="https://apps.apple.com/story/id1531962992">
-        <img class="appstore hidden" src="images/download.png" /></a>
+    <div class="stores">
+      <a class="" href="https://apps.apple.com/story/id1531962992">
+        <img class="appstore" src="images/download.png" /></a>
     </div>
   </div>
 </div>
+
+</div>
+
+
+<div class="stores ystores">
+  <a class="" href="https://apps.apple.com/story/id1531962992">
+    <img class="appstore" src="images/download.png" /></a>
+</div>
+
+
+</div>--->
 <!------------------/EVENY----------------->
 
 
 <!------------------RUNNY----------------->
-<div class="leftIcon">
-  <div class="sidesImages hidden">
+
+
+<h2 class="largeHidden" id="runnyLarge">Runny</h2>
+
+<div class="oneMoreOverlay">
+
+
+  <div class="blobImage blobImageRunny"></div>
+
+<div id="runnyOverlay">
+
+<div id="runnysa" class="leftIcon leftIconRunny">
+  <div class="sidesImages">
     <img src="images/runny-orig.png" class="app-img" />
   </div>
 
   <div class="leftAppWrapper">
 
-    <h2 class="hidden">Runny</h2>
-    <p class="appDesc hidden">Run effectively with effective pace and cadence measuring.
+    <h2 class="stroked runnyStroked">Runny</h2>
+    <p class="appDesc">Run effectively with effective pace and cadence measuring.
     </p>
 
-    <div class="storess">
-      <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908">
-        <img class="appstore hidden" src="images/download.png" /></a>
+    <div class="stores">
+      <a class="" href="https://apps.apple.com/us/app/runny/id1460395908">
+        <img class="appstore" src="images/download.png" /></a>
 
      
     </div>
   </div>
 </div>
-<!------------------/RUNNY----------------->
+</div>
 
 
-<!------------------/SWIMRUN WORLD----------------->
-<div class="leftIcon">
-  <div class="sidesImages hidden">
+<div class="stores zstores">
+  <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908">
+    <img class="appstore hidden" src="images/download.png" /></a>
+</div>
+
+
+
+
+</div>
+<!------------------/RUNNY---------184853 React-------->
+
+
+
+<h2 class="largeHidden" id="swimrunnyLarge">Swimrun World</h2>
+<div class="oneMoreOverlay">
+
+
+  <div class="blobImage blobImageSwimrunny"></div>
+
+<div id="swimrunnyOverlay">
+
+<div id="swimrunnysa" class="leftIcon leftIconSwimrunny">
+  <div class="sidesImages">
     <img src="images/sr-orig.png" class="app-img" />
   </div>
 
   <div class="leftAppWrapper">
 
-    <h2 class="hidden">Swimrun World</h2>
-    <p class="appDesc hidden">Find a swimrun partner
+    <h2 class="stroked swimrunnyStroked">Swimrun World</h2>
+    <p class="appDesc">Run effectively with effective pace and cadence measuring.
     </p>
 
-    <div class="storess">
-      <a class="hidden" href="https://apps.apple.com/cz/app/swimrun-world/id144547569">
-        <img class="appstore hidden" src="images/download.png" /></a>
+    <div class="stores">
+      <a class="" href="https://apps.apple.com/us/app/runny/id1460395908">
+        <img class="appstore" src="images/download.png" /></a>
 
      
     </div>
   </div>
 </div>
-<!------------------/SWIMRUNWORLD----------------->
+</div>
+
+
+<div class="stores lstores">
+  <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908">
+    <img class="appstore hidden" src="images/download.png" /></a>
+</div>
+
+
+
+
+</div>
+
+
+
+<!------------------/SWIMRUN WORLD----------------
+<div class="oneMoreOverlay">
+
+  <div class="blobImage blobImageSwimrunny"></div>
+
+<div id="swimrunnyOverlay">
+<div id="swimrunnysa" class="leftIcon leftIconSwimrunny">
+  <div class="sidesImages">
+    <img src="images/sr-orig.png" class="app-img" />
+  </div>
+
+  <div class="leftAppWrapper">
+
+    <h2 class="stroked swimrunnyStroked">Swimrun World</h2>
+    <p class="appDesc">Find a swimrun partner
+    </p>
+
+    <div class="stores">
+      <a class="" href="https://apps.apple.com/cz/app/swimrun-world/id144547569">
+        <img class="appstore" src="images/download.png" /></a>
+
+     
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="stores lstores">
+  <a class="" href="https://apps.apple.com/cz/app/swimrun-world/id144547569">
+    <img class="appstore" src="images/download.png" /></a>
+
+ 
+</div>
+
+
+</div>
+----------------/SWIMRUNWORLD----------------->
 
 
 </section>
@@ -404,7 +849,7 @@ flex-direction: row;
 
 
 
-  <h1 class="about hidden designTitle">Design</h1>
+  <h1 class="about designTitle hidden">I also design things...</h1>
 
 
 
@@ -455,15 +900,11 @@ flex-direction: row;
   <img class="smallCorner" src="images/moonBallon-8-11-19.png"/>
 </div>
 
-
-
-
   </div>
 </section>
 
 
-
-  <h1 class="about designTitle bottom-about-web hidden">Web</h1>
+  <h1 id ="top1" class="about designTitle bottom-about-web hidden">...and make things for the web</h1>
   
   <section class="js-app hidden">
   <h3 class="app-title">Think.js</h3>
@@ -560,9 +1001,9 @@ flex-direction: row;
 
 
 
-
+<!---
 <span class="cursor"></span>
-
+-->
 
 
 
@@ -965,12 +1406,87 @@ Before it hits the small breakpoint make it to column layout.
 <script src="js/site-animation.js"></script>
 
 <script src="js/utils.js"></script>
-
+<script src="js/filip-name-animation.js"></script>
 <script src="js/transition.js"></script>
-
+<script src="js/appHover.js"></script>
+<script src="js/blobOnScroll.js"></script>
 <script src="js/footer.js"></script>
 
+
+
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<script>
+
+// UPDATE: I was able to get this working again... Enjoy!
+
+var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})
+
+</script>
+
+
+
+
+<script>
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+  
+    S(".ero").style.transform = `rotate(${scrollY / 8}deg)`;
+    S(".erolg").style.transform = `rotate(-${scrollY / 12}deg)`;
+  
+  
+    // 0-590 to 0-1
+  
+    let conv = convertRange(window.scrollY, {min: 0, max: 590}, {min: 1, max: 0});
+     S(".ero").style.opacity = `${conv}`;
+     S(".erolg").style.opacity = `${conv*1.2}`;
+   // S(".erolg").style.opacity = `rotate(-${scrollY / 12}deg)`;
+  
+  
+  });
+  
+  </script>
+
+
+
 </body>
+
+
 
 
 <style>
@@ -980,5 +1496,8 @@ Before it hits the small breakpoint make it to column layout.
     background: oldlace;
     opacity: 0.7;
   } */
+
+
+
 </style>
 
