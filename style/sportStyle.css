@@ -1,5 +1,7 @@
+
+
 .dist, .time {
-	font-size: 1em;
+	font-size: 1.77em;
 }
     .sportTitle {
         margin-left: 0.4em;
@@ -8,9 +10,28 @@
 		.two {
 			padding-left: 0.8em;
 		}
+
+		.time {
+			color: #106a9b;
+		}
+		
+
+		.blob1 {
+			view-transition-name: app1;
+		}
 		
 		.blue {
 			color: blue;
+		}
+
+		.blobSport {
+			width: 40%;
+			margin-top: -30%;
+			margin-left: 70%;
+		}
+
+		.smallerBlob {
+			width: 400px !important;
 		}
 		
 		.firstTitle {
@@ -52,7 +73,8 @@
 			font-weight: bold;
           /*  -webkit-text-stroke: 2px rgb(11, 122, 182);
     color: white;*/
-    font-style: italic;
+   /* font-style: italic;*/
+   font-weight: bold;
 		}
 		
 		
@@ -101,6 +123,12 @@
 	}
 			
 		@media only screen and (max-device-width: 415px){
+
+			.dist, .time {
+				font-size: 2.4rem;
+			}
+
+
 			.sides div {
 			font-size: 2em;
 			}

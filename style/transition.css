@@ -12,6 +12,14 @@ position: absolute;*/
 }
 
 
+.blob1 {
+    view-transition-name: blob1;
+    contain: layout;
+    position: absolute;
+}
+
+
+
 .app2 {
     view-transition-name: app2;
     contain: layout; /*independent*/

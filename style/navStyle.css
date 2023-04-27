@@ -1,0 +1,112 @@
+
+#navback img {
+    width: 340px;
+    }
+    
+                  #col {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    background:#ecf0f1;
+                    height: 100vh;
+                    z-index: 999;
+                    width: 100%;
+    
+                  /*  transform: translate(-100%, 0);*/
+                    
+                  }
+    
+    
+                 #workHover img {
+                  /* opacity: 0;*/
+                   border-radius: 8px;
+                   transform: rotate(-10deg);
+                   box-shadow: 2px 2px 5px #000;
+                   margin-left: 19rem;
+                   margin-top: -8rem;
+                  }
+
+                  #sportHover img {
+                    opacity: 0;
+                    border-radius: 8px;
+                  }
+    
+                  .sideSmall {
+                    display: inline-block;
+                    font-family: Helvetica, sans-serif;
+                    font-weight: bold;
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0;
+                    opacity: 0;
+                    margin: 1.5rem;
+                    margin-left: 2rem;
+                    color: #454545;
+                    font-family: Arial;
+                    font-weight: bold;
+                    font-size: 4rem;
+                   
+                   /* font-size: 2rem; */ /*THIS WAS THE PROBLEM*/
+                   /* BE CAREFUL ABOUT THIS GETTING BIGGER */
+
+                     /* font-size: 2rem; */ /*THIS WAS THE PROBLEM*/
+                   /* BE CAREFUL ABOUT THIS GETTING BIGGER */
+
+                  /*  -webkit-text-fill-color: #454545;*/
+
+                  background: linear-gradient(#33354B, #33354B) left no-repeat, #D1D2DE;
+                  background-size: 0% 100%;
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  transition: 1s ease-in-out;
+
+
+                 /* text-shadow: -2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827, 2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827, 6px 6px #2793db;
+              */
+                 font-style: italic;
+                }
+
+                .sideSmall:hover {
+                /*  color: #454545;
+                  -webkit-text-fill-color: #ffffff;
+                  -webkit-text-stroke-color: #454545;
+                  -webkit-text-stroke-width: 3px;*/
+
+                  background-size: 100% 100%;
+                
+                }
+                
+    
+                  /* 123945 inline-block */
+    
+                  #navback {
+                    background: orange;
+                    opacity: 0;
+                  }
+    
+    
+
+
+
+#onTopLeft {
+    display: grid;
+}
+
+#onTopLeft #l {
+    transform: translate(-120%, 0);
+}
+
+.navControl {
+    grid-area: 1/1;
+    width: 40px;
+   
+}
+
+
+@media only screen and (max-width: 415px){
+  #workHover img {
+    margin-left: 1rem;
+    margin-top: 0rem;
+  }
+}
