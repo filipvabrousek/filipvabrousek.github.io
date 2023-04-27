@@ -1,32 +1,28 @@
-// import { getPageContent, onLinkNavigate, transitionHelper, getLink } from 'utils.js';
-
-
-function getNavigationType(fromPath, toPath) {
-
-    console.warn(fromPath);
-    console.warn(toPath);
-  
-    
-      /*if (toPath.includes("indexo")) {
-        return 'teacher-to-gallery';
-      }
-      
-      if (toPath.includes("child")) {
-        return 'gallery-to-teacher';
-      }
-      
-      return 'other';
-      */
-  
-  
+function getNavigationType(fromPath, toPath) {  
       return 'gallery-to-teacher';
   
-    
     }
   
+
+    /*navigation.addEventListener("navigate", (event) => {
+      const iHaveNotSelectedAnything = true;
+
+      if (iHaveNotSelectedAnything){
+        return;
+      }
+    });*/
   
     onLinkNavigate(async ({fromPath, toPath}) => {
-      document.querySelector(".app1").style.position = "absolute";
+
+
+
+      //  if (!document.createDocumentTransition) return;
+      // of only closed data
+
+
+      
+
+      document.querySelector(".blob1").style.position = "absolute";
       console.log(toPath);
       console.log(fromPath);
    
@@ -38,111 +34,53 @@ function getNavigationType(fromPath, toPath) {
       if (navType === "gallery-to-teacher"){ // 105616
           console.log(getLink(toPath));
           console.log(getLink(fromPath)); // undefinesd 
-       targetThumbnail = document.querySelector(".app1");//getLink(fromPath).querySelector("img");
+        
+        //  alert("ONO")
+       targetThumbnail = document.querySelector(".blob1");//getLink(fromPath).querySelector("img");
        targetThumbnail.style.viewTransformName = "banner-img";
       }
   
+      // 22:09_27 02/04/2023 !!!
       
       const transition = transitionHelper({
           updateDOM(){ // 202908
               document.body.innerHTML = content;
-  
-              /*if (navType === "teacher-to-gallery"){
-                  targetThumbnail = getLink(fromPath).querySelector("img");
-                  targetThumbnail.style.viewTransformName = "banner-img";
-              }*/
           }
       });
-  
   
   
       transition.finished.finally(() => {
-        
           if (targetThumbnail) {
               targetThumbnail.style.viewTransitionName="";
           }
-  
       });
-  
-  
-  
-  
-  
-  
+
     });
-  
-    
-  /*
-  
-  
-  
-  onLinkNavigate(async ({ fromPath, toPath }) => {
-   //....
-    
-    const transition = transitionHelper({
-      updateDOM() {
-        // This is a pretty heavy-handed way to update page content.
-        // In production, you'd likely be modifying DOM elements directly,
-        // or using a framework.
-        // innerHTML is used here just to keep the DOM update super simple.
-        document.body.innerHTML = content;
-  
-        if (navigationType === 'cat-page-to-gallery') {
-          targetThumbnail = getLink(fromPath).querySelector('img');
-          targetThumbnail.style.viewTransitionName = 'banner-img';
-        }
-      }
-    });
-    
-    transition.finished.finally(() => {
-      // Clear the temporary tag
-      if (targetThumbnail) targetThumbnail.style.viewTransitionName = '';
-    });
-  
-  
-  
-  });
-  
-  231755
-  */
-
-
-  // 16:47:20 25/02/2023 OMG! 
 
 
 
-
-
-if (document.startViewTransition && window.location.href.includes("sport")){
+if (document.startViewTransition && window.location.href.includes("sport")) {
   console.log("Supported");
-} else if (document.startViewTransition && (window.location.href.includes("filipvabrousek.github.io") || window.location.href.includes("localhost")) ) {
+} else if (document.startViewTransition && (window.location.href.includes("filipvabrousek.github.io") || window.location.href.includes("localhost"))) {
   console.log("Supported");
-} else if (document.startViewTransition && ((window.location.href.includes("filipvabrousek.github.io")) || (window.location.href.includes("localhost")))){
-  document.querySelector(".app1").style.display = "block";
-  document.querySelector(".app2").style.display = "block";
-  //document.querySelector(".app3").style.display = "block";
+} else if (document.startViewTransition && ((window.location.href.includes("filipvabrousek.github.io")) || (window.location.href.includes("localhost")))) {
+  document.querySelector(".blob1").style.display = "block";
 } else {
   console.log("Unsupported");
-  document.querySelector(".app1").style.display = "none";
-  document.querySelector(".app2").style.display = "none";
-  document.querySelector(".app3").style.display = "none";
+  document.querySelector(".blob1").style.display = "none";
 }
 
-if (window.location.href.includes("sport") === false){
-  document.querySelector(".app1").style.display = "block";
-  document.querySelector(".app2").style.display = "block";
-  //document.querySelector(".app3").style.display = "block";
+if (window.location.href.includes("sport") === false) {
+  document.querySelector(".blob1").style.display = "block";
 }
 
 
-// alert(window.location.href);
 
-
- window.setInterval(() => {
+window.setInterval(() => {
 
   if (window.location.href.includes("sport") && window.animDone === undefined){ // 204952 no Keyboard change
 window.animDone = true;
-  document.querySelector(".app1").animate([
+  document.querySelector(".blob1").animate([
     { opacity: 0.6 },
   { opacity: 0},
   ], {
@@ -150,7 +88,7 @@ window.animDone = true;
     duration: 1000,
     iterations: 1
   });
-
+/*
   document.querySelector(".app2").animate([
     { opacity: 0.6 },
   { opacity: 0},
@@ -168,7 +106,7 @@ window.animDone = true;
     fill: 'forwards',
     duration: 1000,
     iterations: 1
-  });
+  });*/
 /*
   document.querySelector(".app2").animate([
     { opacity: 0.5 },
@@ -191,4 +129,3 @@ window.animDone = true;
 }
 
  }, 500); // 165047 thanks 26/02
-

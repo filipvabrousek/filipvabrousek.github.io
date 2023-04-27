@@ -1,4 +1,19 @@
 
+
+const possibleNulls = [
+
+    S(".filipName"),
+    S(".myDescription"),
+    S(".floatContent"),
+    S(".lo") 
+
+];
+
+if (possibleNulls.filter(n => n != null).length === possibleNulls.length){
+
+
+
+
 localStorage.setItem("doNotMoveTitle", "false");
 
 const dur = 450; // 155915
@@ -9,40 +24,75 @@ let alreadyScaledUp = false;
 let isGoingUp = false;
 let isGoingDown = false;
 let opacityFlag = false;
+
+
 /*
-setTimeout(() => {
-    S(".newFilipName").animate([
-        { transform: 'scale(0.0)', opacity: "0.0" },
-        { transform: 'scale(1.2)', opacity: "1" },
-        { transform: 'scale(1.0)', opacity: "1" },
-        { transform: 'scale(1.14)', opacity: "1" },
-        { transform: 'scale(0.96)', opacity: "1" },
-        { transform: 'scale(1.0)', opacity: "1" }
-    ], {
-        duration: 400,
-        fill: 'forwards'
-    }).play();
-
-
-
-
-}, 400);
-*/
-
-
-S(".newFilipName").animate([
-    { transform: 'scale(3.0)', opacity: "0" },
-        { transform: 'scale(1.2)', opacity: "1" },
+S(".firstName").animate([
+    { transform: 'rotate3d(2, 1, 8, 90deg)',  opacity: "1",  },
+    { transform: 'rotate3d(0,0,0, 0deg)',   opacity: "1",  },
 ], {
-    duration: 700,
+    easing: "cubic-bezier(0.77, 0, 0.175, 1)", // 144700 on 01/04
+    duration: 1000,
+    fill: 'forwards'
+});*/
+
+S(".lastName").animate([
+    { transform: 'translate(0, 100%)',  opacity: "1",  },
+    { transform: 'translate(0,0)',   opacity: "1",  },
+], {
+    easing: "cubic-bezier(0.77, 0, 0.175, 1)", // 144700 on 01/04
+    delay: 400,
+    duration: 900,
     fill: 'forwards'
 });
 
-S(".newSubtitle").animate([
-    {transform: 'translateY(30px)', opacity: "0" },
-        {transform: 'translateY(0px)', opacity: "1" },
+
+
+
+
+/*
+
+@keyframes reveal {
+  0% {
+    transform: translate(0,100%);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+*/
+/*
+S(".lastName").animate([
+    { transform: 'scale(3.0) translateY(-20px)', opacity: "0",  },
+    { transform: 'scale(1) translateY(0px)', opacity: "1",  },
 ], {
-    duration: 900,
+    duration: 700,
+    fill: 'forwards'
+});*/
+
+/*
+
+S(".newFilipName").animate([
+    { transform: 'scale(3.0) translateY(-20px)', opacity: "0",  },
+    { transform: 'scale(1) translateY(0px)', opacity: "1",  },
+], {
+    duration: 700,
+    fill: 'forwards'
+});*/
+
+
+
+//  SA(".noScale")[i].style.transform = `scale(${conv}) translateY(-${conv * 10}px)`;
+
+
+
+S(".newSubtitle").animate([
+    {transform: 'translate(-200%, 0)'},
+    {transform: 'translate(0, 0)' },
+], {
+    easing: "cubic-bezier(0.97, 0, 0.175, 1)", // 144700 on 01/04
+    delay: 400,
+    duration: 1200,
     fill: 'forwards'
 });
 
@@ -50,7 +100,7 @@ S(".newSubtitle").animate([
 
 S(".app1").animate([
     { transform: 'scale(0.0)', opacity: "0" },
-        { transform: 'scale(1.2)', opacity: "1" },
+    { transform: 'scale(1.2)', opacity: "1" },
 ], {
     duration: 700,
     fill: 'forwards'
@@ -58,7 +108,7 @@ S(".app1").animate([
 
 S(".app2").animate([
     { transform: 'scale(0.0)', opacity: "0" },
-        { transform: 'scale(1.2)', opacity: "1" },
+    { transform: 'scale(1.2)', opacity: "1" },
 ], {
     duration: 800,
     fill: 'forwards'
@@ -66,7 +116,7 @@ S(".app2").animate([
 
 S(".app3").animate([
     { transform: 'scale(0.0)', opacity: "0" },
-        { transform: 'scale(1.2)', opacity: "1" },
+    { transform: 'scale(1.2)', opacity: "1" },
 ], {
     duration: 900,
     fill: 'forwards'
@@ -204,6 +254,8 @@ function typeWriter(id, text) {
 
 let media = window.matchMedia("(max-device-width: 415px)");
 
+
+
 let filipOffset = 200;
 let descOffset = 4 * 16;
 let myNameOffset = 220;
@@ -222,8 +274,10 @@ let hasDisappeared = false;
 
 
 
-const scrollLimit = 100; // 250
-let end = scrollLimit + 100;
+function convertRange( value, r1, r2 ) { 
+    return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
+}
+
 
 function convertRange(value, oldRange, newRange) {
     let ret = ((value - oldRange.min) * (newRange.max - newRange.min)) / (oldRange.max - oldRange.min) + newRange.min;
@@ -235,36 +289,44 @@ function convertRange(value, oldRange, newRange) {
 
 }
 
+
+
+function getFinalOffset(el){
+    const offsets = 2 * el.offsetLeft;
+    const remainingScreenMidPoint = (window.innerWidth - offsets) / 2;
+    const final = remainingScreenMidPoint / 2 - el.style.width / 2;
+   return final;
+}
   
+    let offsetSaved = 0;
+    let offset2Saved = 0;
+    let percentageInScrollableRangeSAVED = 0;
+    // 22:19:05 Okay, I am done
+    // 10/04/2023
+
+
 // Check the direction and reverse it
 function moveScaleOnScroll(){
+if (S(".floatContent") === null || SA(".noScale").length === 0){
+    return;
+}
+   
 
-/*
-    if (isGoingDown){
-    filipOffset -= 1;
-    descOffset -= 1;
-    } 
-    
-    if (isGoingUp) {
-        filipOffset += 1;
-        descOffset += 1;
-    }*/
+const scrollLimit = 100; // 250
+let end = scrollLimit + 100;
+
+   // console.log(filipOffset);
 
    
 
-    console.log(filipOffset);
-
-   // if (window.scrollY > 0){
-
-   // S(".sm-a").style.marginBottom = `${window.scrollY}px`;
-    S(".filipName").style.marginLeft = `${filipOffset + window.scrollY}px`;
-    S(".myDescription").style.marginLeft = `${descOffset + window.scrollY}px`;
-   // }
-
-   // S(".dots").style.opacity = "0"; // `${filipOffset / 100 - 1}`;
+   
+   // S(".filipName").style.marginLeft = `${filipOffset + window.scrollY}px`;
+   // S(".myDescription").style.marginLeft = `${descOffset + window.scrollY}px`;
 
 
-    S(".filipName").style.opacity = `${100 - window.scrollY}`;
+
+
+   // S(".filipName").style.opacity = `${100 - window.scrollY}`;
 
    /* S(".myDescription").animate([
         { opacity: '1' },
@@ -282,7 +344,7 @@ function moveScaleOnScroll(){
         fill: 'forwards'
     }).play();*/
 
-    const opa = Math.abs(1 - filipOffset / 200);
+   // const opa = Math.abs(1 - filipOffset / 200);
    // S(".dots").style.opacity = `${opa - 1.8}`;
     // S(".myDescription").style.opacity = `${opa - 1.8}`;
 
@@ -294,18 +356,18 @@ function moveScaleOnScroll(){
         console.log("Really scrolled:" + window.scrollY);
 */
 
-
+/*
 let fNameOpacity = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
 
 if (fNameOpacity > 0 && window.scrollY > 0) {
     S(".floatContent").style.opacity = 1 - (fNameOpacity);
-}
+}*/
 
 
 
     // S(".aboutWrapper").style.marginTop = `${scrollLimit}px`; // was 400px
     
-     if (window.scrollY > scrollLimit) {
+     if (window.scrollY > scrollLimit) { // WEIRD IN SAFARI 
 
         let conv = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
 
@@ -314,6 +376,8 @@ if (fNameOpacity > 0 && window.scrollY > 0) {
 
 
 
+       // S("#motionDesignText").style.color = "orange";
+   
         let up = 0;
         for (var i = 0; i < 11; i++){
             up += 50;
@@ -326,6 +390,143 @@ if (fNameOpacity > 0 && window.scrollY > 0) {
                 SA(".noScale")[i].style.opacity = `0`;
             }
         }
+
+       // SA(".noScale")[SA(".noScale").length - 2].style.color = "green";
+      //  SA(".noScale")[SA(".noScale").length - 1].style.color = "green";
+
+if (window.scrollY > 767){
+
+
+        let convRotation = convertRange(window.scrollY, {min: 768, max: 900}, {min: 0, max: 1});
+        convrotation = convRotation < 0 ? 0 : convRotation;
+
+        let fraction = 90 * convRotation;
+      //  console.warn(fraction);
+        
+        // between 0 and 90 deg
+      
+
+       
+        S("#prelastP").style.transform += ` rotate3d(1, 0, 0, ${fraction}deg)`;
+        S("#lastP").style.transform += ` rotate3d(1, 0, 0, ${fraction}deg)`;
+      
+
+
+    if (window.scrollY > 910){
+
+        let convRotation = convertRange(window.scrollY, {min: 911, max: 1042}, {min: 0, max: 1});
+        convrotation = convRotation < 0 ? 0 : convRotation;
+        let fraction = 90 - (90 * convRotation);
+
+       // S("#motion1").style.color = "orange";
+       // S("#motion2").style.color = "green";
+
+
+        if (fraction != 90){
+            S("#motion1").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
+            S("#motion2").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
+        }
+
+       // console.warn(`rotate3d(1, 0, 0, ${fraction}deg)`);
+    }
+
+    if (window.scrollY > 1042){
+        let percentageInScrollableRange = convertRange(window.scrollY, {min: 1043, max: 1200}, {min: 0, max: 1});
+       
+       // const offsets = 2 * S("#motion1").offsetLeft;
+     //   const remainingScreenMidPoint = (window.innerWidth - offsets) / 2;
+        const final = getFinalOffset(S("#motion1"));
+        const final2 = getFinalOffset(S("#motion2"));
+        console.warn(final);
+
+      //  const distanceToCenterX = (window.innerWidth - 2 * S("#motion1").offsetLeft) / 2 - S("#motion1").style.width / 2;
+        
+        
+        // (window.innerWidth / 2  - (2 * S("#motion1").offsetLeft) * 2);
+        const offset = percentageInScrollableRange * final;
+        const offset2 = percentageInScrollableRange * final2;
+
+      
+
+        let isMobile = window.matchMedia("(max-device-width: 415px)").matches;
+
+
+
+        let isSafarii = (navigator.vendor.match(/apple/i) &&
+        !navigator.userAgent.match(/crios/i) &&
+        !navigator.userAgent.match(/fxios/i) &&
+        !navigator.userAgent.match(/Opera|OPT\//) ) || window.navigator.userAgent.indexOf("Edg") > -1;;
+
+        
+        if (!isMobile){
+
+        if (isSafarii){
+            if (offset2 * 5 < 209){
+                S("#motion1").style.transform = `translate(${offset}px, ${offset * 1.2}px)`;
+                S("#motion2").style.transform = `translate(${offset2}px, ${offset2 * 5}px)`;
+                S("#motion1").style.transform += `scale(${isMobile ? 1.1 * percentageInScrollableRange : (1 + 2 * percentageInScrollableRange)})`;
+
+                offsetSaved = offset;
+                offset2Saved = offset2;
+                percentageInScrollableRangeSAVED = percentageInScrollableRange;
+
+            } else {
+
+                S("#motion1").style.transform = `translate(${offsetSaved}px, ${offsetSaved * 1.2}px)`;
+                S("#motion2").style.transform = `translate(${offset2Saved}px, ${offset2Saved * 5}px)`;
+                S("#motion1").style.transform += `scale(${isMobile ? 1.1 * percentageInScrollableRangeSAVED : (1 + 2 * percentageInScrollableRangeSAVED)})`;
+
+                // freeze at current position
+            }
+        } else {
+            S("#motion1").style.transform = `translate(${offset}px, ${offset * 1.2}px)`;
+            S("#motion2").style.transform = `translate(${offset2}px, ${offset2 * 5}px)`;
+            S("#motion1").style.transform += `scale(${isMobile ? 1.1 * percentageInScrollableRange : (1 + 2 * percentageInScrollableRange)})`;
+        }
+
+
+       
+
+        }
+        // Deleteing .onTopMotion fixes design problem
+
+       // S("#motion1").style.webkitTextStroke = "2px green";
+      
+
+
+       // 21:51:44
+
+       if (!isMobile){
+        S("#motion1").style.webkitTextFillColor = "transparent";
+
+        if (percentageInScrollableRange > 0.07){
+            S("#motion1").style.webkitTextStrokeWidth = "2px";
+        S("#motion1").style.webkitTextFillColor = "transparent";
+       
+        S("#motion1").style.webkitTextStrokeColor = "#3498Db";
+    } else {
+        S("#motion1").style.webkitTextFillColor = "";
+        S("#motion1").style.webkitTextStrokeWidth = "0px";
+    }
+
+}
+
+
+
+        
+
+
+       // S("#motion2").style.transform = `translate(${offset}px, ${offset}px)`;
+        
+    }
+
+
+       
+        
+}
+
+      //  SA(".noScale")[SA(".noScale").length - 2].style.transform += `translateY(-10px)`; //` rotate3d(0,1,0, -${conv * 10}deg)`;
+
 /*
         if (window.scrollY > scrollLimit + 100){
             let conv = convertRange(window.scrollY, {min: scrollLimit + 100, max: end}, {min: 0, max: 1});
@@ -788,4 +989,6 @@ function disable() {
 
 function enable() {
     window.onscroll = function () { };
+}
+
 }
