@@ -25,9 +25,11 @@
 		}
 
 		.blobSport {
+			position: absolute;
 			width: 40%;
 			margin-top: 0%;
 			margin-left: 70%;
+			z-index: -1;
 		}
 
 		.smallerBlob {
