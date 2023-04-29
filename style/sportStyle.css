@@ -143,6 +143,10 @@
 			.sides {
 			grid-template-columns: 1fr 1fr;
 		}
+
+		.smallerBlob {
+			display: none;
+		}
 			
 		}
 		
