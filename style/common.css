@@ -6,6 +6,7 @@
 
 body {
 	background:#ecf0f1;
+	overflow-x: hidden; /* 18/05/ 22:09:00 */
 }
 
 .high {
