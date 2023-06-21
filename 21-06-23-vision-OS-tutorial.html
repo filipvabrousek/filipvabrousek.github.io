@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
+<!---22/1/2019 23:00 end :) -->
+
+
+<head>
+    <title>Vision OS</title>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143592417-2');
+</script>
+
+	
+	<!--<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/prism.min.js"></script>-->
+	<!---<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" rel="stylesheet" />-->
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/a11y-dark.min.css" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+     <script>hljs.highlightAll();</script>
+   
+    </head>
+
+
+<body>
+    <section id="align">
+        <div id="center-buttons">
+            <div id="navback"></div>
+            
+            <button id="h">☰</button>
+
+            <div id="left">
+                <button class="btn-nav" id="close">×</button>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/">Home</a>
+               
+            </div>
+
+        </div>
+    </section>
+    
+
+
+    
+        <h1 class="about sma">Vision OS First App</h1>
+        <p class="date">21/06/2023</p>
+    <style>
+
+
+
+	@media only screen and (max-device-width: 415px){
+		 .sma {
+            font-size: 2.7rem !important;
+        }
+
+        .language-swift {
+            font-size: 2rem;
+        }
+	}
+       
+    </style>
+
+<!---------------------------------------------------- ISOMETRIC LOGO ---------------------------------------------------->
+<section id="tut-section">
+    <p class="pad">Let's get started with VisionOS SDK! You need to download Xcode 15 beta 2.</p>
+        
+         <h2>Creating a new project</h2>
+
+         <p class="pad">
+            We will create new project in Xcode and select select visionOS.
+            In our example we will choose initial scene: Window and immersive space: none.
+            We then click "Create".
+	</p>
+
+
+    <h2> Understanding the code</h2>
+
+    <p class="pad">
+We will opent the app.swift file.
+We can see WindowGroup View, that includes the initial view of our app.
+</p>
+
+
+<p class="pad">
+    SwiftUI supports 3 types of windows:
+    windows - classical windows that can have elements with slight elevation<br>
+    volume - 3D experience<br>
+    full space - space around you<br>
+</p>
+
+
+<p class="pad">
+    We will use .windowStyle(.volumetric) to make a volume.
+</p>
+
+    <pre>
+<code class="language-swift">
+    @main
+    struct MyFirstImmersiveApp: App {
+        var body: some Scene {
+            WindowGroup {
+                ContentView()
+            }.windowStyle(.volumetric)
+        }
+    }
+</code>
+
+    </pre>
+	
+    <style>
+        .inlineCode {
+            background: black;
+            color: white;
+            padding: 1px;
+            border-radius: 9px;
+            font-size: 0.7em;
+        }
+
+        /*https://developer.apple.com/videos/play/wwdc2022/10056/*/
+    </style>
+	
+	<p class="pad">
+
+        <h2>ContentView</h2>
+        Let's open ContentView
+        We will use  ```RealityView``` to load our scene
+        In the first closure of ```RealityView``` we load our content using et class and add it to our content. 
+        
+        We use the update colusure.
+        This closure is not a render loop, it is called only on state change.
+        We get our content from ```content.entities.first``` and set transform to it.
+        We add tap gesture to our scene. In TapGesure, the scene will get bigger to to make the scene larger.
+        Finally we use the ```glassBackgroundEffect``` modifier to add beautiful glass background to our scene.
+       
+<br><br>
+        SwiftUI now supports several types of keyframes:<br>
+        Linear keyframe - which uses linear interpolation between states.<br>
+        Cubic keyframe - the initial velocity of the next segment is used as the end velocity of the
+        Cubic Keyframe segment defined by this keyframe<br>
+        Spring keyframe - Keyframe uses .spring (bouncing) function<br>
+        </p>
+	
+<pre>
+<code class="language-swift">
+    VStack {
+        VStack {
+        
+         Toggle("Enlarge RealityView Content", isOn: $enlarge)
+                    .toggleStyle(.button)
+        
+        RealityView { content in
+            // Add the initial RealityKit content
+            if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
+                content.add(scene)
+            }
+        } update: { content in
+            // Update the RealityKit content when SwiftUI state changes
+            if let scene = content.entities.first {
+                let uniformScale: Float = enlarge ? 1.4 : 1.0
+                scene.transform.scale = [uniformScale, uniformScale, uniformScale]
+            }
+        }
+        .gesture(TapGesture().targetedToEntity().onEnded { _ in
+            enlarge.toggle()
+        })
+           }
+            .padding()
+            .glassBackgroundEffect()
+        }
+    </code>
+</pre>
+
+	
+	<h2>Immersive spaces</h2>
+
+
+
+	<p class="pad">
+
+
+
+        Immersive space is space that can completely sourround the user.
+        
+        We will add immersive space right below the WindowGroup structure in the xx.swift file and use the id: "MySpace"
+        
+    </p>
+	
+
+
+<pre>
+<code class="language-swift">
+    @main
+    struct MyFirstImmersiveApp: App {
+        var body: some Scene {
+            WindowGroup {
+                ContentView()
+            }.windowStyle(.volumetric)
+    
+            ImmersiveSpace(id: "ImmersiveSpace") {
+                ImmersiveView()
+            }
+        }
+    }
+    </code>
+</pre>
+
+<h2>ImmersiveView.swift</h2>
+
+<p class="pad">
+
+We do not need the update blocks as the content we want to display is static. We load our etit, but this time it will be shown in Immerisve View
+
+    </p>
+
+
+<pre>
+    <code class="language-swift">
+        struct ImmersiveView: View {
+
+            var body: some View {
+        
+                RealityView {
+                    content in
+                        // Add the initial RealityKit content
+                        if let scene =
+                        try ? await Entity(named: "ImmScene", in: realityKitContentBundle) {
+                            content.add(scene)
+                        }
+                }
+            }
+        
+        }
+        </code>
+    </pre>
+    
+
+    <p class="pad">
+
+
+We can add button to content View to open our ImSpace.
+We use ```openImmersiveSpace``` environment to open the immersive space.
+User can open the immersive space by tapping this button and he will be completely sourrounded by the content of your app.
+
+    </p>
+
+    <pre>
+        <code class="language-swift">
+
+    struct ContentView: View {
+
+        @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    
+        var body: some View {
+        // .......
+        
+            Button("Open") {
+                Task {
+                    await openImmersiveSpace(id: "ImmersiveSpace")
+                }
+            }
+        }
+    }
+</code>
+</pre>
+ 
+ <p class="pad"> That's it folks, thanks for reading and enjoy the rest of WWDC23!</p>
+    
+
+<style>
+    
+    .pad {
+		padding: 1em;
+		}
+    
+    code {
+        width: 80%;
+        overflow-x: scroll;
+		font-family: Consolas, Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1em;
+    }
+    
+    
+    .eighty {
+		width: 30%;
+		margin-left: 35%;
+        box-shadow: 20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+        padding-top: 2em;
+        padding-bottom: 2em;
+	}
+    
+    @media only screen and (max-width: 70em){
+    .eighty {
+		width: 90%;
+		margin-left: 5%;
+	}
+    }
+    
+    @media (max-device-width: 400px) {
+       code[class*=language-] {
+            font-size: 2.2em !important;
+        }
+		
+		p code {
+            font-size: 1em;
+        }
+    }
+	
+
+    
+	
+	
+	
+    </style>
+</section>
+    
+<style>
+    .sides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sub-image {
+        width: 40vw;
+        border-radius: 1em;
+    }
+	
+	
+    @media only screen and (max-width: 70em){
+        .sides {
+              grid-template-columns: 1fr;
+        }
+        
+        .sub-image {
+            width: 70vw;
+            margin-left: 15vw;
+            margin-bottom: 4em;
+        }
+    }
+	
+	
+	/*@media only screen and (max-device-width: 415px){
+		.language-js {
+			font-size: 1em;
+		}
+	}*/
+   
+</style>
+    
+  <link rel="stylesheet" href="common.css">  
+  <link rel="stylesheet" href = "common-tut.css">
+ <!--<link rel="stylesheet" href="dark.css">-->
+    
+    
+
+<!--
+    <section class="block">
+
+        <p>Welcome!
+
+            You can find brief overview of my bio, past results and racing plans here. There is also some brief description of all the equipment I use. For more pictures please visit my Facebook gallery.</p>
+
+      
+    </section>
+
+
+    <section class="block block-img">
+        <h2 class="sub gr">Block</h2>
+
+       
+        
+        <img src="https://www.teamphenomenalhope.org/wp-content/uploads/2015/11/southern-alps-pf-new-zealand-1-1024x531.jpg">
+
+        <br><br><br>
+
+        <h2 class="sm-title">Age</h2>
+        <p class="race-t">46</p>
+
+        <h2 class="sm-title">Education:</h2>
+        <p class="race-t">Master degree in Econonmy – MU Brno<br>
+            Master degree in Marketing – UTB Zlin</p>
+
+
+        <h2 class="sm-title">Langugages</h2>
+        <p class="race-t">English, German, Spanish, Russian, Slovak</p>
+
+    </section>
+
+
+
+
+    <section class="block">
+        <h2 class="sub gr">Cards</h2>
+
+
+    </section>
+
+    <section class="block F-showcase">
+       
+
+
+
+       
+        <div class="product card-title">
+            <h4>Wanaka</h4>
+         
+            
+            <div class="iw">
+                <img src="images/wanaka.jpg">
+            </div>
+              
+            
+          
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         <div class="product card-title">
+            <h4>Iceland</h4>
+         
+           
+              <div class="iw">
+             
+                  <img src="images/iceland.jpg">
+            </div>
+            
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         
+
+    </section>
+-->
+
+    <footer>
+
+
+        <p class="footer-t">Filip Vabroušek</p>
+        <p class="footer-em"></p>
+
+        <div id="social">
+            <img id="fba" src="footer/fb.png">
+            <img src="footer/spacer.png">
+            <img id="insta" src="footer/insta.png">
+        </div>
+
+
+        <div id="sp">
+
+        </div>
+
+    </footer>
+   
+    
+  
+
+
+
+
+
+
+    <script>
+        // alert(Number(window.innerWidth) / 16);
+
+
+        function S(el) {
+            return document.querySelector(el);
+        }
+
+        function SA(el) {
+            return document.querySelectorAll(el);
+        }
+
+
+
+        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/petrvabrousek/?hl=en", "_top"));
+        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/PetrVabrousek/", "_top"));
+
+        /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
+        S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
+        S("#edit").addEventListener("click", () => window.open("#season-en.html", "_top"));
+        S("#signout").addEventListener("click", () => window.open("#support-en.html", "_top"));
+*/
+
+
+
+        var isHidden = true;
+        S("#close").addEventListener("click", () => {
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+
+            if (isHidden == true) {
+
+                S("#left").style.display = "none";
+                S("#navback").style.display = "none";
+                S("#h").innerHTML = "&#9776;";
+                /* S("#hide").style.position = "absolute";
+                 S("#hide").marginTop = "20px";*/
+               // S(".block").style.display = "block";
+               // S(".block-img").style.display = "block";
+
+            } else {
+                /* S("#hide").style.position = "absolute";*/
+                /*S("#hide").marginTop = "3em";*/
+                S("#left").style.display = "block";
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+               // S(".block").style.display = "none";
+               // S(".block-img").style.display = "none";
+            }
+        });
+
+
+
+        S("#h").addEventListener("click", () => {
+
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+            if (isHidden == true) {
+                S("#left").style.display = "none";
+                S("#left").style.visibility = "hidden";
+                S("#navback").style.display = "none";
+                S(".block").style.display = "block";
+                S(".block-img").style.display = "block";
+                S("#h").innerHTML = "&#9776;";
+                S("#h").marginTop = "20px"; // do not set position to absolute
+            } else {
+               S("#left").style.display = "flex"; 
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+                S(".block").style.display = "none";
+                S(".block-img").style.display = "none";
+                S("#h").marginTop = "3em";
+                S("#h").marginRight = "2em";
+
+            }
+        });
+
+		
+		
+		
+		
+		
+		function writeDate(){
+			document.querySelector(".footer-em").innerText = new Date().getFullYear();
+		}
+		
+		
+		
+		writeDate();
+        
+        /* if (window.matchMedia("(max-width: 70.5em)")){
+           S("#h").style.display = "block";
+     
+        };
+        
+         if (window.matchMedia("(min-width: 71em)")){
+           S("#h").style.display = "none";
+     
+        };
+        */
+
+
+        /*
+        function resize() {
+            var w = window.innerWidth / 16;
+            if (w < 70) {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "none";
+                });
+            } else {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "block";
+                });
+            }
+        }
+
+        window.addEventListener("resize", resize);
+            
+            
+        if (window.matchMedia("(min-width: 70.5em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "block";
+        });
+        }
+            
+            
+        if (window.matchMedia("(max-width: 70em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "none";
+        });
+        }
+
+        */
+
+
+        /*
+        
+        
+Tweet:
+Apple has just announced VisionOS SDK.
+Developers can use Xcode and SwiftUI to develop app for Apple's Vision Pro spatial computer.
+        */
+
+    </script>
+
+
+
+
+</body>
