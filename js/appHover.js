@@ -544,7 +544,7 @@ if (window.matchMedia("(max-device-width: 415px)").matches) {
 
                 document.querySelector(`${options.li} .app-img`).animate([
                     { transform: "translate(0, 0) scale(1)" },
-                    { transform: "translate(60px, -190px) scale(0.6)" }, // Chrome
+                    { transform: "translate(60px, -181px) scale(0.6)" }, // Chrome
                 ], {
                     duration: 400,
                     fill: 'forwards'
