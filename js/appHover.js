@@ -402,7 +402,7 @@ fill: 'forwards'
         li.style.gridArea = "1/1";
     
 
-
+// Check for mobile Safari
         let isSafarii = navigator.vendor.match(/apple/i) &&
         !navigator.userAgent.match(/crios/i) &&
         !navigator.userAgent.match(/fxios/i) &&
@@ -480,7 +480,10 @@ fill: 'forwards'
 
 
         if (window.matchMedia("(max-device-width: 415px)").matches) {
-            safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(470px)" };
+            safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(600px)" };
+            // 470
+
+            alert("Hello");
         }
         
         if (window.matchMedia("(min-width: 1400px)").matches) {
