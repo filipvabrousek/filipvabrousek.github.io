@@ -918,7 +918,7 @@ width: 84%;
 @media (max-device-width: 415px) {
 
     .firstImage {
-        display: none;
+       /* display: none; */
         margin-left: 15rem !important;
     }
    
