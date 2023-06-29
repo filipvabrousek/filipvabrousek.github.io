@@ -440,7 +440,7 @@ fill: 'forwards'
     
         document.querySelector(options.uniqueContainerID).children[2].animate([ // 22:52:40 28/03
             { transform: ' translateY(0px)' },
-            { transform: ' translateY(-30px)' },
+            { transform: ' translateY(-15px)' }, //-30px
     
         ], {
             duration: 1000,
