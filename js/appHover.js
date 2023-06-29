@@ -479,12 +479,7 @@ fill: 'forwards'
         ];
 
 
-        if (window.matchMedia("(max-device-width: 415px)").matches) {
-            safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(600px)" };
-            // 470
-
-            alert("Hello");
-        }
+      
         
         if (window.matchMedia("(min-width: 1400px)").matches) {
             safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(433px)" };
@@ -511,6 +506,14 @@ fill: 'forwards'
 
 if (isSafari){
         safariAppDescData[safariAppDescData.length - 1] =  { transform: `translateY(${smallerThan1400 ? 380 : 500}px)` };
+}
+
+
+if (window.matchMedia("(max-device-width: 415px)").matches) {
+    safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(600px)" };
+    // 470
+
+    alert("Hello");
 }
 
 
