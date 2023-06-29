@@ -17,7 +17,7 @@
 @keyframes spin1 { 100% { transform:rotate(20deg); } }
 
 .largeHidden {
-    position: absolute;
+    position: relative;
     margin-top: 64px;
     margin-left: 78px;
     font-size: 12rem;
@@ -83,18 +83,18 @@
 }
 /*-----------------------------------------------BLOB-IMAGE----------------------------------------------*/
 
-
 .newSubtitle {
     transform: translate(-200%, 0);
 }
 
 .leftIcon {
-  
     height: 700px ;
     width: 700px;
-   
 }
 
+.superSpace {
+        margin-top: 18rem;
+}
 
 .modernSection {
     /* display: grid;*/
@@ -204,7 +204,7 @@
     flex-direction: column;
     /*background-color: white;*/
     border-radius: 3rem;
-    margin-top: 18rem;
+   /* margin-top: 18rem;*/
   }
 
 
@@ -923,8 +923,14 @@ width: 84%;
     }
    
 
+    .superSpace {
+        margin-top: 9rem;
+    }
+
     .largeHidden {
         font-size: 3rem;
+       transform: translateY(150px) !important;
+       margin-left: 28px;
     }
    
 
@@ -961,7 +967,7 @@ width: 84%;
     .blobImage {
             width: 210px;
             height: 180px;
-            margin-top: -2rem;
+            /*margin-top: -2rem;*/
     }
 
     #relaysOverlay, #evenyOverlay, #runnyOverlay, #swimrunnyOverlay {
@@ -971,6 +977,8 @@ width: 84%;
 
     .cover {
         overflow-x: scroll;
+        max-height: 480px;
+        margin-top: -280px;
     }
 
     #rls > img {
