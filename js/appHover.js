@@ -527,13 +527,33 @@ if (window.matchMedia("(max-device-width: 415px)").matches) {
      
         if (window.matchMedia("(max-device-width: 415px)").matches) {
 
-            document.querySelector(`${options.li} .app-img`).animate([
-                { transform: "translate(0, 0) scale(1)" },
-                { transform: "translate(60px, -230px) scale(0.6)" },
-            ], {
-                duration: 400,
-                fill: 'forwards'
-            });
+
+            if (isSafari){
+
+                document.querySelector(`${options.li} .app-img`).animate([
+                    { transform: "translate(0, 0) scale(1)" },
+                    { transform: "translate(60px, -195px) scale(0.6)" },
+                ], {
+                    duration: 400,
+                    fill: 'forwards'
+                });
+
+            } else {
+
+
+
+                document.querySelector(`${options.li} .app-img`).animate([
+                    { transform: "translate(0, 0) scale(1)" },
+                    { transform: "translate(60px, -230px) scale(0.6)" },
+                ], {
+                    duration: 400,
+                    fill: 'forwards'
+                });
+
+
+
+            }
+           
 
 
         } else if (window.matchMedia("(max-width: 1400px)").matches) {
