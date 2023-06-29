@@ -510,10 +510,10 @@ if (isSafari){
 
 
 if (window.matchMedia("(max-device-width: 415px)").matches) {
-    safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(850px)" };
+    safariAppDescData[safariAppDescData.length - 1] =  { transform: "translateY(600px)" };
     // 470
 
-    alert("Hello");
+   // alert("Hello");
 }
 
 
