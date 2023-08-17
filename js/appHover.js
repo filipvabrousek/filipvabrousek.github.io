@@ -278,23 +278,27 @@ if (options.li === "#swimrunnysa" && window.scrollY > swimrunnyLimit){
 
 let rs = document.querySelector(strLeft);
 rs.style.borderRadius = "7px";
+ // rs.style.borderRadius = "42% 56% 72% 28% / 42% 42% 56% 48%";
+// rs.style.borderRadius = "20% 30% 40% / 30% 20% 60%";
+// rs.style.borderRadius = "42% 56% 72% 28% / 42% 42% 56% 48%";
+
 
 
 let br = document.querySelector(str);
-// br.style.borderRadius = "42% 28% 48% 48% / 28% 28% 72% 72%";
+// br.style.borderRadius = "42% 56% / 42% 42% ";
 // 21:46:39
 
 
 
 
-br.style.borderRadius = "7px";
+br.style.borderRadius = "88% 12% 76% 24% / 37% 36% 64% 63% ";
 br.style.width = "90%";   
 br.style.height = "600px";   
 
 
 
 let mat = window.matchMedia("(max-device-width: 415px)").matches;
-br.style.opacity =  mat ? 0.3 : 0.85; // 140250 29/06
+br.style.opacity =  mat ? 0.3 : 0.24; // 140250 29/06
 
 
 //br.style.animation="blob 3s linear";
