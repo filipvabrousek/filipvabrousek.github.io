@@ -12,7 +12,14 @@
    /* animation: blob 3.7s linear infinite;*/
 }
 
+#runnyLarge {
+    color: #1abc9c;
+}
 
+
+#evenyLarge {
+    color: #20a8cd;
+}
 
 @keyframes spin1 { 100% { transform:rotate(20deg); } }
 
@@ -21,7 +28,8 @@
     margin-top: 64px;
     margin-left: 78px;
     font-size: 12rem;
-    color: #d5d5d5;
+    /*color: #d5d5d5;*/
+    color: #3498db;
     opacity: 0;
     transition: 3s;
     transform: translateY(30px);
