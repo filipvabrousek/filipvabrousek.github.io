@@ -298,7 +298,7 @@ br.style.height = "600px";
 
 
 let mat = window.matchMedia("(max-device-width: 415px)").matches;
-br.style.opacity =  mat ? 0.3 : 0.24; // 140250 29/06
+br.style.opacity =  mat ? 0.3 : 0.83; // 140250 29/06
 
 
 //br.style.animation="blob 3s linear";
