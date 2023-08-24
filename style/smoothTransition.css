@@ -1,0 +1,69 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-to-left {
+    from {
+        transform: translateX(-4rem);
+    }
+
+    to {
+        transform: translateX(0rem);
+    }
+}
+/*22:18:00*/
+@keyframes slide-to-right {
+    from {
+        transform: translateX(-4rem);
+    }
+
+    to {
+        transform: translateX(0rem);
+    }
+}
+
+
+.indexBlob, .blobSport  {
+    view-transition-name: card;
+}
+
+
+.indexSecondBlob, .secondBlobSport {
+    view-transition-name: acard;
+}
+
+
+::view-transition-old(card){
+    mix-blend-mode: normal;
+}
+
+::view-transition-new(card){
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root){
+    animation: fade-out 700ms cubic-bezier(0, 0, 0.2, 1), 
+    slide-to-right 700ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+::view-transition-new(root){
+    animation: fade-in 700ms cubic-bezier(0, 0, 0.2, 1), 
+    slide-to-left 700ms cubic-bezier(0, 0, 0.2, 1);
+    mix-blend-mode: normal;
+}
