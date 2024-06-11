@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
+<!---22/1/2019 23:00 end :) -->
+
+
+<head>
+    <title>textRenderer and Swift Testing</title>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143592417-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143592417-2');
+</script>
+
+	
+	<!--<script src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/prism.min.js"></script>-->
+	<!---<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" rel="stylesheet" />-->
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/a11y-dark.min.css" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+     <script>hljs.highlightAll();</script>
+   
+    </head>
+
+
+<body>
+    <section id="align">
+        <div id="center-buttons">
+            <div id="navback"></div>
+            
+            <button id="h">☰</button>
+
+            <div id="left">
+                <button class="btn-nav" id="close">×</button>
+                <a class="btn-nav" href="https://filipvabrousek.github.io/">Home</a>
+               
+            </div>
+
+        </div>
+    </section>
+    
+    
+        <h1 class="about sma">SwiftUI Text Effects and Swift testing</h1>
+        <p class="date">11/06/2024</p>
+    <style>
+
+
+.sma {
+            font-size: 2.2rem !important;
+        }
+
+        h2 {
+            font-size: 1.6rem !important;
+        }
+
+        .hljs-keyword, .hljs-title, .hljs-meta {
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        }
+
+	@media only screen and (max-device-width: 415px){
+		 .sma {
+            font-size: 2.7rem !important;
+        }
+
+        .language-swift {
+            font-size: 2rem;
+        }
+	}
+       
+    </style>
+
+<!---------------------------------------------------- ISOMETRIC LOGO ---------------------------------------------------->
+<section id="tut-section">
+    <p class="pad">In this tutorial we are going to create gradual blur effect using the new <code>textEffect</code> modifier in iOS 18. </p>
+
+    <h2>Step 1: Define the Text Layout</h2>
+<p class="pad">First, we need to define the text layout. We do this by extending the <code>Text.Layout</code> structure and adding two computed properties: <code>flattenedRuns</code> and <code>flattenedRunSlices</code>. These properties will allow us to access the individual runs and slices of the text layout.</p>
+
+<pre><code class="language-swift">
+extension Text.Layout {
+    var flattenedRuns: some RandomAccessCollection<Text.Layout.Run> {
+        self.flatMap { line in
+            line
+        }
+    }
+
+    var flattenedRunSlices: some RandomAccessCollection<Text.Layout.RunSlice> {
+        flattenedRuns.flatMap(\.self)
+    }
+}
+</code></pre>
+
+<h2>Step 2: Create the Emphasis Attribute</h2>
+<p class="pad">Next, we create a new structure called <code>EmphasisAttribute</code> that conforms to the <code>TextAttribute</code> protocol. This attribute will be used to mark the text that we want to apply the effect to.</p>
+
+<pre><code class="language-swift">
+struct EmphasisAttribute: TextAttribute {}
+</code></pre>
+
+<h2>Step 3: Define the Effect</h2>
+<p class="pad">Now, we define the main effect. We create a new structure called <code>Effect</code> that conforms to the <code>TextRenderer</code> and <code>Animatable</code> protocols. This structure will be responsible for rendering the text with the desired effect.</p>
+
+<pre><code class="language-swift">
+struct Effect: TextRenderer, Animatable {
+    var elapsedTime: TimeInterval
+    var elementDuration: TimeInterval
+    var totalDuration: TimeInterval
+    
+    var animatableData: Double {
+        get {elapsedTime}
+        set {elapsedTime = newValue}
+    }
+    
+    init(elapsedTime: TimeInterval, totalDuration: TimeInterval, elementDuration: Double = 0.4) {
+        self.elapsedTime = min(elapsedTime, totalDuration)
+        self.totalDuration = min(elementDuration, totalDuration)
+        self.elementDuration = elementDuration
+    }
+
+    // draw method from step 4 comes here
+}
+</code></pre>
+
+<h2>Step 4: Implement the Draw Method</h2>
+<p class="pad">In the <code>Effect</code> structure, we implement the <code>draw</code> method. This method takes a <code>Text.Layout</code> and a reference to a <code>GraphicsContext</code>, and draws the text with the effect. If the run has the <code>EmphasisAttribute</code>, we draw each slice individually with the effect. Otherwise, we draw the run normally.</p>
+
+<pre><code class="language-swift">
+func draw(layout: Text.Layout, in ctx: inout GraphicsContext) {
+    for run in layout.flattenedRuns {
+        if run[EmphasisAttribute.self] != nil {
+            let delay = 0.03 //elementDelay(count: run.count)
+            
+            for (index, slice) in run.enumerated() {
+                let timeOffset = TimeInterval(index) * delay
+                let elementTime = max(0, min(elapsedTime - timeOffset, elementDuration))
+                var copy = ctx
+                draw(slice, at: elementTime, in: &copy)
+            }
+        } else {
+            var copy = ctx
+            copy.opacity = UnitCurve.easeIn.value(at: elapsedTime / 0.2)
+            copy.draw(run)
+        }
+    }
+}
+</code></pre>
+
+<h2>Step 5: Create the Text Transition</h2>
+<p class="pad">Next, we create a new structure called <code>TextTransition</code> that conforms to the <code>Transition</code> protocol. This structure will be responsible for transitioning the text from one state to another.</p>
+
+<pre><code class="language-swift">
+struct TextTransition: Transition {
+    static var properties: TransitionProperties {
+        TransitionProperties(hasMotion: true)
+    }
+    
+    func body(content: Content, phase: TransitionPhase) -> some View {
+       
+        let duration = 0.9
+        let elapsedTime = phase.isIdentity ? duration : 0
+        let renderer = Effect(elapsedTime: elapsedTime, totalDuration: duration)
+        
+        content.transaction { transaction in
+            if !transaction.disablesAnimations {
+                transaction.animation = .linear(duration: duration)
+            }
+        } body: { view in
+            view.textRenderer(renderer)
+        }
+    }
+}
+</code></pre>
+
+<h2>Step 6: Create the Effect View</h2>
+<p class="pad">Finally, we create a new structure called <code>EffectView</code> that conforms to the <code>View</code> protocol. This view displays the text with the effect. We use a <code>Slider</code> to control the progress of the blur effect on our Text</p>
+
+<pre><code class="language-swift">
+struct EffectView: View {
+    let visualEffects = Text("SwiftUI")
+        .customAttribute(EmphasisAttribute())
+        .foregroundStyle(.green)
+        .bold()
+    
+    @State var time: TimeInterval = 0.3
+    
+    var body: some View {
+        VStack {
+            Slider(value: $time, in: 0 ... 0.8)
+            
+            Text("Filip loves \(visualEffects)")
+                .font(.system(.title, design: .rounded, weight: .semibold))
+                .frame(width: 250)
+                .foregroundStyle(.gray)
+                .textRenderer(Effect(elapsedTime: time, totalDuration: 0.8))
+            
+            Spacer()
+            
+        }.multilineTextAlignment(.center)
+            .padding()
+    }
+}
+</code></pre>
+
+
+<h1 class="about sma">Swift testing</h1>
+<p class="date">11/06/2024</p>
+<p class="pad">Apple has also announced Swift Testing framework at WWDC24. You can check the option "Swift Testing with XCTest UI Tests" </p>
+
+
+<img class="eighty" src="tut-images/swift-testing-2024.png"/>
+<p class="pad"></p>
+
+
+<p class="pad">To begin, open the file<code> SwiftTestingAppTests.swift</code> and write the code in the snippet.</p>
+<p class="pad">You will see struct named after your project, and function annotated with new <code>@Test</code> annotation. We can then define a test case using the new <code>#expect</code> makro.</p>
+
+<pre>
+    <code class="language-swift">
+import Testing
+@testable import SwiftTestingApp
+
+struct SwiftTestingAppTests {
+
+    @Test func testExample() async throws {
+        let a = 2
+        let result = a + a
+        #expect(result == 4)
+    }
+}
+    </code>
+</pre>
+
+<h1 class="about sma">One more thing</h1>
+<p>As I wrote <a href="https://x.com/filipvabrousek/status/1763194965205590205">here</a>, back in February I developed an <a href="https://github.com/filipvabrousek/Bone">open-source</a> Swift library called Bone.swift. It can help you understand SwiftUI internals, by using the <code>bone</code> modifier. It inspect underlying SwiftUI views like <code>UpdateCoalescingCollection</code> view that powers SwiftUI List on iOS and iPadOS. It can also inspect view hiearchy for pure SwiftUI elements like <code>Text</code> that are drawn on SwiftUI's <code>CGDrawingVew.</code>
+The output will be written to text file and backing views and layers will be shown in the interactive view over your app's UI.</p>
+<br>
+
+
+<pre>
+    <code class="language-swift">
+        List {
+            Text("Bone")
+          }
+          .bone(into: "output.txt")
+    </code>
+</pre>
+
+
+<p>And if you are wondering, the implementation of these elements is the same on iOS 18.</p>
+<br>
+<p>Enjoy the rest of WWDC24!</p>
+<style>
+    
+    .pad {
+		padding: 1em;
+		}
+    
+    code {
+        width: 80%;
+        overflow-x: scroll;
+		font-family: Consolas, Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1em;
+    }
+    
+    
+    .eighty {
+		width: 30%;
+		margin-left: 35%;
+        box-shadow: 20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+        padding-top: 2em;
+        padding-bottom: 2em;
+	}
+    
+    @media only screen and (max-width: 70em){
+    .eighty {
+		width: 90%;
+		margin-left: 5%;
+	}
+    }
+    
+    @media (max-device-width: 400px) {
+       code[class*=language-] {
+            font-size: 2.2em !important;
+        }
+		
+		p code {
+            font-size: 1em;
+        }
+    }
+	
+
+    
+	
+	
+	
+    </style>
+</section>
+    
+<style>
+    .sides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sub-image {
+        width: 40vw;
+        border-radius: 1em;
+    }
+	
+	
+    @media only screen and (max-width: 70em){
+        .sides {
+              grid-template-columns: 1fr;
+        }
+        
+        .sub-image {
+            width: 70vw;
+            margin-left: 15vw;
+            margin-bottom: 4em;
+        }
+    }
+
+ 
+	
+	
+	/*@media only screen and (max-device-width: 415px){
+		.language-js {
+			font-size: 1em;
+		}
+	}*/
+   
+</style>
+    
+  <link rel="stylesheet" href="common.css">  
+  <link rel="stylesheet" href = "common-tut.css">
+ <!--<link rel="stylesheet" href="dark.css">-->
+    
+    
+
+<!--
+    <section class="block">
+
+        <p>Welcome!
+
+            You can find brief overview of my bio, past results and racing plans here. There is also some brief description of all the equipment I use. For more pictures please visit my Facebook gallery.</p>
+
+      
+    </section>
+
+
+    <section class="block block-img">
+        <h2 class="sub gr">Block</h2>
+
+       
+        
+        <img src="https://www.teamphenomenalhope.org/wp-content/uploads/2015/11/southern-alps-pf-new-zealand-1-1024x531.jpg">
+
+        <br><br><br>
+
+        <h2 class="sm-title">Age</h2>
+        <p class="race-t">46</p>
+
+        <h2 class="sm-title">Education:</h2>
+        <p class="race-t">Master degree in Econonmy – MU Brno<br>
+            Master degree in Marketing – UTB Zlin</p>
+
+
+        <h2 class="sm-title">Langugages</h2>
+        <p class="race-t">English, German, Spanish, Russian, Slovak</p>
+
+    </section>
+
+
+
+
+    <section class="block">
+        <h2 class="sub gr">Cards</h2>
+
+
+    </section>
+
+    <section class="block F-showcase">
+       
+
+
+
+       
+        <div class="product card-title">
+            <h4>Wanaka</h4>
+         
+            
+            <div class="iw">
+                <img src="images/wanaka.jpg">
+            </div>
+              
+            
+          
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         <div class="product card-title">
+            <h4>Iceland</h4>
+         
+           
+              <div class="iw">
+             
+                  <img src="images/iceland.jpg">
+            </div>
+            
+            <p class="sm">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
+        </div>
+        
+         
+
+    </section>
+-->
+
+    <footer>
+
+
+        <p class="footer-t">Filip Vabroušek</p>
+        <p class="footer-em"></p>
+
+        <div id="social">
+            <img id="fba" src="footer/fb.png">
+          
+            <img id="insta" src="footer/insta.png">
+            <img id="twitter" src="https://cdn3.iconfinder.com/data/icons/basicolor-reading-writing/24/077_twitter-512.png">
+        </div>
+
+
+        <div id="sp">
+
+        </div>
+
+    </footer>
+   
+    
+  
+
+
+
+
+
+
+    <script>
+        // alert(Number(window.innerWidth) / 16);
+
+
+        function S(el) {
+            return document.querySelector(el);
+        }
+
+        function SA(el) {
+            return document.querySelectorAll(el);
+        }
+
+
+
+        S("#insta").addEventListener("click", () => window.open("https://www.instagram.com/filipvabrousek/?hl=en", "_top"));
+        S("#fba").addEventListener("click", () => window.open("https://www.facebook.com/filipvabrousek/", "_top"));
+        S("#twitter").addEventListener("click", () => window.open("https://www.x.com/filipvabrousek/", "_top"));
+
+        /*   S("#all").addEventListener("click", () => window.open("#index-en.html", "_top"));
+        S("#messages").addEventListener("click", () => window.open("#results-en.html", "_top"));
+        S("#edit").addEventListener("click", () => window.open("#season-en.html", "_top"));
+        S("#signout").addEventListener("click", () => window.open("#support-en.html", "_top"));
+*/
+
+
+
+        var isHidden = true;
+        S("#close").addEventListener("click", () => {
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+
+            if (isHidden == true) {
+
+                S("#left").style.display = "none";
+                S("#navback").style.display = "none";
+                S("#h").innerHTML = "&#9776;";
+                /* S("#hide").style.position = "absolute";
+                 S("#hide").marginTop = "20px";*/
+               // S(".block").style.display = "block";
+               // S(".block-img").style.display = "block";
+
+            } else {
+                /* S("#hide").style.position = "absolute";*/
+                /*S("#hide").marginTop = "3em";*/
+                S("#left").style.display = "block";
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+               // S(".block").style.display = "none";
+               // S(".block-img").style.display = "none";
+            }
+        });
+
+
+
+        S("#h").addEventListener("click", () => {
+
+            if (isHidden == true) {
+                isHidden = false
+            } else {
+                isHidden = true;
+            }
+
+            if (isHidden == true) {
+                S("#left").style.display = "none";
+                S("#left").style.visibility = "hidden";
+                S("#navback").style.display = "none";
+                S(".block").style.display = "block";
+                S(".block-img").style.display = "block";
+                S("#h").innerHTML = "&#9776;";
+                S("#h").marginTop = "20px"; // do not set position to absolute
+            } else {
+               S("#left").style.display = "flex"; 
+                S("#navback").style.display = "block";
+                S("#h").innerHTML = "&#10006;";
+                S(".block").style.display = "none";
+                S(".block-img").style.display = "none";
+                S("#h").marginTop = "3em";
+                S("#h").marginRight = "2em";
+
+            }
+        });
+
+		
+		
+		
+		
+		
+		function writeDate(){
+			document.querySelector(".footer-em").innerText = new Date().getFullYear();
+		}
+		
+		
+		
+		writeDate();
+        
+        /* if (window.matchMedia("(max-width: 70.5em)")){
+           S("#h").style.display = "block";
+     
+        };
+        
+         if (window.matchMedia("(min-width: 71em)")){
+           S("#h").style.display = "none";
+     
+        };
+        */
+
+
+        /*
+        function resize() {
+            var w = window.innerWidth / 16;
+            if (w < 70) {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "none";
+                });
+            } else {
+                SA(".spacer").forEach((el, i) => {
+                    el.style.display = "block";
+                });
+            }
+        }
+
+        window.addEventListener("resize", resize);
+            
+            
+        if (window.matchMedia("(min-width: 70.5em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "block";
+        });
+        }
+            
+            
+        if (window.matchMedia("(max-width: 70em)")){
+            SA(".spacer").forEach((el, i) => {
+            el.style.display = "none";
+        });
+        }
+
+        */
+
+
+        /*
+        
+        
+Tweet:
+Apple has just announced VisionOS SDK.
+Developers can use Xcode and SwiftUI to develop app for Apple's Vision Pro spatial computer.
+        */
+
+    </script>
+
+
+
+
+</body>
