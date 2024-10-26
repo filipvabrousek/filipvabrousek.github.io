@@ -52,22 +52,11 @@ S("#h").addEventListener("click", () => {
   isOpen = !isOpen;
 
   let frames = [
-    { transform: 'translate(0, 0)', opacity:1 },
-    { transform: 'translate(0px,256px)', opacity: 0 },
+    { transform: 'translate(0, 0) scale(1)', color: "black", opacity:1 },
+    { transform: 'translate(0px,256px)  scale(1.4)', color: "#00b3ff", opacity: 0 },
   ];
 
-
-
-  if (!isOpen){
-     frames = [
-      { transform: 'translate(0px,256px)', opacity: 0 },
-      { transform: 'translate(0, 0)', opacity: 1 },
-    ];
-    
-  }
-
-  
-  
+// 22:37:10 26/10/2024 Nice!!!  
   for (var i = 0; i < SA(".floatF")[0].children.length; i++){
   SA(".floatF")[0].children[i].animate(frames, {
     easing: "cubic-bezier(0.77, 0, 0.175, 1)", // 144700 on 01/04
@@ -83,17 +72,13 @@ S("#h").addEventListener("click", () => {
 S("#l").addEventListener("click", () => {
   isOpen = !isOpen;
 
-  let frames = [
-    { transform: 'translate(0, 0)', opacity: 0 },
-    { transform: 'translate(0px,256px)', opacity: 1 },
-  ];
 
 
 
   if (!isOpen){
      frames = [
-      { transform: 'translate(0px,256px)', opacity: 0 },
-      { transform: 'translate(0, 0)', opacity: 1 },
+      { transform: 'translate(0px,256px)', color: "#00B3FF", opacity: 0 },
+      { transform: 'translate(0, 0)', color: "black", opacity: 1 },
     ]; 
   }
   

@@ -29,7 +29,7 @@ const makeDoers = () => {
 
 
     S("#l").animate([
-        { transform: 'translate(-120%, 0)', opacity: "1", },
+        { transform: 'translate(-140%, 0)', opacity: "1", },
         { transform: 'translate(0,0)', opacity: "1", },
 
 
@@ -130,7 +130,7 @@ const oladoers = () => {
     S("#l").animate([
 
         { transform: 'translate(0,0)', opacity: "1", },
-        { transform: 'translate(-120%, 0)', opacity: "1", },
+        { transform: 'translate(-140%, 0)', opacity: "1", },
 
 
     ], {
@@ -248,7 +248,7 @@ const oladoersWithTimeout = () => {
     S("#l").animate([
 
         { transform: 'translate(0,0)', opacity: "1", },
-        { transform: 'translate(-120%, 0)', opacity: "1", },
+        { transform: 'translate(-140%, 0)', opacity: "1", },
 
 
     ], {
@@ -407,7 +407,7 @@ if (isExpanded){
                 
                 this.wasAtSport = true;
 
-                wp.setAttribute("src", "https://thumbs.gfycat.com/FlickeringDimHorsefly-size_restricted.gif");
+                wp.setAttribute("src", "https://gifdb.com/images/high/runner-s-mountain-trail-athletes-ai01nacaqhgy2g35.gif");
 
 
                
