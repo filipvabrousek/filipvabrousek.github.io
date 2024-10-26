@@ -1,0 +1,142 @@
+<script src="comptest/AppShowcase.js"></script>
+<script src="comptest/ScreenShowcase.js"></script>
+<script src="comptest/MobileView.js"></script>
+
+
+
+
+<section class="apps">
+
+
+  <app-showcase 
+  app-title="SPATIAL-NETWORK"
+  app-desc=""
+  app-img="https://filipvabrousek.github.io/images/runny-orig.png"
+  app-background="https://res.cloudinary.com/simpleview/image/upload/v1579299474/clients/catalinaislandccvb/Untitled_Panorama1_be5bf235-9ac1-4ed9-9ba1-622fcf38611a.jpg"
+  app-anim-range="1700-2000"
+  fire-at-range="2000-2250"
+  app-minus-constant="1700"
+  ></app-showcase>
+  
+  <screen-showcase 
+  app-for="Spatial-Network"
+  app-for-limit="1700-2100"
+  app-minus-constant="0"
+  first-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
+  second-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
+  third-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"></screen-showcase>
+  
+  
+  
+  <div class="onlyMobile">
+      <mobile-view 
+      app-title="Spatial Network"
+      app-desc="Relays helps you find a relay partner"
+      app-icon="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/54/1c/67/541c676c-4752-d191-217c-3c5eabab008b/AppIcon.lsr/460x0w.webp"
+      mobile-first="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
+      mobile-second="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
+      mobile-third="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
+      mobile-play="true"></mobile-view>
+  </div>
+  
+  <div class="pol l">
+      <p>Relays is the most efficient matching app on the market. Measure your run using effective cadence and effective
+          pace without warm-up phases. Now supports iOS 18 Control Centre toggles.</p>
+      <div class="stores zstores">
+          <a class="hidden" href="https://apps.apple.com/us/app/runny/id1460395908">
+              <img class="appstore hidden" src="download.png" /></a>
+      </div>
+  </div>
+  
+  
+  <style>
+ body {
+        height: 10000;
+        background: #ecf0f1;
+        overflow-x: hidden;
+      /*Simple view for mobile so it is quick!!!*/
+    }
+
+  
+   
+    #spacer {
+        height: 400px;
+    }
+ 
+    screen-showcase {
+        margin-top: 9rem;
+    }
+
+    .onlyMobile {
+            display: none;
+        }
+
+
+   
+
+
+    @media (max-device-width: 500px){
+        app-showcase, screen-showcase {
+            display: none;
+        }
+
+        .onlyMobile {
+            display: block;
+        }
+
+        .pol {
+            display: none;
+        }
+    }
+
+   
+
+   /* .overlaid screen-showcase {
+        margin-top: -1rem;
+    }*/
+
+   
+
+    .add {
+        height: 300;
+    }
+
+    app-showcase {
+        border: 1px solid green;
+    }
+ /*  app-showcase {
+    display: none;
+   }*/
+    /* on mobile 23:47:44*/
+
+    .pol {
+        margin-top:10rem;
+        font-family: Arial;
+        font-size: 1.6rem;
+        font-weight: bold;
+        width: 40rem;
+    }
+
+    .appstore {
+        width: 10rem;
+    }
+
+    mobile-view {
+        display: block;
+        margin-top: 10rem;
+    }
+
+
+   /* .l {
+        margin-top: 24rem;
+    }*/
+
+  </style>
+  
+
+
+
+
+
+
+</section>
