@@ -16,12 +16,25 @@
     color: #1abc9c;
 }
 
+.weird {
+    margin-left: 1rem;
+}
+
+@media (max-width: 70rem) {
+    .weird span {
+        font-size: 3rem;
+    }
+}
+
+
 
 #evenyLarge {
     color: #20a8cd;
 }
 
 @keyframes spin1 { 100% { transform:rotate(20deg); } }
+
+
 
 .largeHidden {
     position: relative;
@@ -228,7 +241,7 @@
 .xstores{
     grid-area: 1/1;
     opacity: 0;
- 
+
   }
 
   .ystores{
@@ -239,7 +252,7 @@
 
   .zstores{
     grid-area: 1/1;
-    opacity: 0;
+   /* opacity: 0;*/
   }
 
 
@@ -285,7 +298,6 @@
 
 .smallCorner {
     border-radius: 14px;
-    width: 70%;
 }
 
 .storess {
@@ -876,23 +888,16 @@ margin-bottom: 5em; /*Danger line*/
 
 #main {
     padding-top: 7em;
-    
 }
 
 .designTitle {
     font-size: 5rem;
     color: #106a9b;
-    
-    /*-webkit-text-stroke: 3px #508bc9;*/
 }
 
 .whiteColor {
-    /*color: white;*/
-
-  /* color: #abe3ff;*/
   color: #5fa4c8;
   color: #4894ae
-
 }
 
 .adobeIcon {
@@ -903,25 +908,9 @@ margin-bottom: 5em; /*Danger line*/
 .leftIcon {
 box-shadow: 2px 2px 20px #d2c6c6;
 border-radius:  8% 9% / 8% 9%;
-/*border-radius:  42% 48% 48% 48% / 28% 28% 72% 72%;*/
-
-
-/*padding: 1rem;*/
-/*width: 1000px;*/ /*23:12:08*/ /*FIXED-23-12-26*/
-
 width: 84%;
-
 }
 /*04/04/2023 22:14:16*/
-
-
-@media (max-width: 1400px) {
-   /* .leftIcon {
-        width: 600px;
-        }*/
-}
-
-
 
 @media (max-device-width: 415px) {
 
@@ -930,6 +919,10 @@ width: 84%;
         margin-left: 15rem !important;
     }
    
+
+    .dontShowMobile {
+        display: none;
+    }
 
     .superSpace {
         margin-top: 9rem;
@@ -1335,10 +1328,10 @@ h3 {
 h3 {
     margin-top: 0.5em;
 }
-
+/*
 .app-title-web {
     margin-top: 1.5em;
-}
+}*/
 
 .bottom-about {
     margin-top: 2em;
@@ -1380,6 +1373,10 @@ h3 {
         .leftIcon h2 {
             padding-left:3rem; 
         }
+
+       
+
+       
 
        
     }
