@@ -445,11 +445,11 @@
 
 
   /*211238 zoom-in*/
-
+/*
   .floatF {
     font-size: 3rem;
   }
-
+*/
   .floatF span {
     display: inline-block;
     transform: translate(0px,256px);
