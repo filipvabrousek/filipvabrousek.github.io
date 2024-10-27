@@ -1,3 +1,11 @@
+const bl = document.querySelector(".boldLarge");
+const isSaf = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+
+let media = window.matchMedia("(min-device-width: 500px)");
+if (isSaf && media.matches){
+    bl.style.paddingTop = "12rem";
+}
 
 
 const possibleNulls = [
@@ -315,57 +323,6 @@ if (S(".floatContent") === null || SA(".noScale").length === 0){
 const scrollLimit = 100; // 250
 let end = scrollLimit + 100;
 
-   // console.log(filipOffset);
-
-   
-
-   
-   // S(".filipName").style.marginLeft = `${filipOffset + window.scrollY}px`;
-   // S(".myDescription").style.marginLeft = `${descOffset + window.scrollY}px`;
-
-
-
-
-   // S(".filipName").style.opacity = `${100 - window.scrollY}`;
-
-   /* S(".myDescription").animate([
-        { opacity: '1' },
-        { opacity: '0' }
-    ], {
-        duration: 600,
-        fill: 'forwards'
-    }).play();
-
-    xts").animate([
-        { opacity: '1' },
-        { opacity: '0' }
-    ], {
-        duration: 600,
-        fill: 'forwards'
-    }).play();*/
-
-   // const opa = Math.abs(1 - filipOffset / 200);
-   // S(".dots").style.opacity = `${opa - 1.8}`;
-    // S(".myDescription").style.opacity = `${opa - 1.8}`;
-
-
-
-
-/*
- console.log("Scroll start to scroll end is " + scrollLimit + " " + end);
-        console.log("Really scrolled:" + window.scrollY);
-*/
-
-/*
-let fNameOpacity = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
-
-if (fNameOpacity > 0 && window.scrollY > 0) {
-    S(".floatContent").style.opacity = 1 - (fNameOpacity);
-}*/
-
-
-
-    // S(".aboutWrapper").style.marginTop = `${scrollLimit}px`; // was 400px
     
      if (window.scrollY > scrollLimit) { // WEIRD IN SAFARI 
 
@@ -373,10 +330,6 @@ if (fNameOpacity > 0 && window.scrollY > 0) {
 
         SA(".noScale")[0].style.transform = `scale(${conv})`;
         SA(".noScale")[0].style.transform = `opacity(${conv})`;
-
-
-
-       // S("#motionDesignText").style.color = "orange";
    
         let up = 0;
         for (var i = 0; i < 11; i++){
@@ -391,21 +344,14 @@ if (fNameOpacity > 0 && window.scrollY > 0) {
             }
         }
 
-       // SA(".noScale")[SA(".noScale").length - 2].style.color = "green";
-      //  SA(".noScale")[SA(".noScale").length - 1].style.color = "green";
+        // let later = 300;
 
 if (window.scrollY > 767){
 
-
-        let convRotation = convertRange(window.scrollY, {min: 768, max: 900}, {min: 0, max: 1});
+        let convRotation = convertRange(window.scrollY, {min: 767, max: 900}, {min: 0, max: 1});
         convrotation = convRotation < 0 ? 0 : convRotation;
 
         let fraction = 90 * convRotation;
-      //  console.warn(fraction);
-        
-        // between 0 and 90 deg
-      
-
        
         S("#prelastP").style.transform += ` rotate3d(1, 0, 0, ${fraction}deg)`;
         S("#lastP").style.transform += ` rotate3d(1, 0, 0, ${fraction}deg)`;
@@ -418,39 +364,22 @@ if (window.scrollY > 767){
         convrotation = convRotation < 0 ? 0 : convRotation;
         let fraction = 90 - (90 * convRotation);
 
-       // S("#motion1").style.color = "orange";
-       // S("#motion2").style.color = "green";
-
 
         if (fraction != 90){
             S("#motion1").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
             S("#motion2").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
         }
-
-       // console.warn(`rotate3d(1, 0, 0, ${fraction}deg)`);
     }
 
     if (window.scrollY > 1042){
         let percentageInScrollableRange = convertRange(window.scrollY, {min: 1043, max: 1200}, {min: 0, max: 1});
-       
-       // const offsets = 2 * S("#motion1").offsetLeft;
-     //   const remainingScreenMidPoint = (window.innerWidth - offsets) / 2;
+
         const final = getFinalOffset(S("#motion1"));
         const final2 = getFinalOffset(S("#motion2"));
-        console.warn(final);
-
-      //  const distanceToCenterX = (window.innerWidth - 2 * S("#motion1").offsetLeft) / 2 - S("#motion1").style.width / 2;
-        
-        
-        // (window.innerWidth / 2  - (2 * S("#motion1").offsetLeft) * 2);
         const offset = percentageInScrollableRange * final;
         const offset2 = percentageInScrollableRange * final2;
 
-      
-
         let isMobile = window.matchMedia("(max-device-width: 415px)").matches;
-
-
 
         let isSafarii = (navigator.vendor.match(/apple/i) &&
         !navigator.userAgent.match(/crios/i) &&
@@ -501,22 +430,14 @@ if (window.scrollY > 767){
 
         if (percentageInScrollableRange > 0.07){
             S("#motion1").style.webkitTextStrokeWidth = "2px";
-        S("#motion1").style.webkitTextFillColor = "transparent";
-       
-        S("#motion1").style.webkitTextStrokeColor = "#3498Db";
+            S("#motion1").style.webkitTextFillColor = "transparent";
+            S("#motion1").style.webkitTextStrokeColor = "#3498Db";
     } else {
         S("#motion1").style.webkitTextFillColor = "";
         S("#motion1").style.webkitTextStrokeWidth = "0px";
     }
 
 }
-
-
-
-        
-
-
-       // S("#motion2").style.transform = `translate(${offset}px, ${offset}px)`;
         
     }
 
@@ -525,83 +446,10 @@ if (window.scrollY > 767){
         
 }
 
-      //  SA(".noScale")[SA(".noScale").length - 2].style.transform += `translateY(-10px)`; //` rotate3d(0,1,0, -${conv * 10}deg)`;
-
-/*
-        if (window.scrollY > scrollLimit + 100){
-            let conv = convertRange(window.scrollY, {min: scrollLimit + 100, max: end}, {min: 0, max: 1});
-            SA(".noScale")[1].style.transform = `scale(${conv})`;
-            SA(".noScale")[1].style.transform = `opacity(${conv})`;
-        } else {
-            SA(".noScale")[1].style.transform = `scale(${0})`;
-            SA(".noScale")[1].style.transform = `opacity(${0})`;
-        }
-*/
-
-       
-
-        
-       // let opa = Math.abs(window.scrollY / 100);
-       // opa -= 2.50;
-       // opa += 1;
-
-       // let calc = 0.5 + opa / 4;
-       
-        // S(".boldLarge").style.transform = `scale(${opa /2 })`;
-        
-      
-
-      /*  let opad = Math.abs(1 - (window.scrollY - scrollLimit) / 100);
-        let val = 1 - opad - 1.8;
-        S(".scale").style.opacity = `${val}`;
-
-        if (val > 1){
-            console.log("Descrease");
-        }*/
         S(".aboutWrapper").style.opacity = `1`;
-
-
-
-        // S(".aboutWrapper").style.marginTop = `${Math.abs(filipOffset)}px`;
     }
 
 
-
-/*
-
-   let XD = distanceBetweenElements(S(".appsWrapper"), S(".scale"));
-    if (XD.xDist < 0){
-        SA(".noScale").forEach(el => {
-          //  alert(el)
-         
-if (!hasDisappeared){
-    hasDisappeared = true;
-    // opacityIsElement(el, 1.0, 0.0);
-}
-           
-        });
-    }
-*/
-
-/*
-    if (window.scrollY > 600) {
-        S(".scale").style.marginTop = `${4 * fraction * distance.xDist}px`;
-        S(".scale").style.marginLeft = (-100 * fraction) + "px";
-        S(".scale").style.transform = `scale(${fraction + 1})`;
-        S(".scale").style.opacity = `${1 - fraction}`;
-    }*/
-
-    /*S(".aboutWrapper").animate([
-        { transform: 'scale(0.0)', opacity: "0.0" },
-        { transform: 'scale(1.2)', opacity: "1" },
-        { transform: 'scale(1.0)', opacity: "1" },
-        { transform: 'scale(1.08)', opacity: "1" },
-        { transform: 'scale(0.98)', opacity: "1" },
-        { transform: 'scale(1.0)', opacity: "1" }
-    ], {
-        duration: 800,
-        fill: 'forwards'
-    }).play();*/
 
 
 
