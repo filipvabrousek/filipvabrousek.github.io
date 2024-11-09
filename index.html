@@ -975,14 +975,9 @@ window.addEventListener('wheel', (event) => {
 
       
 
+      offset = Math.min(3600, offset);
 
       let w = offset * 2.2;
-
-      if (w > 8500){
-        w = 8500;
-      }
-
-      //alert( document.querySelector("#back").getBoundingClientRect().height);
       document.querySelector("#back").style.marginLeft = `-${offset / 1}px`;
       document.querySelector("#back").style.width = `${w}px`;
       document.querySelector("#back").style.height = `${w}px`;
