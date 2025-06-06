@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--began 10/10/2018 15:32 at Nymburk room 116 :D --->
 <!---22/1/2019 23:00 end :) -->
@@ -930,7 +931,8 @@ window.addEventListener('wheel', (event) => {
     .largeLetter {
       display: block;
       color: 106a9b;
-      z-index: -1;
+      z-index: 19;
+      position: relative;
     }
 
     iframe {
@@ -983,7 +985,7 @@ window.addEventListener('wheel', (event) => {
       document.querySelector("#back").style.height = `${w}px`;
 
       if (offset > 0){      
-      document.querySelector(".largeLetter").style.transform = `scale(${ 1 + (Math.abs(offset / 50))})`;
+     // document.querySelector(".largeLetter").style.transform = `scale(${ 1 + (Math.abs(offset / 50))})`;
       }
     });
 
@@ -1015,7 +1017,12 @@ window.addEventListener('wheel', (event) => {
 --->
 
 <h2 class="graphicTitle hidden firstTitle hideOnMobile">I also design things...</h2>
-<!---------------------watchOS 10------------------>
+<!---------------------watchOS 10----------------->
+<h2 class="graphicTitle hidden firstTitle">watchOS 26 Concept</h2>
+<p class="caption">Adobe After Effects, Adobe Illustrator</p>
+<img class="houdiniIcon" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Houdini3D_icon.png"/>
+<iframe width="800px" height="400px"  src="https://www.youtube.com/embed/jaUou0GYEnc?si=xCqGBbgaPd3h9wLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ 
 
 <h2 class="graphicTitle hidden firstTitle">Rise of particles</h2>
 <p class="caption">HOUDINI 20.5</p>
