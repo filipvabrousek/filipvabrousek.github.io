@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App</title>
+</head>
+<body>
+  <script type="module" src="dist/lib.bundle.js">
+  </script>
+  <div id="mount"></div>
+
+  <script type="module">
+    new Text("Hello").set({
+    size: "S1",
+    font: "Arial",
+    stroke: {
+        op: {
+            name: "blast",
+            color: "green",
+            width: "1px"
+        }
+    }
+}).render("#mount"); 
+ 
+  </script>
+
+
+
+    <script type="module">
+      import {Nice} from "/src/componen-serve.js";
+      
+      new Nice({
+          year: "2025"
+        })
+        .mount("#mount");
+    </script>
+</body>
+</html>
