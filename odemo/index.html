@@ -1,1 +1,75 @@
-a
+<meta charset="UTF-8">
+<meta name="view-transition" content="same-origin">
+<script type="module" src="dist/lib.bundle.js"></script>
+
+<style>
+    body {
+        background: gray;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+@view-transition { 
+    navigation: auto;
+}
+</style>
+
+<div id="mount"></div>
+
+
+<script type="module">
+
+  // Define Card class
+class Card {
+    constructor(obj){
+        this.id = obj.id;
+        this.child = obj.child;
+        this.url = obj.url;
+        this.textChild = obj.textChild;
+        this.icon = obj.icon;
+    }
+
+    render(){
+        return new Wrapper({ isLink: true, child: this.child })
+            .set({
+                id: this.id,
+                child: this.child,
+                class: this.id + "o",
+                font: "Arial"
+            })
+            .add([
+
+             
+                new Image(
+                    this.url)
+                    .set({
+                        width: "400px",
+                        height: "300px",
+                        objectFit: "cover",
+                       
+                        class: this.id,
+                        vtn: this.textChild + "img"
+                    })
+            ]); 
+       
+    }
+}
+
+
+// Initialize HScroller and add a card
+    new HScroller()
+    .seto({
+        speed: 1.0 // the bigger the slower
+    })
+    .add([
+         new Card({
+            child: "child-A.html",
+            textChild: "icon",
+            icon: "child-A-icon",
+            url: "https://media.cnn.com/api/v1/images/stellar/prod/ap24002766263400.jpg?c=original",
+        }).render()
+    ])
+    .render("#mount");
+
+ </script>
