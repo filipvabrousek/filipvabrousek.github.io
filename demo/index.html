@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>navtestera</title>
+      <script type="importmap">
+         {
+           "imports": {
+             "nodality": "/dist/lib.bundle.js"
+           }
+         }
+      </script>
+      <style>
+         * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         }
+      </style>
+
+
+<script type="module">
+   new Switcher().set({
+        breakpoints: [
+        { at: "0px", view: new MobileBar().set({
+background: "#ecf0f1",
+brand: new Text("Company").set({
+    size: "S6",
+    font: "Helvetica"
+}),
+mar: [{"a":21}],
+pad: undefined,
+resmar: undefined,
+respad: undefined,
+radius: "1rem",
+}).add([
+                         new Link().set({
+    text: "About",
+    url: "#a"
+}),new Dropdown().set({
+  behaviour: "mouseover",
+  pad: [{"a":40}],
+  mar: [{"lr":"auto"}],
+  breakpoint: "1200px",
+  padding: "10px",
+  border: "1px solid black",
+  height: "auto"
+}).add([
+ new Text("More").set({
+    cursor: "hand",
+    icon: {
+        padding: 30,
+        url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
+    },
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),new Text("Our story").set({
+    cursor: "hand",
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),new Text("Team").set({
+    cursor: "hand",
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+})
+]),new Link().set({
+    text: "About",
+    url: "#b"
+}),new Link().set({
+    text: "Contact",
+    url: "https://www.abcnews.com"
+})
+
+                    ]) }, 
+{ at: "1200px", view: new DesktopBar().set({background:"#ecf0f1",mar:[{a:21}],maxHeight:"100px",radius:"1rem"}).add([
+                  new Text("Company").set({
+    size: "S6",
+    font: "Helvetica"
+}),new Spacer(true),new Dropdown().set({
+  behaviour: "mouseover",
+  pad: [{"a":40}],
+  padding: "10px",
+  border: "1px solid black",
+  radius: "30px",
+  width: "130px"
+}).add([
+ new Text("More").set({
+    cursor: "hand",
+    icon: {
+        padding: 30,
+        url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
+    },
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),new Wrapper()
+  .set({
+  flexDir: "column",
+  mar: [
+    {
+      t: "10px"
+    }
+  ],
+  radius: ".3rem"
+})
+  .add([
+new Link().set({
+    text: "Who we are",
+    url: "jk",
+    cursor: "hand",
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),
+new Link().set({
+    text: "Info",
+    url: "#u",
+    cursor: "hand",
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),
+new Link().set({
+    text: "About",
+    url: "#u",
+    cursor: "hand",
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+})
+  ])
+
+]),new Link().set({
+    text: "About",
+    url: "#a"
+}),new Link().set({
+    text: "Services",
+    url: "#a"
+}),new Link().set({
+    text: "Contact",
+    url: "#a"
+})
+
+                      
+                    
+
+                    ]) }, 
+
+        ]
+      }).render("#mount"); 
+ 
+new Text("Hello").set({
+    size: "S1",
+    font: "Arial",
+    stroke: {
+        op: {
+            name: "blast",
+            color: "green",
+            width: "1px"
+        }
+    }
+}).render("#mount"); 
+ 
+new Link().set({
+    type: "a",
+    text: "Apple Event",
+    url: "https://www.apple.com",
+    keySet: {
+        key: "background",
+        value: "shadow: 3px 3px solid green"
+    },
+    font: "Arial",
+    index: "2",
+    blast: {
+        op: {
+            name: "blast",
+            color: "green",
+            width: "1px"
+        }
+    },
+    pad: [
+        {
+            a: 10
+        }
+    ]
+}).render("#mount"); 
+
+   </script>
+   </head>
+   <body>
+      <div id="mount"></div>
+      <script type="module" src="/dist/lib.bundle.js"></script>
+   </body>
+</html>
