@@ -512,8 +512,8 @@ flex-direction: row;
   app-for-limit="1900-2300" 
   app-minus-constant="1900"
   first-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
-  second-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"
-  third-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8e/96/68/8e966867-7df5-8f08-26ef-0bf8bac57639/94abf0e8-bcb7-4ed4-b460-77a823cc6c5a_Artboard_2.png/960x540mv.webp"></screen-showcase>
+  second-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8d/e3/d4/8de3d460-9f5e-c8d7-940c-c661890387ff/df23c0ed-a01c-462f-ab1f-fd82bc5162ff_Artboard_4.png/1286x724mv.webp"
+  third-url="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/86/6c/e0/866ce0c9-795a-0335-1853-de8e742f196b/19b65d68-7d1f-4067-830c-320efdeab7ef_Artboard_4_copy.png/1286x724mv.webp"></screen-showcase>
   
   <div class="onlyMobile">
       <mobile-view 
@@ -890,6 +890,7 @@ window.addEventListener('wheel', (event) => {
     }
  
    
+   
 
     @media screen and (min-device-width: 415px) {
       
@@ -911,14 +912,19 @@ window.addEventListener('wheel', (event) => {
       z-index: -1;
     }
 
-    .firstTitle {
+  /*  .firstTitle {
       margin-top: 40rem;
-    }
+    }*/
 
     .graphicTitle {
       color: #ecf0f1;
 
     font-size: 4rem;
+    }
+
+
+    .footer-t, .footer-em {
+      color: white;
     }
 
     iframe {
@@ -977,7 +983,7 @@ window.addEventListener('wheel', (event) => {
 
       
 
-      offset = Math.min(3600, offset);
+      offset = Math.min(4800, offset); 
 
       let w = offset * 2.2;
       document.querySelector("#back").style.marginLeft = `-${offset / 1}px`;
