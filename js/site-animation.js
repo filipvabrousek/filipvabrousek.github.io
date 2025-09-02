@@ -322,8 +322,9 @@ if (S(".floatContent") === null || SA(".noScale").length === 0){
 
 let scrollLimit = 100; // 250 (was 100) make 0 on alrge screens?
 
-if (window.innerWidth > 1500){
+if (window.innerWidth > 1999){ // 02/09/2025 1999 test
     scrollLimit = 0;
+    console.log("INOA");
 }
 
 let end = scrollLimit + 100;
@@ -338,7 +339,7 @@ let end = scrollLimit + 100;
    
         let up = 0;
         for (var i = 0; i < 11; i++){
-            up += window.innerWidth > 1500 ? 90 : 50;
+            up += window.innerWidth > 1999 ? 31 : 50;
            // up += 50;
             if (window.scrollY > scrollLimit + up){
                 let conv = convertRange(window.scrollY, {min: scrollLimit + up, max: end + up}, {min: 0, max: 1});
