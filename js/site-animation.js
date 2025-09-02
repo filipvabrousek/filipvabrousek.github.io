@@ -298,6 +298,18 @@ function convertRange(value, oldRange, newRange) {
 }
 
 
+function smartRange(value, oldRange, newRange) {
+    let ret =
+        ((value - oldRange.min) * (newRange.max - newRange.min)) /
+            (oldRange.max - oldRange.min) +
+        newRange.min;
+
+    // Clamp to newRange
+    ret = Math.max(newRange.min, Math.min(ret, newRange.max));
+
+    return ret;
+}
+
 
 function getFinalOffset(el){
     const offsets = 2 * el.offsetLeft;
@@ -353,9 +365,14 @@ let end = scrollLimit + 100;
 
         // let later = 300;
 
-if (window.scrollY > 767){
 
-        let convRotation = convertRange(window.scrollY, {min: 767, max: 900}, {min: 0, max: 1});
+       
+let is1999 = window.innerWidth > 1999;
+let scrollRotationLimit = is1999 ? 450 : 767;
+
+if (window.scrollY > scrollRotationLimit){
+
+        let convRotation = smartRange(window.scrollY, {min: scrollRotationLimit, max: scrollRotationLimit + 130}, {min: 0, max: 1});
         convrotation = convRotation < 0 ? 0 : convRotation;
 
         let fraction = 90 * convRotation;
@@ -365,9 +382,28 @@ if (window.scrollY > 767){
       
 
 
-    if (window.scrollY > 910){
+if (window.scrollY > scrollRotationLimit + 131){
 
-        let convRotation = convertRange(window.scrollY, {min: 911, max: 1042}, {min: 0, max: 1});
+
+         let convMotionRotation = smartRange(window.scrollY, {min: scrollRotationLimit + 131, max: scrollRotationLimit + 131 + 260}, {min: 0, max: 1});
+console.log("SMARTR");
+console.log(convMotionRotation);
+
+let motionDeg = 270 + convMotionRotation * 90; // Thanks GPT
+
+S("#motion1").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
+S("#motion2").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
+        
+
+} else {
+             S("#motion1").style.transform = ` rotate3d(1, 0, 0, 270deg)`;
+            S("#motion2").style.transform = ` rotate3d(1, 0, 0, 270deg)`;
+}
+
+        /*
+    if (window.scrollY > scrollRotationLimit + 140){
+
+        let convRotation = convertRange(window.scrollY, {min: scrollRotationLimit + 140, max: scrollRotationLimit + 140 + 100}, {min: 0, max: 1});
         convrotation = convRotation < 0 ? 0 : convRotation;
         let fraction = 90 - (90 * convRotation);
 
@@ -376,10 +412,11 @@ if (window.scrollY > 767){
             S("#motion1").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
             S("#motion2").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
         }
-    }
+    }*/
 
-    if (window.scrollY > 1042){
-        let percentageInScrollableRange = convertRange(window.scrollY, {min: 1043, max: 1200}, {min: 0, max: 1});
+      /*  
+    if (scrollRotationLimit + 400){
+        let percentageInScrollableRange = convertRange(window.scrollY, {min: scrollRotationLimit + 400, max: scrollRotationLimit + 400 + 150}, {min: 0, max: 1});
 
         const final = getFinalOffset(S("#motion1"));
         const final2 = getFinalOffset(S("#motion2"));
@@ -446,7 +483,7 @@ if (window.scrollY > 767){
 
 }
         
-    }
+    }*/
 
 
        
