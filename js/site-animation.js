@@ -320,12 +320,17 @@ if (S(".floatContent") === null || SA(".noScale").length === 0){
 }
    
 
-const scrollLimit = 100; // 250
+let scrollLimit = 100; // 250 (was 100) make 0 on alrge screens?
+
+if (window.innerWidth > 1999){
+    scrollLimit = 0;
+}
+
 let end = scrollLimit + 100;
 
     
      if (window.scrollY > scrollLimit) { // WEIRD IN SAFARI 
-
+//alert("Now")
         let conv = convertRange(window.scrollY, {min: scrollLimit, max: end}, {min: 0, max: 1});
 
         SA(".noScale")[0].style.transform = `scale(${conv})`;
