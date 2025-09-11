@@ -3,140 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Privacy — EULA</title>
+  <title>Privacy & EULA</title>
   <style>
-    :root{
-      --bg: #f7f9fa;
-      --card: #ecf0f1;
-      --text: #111;
-      --muted: #555;
-      --accent: #3498db;
-      --radius: 12px;
-      --max-width: 900px;
-      --gutter: 16px;
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background: #f7f9fa;
+      color: #111;
+      padding: 20px;
     }
-
-    *{box-sizing: border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:24px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
+    main {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-
-    .sheet {
-      width:100%;
-      max-width:var(--max-width);
-      background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
-      border-radius:var(--radius);
-      box-shadow: 0 10px 30px rgba(16,24,40,0.08);
-      padding: clamp(18px, 3vw, 32px);
+    h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      margin-top: 0;
     }
-
-    .top-row {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom: 8px;
+    h2 {
+      font-size: clamp(18px, 3vw, 24px);
+      margin-top: 0.5em;
+      color: #3498db;
     }
-
-    .close {
-      background: transparent;
-      border: none;
-      color:var(--accent);
-      font-size:20px;
-      padding:6px;
-      border-radius:8px;
-      cursor:pointer;
-    }
-    .close:focus{outline:2px solid rgba(52,152,219,0.25)}
-
-    h1{
-      margin:0;
-      font-size: clamp(20px, 3.2vw, 32px);
-      letter-spacing: -0.02em;
-    }
-
     .meta {
-      color:var(--muted);
-      margin-top:8px;
-      font-size:14px;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 1em;
     }
-
-    .card {
-      background:var(--card);
-      border-radius:10px;
-      padding:16px;
-      margin-top:18px;
-    }
-
-    p{margin:0 0 12px 0; color:var(--text)}
-    .lead{margin-top:12px; font-weight:600}
-
-    /* responsive columns for long copy on wide screens */
-    @media (min-width:900px){
-      .content-grid{
-        display:grid;
-        grid-template-columns: 1fr 320px;
-        gap:20px;
-        align-items:start;
-      }
-      .card{padding:20px}
-    }
-
-    /* small screens */
-    @media (max-width:420px){
-      body{padding:12px}
-      .sheet{padding:14px}
+    p {
+      margin-bottom: 1em;
     }
   </style>
 </head>
 <body>
-  <main class="sheet" role="main" aria-labelledby="title">
-    <div class="top-row">
-      <button class="close" aria-label="Close" onclick="window.history.back()">✕</button>
-      <div style="flex:1"></div>
-      <div style="font-size:13px; color:var(--muted)">Last updated Septmber 12, 2025</div>
-    </div>
+  <main>
+    <h1>Privacy</h1>
+    <h2>EULA</h2>
+    <div class="meta">Last updated on December 23, 2019</div>
 
-    <div class="content-grid">
-      <section>
-        <h1 id="title">Privacy</h1>
-        <h2 style="margin:6px 0 0 0; font-size:18px; color:var(--accent)">EULA</h2>
+    <p>
+      By using the “Eveny” app, you consent to the following terms:
+    </p>
 
-        <div class="card" aria-live="polite">
-          <p class="lead">By using the “Eveny” app, you consent to the following terms:</p>
-
-          <p>The Eveny app stores data about your event, such as Title, Start time, End time, the day your lesson takes place in and whether the event takes place in odd or even week. The data do NOT ever leave your device.</p>
-
-          <p>If you have questions about these terms, contact support@example.com.</p>
-        </div>
-      </section>
-
-      <aside aria-label="Actions / Summary">
-        <div style="position:sticky; top:20px; display:flex; flex-direction:column; gap:12px;">
-          <div style="background:var(--card); padding:12px; border-radius:10px; text-align:center;">
-            <strong>Policy</strong>
-            <div style="color:var(--muted); font-size:13px; margin-top:8px">Local-only storage — no cloud sync</div>
-          </div>
-
-          <a href="#" style="display:inline-block; text-decoration:none; margin-top:6px;">
-            <button style="width:100%; padding:10px 12px; border-radius:8px; border:none; background:var(--accent); color:white; font-weight:600; cursor:pointer">
-              Accept
-            </button>
-          </a>
-        </div>
-      </aside>
-    </div>
+    <p>
+      The Eveny app stores data about your event, such as Title, Start time, End time, 
+      the day your lesson takes place in and whether the event takes place in odd or 
+      even week. The data do NOT ever leave your device.
+    </p>
   </main>
 </body>
 </html>
