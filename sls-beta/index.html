@@ -1,23 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sls3-2025</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- importmap to map "nodality" to node_modules path -->
-  <script type="importmap">
-  {
-    "imports": {
-      "nodality": "/node_modules/nodality/dist/index.esm.js"
-    }
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>SLS 3</title>
+
+   <script type="importmap">
+         {
+           "imports": {
+             "nodality": "/dist/lib.bundle.js"
+           }
+         }
+      </script>
+
+      <style>
+         * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         }
+      </style>
 </head>
 <body>
+  <script type="module" src="dist/lib.bundle.js">
+  </script>
   <div id="mount"></div>
 
-  <!-- User app -->
-  <script type="module" src="src/app.js"></script>
+  <script type="module">
+
+
+class Blue70Link extends Base {
+  constructor(props) {
+    super();
+    this.props = props || {};
+  }
+
+  render() {
+    return new Link().set({
+      type: "a",
+      text: this.props.text ?? "Neopreny Blue70",
+      url: this.props.url ?? "#blue70",
+      background: this.props.background ?? "orange",
+      block: true,
+      width: this.props.width ?? "200px",
+      align: this.props.align ?? "center",
+      font: this.props.font ?? "Arial",
+      radius: this.props.radius ?? "0.3rem",
+      pad: this.props.pad ?? [{ a: 10 }],
+          mar: this.props.pad ?? [{ a: 10 }],
+          color: "white"
+    });
+  }
+}
+
+
+    let links = [
+      {text: "Podkolenky", url: "K"},
+      {text: "Lýtkové návleky", url: "K"},
+      {text: "Triatlonové dresy", url: "K"},
+        {text: "Kniha", url: "K"}
+    ];
+
+let other = links.map(el => 
+new Link(el.text).set({
+    cursor: "hand",
+    fluidc: "S6",
+    url: el.url,
+    align: "center",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+})
+);
+
+
+const makeLinks = () =>
+  links.map(el =>
+    new Link(el.text).set({
+      cursor: "hand",
+      fluidc: "S6",
+      url: el.url,
+      align: "center",
+      pad: [{ l: 10, r: 10 }],
+      font: "Arial",
+      weight: "bold",
+    })
+  );
+
+
+   new Switcher().set({
+        breakpoints: [
+        { at: "0px", view: new MobileBar().set({
+background: "#ecf0f1",
+brand: new Image("img/blue70logo.png")
+.set({
+    width: "100px",
+    height: "auto"
+}),
+mar: [{"a":21}],
+pad: undefined,
+resmar: undefined,
+respad: undefined,
+radius: "1rem",
+}).add([
+                         new Link().set({
+    text: "Home",
+    url: "#a"
+}),
+
+   
+
+
+new Dropdown().set({
+  behaviour: "mouseover",
+  pad: [{"a":40}],
+  mar: [{"lr":"auto"}],
+  breakpoint: "1200px",
+  padding: "10px",
+  border: "1px solid black",
+  height: "auto"
+}).add([
+ new Link("Katalog").set({
+  text: "Katalog",
+  url: "#e",
+    cursor: "hand",
+    flex: true, // implement
+    icon: {
+        padding: 30,
+        url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
+    },
+    fluidc: "S6",
+    flex: true,
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),
+
+...makeLinks()    
+
+]),
+
+
+  new Link().set({
+    text: "Team SLS3",
+    url: "#a"
+}),
+
+
+new Link().set({
+    text: "Popis",
+    url: "#b"
+}),
+
+new Link().set({
+    text: "Kontakt",
+    url: "https://www.abcnews.com"
+})
+
+                    ]) }, 
+{ at: "1200px", view: new DesktopBar()
+.set({background:"#ecf0f1",
+mar:[{a:21}],
+maxHeight:"100px",
+// error
+//brand: new Image("https://sls3.weebly.com/uploads/4/0/5/5/40554337/659389662_orig.png"),
+radius:"1rem"
+}).add([
+                 
+
+/*
+new Text("SLS3").set({
+    size: "S6",
+    font: "Helvetica"
+})*///,
+new Image("img/blue70logo.png").set({
+  width: "100px"
+})
+,
+new Spacer(undefined),
+
+
+new Link().set({
+    text: "Home",
+    url: "#a"
+}),
+
+new Dropdown().set({
+  behaviour: "mouseover",
+  pad: [{"a":40}],
+  padding: "10px",
+  border: "1px solid black",
+  radius: "30px",
+  width: "130px"
+}).add([
+ new Link("Katalog").set({
+    text: "Katalog",
+    url: "A",
+    cursor: "hand",
+    flex: true, // update
+    icon: {
+        padding: 30,
+        url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
+    },
+    fluidc: "S6",
+    pad: [
+        {
+            l: 10,
+            r: 10
+        }
+    ],
+    font: "Arial",
+    align: "center",
+    weight: "bold"
+}),new Wrapper()
+  .set({
+  flexDir: "column",
+  mar: [
+    {
+      t: "10px"
+    }
+  ],
+  radius: ".3rem"
+})
+  .add([...makeLinks() ]/*[
+...other
+  ]*/)
+
+]),
+
+new Link().set({
+    text: "Teams SLS3",
+    url: "#a"
+}),
+
+new Link().set({
+    text: "Popis",
+    url: "#a"
+}),new Link().set({
+    text: "Kontakt",
+    url: "#a"
+})
+
+                      
+                    
+
+                    ]) }, 
+
+        ]
+      }).render("#mount"); 
+ 
+new Text("Swim free").set({
+    size: "S1",
+    font: "Montserrat",
+        pad: [{tlr: "3rem"}]
+}).render("#mount"); 
+ 
+new Text("70% zemského povrchu je pokryto vodou. Žádné dráhy, žádný chlor, žádné obrátky. Ať se chystáte na svůj první triatlon, na svůj desátý Ironman nebo jen máte rádi plavání v řekách, jezerech či mořích, vězte, že jsme tady právě pro Vás.").set({
+    size: "S6",
+    font: "Arial",
+    pad: [{a: "3rem"}]
+}).render("#mount"); 
+ 
+new Image().set({
+  type: "img",
+  url: "img/blue70.jpg"
+}).render("#mount"); 
+ 
+
+
+
+
+new Center()
+ .items([
+
+new Blue70Link({ 
+  text: "Prohlédnout neopreny",
+ background: "#3498db",
+  url: "https://blue70.weebly.com/"
+ }).render(),
+ 
+new Blue70Link({
+  color: "white",
+   text: "Podkolenky SLS3", 
+background: "#2c3e50",
+ url: "https://sls3.weebly.com/" 
+}).render(),
+ 
+new Blue70Link({ 
+  color: "white",
+  text: "petrvabrousek.cz",
+ background: "#2c3e50",
+  url: "https://www.petrvabrousek.cz"
+ }).render(),
+  ])
+.render("#mount"); 
+
+
+
+
+class ProductCard extends Base {
+  constructor(obj){
+    super();
+    this.obj = obj;
+  }
+
+  render(){
+    return new Wrapper({isLink: true,   child: "https://www.apple.com/iphone",})
+  .set({
+  
+    pad: [{lbr: "1rem"}]
+})
+  .add([
+new Image().set({
+  type: "img",
+  width: "300px",
+  url: this.obj.url
+}),
+new Link(this.obj.name).set({
+  url: "https://www.apple.com",
+   pad: [
+        {
+            a: 10
+        }
+    ]
+}),
+new Text(this.obj.price).set({
+   pad: [
+        {
+            a: 10
+        }
+    ]
+}),
+
+  ])
+  }
+}
+
+
+  let products = [
+  {
+    "name": "HELIX",
+    "price": "4990",
+    "info": ["First"],
+    "sizes": ["XS/S"],
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
+  },
+  {
+    "name": "REACTION",
+    "price": "990",
+    "info": ["First"],
+    "sizes": ["XS/S"],
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
+  },
+  {
+    "name": "SPRINT",
+    "price": "990",
+    "info": ["First"],
+    "sizes": ["XS/S"],
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
+  }
+]
+
+  new FlexGrid()
+    .set({
+      colat: "700px",
+      wrap: true,
+      align: "center",
+      gap: "1rem"
+
+    })
+    .items(
+      products.map(el =>
+
+        new Card()
+          .set({
+            width: "300px",
+            height: "700px",
+            radius: "1rem",
+            border: "3px solid #ECF0F1",
+            background: "#ECF0F1",
+            inpad: "1rem",
+            mar: { sides: ["all"], value: "0.8rem" },
+           
+           //  pad: { sides: ["all"], value: "1rem" }
+
+          })
+          .items([
+            new ProductCard({
+              name: el.name,
+              price: el.price,
+              info: el.info,
+              sizes: el.sizes,
+              url: el.url
+            }).render()
+          ])
+      )
+    )
+    .render("#mount"); 
+
+class ProductDetail extends Base {
+  constructor(obj) {
+    super();
+    this.obj = obj;
+  }
+
+  render() {
+    return new FlexRow().set({
+      pad: [{ a: "1rem" }],
+      gap: "1rem",
+      align: "flex-start", // align items at top
+      wrap: true,
+      width: "100%",
+      maxWidth: "800px",
+      justify: "space-around"
+    })
+    .items([
+      // Left column: image
+      new Image().set({
+        type: "img",
+        width: "50%",
+        url: this.obj.url
+      }),
+
+      // Right column: text, list, link
+      new Wrapper().set({
+        gap: "1rem",
+        direction: "column",
+        align: "flex-start",
+        column: true,
+        width: "300px" // take remaining space
+      }).add([
+        
+        new Text(this.obj.name).set({
+          font: "Arial",
+          size: "1.5rem",
+          weight: "bold",
+        }),
+
+        new Text(this.obj.price).set({
+          font: "Arial",
+          size: "1.2rem",
+          color: "green",
+        }),
+
+        new Text(this.obj.description).set({
+          font: "Arial",
+          size: "1rem",
+          
+        }),
+
+        new UList().setItems(this.obj.details.map(el => new Text(el, {type: "li"}).set({font: "Arial"}))), // 130058 so cool
+
+        new Link("Buy Now").set({
+          url: this.obj.link ?? "#",
+          background: "orange",
+          color: "white",
+          block: true,
+          align: "center",
+          radius: "0.5rem",
+          pad: [{ a: 12 }]
+        })
+      ])
+    ]);
+  }
+}
+
+
+
+
+let detailJSON = [
+  {
+    "name": "Helix Detail",
+    "price": "CZK 999",
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší. Každý detail je navržen pro rychlost, preciznost a neúnavnou snahu o vítězství.",
+    "details": [
+"Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
+"Výrazné modré ramena jsou bezešvá a maximalizují elasticitu pro neomezenou volnost v pohybu.",
+"Vylepšené zádové panely podporují přirozenou rotaci pro maximální délku záběru",
+"prémiový ultratenký 1,5mm Yamamoto 40 cell neopren na pažích poskytuje pružnost, pohodlí a rychlost.",
+"Vododpudivá, propustná technologie na předloktí podporuje přirozený cit pro vodu.",
+"Obrácené zapínání eliminuje odřeniny na krku a umožňuje nižší krční panel pro neomezené dýchání a komfort.",
+"Mimořádně pružná vnitřní nylonová vrstva je lehčí a flexbilinější ve srovnání s konkurenčními neopreny.",
+"5mm Yamamoto Aerodome panely maximálně nednáší tělo od středu hrudníku až boky a stehna. 4mm materiál níže na nohách umožňuje optimální polohu těla ve vodě při plavání.",
+"Technologie LIFT využívá silně nadnášivou pěnu uzavřenou mezi vrchní a spodní vrstvu neoprenu k ještě výraznějšímu zvýšení polohy středu těla ve vodě.",
+"Helix je vyroben z toho nejkvalitnějšího Yamamoto smooth skin neoprenu spojeného se 100% nylonovou vnitřní vrstvou pro absolutně nejlepší poměr mezi vahou a elasticitou mezi všemi konkurenčními značkami.",
+"Boční 3mm panely jsou navrženy specificky zvlášť pro muže i pro ženy tak, aby umožnily přirozenou rotaci v bocích a snadné vysvlékání v depu.",
+"Velmi pružné 1,5mm panely od kolen níže umožňují snadné rychlé vykopnutí nohou z nohavic pro rychlý průlet prvním depem.",
+      "Vhodný model a velikost vám rád poradím na petrETvabrousek.cz"
+    ],
+    "link": "https://www.apple.com/iphone"
+  }
+];
+
+
+
+const detailComponents = detailJSON.map(item => new ProductDetail(item).render());
+
+/*
+const detail = new ProductDetail({
+  name: "SLS3 Detail",
+  price: "CZK 999",
+  url: "https://sls3.com/cdn/shop/files/image_712.png?v=1748939135",
+  description: "Nový model podkolenek, určených zejména pro běhání a regeneraci, přichází s důkladně propracovanou a vyztuženou patou i špičkou. Rozlišuje pravou a levou ponožku podle tvarování polstrování. Výrazně zvýšená životnost. Skladem ve všech 4 velikostech.",
+  details: [
+"• Jsou navrženy sportovními lékaři",
+"• 20-30 mmHG stupňované komprese pro zlepšení krevního oběhu, okysličení svalů a stabilitu",
+"• Antimikrobiální vlákna bránící vzniku zápachu i při dlouhodobém nošení",
+"• Micro-nylonová úprava pro snadné oblékání",
+"• Certifikovaná stupňovaná komprese",
+"• Zvyšují přívod kyslíku k pracujícím svalům",
+"• Urychlují odplavení metabolitů vznikajících při sportovním výkonu",
+"• Oddalují nástup únavy",
+"• Snižují destruktivní vibrace pracujících svalů",
+"• Můžete sportovat déle a výkonněji",
+"• Cílená podpora achilovky, holeně, klenby, kotníků a lýtek – výrazná redukce rizika úrazu",
+"• Výrazně urychlují dobu nezbytnou k regeneraci po náročném sportovním výkonu",
+"• Vhodné pro běh, cyklistiku, chůzi, triatlon, lyžování, kolektivní sporty,",
+"• Zajistí svěžest při dlouhém stání nebo cestování",
+"• V případě nespokojenosti možno do měsíce vrátit!",
+"• 4 velikosti, bílá, modrá a černá barva",
+"Vhodný model a velikost vám rád poradím na petrETvabrousek.cz",
+  ],
+  link: "https://www.apple.com/iphone"
+});
+*/
+
+console.log(detailComponents[0].render())
+detailComponents[0].render("#mount");
+
+
+// We can host on github and redirect for free
+
+
+// UPDATE: npm i nodality@latest
+// BYPASS package.json
+
+
+ 
+// run with npx serve -l 2000
+// http://localhost:2000/publish
+  </script>
+
 </body>
 </html>
