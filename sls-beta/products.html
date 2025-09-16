@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>SLS 3</title>
+
+      <style>
+         * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         }
+      </style>
+</head>
+<body>
+  <script type="module" src="../dist/lib.bundle.js">
+  </script>
+  <div id="mount"></div>
+
+  <script type="module">
+
+
+class ProductCard extends Base {
+  constructor(obj){
+    super();
+    this.obj = obj;
+  }
+
+  render(){
+    return new Wrapper({isLink: true,   child: "detail.html",})
+  .set({
+  
+    pad: [{lbr: "1rem"}]
+})
+  .add([
+new Image().set({
+  type: "img",
+  width: "300px",
+  url: this.obj.url
+}),
+
+new Text(this.obj.name).set({
+  color: "black",
+  weight: "bold",
+  fluidc: "S6",
+   pad: [
+        {
+            a: 10
+        }
+    ]
+}),
+new Text(this.obj.price).set({
+   pad: [
+        {
+            a: 10
+        }
+    ]
+}),
+
+  ])
+  }
+}
+
+
+
+new Text("Produkty")
+.set({
+  size: "S1",
+  font: "Arial",
+  pad: [{a: "3rem"}]
+})
+.render("#mount");
+
+  let products = [
+  {
+    "name": "Helix",
+    "price": "4990",
+    "info": ["First"],
+    "sizes": ["XS/S"],
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
+  },
+  {
+    "name": "Reaction",
+    "price": "990",
+    "info": ["First"],
+    "sizes": ["XS/S"],
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
+  },
+  {
+    "name": "Sprint",
+    "price": "990",
+    "info": ["First"],
+    "sizes": ["XS/S"],
+    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
+  }
+]
+
+  new FlexGrid()
+    .set({
+      colat: "700px",
+      wrap: true,
+      align: "center",
+      gap: "1rem",
+      pad: [{a: "1rem"}]
+    })
+    .items(
+      products.map(el =>
+
+        new Card()
+          .set({
+            width: "300px",
+            height: "700px",
+            radius: "1rem",
+            border: "3px solid #ECF0F1",
+            background: "#ECF0F1",
+            inpad: "1rem",
+            mar: { sides: ["all"], value: "0.8rem" },
+           
+           //  pad: { sides: ["all"], value: "1rem" }
+
+          })
+          .items([
+            new ProductCard({
+              name: el.name,
+              price: el.price,
+              info: el.info,
+              sizes: el.sizes,
+              url: el.url
+            }).render()
+          ])
+      )
+    )
+    .render("#mount"); 
+
+
+// We can host on github and redirect for free
+
+
+// UPDATE: npm i nodality@latest
+// BYPASS package.json
+
+
+ 
+// run with npx serve -l 2000
+// http://localhost:2000/publish
+  </script>
+
+</body>
+</html>
