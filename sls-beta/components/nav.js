@@ -8,6 +8,25 @@
     ];
 
 
+    class NavLink extends Base {
+        constructor(obj){
+            super();
+            this.text = obj.text;
+            this.url = obj.url
+        }
+
+        render(){
+           return new Link().set({
+    text: this.text,
+    bold: true,
+    url: this.url,
+     hover: {
+        color: "#3498db"
+    }
+        });
+
+    }
+}
 
 
 const makeLinks = () =>
@@ -17,7 +36,10 @@ const makeLinks = () =>
       fluidc: "S6",
       url: el.url,
       pad: [{ l: 10, r: 10, b: 12 }],
-      font: "Arial"
+      font: "Arial",
+      hover: {
+        color: "#3498db"
+      }
     })
   );
 
@@ -37,10 +59,10 @@ resmar: undefined,
 respad: undefined,
 radius: "1rem",
 }).add([
-                         new Link().set({
-    text: "Home",
-    url: "#a"
-}),
+                         new NavLink({
+                            text: "Home", 
+                            url: "#home"
+                        }).render(),
 
    
 
@@ -81,21 +103,20 @@ new Dropdown().set({
 ]),
 
 
-  new Link().set({
-    text: "Team blueseventy",
-    url: "#a"
-}),
+ new NavLink({
+        text: "Team Blueseventy",
+        url: "#home"
+    }).render(),
 
+new NavLink({
+        text: "Uživatelské tipy",
+        url: "#home"
+    }).render(),
 
-new Link().set({
-    text: "Uživatelské tipy",
-    url: "#b"
-}),
-
-new Link().set({
-    text: "Kontakt",
-    url: "https://www.abcnews.com"
-})
+new NavLink({
+        text: "Kontakt",
+        url: "#home"
+    }).render(),
 
                     ]) }, 
 { at: "1200px", view: new DesktopBar()
@@ -120,10 +141,10 @@ new Image("img/blue70logo.png").set({
 new Spacer(undefined),
 
 
-new Link().set({
-    text: "Home",
-    url: "#a"
-}),
+    new NavLink({
+        text: "Home",
+        url: "#home"
+    }).render(),
 
 new Dropdown().set({
   behaviour: "mouseover",
@@ -168,20 +189,20 @@ new Dropdown().set({
 
 ]),
 
-new Link().set({
-    text: "Teams blueseventy",
-    url: "#a"
-}),
+new NavLink({
+        text: "Team blueseventy",
+        url: "#home"
+    }).render(),
 
-new Link().set({
-    text: "Uživatelské tipy",
-    url: "#a"
-}),
+new NavLink({
+        text: "Uživatelské tipy",
+        url: "#home"
+    }).render(),
 
-new Link().set({
-    text: "Kontakt",
-    url: "#a"
-})
+new NavLink({
+        text: "Kontakt",
+        url: "#home"
+    }).render(),
 ]) }, 
 
         ]
