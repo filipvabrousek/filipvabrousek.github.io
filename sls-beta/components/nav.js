@@ -7,7 +7,7 @@
       {text: "Triatlonové kombinézy", url: "K"}
     ];
 
-
+// To link wrapper in dropdown: z-index: 9999px
     class NavLink extends Base {
         constructor(obj){
             super();
@@ -20,6 +20,7 @@
     text: this.text,
     bold: true,
     url: this.url,
+    fluidc: "S6", // add exact
      hover: {
         color: "#3498db"
     }
@@ -33,7 +34,7 @@ const makeLinks = () =>
   links.map(el =>
     new Link(el.text).set({
       cursor: "hand",
-      fluidc: "S6",
+      size: "S6",
       url: el.url,
       pad: [{ l: 10, r: 10, b: 12 }],
       font: "Arial",
@@ -85,7 +86,7 @@ new Dropdown().set({
         padding: 30,
         url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
     },
-    fluidc: "S6",
+    size: "S6",
     flex: true,
     pad: [
         {
@@ -163,7 +164,7 @@ new Dropdown().set({
         padding: 30,
         url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
     },
-    fluidc: "S6",
+    size: "S6",
     pad: [
         {
             l: 10,

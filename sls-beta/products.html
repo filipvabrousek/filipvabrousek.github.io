@@ -20,6 +20,11 @@
 </head>
 <body>
   <script type="module" src="dist/lib.bundle.js">
+    
+  </script>
+
+   <script type="module" src="components/nav.js">
+    
   </script>
   <div id="mount"></div>
 
@@ -35,7 +40,6 @@ class ProductCard extends Base {
   render(){
     return new Wrapper({isLink: true,   child: "detail.html",})
   .set({
-  
     pad: [{lbr: "1rem"}]
 })
   .add([
@@ -49,20 +53,37 @@ new Image().set({
 new Text(this.obj.name).set({
   color: "black",
   weight: "bold",
-  fluidc: "S6",
+  size: "S5",
    pad: [
         {
             a: 10
         }
-    ]
+    ],
 }),
+
 new Text(this.obj.price).set({
+  weight: "bold", // bold true inifx
+  color: "black",
+  exact: "1.1rem",
    pad: [
         {
             a: 10
         }
     ]
 }),
+
+new Link().set({
+  text: "Buy",
+    background: "#3498db",
+    color: "white",
+  hover: {
+    color: "#3498db",
+    background: "white"
+  },
+  radius: "1rem",
+  pad: [{lr: "2rem"}, {tb: "1rem"}],
+  mar: [{l: "1.1rem"}]
+})
 
   ])
   }
