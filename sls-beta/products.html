@@ -23,13 +23,11 @@
     
   </script>
 
-   <script type="module" src="components/nav.js">
-    
-  </script>
+   <script type="module" src="components/nav.js"></script>
+     <script type="module" src="components/footer.js"></script>
   <div id="mount"></div>
 
   <script type="module">
-
 
 class ProductCard extends Base {
   constructor(obj){
@@ -38,9 +36,9 @@ class ProductCard extends Base {
   }
 
   render(){
-    return new Wrapper({isLink: true,   child: "detail.html",})
+    return new Wrapper({isLink: true, child: "detail.html",})
   .set({
-    pad: [{lbr: "1rem"}]
+    //pad: [{lbr: "1rem"}]
 })
   .add([
 new Image().set({
@@ -50,6 +48,11 @@ new Image().set({
   vtn: name
 }),
 
+
+new Wrapper().set({
+  pad: [{a: 14}] // fix // we need arrays Filip
+}).add([
+
 new Text(this.obj.name).set({
   color: "black",
   weight: "bold",
@@ -58,7 +61,7 @@ new Text(this.obj.name).set({
         {
             a: 10
         }
-    ],
+    ]
 }),
 
 new Text(this.obj.price).set({
@@ -73,19 +76,23 @@ new Text(this.obj.price).set({
 }),
 
 new Link().set({
-  text: "Buy",
+  text: "Koupit",
     background: "#3498db",
     color: "white",
+    url: "detail.html",
   hover: {
     color: "#3498db",
     background: "white"
   },
   radius: "1rem",
   pad: [{lr: "2rem"}, {tb: "1rem"}],
-  mar: [{l: "1.1rem"}]
 })
 
+])
+
   ])
+
+
   }
 }
 
@@ -137,7 +144,7 @@ new Text("Produkty")
         new Card()
           .set({
             width: "300px",
-            height: "700px",
+          //  height: "700px",
             radius: "1rem",
             border: "3px solid #ECF0F1",
             background: "#ECF0F1",
@@ -160,7 +167,12 @@ new Text("Produkty")
     )
     .render("#mount"); 
 
+import {FooterEl} from "./components/footer.js";
 
+  new FooterEl()
+  .render()
+  .render("#mount");
+  
 // We can host on github and redirect for free
 
 

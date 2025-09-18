@@ -135,9 +135,20 @@ new Text("SLS3").set({
     size: "S6",
     font: "Helvetica"
 })*///,
+
+new Link().set({
+  data: {
+    options: {
+      img: "img/blue70logo.png",
+      url: "index.html",
+      size: "80px"
+    }
+  }
+})
+/*
 new Image("img/blue70logo.png").set({
   width: "100px"
-})
+})*/
 ,
 new Spacer(undefined),
 

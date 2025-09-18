@@ -20,8 +20,8 @@
 </head>
 <body>
   <script type="module" src="dist/lib.bundle.js"></script>
-  <script type="module" src="components/nav.js">
-  </script>
+  <script type="module" src="components/nav.js"></script>
+  <script type="module" src="components/footer.js"></script>
   <div id="mount"></div>
 
   <script type="module">
@@ -102,14 +102,13 @@ new Blue70Link({
 .render("#mount"); 
 
 
-new Center().items([
-new Text("Petr Vabrousek@2025").set({
-  size: "S6",
-  font: "Arial",
-  pad: [{tb: "1rem"}]
-})
-])
-.render("#mount")
+
+import {FooterEl} from "./components/footer.js";
+
+  new FooterEl()
+  .render()
+  .render("#mount");
+
 
 // We can host on github and redirect for free
 

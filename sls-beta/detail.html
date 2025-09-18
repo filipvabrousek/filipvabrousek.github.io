@@ -23,7 +23,7 @@
   </script>
 
      <script type="module" src="components/nav.js"></script>
-
+  <script type="module" src="components/footer.js"></script>
   <div id="mount"></div>
 
   <script type="module">
@@ -65,7 +65,8 @@ class ProductDetail extends Base {
         new Text(this.obj.name).set({
           font: "Arial",
           weight: "bold",
-          exact: "9rem"
+           exact: "6rem"
+         // exact: "9rem"
         }),
 
         new Text(this.obj.price).set({
@@ -138,6 +139,14 @@ const detailComponents = detailJSON.map(item => new ProductDetail(item).render()
 console.log(detailComponents[0].render())
 detailComponents[0].render("#mount");
 
+
+
+import {FooterEl} from "./components/footer.js";
+
+  new FooterEl()
+  .render()
+  .render("#mount");
+  
 
 // We can host on github and redirect for free
 
