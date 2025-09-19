@@ -6,9 +6,12 @@ class FooterEl extends Base {
     render() {
       return new Center().items([
         new Text("Petr Vabrousek@2025").set({
-          size: "S6",
+          exact: "1em",
           font: "Arial",
-          pad: [{ tb: "1rem" }]
+          weight: "bold",
+          //bold: true,
+          color: "gray",
+          pad: [{ tb: "3rem" }]
         })
       ])
     }
