@@ -98,7 +98,7 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
       }
     }
 
-    fetch("/products.json")
+    fetch("./products.json")
   .then(res => res.json())
   .then(data => {
     const product = data.find(p => p.id === id);
