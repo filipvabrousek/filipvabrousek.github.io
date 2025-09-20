@@ -23,6 +23,7 @@
     fluidc: "S6", // add exact
      hover: {
         color: "#3498db"
+        
     }
         });
 
@@ -39,33 +40,33 @@ const makeLinks = () =>
       pad: [{ l: 10, r: 10, b: 12 }],
       font: "Arial",
       hover: {
-        color: "#3498db"
+        color: "#3498db",
+        // background: "#3498db" also works nicely!
       }
     })
   );
 
 
-   new Switcher().set({
-        breakpoints: [
-        { at: "0px", view: new MobileBar().set({
-background: "#ecf0f1",
-brand: new Image("img/blue70logo.png")
-.set({
-    width: "100px",
-    height: "auto"
-}),
-mar: [{"a":21}],
-pad: undefined,
-resmar: undefined,
-respad: undefined,
-radius: "1rem",
-}).add([
-                         new NavLink({
-                            text: "Home", 
-                            url: "#home"
-                        }).render(),
-
-   
+new Switcher().set({
+  breakpoints: [
+    {
+      at: "0px", view: new MobileBar().set({
+        background: "#ecf0f1",
+        brand: new Image("img/blue70logo.png")
+          .set({
+            width: "100px",
+            height: "auto"
+          }),
+        mar: [{ "a": 21 }],
+        pad: undefined, // REMOVE FROM CODEGEN
+        resmar: undefined,
+        respad: undefined,
+        radius: "1rem",
+      }).add([
+        new NavLink({
+          text: "Home",
+          url: "#home"
+        }).render(),
 
 
 new Dropdown().set({
@@ -83,7 +84,7 @@ new Dropdown().set({
     cursor: "hand",
     flex: true, // implement
     icon: {
-        padding: 30,
+        padLeft: "40px", // should be padRight 
         url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
     },
     size: "S6",
@@ -172,7 +173,7 @@ new Dropdown().set({
     cursor: "hand",
     flex: true, // update
     icon: {
-        padding: 30,
+         padLeft: "40px", 
         url: "https://cdn-icons-png.flaticon.com/512/60/60995.png"
     },
     size: "S6",

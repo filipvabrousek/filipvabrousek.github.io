@@ -28,142 +28,135 @@
   <div id="mount"></div>
 
   <script type="module">
+ class ProductCard extends Base {
+      constructor(obj){
+        super();
+        this.obj = obj;
+      }
 
-class ProductCard extends Base {
-  constructor(obj){
-    super();
-    this.obj = obj;
-  }
+      render(){
+        return new Wrapper(/*isLink: true, child: `detail.html?id=a`*/)
+          .add([
+            new Image().set({
+              type: "img",
+              width: "300px",
+              url: this.obj.url,
+              vtn: this.obj.name
+            }),
+            new Wrapper().set({
+              pad: [{a: 14}]
+            }).add([
+              new Text(this.obj.name).set({
+                color: "black",
+                weight: "bold",
+                size: "S5"
+              }),
+              new Text(this.obj.price).set({
+                weight: "bold",
+                color: "black",
+                exact: "1.1rem",
+                pad: [{b: "0.7rem"}]
+              }),
+              new Link().set({
+                text: "Koupit",
+                background: "#3498db",
+                color: "white",
+                url: `/detail.html?id=${this.obj.name}`,
+                hover: {
+                  color: "#3498db",
+                  background: "white"
+                },
+                radius: "1rem",
+                pad: [{lr: "2rem"}, {tb: "1rem"}]
+              })
+            ])
+          ]);
+      }
+    }
 
-  render(){
-    return new Wrapper({isLink: true, child: "detail.html",})
-  .set({
-    //pad: [{lbr: "1rem"}]
-})
-  .add([
-new Image().set({
-  type: "img",
-  width: "300px",
-  url: this.obj.url,
-  vtn: name
-}),
+    // ✅ Title
+    new Text("Produkty")
+      .set({
+        size: "S1",
+        font: "Arial",
+        pad: [{a: "3rem"}]
+      })
+      .render("#mount");
 
+    // ✅ Load products.json
+    /*import data from './products.json' assert { type: 'json' };
 
-new Wrapper().set({
-  pad: [{a: 14}] // fix // we need arrays Filip
-}).add([
-
-new Text(this.obj.name).set({
-  color: "black",
-  weight: "bold",
-  size: "S5"
-}),
-
-new Text(this.obj.price).set({
-  weight: "bold", // bold true inifx
-  color: "black",
-  exact: "1.1rem",
-  pad: [{b: "0.7rem"}]
-   
-}),
-
-new Link().set({
-  text: "Koupit",
-    background: "#3498db",
-    color: "white",
-    url: "detail.html",
-  hover: {
-    color: "#3498db",
-    background: "white"
-  },
-  radius: "1rem",
-  pad: [{lr: "2rem"}, {tb: "1rem"}],
-})
-
-])
-
-  ])
-
-
-  }
-}
-
-
-
-new Text("Produkty")
-.set({
-  size: "S1",
-  font: "Arial",
-  pad: [{a: "3rem"}]
-})
-.render("#mount");
-
-  let products = [
-  {
-    "name": "Helix",
-    "price": "25990 Kč",
-    "info": ["First"],
-    "sizes": ["XS/S"],
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg"
-  },
-  {
-    "name": "Reaction",
-    "price": "25990 Kč",
-    "info": ["First"],
-    "sizes": ["XS/S"],
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
-  },
-  {
-    "name": "Sprint",
-    "price": "25990 Kč",
-    "info": ["First"],
-    "sizes": ["XS/S"],
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p3_i16_w1500.jpeg"
-  }
-]
-
-  new FlexGrid()
-    .set({
-      colat: "700px",
-      wrap: true,
-      align: "center",
-      gap: "1rem",
-      pad: [{a: "1rem"}]
-    })
-    .items(
-      products.map(el =>
-
-        new Card()
-          .set({
-            width: "300px",
-          //  height: "700px",
-            radius: "1rem",
-            border: "3px solid #ECF0F1",
-            background: "#ECF0F1",
-            inpad: "1rem",
-            mar: { sides: ["all"], value: "0.8rem" },
-           
-           //  pad: { sides: ["all"], value: "1rem" }
-
-          })
-          .items([
-            new ProductCard({
-              name: el.name,
-              price: el.price,
-              info: el.info,
-              sizes: el.sizes,
-              url: el.url
-            }).render()
-          ])
+    new FlexGrid()
+      .set({
+        colat: "700px",
+        wrap: true,
+        align: "center",
+        gap: "1rem",
+        pad: [{a: "1rem"}]
+      })
+      .items(
+        data.map(el =>
+          new Card()
+            .set({
+              width: "300px",
+              radius: "1rem",
+              border: "3px solid #ECF0F1",
+              background: "#ECF0F1",
+              inpad: "1rem",
+              mar: { sides: ["all"], value: "0.8rem" }
+            })
+            .items([ new ProductCard(el).render() ])
+        )
       )
-    )
-    .render("#mount"); 
+      .render("#mount");
+*/
 
-import {FooterEl} from "./components/footer.js";
+ import { FooterEl } from "./components/footer.js";
 
-  new FooterEl()
-  .render()
-  .render("#mount");
+fetch("./products.json")
+  .then(res => res.json())
+  .then(data => {
+    new FlexGrid()
+      .set({
+        colat: "700px",
+        wrap: true,
+        align: "center",
+        gap: "1rem",
+        pad: [{a: "1rem"}]
+      })
+      .items(
+        data.map(el =>
+          new Card()
+            .set({
+              width: "300px",
+              radius: "1rem",
+              border: "3px solid #ECF0F1",
+              background: "#ECF0F1",
+              inpad: "1rem",
+              mar: { sides: ["all"], value: "0.8rem" }
+            })
+            .items([ new ProductCard(el).render() ])
+        )
+      )
+      .render("#mount");
+
+      
+    new FooterEl().render().render("#mount");
+  });
+
+
+  const button = document.createElement("button");
+button.innerText = "Koupit";
+button.onclick = () => {
+  window.location.href = `/detail.html?id=helix`;
+};
+document.body.appendChild(button);
+
+
+
+
+    // ✅ Footer
+   
   
 // We can host on github and redirect for free
 
