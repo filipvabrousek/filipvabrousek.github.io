@@ -136,31 +136,18 @@ new Wrapper().set({background: "green", width: "300px", height: "300px"}).add([
 
 new Link().set({
                 text: "Koupit fix = false",
-                background: "#3498db",
-                color: "white",
+               
                 url: `./detail.html?id=helix`,
-               // fixMobileTap: true,
-                hover: {
-                  color: "#3498db",
-                  background: "white"
-                },
-                radius: "1rem",
-                pad: [{lr: "2rem"}, {tb: "1rem"}]
+          
               }).render("#mount");
 
 
 new Link().set({
                 text: "Koupit fix = true",
-                background: "#3498db",
-                color: "white",
+             
                 url: `./detail.html?id=helix`,
                 fixMobileTap: true,
-                hover: {
-                  color: "#3498db",
-                  background: "white"
-                },
-                radius: "1rem",
-                pad: [{lr: "2rem"}, {tb: "1rem"}]
+               
               }).render("#mount");
 
  import { FooterEl } from "./components/footer.js";
