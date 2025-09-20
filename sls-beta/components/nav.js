@@ -214,7 +214,7 @@ new NavLink({
 
 new NavLink({
         text: "Kontakt",
-        url: "#home"
+        url: "https://www.apple.com"
     }).render(),
 ]) }, 
 
