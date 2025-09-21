@@ -912,7 +912,7 @@ width: 84%;
 }
 /*04/04/2023 22:14:16*/
 
-@media (max-device-width: 415px) {
+@media (max-device-width: 420px) {
 
     .firstImage {
        /* display: none; */
@@ -1431,7 +1431,7 @@ h3 {
 
 }
 
-@media (max-device-width: 415px) {
+@media (max-device-width: 420px) {
     .largeHidden {
         font-size: 2rem;
     }
