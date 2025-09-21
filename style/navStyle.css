@@ -11,24 +11,35 @@
                     height: 100vh;
                     z-index: 999;
                     width: 100%;
-    
+
+
+                    overflow-x: hidden;
+  position: relative;
                   /*  transform: translate(-100%, 0);*/
                     
                   }
     
     
-                 #workHover img {
+                 #workHover img { /*474 x 921 problem*/
                   /* opacity: 0;*/
                    border-radius: 8px;
                    transform: rotate(-10deg);
                    box-shadow: 2px 2px 5px #000;
                    margin-left: 19rem;
                    margin-top: -8rem;
+                  /* display: none;*/
                   }
 
                   #sportHover img {
                     opacity: 0;
                     border-radius: 8px;
+                  /*  display: none;*/
+                  }
+
+                  #sportHover img, #workHover img {
+                  /* display: none;*/
+                   position: absolute; /* can extend visually */
+                   left: -130px; right: 0;  /* but won’t affect page width */
                   }
     
                   .sideSmall {
@@ -104,7 +115,7 @@
 }
 
 
-@media only screen and (max-width: 430px){
+@media only screen and (max-width: 800px){
   #workHover img {
     margin-left: 1rem;
     margin-top: 0rem;
