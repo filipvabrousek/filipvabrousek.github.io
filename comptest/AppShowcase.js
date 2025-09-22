@@ -125,7 +125,7 @@ font-size: 7rem;
 }
 
 .blobImage {
-width: 700px;
+max-width: 70%; /*was 700px*/
 height: 600px;
 border-radius: 43% 56% 72% 28% / 42% 42% 56% 48%;
 }
@@ -269,9 +269,9 @@ class AppShowcase extends HTMLElement {
                 console.log("OH HELLO");
               //  alert("Hello")
                // this.shadowRoot.querySelector(".cover").style.height = "2000px";
-                this.shadowRoot.querySelector('.titles').style.fontSize = "8rem";
+               // this.shadowRoot.querySelector('.titles').style.fontSize = "8rem";
               } else {
-                this.shadowRoot.querySelector('.titles').style.fontSize = "8rem";
+               // this.shadowRoot.querySelector('.titles').style.fontSize = "8rem";
               }
 
               console.log("START IS ");
