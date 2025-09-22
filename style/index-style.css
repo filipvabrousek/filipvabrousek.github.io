@@ -75,7 +75,7 @@
     background-size: cover;
     background-repeat:no-repeat;
 }
-
+/*
 @keyframes blob {
     0%, 100% {
         border-radius:
@@ -101,7 +101,7 @@
         border-radius:
             90%;
     }
-}
+}*/
 /*-----------------------------------------------BLOB-IMAGE----------------------------------------------*/
 
 .newSubtitle {
