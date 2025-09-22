@@ -101,6 +101,8 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
     fetch("./products.json")
   .then(res => res.json())
   .then(data => {
+    console.log("JSON");
+    console.log(data);
     const product = data.find(p => p.id === id);
 
     if (product) {
@@ -108,6 +110,38 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
     } else {
       new Text("Product not found").render("#mount");
     }
+
+
+
+    let texts = [
+
+    /*new Wrapper().set({}).add([
+
+        new Text("One").set({size: "S1", color: "#1abc9c", font: "Arial"
+        }),
+
+        new Text("First time").set({
+            font: "Arial"
+        })
+    ]),*/
+
+    new Image().set({
+      url: "https://image.datart.cz/foto/500/7/0/8/product_7766807.jpg",
+      width: "400px",
+      height: "auto"
+    }),
+
+
+    new Text("Two").set({size: "S1", color: "#1abc9c", font: "Arial"}),
+    
+    new Text("Three").set({size: "S1", color: "#1abc9c", font: "Arial"}),
+
+    new Text("Four").set({size: "S1", color: "#1abc9c", font: "Arial"})
+];
+
+new Slider(texts, null)
+ 
+.render("#mount"); 
 
     // ✅ Footer after product load
     import("./components/footer.js").then(({ FooterEl }) => {
@@ -120,6 +154,8 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
   });
 
   // 202537 works in browser
+
+
 
   
   </script>
