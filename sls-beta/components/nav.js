@@ -65,7 +65,7 @@ new Switcher().set({
       }).add([
         new NavLink({
           text: "Home",
-          url: "#home"
+          url: "index.html"
         }).render(),
 
 
@@ -107,7 +107,7 @@ new Dropdown().set({
 
  new NavLink({
         text: "Team Blueseventy",
-        url: "#home"
+        url: "team-blueseventy"
     }).render(),
 
 new NavLink({
@@ -153,10 +153,9 @@ new Image("img/blue70logo.png").set({
 ,
 new Spacer(undefined),
 
-
     new NavLink({
         text: "Home",
-        url: "#home"
+        url: "index.html"
     }).render(),
 
 new Dropdown().set({
@@ -204,7 +203,7 @@ new Dropdown().set({
 
 new NavLink({
         text: "Team blueseventy",
-        url: "#home"
+        url: "team-blueseventy"
     }).render(),
 
 new NavLink({
