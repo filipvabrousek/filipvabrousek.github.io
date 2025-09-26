@@ -28,6 +28,18 @@
   <div id="mount"></div>
 
   <script type="module">
+    const urlParams = new URLSearchParams(window.location.search);
+const cat = urlParams.get("cat"); 
+// http://localhost:2000/categoryDetail?cat=neopreny
+
+// http://localhost:2000/products
+
+
+// http://localhost:2000/products?cat=neopreny
+new Text(cat).set({
+  size: "S1"
+}).render("#mount");
+
  class ProductCard extends Base {
       constructor(obj){
         super();
@@ -118,7 +130,7 @@
 
 
  import { FooterEl } from "./components/footer.js";
-
+/*
 fetch("./products.json")
   .then(res => res.json())
   .then(data => {
@@ -148,7 +160,46 @@ fetch("./products.json")
 
       
     new FooterEl().render().render("#mount");
+  });*/
+
+  fetch("./products.json") // http://localhost:2000/products?cat=swimsuits
+  .then(res => res.json())
+  .then(data => {
+   // alert(cat);
+    // Flatten all products from all categories
+      const cata = data.categories.filter(cato => cato.id.toLowerCase() === cat)[0];
+
+    console.log("-----")
+    console.log(cata);
+
+    new FlexGrid()
+      .set({
+        colat: "700px",
+        wrap: true,
+        align: "center",
+        gap: "1rem",
+        pad: [{ a: "1rem" }]
+      })
+      .items(
+        cata.products.map(el =>
+          new Card()
+            .set({
+              width: "300px",
+              radius: "1rem",
+              border: "3px solid #ECF0F1",
+              background: "#ECF0F1",
+              inpad: "1rem",
+              mar: { sides: ["all"], value: "0.8rem" }
+            })
+            .items([ new ProductCard(el).render() ])
+        )
+      )
+      .render("#mount");
+
+    // Render footer under grid
+    new FooterEl().render().render("#mount");
   });
+
 
 
 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>SLS 3</title>
+
+      <style>
+         * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         }
+      </style>
+</head>
+<body>
+  <script type="module" src="dist/lib.bundle.js">
+  </script>
+
+     <script type="module" src="components/nav.js"></script>
+  <script type="module" src="components/footer.js"></script>
+  <div id="mount"></div>
+
+  <script type="module">
+ // ✅ ProductDetail stays the same
+
+
+//const urlParams = new URLSearchParams(window.location.search);
+//const cat = urlParams.get("cat"); 
+
+
+
+
+    class ProductDetail extends Base {
+      constructor(obj) {
+        super();
+        this.obj = obj;
+      }
+
+      render() {
+        return new FlexRow().set({
+          pad: [{ a: "1rem" }],
+          gap: "1rem",
+          align: "flex-start",
+          wrap: true,
+          width: "100%",
+          maxWidth: "800px",
+          justify: "space-around"
+        })
+        .items([
+          new Image().set({
+            type: "img",
+            width: "50%",
+            url: this.obj.url,
+            vtn: this.obj.name
+          }),
+          new Wrapper().set({
+            gap: "1rem",
+            direction: "column",
+            align: "flex-start",
+            column: true,
+            width: "600px"
+          }).add([
+            new Text(this.obj.name).set({
+              font: "Montserrat",
+              weight: "bold",
+              exact: "2rem"
+            }),
+            new Text(this.obj.price).set({
+              font: "Montserrat",
+              exact: "1.6rem",
+              color: "#3498Db",
+              weight: "bold",
+              pad: [{ tb: "1rem" }]
+            }),
+            new Text(this.obj.description).set({
+              font: "Montserrat",
+              exact: "1.2rem",
+              pad: [{ tb: "1rem" }]
+            }),
+           /* new UList().setItems(this.obj.details.map(el =>
+              new Text(el, { type: "li" }).set({
+                font: "Montserrat",
+                exact: "1rem",
+                pad: [{ tb: "0.5rem" }],
+                color: "gray"
+              })
+            ))*/
+          ])
+        ]);
+      }
+    }
+
+   fetch("./categories.json")
+  .then(res => res.json())
+  .then(data => {
+    new FlexGrid()
+      .set({
+        colat: "700px",
+        wrap: true,
+        align: "center",
+        gap: "1rem",
+        pad: [{a: "1rem"}]
+      })
+      .items(
+        data.map(el =>
+          new Card()
+            .set({
+              width: "300px",
+              radius: "1rem",
+              border: "3px solid #ECF0F1",
+              background: "#ECF0F1",
+              inpad: "1rem",
+              mar: { sides: ["all"], value: "0.8rem" }
+            })
+            .items([ 
+              new Text(el.name),
+             new Link().set({
+              text: el.url,
+              url: el.url
+             })  ])
+        )
+      )
+      .render("#mount");
+
+
+    // ✅ Footer after product load
+    import("./components/footer.js").then(({ FooterEl }) => {
+      new FooterEl().render().render("#mount");
+    });
+  })
+  .catch(err => {
+    console.error("Failed to load products.json", err);
+    new Text("Error loading product data").render("#mount");
+  });
+
+
+</script>

@@ -1,92 +1,88 @@
-[
-  {
-    "id": "helix",
-    "name": "Helix",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  },
-
-   {
-    "id": "sprint",
-    "name": "Sprint",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  },
-
-   {
-    "id": "react",
-    "name": "React",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  },
-
-  {
-    "id": "react",
-    "name": "React",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  },
-
-  {
-    "id": "react",
-    "name": "React",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  },
-
-  {
-    "id": "react",
-    "name": "React",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  },
-
-  {
-    "id": "react",
-    "name": "React",
-    "price": "25999 Kč",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-    "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
-    "details": [
-      "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-      "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-      "Vylepšené zádové panely podporují přirozenou rotaci."
-    ]
-  }
-]
+{
+  "categories": [
+    {
+      "id": "swimsuits",
+      "name": "Swimsuits",
+      "products": [
+        {
+          "id": "helix",
+          "name": "Helix",
+          "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+          "details": [
+            "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
+            "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
+            "Vylepšené zádové panely podporují přirozenou rotaci."
+          ]
+        },
+        {
+          "id": "sprint",
+          "name": "Sprint",
+          "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "Sprint je navržený pro plavce, kteří chtějí výkon bez kompromisů.",
+          "details": [
+            "Flexibilní panely umožňují volný pohyb.",
+            "Odlehčený materiál snižuje odpor.",
+            "Snadné oblékání i svlékání."
+          ]
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "details": [
+            "Vyvážený poměr flexibility a podpory.",
+            "Odolná konstrukce vhodná pro častý trénink.",
+            "Optimalizovaná plovatelnost."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goggles",
+      "name": "Swimming Goggles",
+      "products": [
+        {
+          "id": "vision",
+          "name": "Vision",
+          "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+        {
+          "id": "contour",
+          "name": "Contour",
+          "price": "1599 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Racer jsou závodní brýle s hydrodynamickým profilem pro minimální odpor.",
+          "details": [
+            "Nízkoprofilový design pro rychlost.",
+            "Vyměnitelné nosníky pro perfektní přizpůsobení.",
+            "Čočky s vysokým kontrastem pro lepší viditelnost."
+          ]
+        },
+         {
+          "id": "flow",
+          "name": "Flow",
+          "price": "1599 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Racer jsou závodní brýle s hydrodynamickým profilem pro minimální odpor.",
+          "details": [
+            "Nízkoprofilový design pro rychlost.",
+            "Vyměnitelné nosníky pro perfektní přizpůsobení.",
+            "Čočky s vysokým kontrastem pro lepší viditelnost."
+          ]
+        }
+      ]
+    }
+  ]
+}
