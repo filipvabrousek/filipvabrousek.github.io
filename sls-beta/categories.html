@@ -22,7 +22,7 @@
   <script type="module" src="dist/lib.bundle.js">
   </script>
 
-     <script type="module" src="components/nav.js"></script>
+  <script type="module" src="components/nav.js"></script>
   <script type="module" src="components/footer.js"></script>
   <div id="mount"></div>
 
@@ -32,9 +32,6 @@
 
 //const urlParams = new URLSearchParams(window.location.search);
 //const cat = urlParams.get("cat"); 
-
-
-
 
     class ProductDetail extends Base {
       constructor(obj) {
@@ -56,7 +53,7 @@
           new Image().set({
             type: "img",
             width: "50%",
-            url: this.obj.url,
+            url: this.obj.imageURL,
             vtn: this.obj.name
           }),
           new Wrapper().set({
@@ -64,33 +61,27 @@
             direction: "column",
             align: "flex-start",
             column: true,
-            width: "600px"
+            width: "600px",
+            
           }).add([
+           
             new Text(this.obj.name).set({
               font: "Montserrat",
               weight: "bold",
-              exact: "2rem"
+              exact: "2rem",
+              height: "100px"
             }),
-            new Text(this.obj.price).set({
+
+            new Link("Koupit").set({
               font: "Montserrat",
               exact: "1.6rem",
               color: "#3498Db",
               weight: "bold",
+              url: this.obj.url,
               pad: [{ tb: "1rem" }]
             }),
-            new Text(this.obj.description).set({
-              font: "Montserrat",
-              exact: "1.2rem",
-              pad: [{ tb: "1rem" }]
-            }),
-           /* new UList().setItems(this.obj.details.map(el =>
-              new Text(el, { type: "li" }).set({
-                font: "Montserrat",
-                exact: "1rem",
-                pad: [{ tb: "0.5rem" }],
-                color: "gray"
-              })
-            ))*/
+           
+         
           ])
         ]);
       }
@@ -119,11 +110,14 @@
               mar: { sides: ["all"], value: "0.8rem" }
             })
             .items([ 
-              new Text(el.name),
+              new ProductDetail(el).render()
+             /* new Text(el.name),
              new Link().set({
               text: el.url,
               url: el.url
-             })  ])
+             })*/
+            
+            ])
         )
       )
       .render("#mount");

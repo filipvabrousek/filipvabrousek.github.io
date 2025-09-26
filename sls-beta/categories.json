@@ -1,31 +1,37 @@
 [
   {
     "name": "Neopreny",
-    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=swimsuits"
+    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=wetsuits",
+    "imageURL": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_c6_i3_w517.jpeg"
   },
 
   {
     "name": "Plavecké kombinézy",
-    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=swimshorts"
+    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=swimsuits",
+    "imageURL": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_c6_i3_w517.jpeg"
   },
 
   {
     "name": "Plavecké brýle",
-    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=goggles"
+    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=goggles",
+    "imageURL": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_c6_i3_w517.jpeg"
   },
 
   {
     "name": "Závodní plavky",
-    "url": "oijiojh"
+    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=racesswimwear",
+    "imageURL": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_c6_i3_w517.jpeg"
   },
 
   {
     "name": "Triatlonové kombinézy",
-    "url": "oijiojh"
+    "url": "https://filipvabrousek.github.io/sls-beta/products?cat=triatloncomb",
+    "imageURL": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_c6_i3_w517.jpeg"
   },
 
   {
     "name": "Doplňky",
-    "url": "oijiojh"
+      "url": "https://filipvabrousek.github.io/sls-beta/products?cat=amenities",
+    "imageURL": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_c6_i3_w517.jpeg"
   }
 ]
