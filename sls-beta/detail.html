@@ -103,7 +103,11 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
   .then(data => {
     console.log("JSON");
     console.log(data);
-    const product = data.find(p => p.id === id);
+   // Flatten all products from all categories
+    const products = data.categories.flatMap(cat => cat.products);
+
+    // Find product by id
+    const product = products.find(p => p.id === id);
 
     if (product) {
       new ProductDetail(product).render().render("#mount");
@@ -139,7 +143,7 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
     new Text("Four").set({size: "S1", color: "#1abc9c", font: "Arial"})
 ];
 
-new Slider(texts, nullde)
+new Slider(texts, null)
  
 .render("#mount"); 
 
