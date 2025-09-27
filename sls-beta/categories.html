@@ -40,28 +40,17 @@
       }
 
       render() {
-        return new FlexRow().set({
-          pad: [{ a: "1rem" }],
-          gap: "1rem",
-          align: "flex-start",
-          wrap: true,
-          width: "100%",
-          maxWidth: "800px",
-          justify: "space-around"
-        })
-        .items([
+        return new Wrapper()
+        .set({})
+        .add([
           new Image().set({
-            type: "img",
-            width: "50%",
+            isFull: true,
+            width: "300px",
             url: this.obj.imageURL,
             vtn: this.obj.name
           }),
           new Wrapper().set({
-            gap: "1rem",
-            direction: "column",
-            align: "flex-start",
-            column: true,
-            width: "600px",
+          
             
           }).add([
            
@@ -74,9 +63,9 @@
 
             new Link("Koupit").set({
               font: "Montserrat",
-              exact: "1.6rem",
+              exact: "1rem",
               color: "#3498Db",
-              weight: "bold",
+             
               url: this.obj.url,
               pad: [{ tb: "1rem" }]
             }),
