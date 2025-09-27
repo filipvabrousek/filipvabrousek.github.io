@@ -1,11 +1,11 @@
- let links = [
-      {text: "Neopreny", url: "K"},
-      {text: "Plavecké kombinézy", url: "K"},
-      {text: "Plavecké brýle", url: "K"},
-      {text: "Závodní plavky", url: "K"},
-      {text: "Doplňky", url: "K"},
-      {text: "Triatlonové kombinézy", url: "K"}
-    ];
+let links = [
+  {text: "Neopreny", url: "https://filipvabrousek.github.io/sls-beta/products?cat=wetsuits"},
+  {text: "Plavecké kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=triskins"},
+  {text: "Plavecké brýle", url: "https://filipvabrousek.github.io/sls-beta/products?cat=goggles"},
+  {text: "Závodní plavky", url: "https://filipvabrousek.github.io/sls-beta/products?cat=racesswimwear"},
+  {text: "Doplňky", url: "https://filipvabrousek.github.io/sls-beta/products?cat=amenities"},
+  {text: "Triatlonové kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=triatloncomb"}
+];
 
 // To link wrapper in dropdown: z-index: 9999px
     class NavLink extends Base {
