@@ -50,16 +50,18 @@ import {Blue70Button} from "./components/blue70Button.js";
             url: this.obj.imageURL,
             vtn: this.obj.name
           }),
+
           new Wrapper().set({
-          
-            
+            pad: [{a: 10}]
+           // background: "green"
           }).add([
            
             new Text(this.obj.name).set({
               font: "Montserrat",
               weight: "bold",
-              exact: "2rem",
-              height: "100px"
+              exact: "1.6rem",
+              height: "100px",
+              
             }),
 
           /*  new Link("Koupit").set({
@@ -98,7 +100,7 @@ import {Blue70Button} from "./components/blue70Button.js";
             .set({
               width: "300px",
               radius: "1rem",
-              border: "3px solid #ECF0F1",
+            //  border: "3px solid #ECF0F1",
               background: "#ECF0F1",
               inpad: "1rem",
               mar: { sides: ["all"], value: "0.8rem" }

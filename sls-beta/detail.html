@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -143,9 +143,12 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
     new Text("Four").set({size: "S1", color: "#1abc9c", font: "Arial"})
 ];
 
-new Slider(texts, null)
- 
-.render("#mount"); 
+new Slider(texts, 
+null, 
+{ 
+     tintColor: "#3498db",
+     inactiveColor: "#ccc"
+ }).render("#mount"); 
 
     // ✅ Footer after product load
     import("./components/footer.js").then(({ FooterEl }) => {
