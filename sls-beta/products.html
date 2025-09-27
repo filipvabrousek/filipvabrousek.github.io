@@ -25,6 +25,8 @@
 
    <script type="module" src="components/nav.js"></script>
      <script type="module" src="components/footer.js"></script>
+       
+     
   <div id="mount"></div>
 
   <script type="module">
@@ -40,6 +42,7 @@ const cat = urlParams.get("cat");
 // https://filipvabrousek.github.io/sls-beta/categories
 // https://filipvabrousek.github.io/sls-beta/products?cat=swimsuits
 
+import {Blue70Button} from "./components/blue70Button.js";
 
  class ProductCard extends Base {
       constructor(obj){
@@ -70,6 +73,11 @@ const cat = urlParams.get("cat");
                 exact: "1.1rem",
                 pad: [{b: "0.7rem"}]
               }),
+
+              new Blue70Button({
+                title: this.obj.name,
+                url: `https://filipvabrousek.github.io/sls-beta/detail.html?id=${this.obj.id}`
+              }).render()
              
             ])
           ]);

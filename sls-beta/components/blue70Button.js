@@ -20,3 +20,6 @@ class Blue70Button extends Base {
               })
   }
 }
+
+
+export { Blue70Button }

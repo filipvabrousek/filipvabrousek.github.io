@@ -32,6 +32,7 @@
 
 //const urlParams = new URLSearchParams(window.location.search);
 //const cat = urlParams.get("cat"); 
+import {Blue70Button} from "./components/blue70Button.js";
 
     class ProductDetail extends Base {
       constructor(obj) {
@@ -61,14 +62,19 @@
               height: "100px"
             }),
 
-            new Link("Koupit").set({
+          /*  new Link("Koupit").set({
               font: "Montserrat",
               exact: "1rem",
               color: "#3498Db",
              
               url: this.obj.url,
               pad: [{ tb: "1rem" }]
-            }),
+            }),*/
+
+             new Blue70Button({
+                title: this.obj.name,
+                url: this.obj.url
+              }).render()
            
          
           ])
