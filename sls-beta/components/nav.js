@@ -65,7 +65,8 @@ new Switcher().set({
       }).add([
         new NavLink({
           text: "Home",
-          url: "index.html"
+          url: "index.html",
+          cursor: "hand"
         }).render(),
 
 
