@@ -6,7 +6,7 @@ class Blue70Button extends Base {
 
   render(){
     return new Link().set({
-                text: this.obj.title,
+                text: "Koupit",
                 background: "#3498db",
                 color: "white",
                 url: this.obj.url, //`https://filipvabrousek.github.io/sls-beta/detail.html?id=${this.obj.id}`, //`./detail.html?id=${this.obj.id}`,
