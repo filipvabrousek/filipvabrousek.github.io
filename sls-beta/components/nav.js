@@ -100,7 +100,22 @@ new Dropdown().set({
     weight: "bold"
 }),
 
-...makeLinks()    
+new Wrapper()
+  .set({ 
+    display: "flex",
+  flexDir: "column",
+  mar: [
+    {
+      t: "10px"
+    }
+  ],
+  radius: ".3rem"
+})
+  .add([...makeLinks() ])
+
+
+
+ 
 
 ]),
 
