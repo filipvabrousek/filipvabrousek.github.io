@@ -1,8 +1,8 @@
 {
   "categories": [
     {
-      "id": "swimsuits",
-      "name": "Swimsuits",
+      "id": "wetsuits",
+      "name": "Wetsuits",
       "products": [
         {
           "id": "helix",
@@ -83,6 +83,68 @@
           ]
         }
       ]
-    }
+    },
+
+     {
+      "id": "racesswimwear",
+      "name": "Swimsuits",
+      "products": [
+        {
+          "id": "swimsuits",
+          "name": "Swimsuits",
+          "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        }
+      ]
+      },
+
+          {
+      "id": "triskins",
+      "name": "Triatlonové kombinézy",
+      "products": [
+        {
+          "id": "swimsuits",
+          "name": "Swimsuits",
+          "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        }
+      ]
+      },
+
+        {
+      "id": "swimskins",
+      "name": "Plavecké kombinézy",
+      "products": [
+        {
+          "id": "swimsuits",
+          "name": "Swimsuits",
+          "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        }
+      ]
+      }
+
+
+
+
+
   ]
 }

@@ -36,11 +36,10 @@ const cat = urlParams.get("cat");
 
 
 // http://localhost:2000/products?cat=neopreny
+// http://localhost:2000/products?cat=wetsuits
 // https://filipvabrousek.github.io/sls-beta/categories
 // https://filipvabrousek.github.io/sls-beta/products?cat=swimsuits
-new Text(cat).set({
-  size: "S1"
-}).render("#mount");
+
 
  class ProductCard extends Base {
       constructor(obj){
