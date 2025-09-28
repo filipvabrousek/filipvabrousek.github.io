@@ -115,23 +115,20 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
       new Text("Product not found").render("#mount");
     }
 
-    let texts = [
 
-    new Image().set({
-      url: "https://image.datart.cz/foto/500/7/0/8/product_7766807.jpg",
+    let images = product.images.map(url => new Image().set({
+      url: url,
       width: "400px",
       height: "auto"
-    }),
+    })
+  );
 
+    console.log("ORAA");
+    console.log(images);
 
-    new Text("Two").set({size: "S1", color: "#1abc9c", font: "Arial"}),
-    
-    new Text("Three").set({size: "S1", color: "#1abc9c", font: "Arial"}),
+   
 
-    new Text("Four").set({size: "S1", color: "#1abc9c", font: "Arial"})
-];
-
-new Slider(texts, 
+new Slider(images, 
 null, 
 { 
      tintColor: "#3498db",

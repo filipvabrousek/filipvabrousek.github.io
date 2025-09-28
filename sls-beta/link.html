@@ -1,0 +1,215 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>SLS 3</title>
+
+      <style>
+         * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         }
+
+     
+
+
+      </style>
+</head>
+<body>
+
+<script>
+  document.addEventListener("mouseover", e => {
+  const els = document.elementsFromPoint(e.clientX, e.clientY);
+  console.log("Under cursor:", els.map(el => el.tagName + (el.id ? "#" + el.id : "")));
+});
+</script>
+
+<script type="module" src="dist/lib.bundle.js">
+  </script>
+
+  <div id="mount"></div>
+
+  <script type="module">
+
+import {XLink} from "./xlink.js";
+
+new Wrapper().set({
+  background: "orange",
+  
+}).add([
+
+
+
+// Real problem is padding used in my Link class
+// padding on real <a> element is not a problem
+// only hove problem is bottom
+
+// margin matching padding is problem
+
+/*
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Linki",
+ //pad is 1rem, mar(a) => 1.8rem
+  pad: [{a: "1rem"}], 
+  color: "white",
+  background: "purple",
+  weight: "bold",
+mar: [{a: "1.8rem"}], // l is okay
+fixMobileTap: true,
+}),*/
+//.render("#mount");
+
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Linki",
+ //pad is 1rem, mar(a) => 1.8rem
+  pad: [{a: "1rem"}], 
+  color: "white",
+  background: "purple",
+  weight: "bold",
+mar: [{a: "1rem"}], // l is okay
+fixMobileTap: true,
+}),
+
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Linki",
+ //pad is 1rem, mar(a) => 1.8rem
+  pad: [{a: "1rem"}], 
+  color: "white",
+  background: "purple",
+  weight: "bold",
+mar: [{a: "1.8rem"}], // l is okay
+fixMobileTap: true,
+}),
+//.render("#mount"); // OKAY
+
+
+
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Linki",
+ //pad is 1rem, mar(a) => 1.8rem
+  pad: [{a: "1rem"}], 
+  color: "white",
+  background: "purple",
+  weight: "bold",
+mar: [{a: "1.8rem"}], // l is okay
+fixMobileTap: true,
+})
+//.render("#mount"); // OKAY
+
+
+]).render("#mount");
+
+
+
+
+
+
+
+
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Linki",
+ //pad is 1rem, mar(a) => 1.8rem, pad > mar was problem
+  pad: [{a: "0.91rem"}], 
+  color: "green",
+  //background: "purple",
+  weight: "bold",
+mar: [{a: "1rem"}], // l is okay
+fixMobileTap: true,
+}).render("#mount")
+
+/*
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Right",
+ //pad is 1rem, mar >= pad => problem
+  pad: [{a: "1rem"}], 
+  color: "white",
+  background: "orange",
+  weight: "bold",
+mar: [{a: "1.1rem"}],
+fixMobileTap: true,
+  hover: {
+                  color: "#3498db",
+                  
+                }
+})
+.render("#mount");*/
+
+
+/*
+new Link() 
+.set({
+  id: "#myLink",
+   url: "https://www.nasa.gov",
+  text: "Link",
+ //pad is 1rem, mar >= pad => problem
+  pad: [{a: "1rem"}], 
+  color: "white",
+  background: "green",
+  weight: "bold",
+mar: [{a: "1rem"}],
+fixMobileTap: true,
+  hover: {
+                  color: "#3498db",
+                  
+                }
+})
+.render("#mount");*/
+
+
+
+
+
+//]).render("#mount");
+  </script>
+  <a class="a" href="oo">Hello</a> 
+<!---
+<a class="a" href="oo">Hello</a> 
+<a class="a" href="oo">Hello</a> 
+-->
+<style>
+
+   
+
+  .a {
+display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+   
+    text-decoration: none;
+text-decoration: none;
+    color: rgb(18, 190, 164);
+
+  }
+
+  #mount {
+    margin-bottom: 3rem;
+  }
+</style>
+
+</body>
+</html>

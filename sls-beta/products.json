@@ -1,5 +1,5 @@
 {
-  "categories": [
+  "categories": [ 
     {
       "id": "wetsuits",
       "name": "Wetsuits",
@@ -14,24 +14,133 @@
             "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
             "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
             "Vylepšené zádové panely podporují přirozenou rotaci."
+          ],
+          "images": [
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
+          ]
+        },
+         {
+          "id": "reaction",
+          "name": "Reaction",
+          "price": "12990 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+          "details": [
+            "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
+            "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
+            "Vylepšené zádové panely podporují přirozenou rotaci."
+          ],
+           "images": [
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
+          ]
+        },
+         {
+          "id": "sprint",
+          "name": "Sprint",
+          "price": "5999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+          "details": [
+            "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
+            "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
+            "Vylepšené zádové panely podporují přirozenou rotaci."
+          ],
+           "images": [
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
           ]
         },
         {
-          "id": "sprint",
-          "name": "Sprint",
-          "price": "25999 Kč",
+          "id": "glide",
+          "name": "Glide",
+          "price": "3990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
           "description": "Sprint je navržený pro plavce, kteří chtějí výkon bez kompromisů.",
           "details": [
             "Flexibilní panely umožňují volný pohyb.",
             "Odlehčený materiál snižuje odpor.",
             "Snadné oblékání i svlékání."
+          ],
+            "images": [
+              "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160"
+            
           ]
         },
         {
-          "id": "react",
-          "name": "React",
+          "id": "torpedo",
+          "name": "Torpedo",
+          "price": "3990 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "details": [
+            "Vyvážený poměr flexibility a podpory.",
+            "Odolná konstrukce vhodná pro častý trénink.",
+            "Optimalizovaná plovatelnost."
+          ],
+           "images": [
+             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+              "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
+           
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160"
+            
+          ]
+
+        },
+        {
+          "id": "helix",
+          "name": "Thermal",
           "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "details": [
+            "Vyvážený poměr flexibility a podpory.",
+            "Odolná konstrukce vhodná pro častý trénink.",
+            "Optimalizovaná plovatelnost."
+          ]
+        },
+
+        {
+          "id": "reaction",
+          "name": "Reaction Thermal",
+          "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "details": [
+            "Vyvážený poměr flexibility a podpory.",
+            "Odolná konstrukce vhodná pro častý trénink.",
+            "Optimalizovaná plovatelnost."
+          ]
+        },
+
+          {
+          "id": "alliance",
+          "name": "Alliance (pro styl prsa a swimrun)",
+          "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "details": [
+            "Vyvážený poměr flexibility a podpory.",
+            "Odolná konstrukce vhodná pro častý trénink.",
+            "Optimalizovaná plovatelnost."
+          ]
+        },
+
+         {
+          "id": "liftshorts",
+          "name": "LIFT shorts",
+          "price": "2999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
           "description": "React kombinuje komfort a výkon v dostupném balení.",
           "details": [
@@ -131,6 +240,25 @@
           "id": "swimsuits",
           "name": "Swimsuits",
           "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        }
+      ]
+      },
+
+       {
+      "id": "amenities",
+      "name": "Doplňky",
+      "products": [
+        {
+          "id": "amenities",
+          "name": "Amenities",
+          "price": "499 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
           "details": [
