@@ -27,11 +27,14 @@
   <div id="mount"></div>
 
   <script type="module">
- // ✅ ProductDetail stays the same
+// VISIT
+// http://localhost:2000/products?cat=wetsuits
+// http://localhost:2000/products?cat=swimskins
+// http://localhost:2000/products?cat=goggles
+// http://localhost:2000/products?cat=raceswimwear
+// http://localhost:2000/products?cat=amenities
+// http://localhost:2000/products?cat=triskins
 
-
-//const urlParams = new URLSearchParams(window.location.search);
-//const cat = urlParams.get("cat"); 
 import {Blue70Button} from "./components/blue70Button.js";
 
     class ProductDetail extends Base {
@@ -82,7 +85,7 @@ import {Blue70Button} from "./components/blue70Button.js";
         ]);
       }
     }
-
+// http://localhost:2000/products?cat=wetsuits
    fetch("./categories.json")
   .then(res => res.json())
   .then(data => {

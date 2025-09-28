@@ -62,7 +62,36 @@ import {Blue70Button} from "./components/blue70Button.js";
             new Wrapper().set({
               pad: [{a: 14}]
             }).add([
-              new Text(this.obj.name).set({
+
+            new Wrapper().set({
+             // height: "170px"
+             
+             resprop:  [
+              {
+              breakpoint: "md",
+              height: "90px",
+           //   background: "green"
+        },
+        {
+            breakpoint: "lg",
+            height: "170px",
+          //  background: "orange"
+        },
+
+         {
+            breakpoint: "xl",
+            height: "170px",
+           // background: "orange"
+        },
+
+         {
+            breakpoint: "xxl",
+            height: "170px",
+           // background: "orange"
+        }
+      ]
+            }).add([
+ new Text(this.obj.name).set({
                 color: "black",
                 weight: "bold",
                 size: "S5"
@@ -73,6 +102,8 @@ import {Blue70Button} from "./components/blue70Button.js";
                 exact: "1.1rem",
                 pad: [{b: "0.7rem"}]
               }),
+            ]),
+             
 
               new Blue70Button({
                 url: `https://filipvabrousek.github.io/sls-beta/detail.html?id=${this.obj.id}`
@@ -181,6 +212,7 @@ fetch("./products.json")
           new Card()
             .set({
               width: "300px",
+           //  height: "700px",
               radius: "1rem",
               border: "3px solid #ECF0F1",
               background: "#ECF0F1",
