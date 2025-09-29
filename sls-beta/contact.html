@@ -62,10 +62,12 @@ constructor(text){
 
 render(){
    return new Text(this.text)
-   .set({type: "p",
+   .set({
+    type: "p",
     bold: true,
     font: "Montserrat",
-  pad:[{a: "1rem"}]})
+  pad:[{a: "1rem"}]
+})
 
 }
 }
@@ -78,29 +80,28 @@ class ContactInfo extends Base {
 
   render(){
     return new Wrapper().set({}).add([
-      new ContentP("Veškeré objednávky zboží Blueseventy probíhají přes e-mail petr@vabrousek.cz. Zvolit vhodnou velikost neoprenu, ideální kombinézu nebo model brýlí není bez zkušeností úplně jednoduché a předejdeme tak případnému posílání různých modelů a velikostí tam a zpět.").render(),
+      new ContentP("Veškeré objednávky zboží **Blueseventy** probíhají přes e-mail petr@vabrousek.cz. Zvolit vhodnou velikost neoprenu, ideální kombinézu nebo model brýlí není bez zkušeností úplně jednoduché a předejdeme tak případnému posílání různých modelů a velikostí tam a zpět.").render(),
   
-
     new ContentP("Pošlete mi prosím mail s těmito údaji:").render(),
  
- 
-     new Wrapper().set({pad: [{l: "2.2rem"}]}).add([
+    new Wrapper().set({pad: [{l: "2.2rem"}]}).add([
 
     
     new UList().setItems(this.obj.tips.map(el =>
               new Text(el, { type: "li" }).set({
                 font: "Montserrat",
                 exact: "1rem",
-                
                 color: "gray"
               })
             ))
 
             ]),
 
+            
 
             new ContentP("Rád vám doporučím vhodný model i velikost. Objednávka bude neprodleně vyřízena poštou. Platba je možná na dobírku i převodem až po vyzkoušení dodaného obleku.Stejně jako v hotovosti při osobním převzetí ve Zlíně, kde je i možnost po dohodě před koupí oblek vyzkoušet v bazénu.V případě, že velikost nebude sedět, bude zboží vyměněno bezplatně za vhodnější velikost.").render(),
           
+      
 
 
                 new ContentP("V případě, že budete po vyzkoušení nespokojeni, pošlete zboží prosím do dvou týdnů na dobírku zpět na mou adresu. Pevně věřím, že budete spokojeni a stejně jako 100% zákazníků před Vámi. V případě reklamace prosím pošlete foto a popis defektu na: ").render(),
@@ -135,10 +136,14 @@ new Link("www.petrvabrousek.cz").set({
 
 
 
-  new ContactInfo({tips: neoprenTips}).render()
+  new ContactInfo({tips: neoprenTips})
+    .render()
+    .render("#mount");
 
-
-.render("#mount");
+  new Text("Hello **md** *italic*")
+            .set({
+              color: "green",
+           }).render("#mount")
 </script>
 
 
