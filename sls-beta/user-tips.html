@@ -44,4 +44,45 @@ import {Blue70Button} from "./components/blue70Button.js";
         pad: [{a: "3rem"}]
       })
       .render("#mount");
+
+
+
+      const neoprenTips = [
+  "Díky kvalitnímu provedení krku není potřeba se ničím mazat, kdo má však citlivou kůži, plave v moři nebo hodně zaklání hlavu, mazat by si krk měl. Nevhodná je vazelína, která rozkládá lepidlo na neopren. Nejlépe se osvědčil zahraniční Body Glide nebo podobné přímo k tomu určené výrobky.",
+  "Na oblékání si vyhraďte dostatek času a zásadně oblékejte oblek suchý na suché tělo, snažte se netahat za něj nehty. V případě potřeby využijte tenkých rukaviček, které se k obleku Blueseventy dodávají v balení. U oblékání nohavic pomohou ponožky nebo sáčky na chodidlech. Nohavice vytáhněte v rozkroku co nejvýše, stejně tak poté rukávy. Ve vodě si pak krkem, rukávy i nohavicemi naberte prudkým pohybem vodu dovnitř. Teprve poté si neopren ideálně sedne. Případnou přebytečnou vodu pak můžete ještě znovu na břehu nohavicemi vytlačit ven. Neopren pak bude sedět jako “druhá kůže”.",
+  "Po doplavání nejdříve rozepněte jednou rukou krk a druhou pak pomocí popruhu rozepněte záda. V depu se pak během nasazování brýlí a přilby vyšlapte z nohavic do výše achilovky a na závěr oběma dlaněmi vyzujte paty. Nezapomeňte si tuto operaci v závodním tempu vyzkoušet po každém plaveckém tréninku absolvovaném v neoprenu.",
+  "Neopren po použití opláchněte čistou vodou a usušte na ramínku se širšími rameny v poloze “naruby” po uschnutí jej pak poskládejte naplocho a uložte do síťovaného vaku, který je rovněž součástí balení (u modelů Reaction a Helix). Nenechávejte oblek delší dobu na přímém slunci.",
+  "Pravidelně kontrolujte, zda se neobjevily nějaké trhlinky (obvykle vzniklé při zbrklém oblékání nebo v zápalu boje od soupeřů). Pak postačí dobře oblek usušit, nanést malou vrstvu lepidla (máme v nabídce) a po zhruba minutovém zavadnutí na dvě minuty pevně spoj stlačit. Fuguje to dokonale, dané místo už se obvykle znovu nerozlepí.",
+  "Na vnitřní části obleku je bílé místo určené k podpisu a kontaktu na majitele, což může pomoci při identifikaci obleku po závodě a odradit potenciální zloděje. Postačí silnější propiska nebo fix typu Sharpie.",
+  "Plavání v neoprenu je rychlejší, nicméně má svá drobná specifika a je proto vhodné v něm alespoň jednou týdně trénovat (mimo víkendové závody). Neopreny Blue Seventy snesou bez problémů i pravidelný trénink v bazénu."
+];
+
+
+class Tipper extends Base {
+  constructor(obj){
+    super();
+    this.obj = obj;
+  } 
+
+  render(){
+    return new UList().setItems(this.obj.tips.map(el =>
+              new Text(el, { type: "li" }).set({
+                font: "Montserrat",
+                exact: "1rem",
+                pad: [{ tb: "0.5rem" }],
+                color: "gray"
+              })
+            ));
+  }
+}
+
+new Wrapper().set({mar:[{a: "2.2rem"}]}).add([
+  new Tipper({tips: neoprenTips}).render()
+])
+
+.render("#mount");
+
+
+
+
 </script>
