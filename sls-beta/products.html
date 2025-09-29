@@ -114,70 +114,9 @@ import {Blue70Button} from "./components/blue70Button.js";
       })
       .render("#mount");
 
-    // ✅ Load products.json
-    /*import data from './products.json' assert { type: 'json' };
-
-    new FlexGrid()
-      .set({
-        colat: "700px",
-        wrap: true,
-        align: "center",
-        gap: "1rem",
-        pad: [{a: "1rem"}]
-      })
-      .items(
-        data.map(el =>
-          new Card()
-            .set({
-              width: "300px",
-              radius: "1rem",
-              border: "3px solid #ECF0F1",
-              background: "#ECF0F1",
-              inpad: "1rem",
-              mar: { sides: ["all"], value: "0.8rem" }
-            })
-            .items([ new ProductCard(el).render() ])
-        )
-      )
-      .render("#mount");
-*/
-
-
-
-
 
  import { FooterEl } from "./components/footer.js";
-/*
-fetch("./products.json")
-  .then(res => res.json())
-  .then(data => {
-    new FlexGrid()
-      .set({
-        colat: "700px",
-        wrap: true,
-        align: "center",
-        gap: "1rem",
-        pad: [{a: "1rem"}]
-      })
-      .items(
-        data.map(el =>
-          new Card()
-            .set({
-              width: "300px",
-              radius: "1rem",
-              border: "3px solid #ECF0F1",
-              background: "#ECF0F1",
-              inpad: "1rem",
-              mar: { sides: ["all"], value: "0.8rem" }
-            })
-            .items([ new ProductCard(el).render() ])
-        )
-      )
-      .render("#mount");
 
-      
-    new FooterEl().render().render("#mount");
-  });*/
 
   fetch("./products.json") // http://localhost:2000/products?cat=swimsuits
   .then(res => res.json())
@@ -217,24 +156,13 @@ fetch("./products.json")
     // Render footer under grid
     new FooterEl().render().render("#mount");
   });
-
-
-
-
-
-
-
-    // ✅ Footer
    
   
 // We can host on github and redirect for free
 
-
 // UPDATE: npm i nodality@latest
 // BYPASS package.json
 
-
- 
 // run with npx serve -l 2000
 // http://localhost:2000/publish
   </script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>SLS 3</title>
+
+      <style>
+         * {
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+         }
+      </style>
+</head>
+<body>
+  <script type="module" src="dist/lib.bundle.js">
+  </script>
+
+  <script type="module" src="components/nav.js"></script>
+  <script type="module" src="components/footer.js"></script>
+  <div id="mount"></div>
+
+  <script type="module">
+// VISIT
+// http://localhost:2000/products?cat=wetsuits
+// http://localhost:2000/products?cat=swimskins
+// http://localhost:2000/products?cat=goggles
+// http://localhost:2000/products?cat=raceswimwear
+// http://localhost:2000/products?cat=amenities
+// http://localhost:2000/products?cat=triskins
+
+import {Blue70Button} from "./components/blue70Button.js";
+
+  new Text("Kontakt")
+      .set({
+        size: "S1",
+        font: "Arial",
+        pad: [{a: "3rem"}]
+      })
+      .render("#mount");
+</script>

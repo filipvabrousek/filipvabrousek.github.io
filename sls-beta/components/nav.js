@@ -81,7 +81,7 @@ new Dropdown().set({
 }).add([
  new Link("Katalog").set({
   text: "Katalog",
-  url: "#e",
+  url: "categories.html",
     cursor: "hand",
     flex: true, // implement
     icon: {
@@ -128,12 +128,12 @@ new Wrapper()
 
 new NavLink({
         text: "Uživatelské tipy",
-        url: "#home"
+        url: "user-tips"
     }).render(),
 
 new NavLink({
         text: "Kontakt",
-        url: "https://www.apple.com"
+        url: "contact"
     }).render(),
 
                     ]) }, 
@@ -184,7 +184,7 @@ new Dropdown().set({
 }).add([
  new Link("Katalog").set({
     text: "Katalog",
-    url: "A",
+    url: "categories.html",
     cursor: "hand",
     flex: true, // update
     icon: {
@@ -224,12 +224,12 @@ new NavLink({
 
 new NavLink({
         text: "Uživatelské tipy",
-        url: "#home"
+        url: "user-tips"
     }).render(),
 
 new NavLink({
         text: "Kontakt",
-        url: "https://www.apple.com"
+        url: "contact"
     }).render(),
 ]) }, 
 
