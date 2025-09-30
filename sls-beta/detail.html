@@ -79,12 +79,24 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
               color: "#3498Db",
               weight: "bold",
               pad: [{ tb: "1rem" }]
-            }),
-            new Text(this.obj.description).set({
+            }), // http://localhost:2000/detail?id=helix
+
+            new Wrapper()
+            .set({})
+            .add(this.obj.description.map(el => {
+              return new Text(el).set({
               font: "Montserrat",
               exact: "1.2rem",
               pad: [{ tb: "1rem" }]
-            }),
+            })
+          }
+          )),
+          
+           /* new Text(this.obj.description).set({
+              font: "Montserrat",
+              exact: "1.2rem",
+              pad: [{ tb: "1rem" }]
+            }),*/
             new UList().setItems(this.obj.details.map(el =>
               new Text(el, { type: "li" }).set({
                 font: "Montserrat",

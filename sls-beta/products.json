@@ -4,16 +4,24 @@
       "id": "wetsuits",
       "name": "Wetsuits",
       "products": [
-        {
-          "id": "helix",
-          "name": "Helix",
+
+
+
+         {
+          "id": "helix-thermal",
+          "name": "Helix Thermal",
           "price": "25999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+          "description": ["Skok do ledové vody vám může skutečně vyrazit dech. Pokud do ní ale skočíte v tom nejlepším, co je na světovém trhu k dispozici, bude se vám plavat mnohem snáze! HELIX THERMAL je odvozen od 4 generací toho svého jmenovce a byl upraven speciálně pro mimořádně studenou vodu nebo pro ty, kteří jsou prostě méně otužilí a extrémní chlad snášejí hůře."," Samozřejmostí zůstává brezkonkurenční anatomické tvarování a jedinečná elasticita a životnost. Celý oblek je zevnitř potažen zirkoniovou vrstvou, která výrazně zvyšuje jeho hřejivost. Přesto je stále velmi lehký a pružný. Všechny švy jsou trojité, zaslepené a přelepené na místech, kde by potenciálně mohlo dojít k odřeninám. Konec strachu ze studené vody!"],
           "details": [
-            "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-            "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-            "Vylepšené zádové panely podporují přirozenou rotaci."
+            "ZIRKONOVÁ VRSTVA Celý oblek je zevnitř opatřen zirkonovou vrstvou, která nejen zabraňuje tepelný ztrátám,ale také snižuje nasákavost materiálu, takže oblek zůstává lehčí.",
+            "PLÁSTVOVÝ ZÁBĚROVÝ PANEL NA PŘEDLOKTÍ Je celý z neoprenu aby se tak zvýšil hřejivý efekt a ztráty energie.",
+            "UZÁVĚRY Také tento oblek používá velmi kvalitní zipy a nově přidává pohodlnější tvarování v oblasti krku.",
+            "TST TECHNOLOGIE Známé modré panely z Helixu byly vylepšeny o stříbrné Yamamoto 40. Byly eliminovány švy na zádech, což umožňuje větší celkovou elasticitu obleku.",
+            "FIT PANELY Podle těla vytvarované 3mm silné boční panely se vhodně doplňují se silnější hrudní a zádovou částí a vylepšují tak polohu ve vodě a usnadňují rotaci.",
+            "VO2 HRUDNÍ PANEL Nově vytvarovaný dvojdílný hrudník umožňuje bezproblémový nádech aniž by jakkoli snižoval nadnášivost a přilnavost obleku.",
+            "NADNÁŠIVOST Helix je konstruován z velké většiny z 5mm neoprenu nejvyšší kvality Yamamoto Aerodome tak, že výrazně zvyšuje polohu nohou při plavání a pomáhá k účinné poloze “plavání z kopce”.",
+            "ŽENSKÉ SPECIFICKÉ VELIKOSTI Tak jako všechny neopreny Blueseventy i Thermal Helix nabízí celou škálu specifických ženských velikostí.​"
           ],
           "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
@@ -22,16 +30,84 @@
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
           ]
         },
+
+
+
+
+        {
+          "id": "helix",
+          "name": "Helix",
+          "price": "25999 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
+          "description": [
+            "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+            "Helix je rychlejší než kdykoli předtím. Je vyroben ze špičkového neoprenu Yamamoto a poskytuje bezkonkurenční elasticitu, vztlak a rychlost. Bezešvá konstrukce ramen umožňuje zcela neomezenou pohyblivost v ramenou. Ultraflexibilní tenký neopren v ramenou znamená plavání bez odporu. Veškerá vaše síla se přenáší do dopředného pohybu. Vztlakové panely na horní části stehen dále zdokonalují polohu těla a udržují vás výše ve vodě pro maximální efektivitu při každém záběru.",
+            "Systém reverzního zipu je navržený tak, aby se zapínal shora dolů. Je vytvořen pro rychlost. Nejenže snižuje možnost odření krku při plavání, ale umožňuje vám svléknout neopren v depu v rekordním čase. Každá vteřina se počítá.",
+            "Helix je vaše závodní zbraň, která má být v nejlepší kondici, když na tom nejvíc záleží. Pokud si jej chcete zachovat 10+ let v top kondici, doporučujeme trénovat v jiném modelu (Reaction nebo Sprint) a Helix si šetřit jen na rozplavání před a samotný den závodu. Nutné to ale není, často se stává, že si zákazníci přijdou pro nový Helix i po deseti letech, přičemž ho používají i na všechny tréninky."
+          ],
+          "details": [
+"Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
+"Výrazné modré ramena jsou bezešvá a maximalizují elasticitu pro neomezenou volnost v pohybu.",
+"Vylepšené zádové panely podporují přirozenou rotaci pro maximální délku záběru",
+"prémiový ultratenký 1,5mm Yamamoto 40 cell neopren na pažích poskytuje pružnost, pohodlí a rychlost.",
+"Vododpudivá, propustná technologie na předloktí podporuje přirozený cit pro vodu.",
+"Obrácené zapínání eliminuje odřeniny na krku a umožňuje nižší krční panel pro neomezené dýchání a komfort.",
+"Mimořádně pružná vnitřní nylonová vrstva je lehčí a flexbilinější ve srovnání s konkurenčními neopreny.",
+
+
+"5mm Yamamoto Aerodome panely maximálně nednáší tělo od středu hrudníku až boky a stehna. 4mm materiál níže na nohách umožňuje optimální polohu těla ve vodě při plavání.",
+
+
+"Technologie LIFT využívá silně nadnášivou pěnu uzavřenou mezi vrchní a spodní vrstvu neoprenu k ještě výraznějšímu zvýšení polohy středu těla ve vodě.",
+
+
+"Helix je vyroben z toho nejkvalitnějšího Yamamoto smooth skin neoprenu spojeného se 100% nylonovou vnitřní vrstvou pro absolutně nejlepší poměr mezi vahou a elasticitou mezi všemi konkurenčními značkami.",
+
+
+"Boční 3mm panely jsou navrženy specificky zvlášť pro muže i pro ženy tak, aby umožnily přirozenou rotaci v bocích a snadné vysvlékání v depu.",
+
+
+"Velmi pružné 1,5mm panely od kolen níže umožňují snadné rychlé vykopnutí nohou z nohavic pro rychlý průlet prvním depem."
+          ],
+          "images": [
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
+          ]
+        },
+
+
+
+
+
+
+
          {
           "id": "reaction",
           "name": "Reaction",
           "price": "12990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+          "description": [
+            "Reaction není jen vylepšením - mění pravidla hry. Je inspirován naším oblekem Helix pro elitní triatlety a je určen pro plavce všech úrovní, kteří chtějí dosáhnout svého nejvyššího potenciálu. Přepracované panely v horní části těla reagují na vaši přirozenou rotaci, čímž vytvářejí větší sílu a umožňují delší záběr bez omezení.",
+"Reaction je určen pro plavce, kteří vyžadují naprostou svobodu při záběru. Tento neopren, vyrobený z prvotřídního neoprenu Yamamoto a s naší jedinečnou jednodílnou konstrukcí ramen (žádné švy, které by vám překážely), poskytuje bezkonkurenční flexibilitu a plynulý, nepřerušovaný rozsah pohybu. Ultraflexibilní tenký neopren v ramenou eliminuje jakékoli tahání, nebo odpor, jen čistá síla přenesená do dopředného pohybu ve vodě."
+          ],
           "details": [
-            "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-            "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-            "Vylepšené zádové panely podporují přirozenou rotaci."
+"Oblek nejvyšší třídy pro triatlety, kteří ještě nechtějí nebo nemohou investovat do top modelu.",
+
+"Air-cell materiál použitý v těle obleku zvyšuje hřejivost obleku a přitom zvyšuje i nadnášivost.",
+
+"Vylepšený nízký krční díl zvyšuje pohodlí a zamezuje nechtěným odřeninám na krku. Skvěle brání průniku vody dovnitř obleku.",
+
+"Jediný díl 39 cell 1,5mm Yamamoto neoprenu výrazně zlepšuje elasticitu a brání únavě v celém rozsahu záběru. Společně s 1,5mm podpažními díly umožňuje neomezený rozsah pohybu paží.",
+"2mm neopren s pružnou spodní vrstvou nabízí větší mobilitu v oblasti ramen a zad a efektivně tak brání nechtěné únavě a umožňuje prodloužit délku záběru.",
+
+"Ultra tenký 1,5mm silný prémiový neopren na pažích zvyšuje flexibilitu a pohodlí při záběru.",
+"5mm silný neopren na trupu a bocích a 4mm neopren pod koleny vytváří nejlepší možnou polohu těla ve vodě pro efektivní plaveckou techniku.",
+  "Na základě zkušeností z vytváření Helixu jsme zúžili centrální panel na hrudi a rozšířili boční panely až k bokům tak, aby oblek maximálně podporoval přirozenou rotaci těla k dosažení maximální rychlosti plavání s minimálním úsilím.",
+  "SCS coated Yamamoto smooth-skin neopren nabízí mimořádnou elasticitu a současně odolnost. Společně s mimořádně strečovou vnitřní vrstvou dosahuje zcela neomezený pohyb podle vašich potřeb.",
+  "3mm boční panely umožňují přizpůsobit velikost obleku vašim velikostním odchylkám tak, aby vás oblek při plavání správně obepínal a aby bylo možné ho snadno obléct i vysvléct.",
+  "1,5mm panely pod koleny umožňují snadné a rychlé vysvlečení neoprenu pro úsporu času v prvním depu. Zesílený šev také umožňuje zkrácení nohavic pokud vám to vyhovuje."
           ],
            "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
@@ -40,16 +116,34 @@
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
           ]
         },
+
+
+
+
+
+
+
          {
           "id": "sprint",
           "name": "Sprint",
           "price": "5999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "Helix je vytvořený pro sportovce, kteří odmítají cokoli jiného než to nejlepší.",
+          "description": [
+            "Nový model 25, který byl vytvořen na základě vyššího modelu Fusion a je připraven vám skvěle posloužit ve vašich prvních několika triatlonových sezonách."
+          ],
           "details": [
-            "Snížená a rozšířená manžeta krku zvyšuje pohodlí a komfort.",
-            "Výrazné modré ramena jsou bezešvá a maximalizují elasticitu.",
-            "Vylepšené zádové panely podporují přirozenou rotaci."
+           "Neopren bez kompromisů vytvořený pro začátečníky až středně pokročilé.",
+  "Pokud se s triatlonem teprve seznamujete a nechcete ještě investovat do dražších modelů, Sprint je neopren pro Vás.",
+  "Nově navržený nízký krk z jednoho dílu usnadňuje dýchání a eliminuje pocit ztaženosti. Efektivně brání vzniku odřenin i pronikání vody dovnitř obleku při plavání.",
+  "Nejsilnější 5mm neopren zvedá primárně boky a nohy tak, aby výrazně vylepšil vaši polohu ve vodě a eliminoval odpor těla při plavání i v nižších rychlostech.",
+  "Rozšířený ramenní i pažní díly ze super strečového 1,5mm smoothskin neoprenu zvyšují flexibilitu a pohodlí při záběru.",
+  "Vyroben z vysoce kvalitního Yamamoto smooth-skin and super-stretch neoprenu zajišťuje mimořádnou flexibilitu a odolnost (obvyklá životnost 10+ let).",
+  "Super Composite Skin povrchová úprava na bocích, nohou a pažích vytvoří silný vodoodpudivý efekt pro zvýšení rychlosti a ochranu proti poškození.",
+  "Krátké, tenké a flexibilní zakončení rukávů brání pronikání vody do rukávu při startovním skoku a během plavání.",
+  "Vhodný pro plavání v chladné vodě od 12,5 stupně (ideálně v kombinaci s Thermal doplňky - čepice, ponožky, rukavice).",
+  "Plavec, který závodí tempem nad 1:50/100m v něm najde neopren bez kompromisů, který jej spolehlivě a rychle dopraví do cíle plavecké části nejen prvního závodu, ale při dobrém zacházení i o deset let později.",
+  "Pokud se časem rozhodnete upgradovat na vyšší model, Sprint vždy skvěle poslouží jako tréninkový neopren i v zimě do bazénu nebo například na windsurfing či vodní lyžování.",
+  "TOP modely REACTION a HELIX více nesou, hřejí, jsou elastičtější, rychleji se vysvlékají a budou rychlejší i pro začátečníka. S ohledem na typickou životnost 10 let dobře zvažte, zda rovnou neinvestovat do vyššího modelu."
           ],
            "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
@@ -58,35 +152,50 @@
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160"
           ]
         },
+
+
+
+
+
+
+
+
+
         {
           "id": "glide",
           "name": "Glide",
           "price": "3990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "Sprint je navržený pro plavce, kteří chtějí výkon bez kompromisů.",
+          "description": ["Nejnovější přírůstek do rodiny neoprenů Blueseventy."],
           "details": [
-            "Flexibilní panely umožňují volný pohyb.",
-            "Odlehčený materiál snižuje odpor.",
-            "Snadné oblékání i svlékání."
+            "PROBLEM HERE"
           ],
             "images": [
-              "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160",
+            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160",
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160"
             
           ]
         },
+
+
+
+
+
+
+
+
         {
           "id": "torpedo",
           "name": "Torpedo",
           "price": "3990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "description": ["Blue Seventy jako jediný výrobce na světě myslí i na mladé závodníky a přichází na trh s plnohodnotným triatlonovým neoprenem pro děti. Vyrábí se ve 3 velikostech pro 8-10-12 let, které spolehlivě pokryjí potřeby dětí zhruba od 6ti do 15ti let. Samozřejmě jej lze využít i pro koupání na dovolené u chladnější vody, surfování, vodní lyžování,", "Velikosti:"],
           "details": [
-            "Vyvážený poměr flexibility a podpory.",
-            "Odolná konstrukce vhodná pro častý trénink.",
-            "Optimalizovaná plovatelnost."
+              "S 130-144cm 25-38kg",
+              "M 140-150cm 32-43kg",
+              "L 145-158cm 40-51kg"
           ],
            "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
@@ -96,35 +205,36 @@
           ]
 
         },
-        {
-          "id": "helix",
-          "name": "Thermal",
-          "price": "25999 Kč",
-          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "React kombinuje komfort a výkon v dostupném balení.",
-          "details": [
-            "Vyvážený poměr flexibility a podpory.",
-            "Odolná konstrukce vhodná pro častý trénink.",
-            "Optimalizovaná plovatelnost."
-          ],
-           "images": [
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160"
-          ]
-        },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         {
           "id": "reaction",
           "name": "Reaction Thermal",
           "price": "25999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "description": ["Skok do ledové vody vám může skutečně vyrazit dech. Pokud do ní ale skočíte v tom nejlepším, co je na světovém trhu k dispozici, bude se vám plavat mnohem snáze! REACTION THERMAL je odvozen od předešlých generací toho svého jmenovce a byl upraven speciálně pro mimořádně studenou vodu nebo pro ty, kteří jsou prostě méně otužilí a extrémní chlad snášejí hůře. Samozřejmostí zůstává brezkonkurenční anatomické tvarování a dlouhá životnost. Celý oblek je zevnitř potažen zirkonovou vrstvou, která výrazně zvyšuje jeho hřejivost. Přesto je stále velmi lehký a pružný. Všechny švy jsou trojité, zaslepené a přelepené na místech, kde by potenciálně mohlo dojít k odřeninám. Konec strachu ze studené vody!"],
           "details": [
-            "Vyvážený poměr flexibility a podpory.",
-            "Odolná konstrukce vhodná pro častý trénink.",
-            "Optimalizovaná plovatelnost."
+             "ZIRKONOVÁ VRSTVA Celý oblek je zevnitř opatřen zirkonovou vrstvou, která nejen zabraňuje tepelným ztrátám, ale také snižuje nasákavost materiálu, takže oblek zůstává lehčí.",
+    "UZÁVĚRY Také tento oblek používá velmi kvalitní zipy a nově přidává pohodlnější tvarování v oblasti krku.",
+    "RST TECHNOLOGIE Na zádech a ramenou je použit tenčí materiál, který výrazně usnadňuje a prodlužuje kraulový záběr a snižuje únavu.",
+    "4-5-4 DESIGN Díky rozložení 4 a 5mm materiálu získá vaše tělo ve vodě při plavání tu nejvýhodnější hydrodynamickou polohu. Poplavete jako \"z kopce\".",
+    "S-FLEX BOČNÍ PANELY Usnadňují oblékání neoprenu a zlepšují polohu a rotaci těla ve vodě bez omezení nadnášivého efektu obleku.",
+    "S-GRIP PANELY NA PŘEDLOKTÍ Tyto panely s jemnou texturou zlepšují cit pro správný záběr a pomáhají uchopit vodu při samotném záběru.",
+    "QUIT EXIT NOHAVICE Tenké panely na nohou zlepšují rychlost vysvlékání, takže v depu se po plavání nezdržíte. Díky zesílenému zaslepení švů si můžete nohavice dokonce zkrátit dle vlastní potřeby.",
+    "NADNÁŠIVOST Helix je konstruován z velké většiny z 5mm neoprenu nejvyšší kvality Yamamoto Aerodome tak, že výrazně zvyšuje polohu nohou při plavání a pomáhá k účinné poloze „plavání z kopce“.",
+    "ŽENSKÉ SPECIFICKÉ VELIKOSTI Tak jako všechny neopreny Blueseventy i Thermal Reaction nabízí celou škálu specifických ženských velikostí."
           ],
            "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
@@ -139,11 +249,13 @@
           "name": "Alliance",
           "price": "25999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "description": ["Alliance je oblek speciálně vyvinutý pro nově vznikající sport - SwimRun. Je výsledkem tří let intenzivního testování na závodních tratích a je dotažen do nejmenších detailů. Skok do vody, rychlé plavání, výběh z vody a pohodlný běh - na to vše bylo při jeho konstrukci myšleno.", "SWIMRUN je sportem dvojic a je velmi prospěšné, když k sobě najdete někoho podobně rychlého ve vodě i při běhu. Nejsnadněji ho pro libovolný závodnajdete na www.swimrunworld.co a v aplikaci Swimrun World v AppStore."],
           "details": [
-            "Vyvážený poměr flexibility a podpory.",
-            "Odolná konstrukce vhodná pro častý trénink.",
-            "Optimalizovaná plovatelnost."
+"malé i velké kapsy pro uložení vybavení a výživy",
+"očka na karabinu pro spojení obou závodníků",
+"odolná konstrukce pro to nejhrubší zacházení",
+"dlouhý zip pro rozepnutí při běhu v horku",
+"rukávy je možno libovolně zastřihnout, aniž by hrozilo rozlepení"
           ],
            "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
@@ -158,11 +270,17 @@
           "name": "LIFT shorts",
           "price": "2999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpeg",
-          "description": "React kombinuje komfort a výkon v dostupném balení.",
+          "description": ["LIFT šortky nově přináší výrazně zvýšený pás pro ještě lepší polohu těla při plavání a větší pohodlí. Má shodné LIFT panely jako top model mezi neopreny HELIX, díky čemuž maximálně nadnáší. Svým střihem podporuje správnou rotaci těla ve vodě při plavání. Jde o nejlepší možný \"pull buoy\" pro správnou neomezenou techniku plavání. Jsou vyrobeny z kombinace 5mm Yamamoto Aerodome neorprenu a 3mm flexibilního Yamamoto neoprenu po stranách. Vylepšená horní část lépe a pohodlněji sedí na bocích. Pokud kombinujete úseky v šortkách a bez nich, je teď mnohem snazší a rychlejší oblékání a vysvlékání. Švy jsou zaslepeny a zalepeny pro mnohaletou životnost i při pravidelném používání.", 
+        "Velikosti jsou určeny vaším obvodem v pase (v palcích):", "XS = 28 , S = 30 , M = 32, L = 34 , XL = 36, XXL = 38"],
           "details": [
-            "Vyvážený poměr flexibility a podpory.",
-            "Odolná konstrukce vhodná pro častý trénink.",
-            "Optimalizovaná plovatelnost."
+            "Ideální pomůcka do bazénu pokud se připravujete na závod plavaný v neoprenu.",
+    "Pomohou s polohou těla ve vodě a usnadní tak nácvik kraulové, znakové a motýlové techniky.",
+    "Při technických cvičeních máte vyšší rychlost a lepší polohu ve vodě, aniž by vás omezovaly jako pull buoy.",
+    "Zahřejí, pokud vám je při tréninku zima.",
+    "Urychlí vás o 3-10 vteřin na 100m a usnadní tak nácvik techniky v závodní rychlosti.",
+    "Pokud plavete po náročném běžeckém nebo cyklistickém tréninku, pošetří vaše nohy a můžete naplno plavat pažemi.",
+    "Skvěle vypadají!"
+    
           ],
            "images": [
             "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
@@ -173,6 +291,7 @@
         }
       ]
     },
+    
     {
       "id": "goggles",
       "name": "Swimming Goggles",
@@ -347,7 +466,7 @@
           "name": "Jak na triatlon (a jiné vytrvalostní sporty)",
           "price": "399 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": "Druhé rozšířené vydání (440 stran) je souborem odborných článků pro triatlonová a běžecká média. Je určena nejen triatletům, ale své si v ní najdou vyznavači všech vytrvalostních sportů od běhu, přes cyklistiku až třeba po běžecké lyžování. Najdete zde návody jak trénovat, stravovat se, regenerovat, závodit, něco o vybavení a spoustu dalšího.... O výtisk s věnováním si můžete napsat na petr@vabrousek.cz",
           "details": [
             "Panoramatická čočka pro lepší rozhled.",
             "UV ochrana a anti-fog vrstva.",
