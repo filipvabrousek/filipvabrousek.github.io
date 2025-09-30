@@ -218,12 +218,12 @@
 
      {
       "id": "racesswimwear",
-      "name": "Swimsuits",
+      "name": "Závodní plavky",
       "products": [
         {
           "id": "swimsuits",
-          "name": "Swimsuits",
-          "price": "1299 Kč",
+          "name": "Zívodní plavky NERO",
+          "price": "4290 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p16_i4_w233.jpeg",
           "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
           "details": [
@@ -240,9 +240,61 @@
       "name": "Triatlonové kombinézy",
       "products": [
         {
-          "id": "swimsuits",
-          "name": "Swimsuits",
+          "id": "TX2000",
+          "name": "TX 2000 AERO KOMBINÉZA",
           "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+
+        {
+          "id": "elite-trisuit",
+          "name": "Elite Trisuit",
+          "price": "1299 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+
+         {
+          "id": "tx-2000",
+          "name": "TX 2000",
+          "price": "1990 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+
+         {
+          "id": "tx-3000",
+          "name": "TX 3000",
+          "price": "2490 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+
+         {
+          "id": "tx-1000",
+          "name": "TX 1000",
+          "price": "1750 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
           "details": [
@@ -291,9 +343,35 @@
       "name": "Doplňky",
       "products": [
         {
-          "id": "amenities",
-          "name": "Amenities",
-          "price": "499 Kč",
+          "id": "triathlon-book",
+          "name": "Jak na triatlon (a jiné vytrvalostní sporty)",
+          "price": "399 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+
+        {
+          "id": "triathlon-book",
+          "name": "TRIATLON - 226 OTÁZEK A ODPOVĚDÍ",
+          "price": "399 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "details": [
+            "Panoramatická čočka pro lepší rozhled.",
+            "UV ochrana a anti-fog vrstva.",
+            "Měkké silikonové těsnění proti zatékání vody."
+          ]
+        },
+
+        {
+          "id": "transition-backapck",
+          "name": "Batoh Transition",
+          "price": "399 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
           "details": [
