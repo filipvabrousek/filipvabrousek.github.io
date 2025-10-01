@@ -367,13 +367,11 @@
         {
           "id": "TX2000",
           "name": "TX 2000 AERO KOMBINÉZA",
-          "price": "1299 Kč",
+          "price": "3990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Nová vylepšená verze triatlonové kombinézy TX2000 přichází s krátkým rukávem pro lepší aerodynamiku při cyklistice a větší ochranu proti slunci po celý závod."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            
           ]
         },
 
@@ -382,11 +380,15 @@
           "name": "Elite Trisuit",
           "price": "1299 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+    "Skvělá pohyblivost v ramenou vás nebude omezovat při plavání.",
+    "Carvico VITA textílie s COLDBLACK úpravou redukuje zahřívání na slunci a chrání před slunečními paprsky.",
+    "2 zadní kapsy byly navrženy pro lepší aerodynamiku a mají lem z reflexního materiálu pro lepší viditelnost.",
+    "Pohodlná lehká výstelka exkluzivně dodávaná od firmy BERENIS má mužskou nebo ženskou specifikaci.",
+    "Oblek má ploché švy a 20mm zahnutí na koncích rukávů pro větší pohodlí.",
+    "6 mužských velikostí (červené rukávy a modré rukávy s modrým trupem).",
+    "5 ženských velikostí (modré rukávy s černým trupem)."
           ]
         },
 
@@ -395,11 +397,12 @@
           "name": "TX 2000",
           "price": "1990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": [],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+    "Elastická.",
+    "Rychleschnoucí.",
+    "Se zipem vzadu odpovídající ITU pravidlům."
           ]
         },
 
@@ -410,9 +413,10 @@
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+"Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+"Elastická",
+"Rychleschnoucí",
+"Se zipem vzadu odpovídající ITU pravidlům"
           ]
         },
 
@@ -423,9 +427,10 @@
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+      "Elastická",
+      "Rychleschnoucí",
+      "Se zipem vzadu odpovídající ITU pravidlům"
           ]
         }
       ]
