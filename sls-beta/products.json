@@ -365,13 +365,19 @@
       "name": "Triatlonové kombinézy",
       "products": [
         {
-          "id": "TX2000",
+          "id": "TX2000-AERO",
           "name": "TX 2000 AERO KOMBINÉZA",
           "price": "3990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": ["Nová vylepšená verze triatlonové kombinézy TX2000 přichází s krátkým rukávem pro lepší aerodynamiku při cyklistice a větší ochranu proti slunci po celý závod."],
           "details": [
-            
+             "Skvělá pohyblivost v ramenou vás nebude omezovat při plavání",
+    "Carvico VITA textílie s COLDBLACK úpravou redukuje zahřívání na slunci a chrání před slunečními paprsky",
+    "2 zadní kapsy byly navrženy pro lepší aerodynamiku a mají lem z reflexního materiálu pro lepší viditelnost",
+    "Pohodlná lehká výstelka exkluzivně dodávaná od firmy BERENIS má mužskou nebo ženskou specifikaci",
+    "Oblek má ploché švy a 20mm zahnutí na koncích rukávů pro větší pohodlí",
+     "6 mužských velikostí (červené rukávy a modré rukávy s modrým trupem)",
+    "5 ženských velikostí (modré rukávy s černým trupem)"
           ]
         },
 
@@ -380,15 +386,12 @@
           "name": "Elite Trisuit",
           "price": "1299 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": ["Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky."],
+          "description": [""],
           "details": [
-    "Skvělá pohyblivost v ramenou vás nebude omezovat při plavání.",
-    "Carvico VITA textílie s COLDBLACK úpravou redukuje zahřívání na slunci a chrání před slunečními paprsky.",
-    "2 zadní kapsy byly navrženy pro lepší aerodynamiku a mají lem z reflexního materiálu pro lepší viditelnost.",
-    "Pohodlná lehká výstelka exkluzivně dodávaná od firmy BERENIS má mužskou nebo ženskou specifikaci.",
-    "Oblek má ploché švy a 20mm zahnutí na koncích rukávů pro větší pohodlí.",
-    "6 mužských velikostí (červené rukávy a modré rukávy s modrým trupem).",
-    "5 ženských velikostí (modré rukávy s černým trupem)."
+    "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu",
+    "Elastická",
+    "Rychleschnoucí",
+    "Se zipem vzadu odpovídající ITU pravidlům"
           ]
         },
 
@@ -398,13 +401,13 @@
           "price": "1990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": [
-              "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
-    "Elastická.",
-    "Rychleschnoucí.",
-    "Se zipem vzadu odpovídající ITU pravidlům."
+            
           ],
           "details": [
-          
+            "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+              "Elastická.",
+              "Rychleschnoucí.",
+              "Se zipem vzadu odpovídající ITU pravidlům."
           ]
         },
 
@@ -413,12 +416,12 @@
           "name": "TX 3000",
           "price": "2490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": ["Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+          "description": [],
+          "details": [
+"Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
 "Elastická",
 "Rychleschnoucí",
-"Se zipem vzadu odpovídající ITU pravidlům"],
-          "details": [
-
+"Se zipem vzadu odpovídající ITU pravidlům"
           ]
         },
 
@@ -427,12 +430,14 @@
           "name": "TX 1000",
           "price": "1750 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": [ "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
-      "Elastická",
-      "Rychleschnoucí",
-      "Se zipem vzadu odpovídající ITU pravidlům"],
+          "description": [ 
+         
+        ],
           "details": [
-          
+           "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+          "Elastická",
+          "Rychleschnoucí",
+          "Se zipem vzadu odpovídající ITU pravidlům"
           ]
         }
       ]
@@ -443,28 +448,31 @@
       "name": "Plavecké kombinézy",
       "products": [
         {
-          "id": "swimsuits",
+          "id": "PZ4TX+",
           "name": "PZ4TX+",
           "price": "1299 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": ["Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky."],
+          "description": ["Kombinéza PZ4TX+ je výsledkem naší snahy maximálně vám pomoci s plaváním i v triatlonech, při kterých není kvůli vyšší teplotě vody povoleno plavání v neoprenu. Vznikla po několika letech vývoje a testování s nejlepšími profi triatlety světa. A jako reakce na rostoucí popularitu nových aero dresů s krátkým rukávem (TX2000 aero) jsme vyvinuli i model s krátkými rukávy pro plavání. Vyrobena je z prvotřídního italského hydrofobního materiálu Taiana, který přirozeně odpuzuje vodu a oblek tak nemusí být druhotně pokrýván další vrstvou jako u konkurence. Díky tomu si svou funkci udrží monohem déle a je elastičtější, což je při plavání samozřejmě klíčové."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+          "Krátké rukávy zvyšují hydrofobní pokrytí těla a lehce stahují pro menší odpor ve vodě",
+    "Mimořádná elasticita a lehká svalová komprese, materiál přirozeně dýchá",
+    "Zahnuté a upravené okraje minimalizují možnost vzniku odřenin",
+    "Švy upravené ultrazvukem pro hladký hydrofobní povrch",
+    "Nízký koeficient odporu"
           ]
         },
 
          {
-          "id": "swimsuits",
+          "id": "PZ4TX",
           "name": "PZ4TX",
           "price": "1299 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Kombinéza PZ4TX je výsledkem naší snahy maximálně vám pomoci s plaváním i v triatlonech, při kterých není kvůli vyšší teplotě vody povoleno plavání v neoprenu. Vznikla po několika letech vývoje a testování s nejlepšími profi triatlety světa.", "Vyrobena je z prvotřídního italského hydrofobního materiálu Taiana, který přirozeně odpuzuje vodu a oblek tak nemusí být druhotně pokrýván další vrstvou jako u konkurence. Díky tomu si svou funkci udrží monohem déle a je elastičtější, což je při plavání samozřejmě klíčové."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+          "Mimořádná elasticita a lehká svalová komprese, materiál přirozeně dýchá",
+    "Zahnuté a upravené okraje minimalizují možnost vzniku odřenin",
+    "Švy upravené ultrazvukem pro hladký hydrofobní povrch",
+    "Nízký koeficient odporu"
           ]
         }
       ]
