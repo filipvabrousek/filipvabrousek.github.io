@@ -397,12 +397,14 @@
           "name": "TX 2000",
           "price": "1990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": [],
-          "details": [
-            "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+          "description": [
+              "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
     "Elastická.",
     "Rychleschnoucí.",
     "Se zipem vzadu odpovídající ITU pravidlům."
+          ],
+          "details": [
+          
           ]
         },
 
@@ -411,12 +413,12 @@
           "name": "TX 3000",
           "price": "2490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-"Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+          "description": ["Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
 "Elastická",
 "Rychleschnoucí",
-"Se zipem vzadu odpovídající ITU pravidlům"
+"Se zipem vzadu odpovídající ITU pravidlům"],
+          "details": [
+
           ]
         },
 
@@ -425,12 +427,12 @@
           "name": "TX 1000",
           "price": "1750 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-            "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
+          "description": [ "Kombinéza vhodná pro absolvování všech tří disciplín triatlonu.",
       "Elastická",
       "Rychleschnoucí",
-      "Se zipem vzadu odpovídající ITU pravidlům"
+      "Se zipem vzadu odpovídající ITU pravidlům"],
+          "details": [
+          
           ]
         }
       ]
@@ -445,7 +447,7 @@
           "name": "PZ4TX+",
           "price": "1299 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky."],
           "details": [
             "Panoramatická čočka pro lepší rozhled.",
             "UV ochrana a anti-fog vrstva.",
