@@ -1,10 +1,10 @@
 let links = [
   {text: "Neopreny", url: "https://filipvabrousek.github.io/sls-beta/products?cat=wetsuits"},
-  {text: "Plavecké kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=triskins"},
+  {text: "Plavecké kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=swimskins"},
   {text: "Plavecké brýle", url: "https://filipvabrousek.github.io/sls-beta/products?cat=goggles"},
   {text: "Závodní plavky", url: "https://filipvabrousek.github.io/sls-beta/products?cat=racesswimwear"},
   {text: "Doplňky", url: "https://filipvabrousek.github.io/sls-beta/products?cat=amenities"},
-  {text: "Triatlonové kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=triatloncomb"}
+  {text: "Triatlonové kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=triskins"}
 ];
 
 // To link wrapper in dropdown: z-index: 9999px
