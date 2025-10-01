@@ -291,7 +291,7 @@
         }
       ]
     },
-    
+
     {
       "id": "goggles",
       "name": "Swimming Goggles",
@@ -301,11 +301,15 @@
           "name": "Hydravision",
           "price": "1299 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Špičkový top model pro plavání na otevřené vodě i do bazénu"],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+           "Širokouhlé čočky s absolutně čistou viditelností.",
+    "Integrovaný systém upravování délky popruhů - postačí jemný stisk po stranách brýlí.",
+    "Prvotřídní přizpůsobení se tvaru jakéhokoli obličeje.",
+    "Nízký profil zaručuje optimální obtékání při rychlém plavání.",
+    "Nejnovější materiál zaručuje minimální hmotnost a příjemné nošení.",
+    "ANTIFOG úprava čoček.",
+    "Rozdělený popruh zajišťuje pevné usazení i při masových startech triatlonů."
           ]
         },
         {
@@ -313,11 +317,15 @@
           "name": "Contour",
           "price": "1599 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Racer jsou závodní brýle s hydrodynamickým profilem pro minimální odpor.",
+          "description": ["Brýle Contour jsou letošní novinkou s výrazně vylepšenou hydrodynamikou. Unikátní měkké očníky jsou protaženy a vytváří nízký profil se skvělým rozhledem a perfektní přilnavostí. V nabídce 2 modely s čirým skly vhodnější do bazénu a 2 modely se zrcadlovou úpravou vhodnější pro venkovní plavání. Ideální je mít obě varianty a volit podle aktuálních světelných podmínek."
+        ],
           "details": [
-            "Nízkoprofilový design pro rychlost.",
-            "Vyměnitelné nosníky pro perfektní přizpůsobení.",
-            "Čočky s vysokým kontrastem pro lepší viditelnost."
+           "Měkké pohodlné očníky.",
+    "Skvělá hydrodynamika s nízkým profilem a velkým rozhledem.",
+    "Dvojitý nízký silikonový popruh se zadním klipem pro snadnou úpravu délky.",
+    "Prémiový polykarbonát, anti-fog čočky nabízejí ostrou viditelnost nad vodou i pod vodou.",
+    "Obsahuje 4 vyměnitelné nosníky pro optimální fit.",
+    "Neobsahuje PVC ani Latex."
           ]
         },
          {
@@ -325,11 +333,13 @@
           "name": "Flow",
           "price": "1599 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Racer jsou závodní brýle s hydrodynamickým profilem pro minimální odpor.",
+          "description": ["Skvěle sedící pohodlné brýle pro dokonelé vidění. Čiré verze jsou vhodnější do bazénu, zrcadlovky více pro plavání venku. V ideálním případě je dobré mít 1+1 a volit podle aktuálních světelných podmínek. Velmi lehké brýle s měkkými očníky a skvělou přilnavostí. Nízký profil a skvělý rozhled", "Racer jsou závodní brýle s hydrodynamickým profilem pro minimální odpor.",
+        "Varianty", "modré - duhové zrcadlovky skla", "bílé - stříbrné zrcadlovky skla", "černé - čirá skla", "bílé - kouřová skla"],
           "details": [
-            "Nízkoprofilový design pro rychlost.",
-            "Vyměnitelné nosníky pro perfektní přizpůsobení.",
-            "Čočky s vysokým kontrastem pro lepší viditelnost."
+           "Velmi pružný integrovaný nosník, který skvěle sedí na většině obličejů",
+"Očníky sedí pohodlně a nepropouští vodu dovnitř",
+"Vysoce kvalitní antifog očníky odolné proti poškrábání"
+
           ]
         }
       ]
@@ -341,14 +351,13 @@
       "products": [
         {
           "id": "swimsuits",
-          "name": "Zívodní plavky NERO",
+          "name": "Závodní plavky NERO",
           "price": "4290 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p16_i4_w233.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Plavky určené pro bazénové plavání. Jedná se o FINA schváleného nástupce ultrarychlých plavek NERO, ve kterých v uplynulém roce padla řada světových rekordů. Úspora proti konkurenčním plavkám se tady počítá ve zlomcích vteřiny, ale v bazénu je právě to, oč běží! "],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+             "cena pánské    4290,-",
+             "cena dámské    6290,-​"
           ]
         }
       ]
