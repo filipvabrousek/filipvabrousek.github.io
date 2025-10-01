@@ -4,9 +4,6 @@
       "id": "wetsuits",
       "name": "Wetsuits",
       "products": [
-
-
-
          {
           "id": "helix-thermal",
           "name": "Helix Thermal",
@@ -350,7 +347,7 @@
       "name": "Závodní plavky",
       "products": [
         {
-          "id": "swimsuits",
+          "id": "nero",
           "name": "Závodní plavky NERO",
           "price": "4290 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p16_i4_w233.jpeg",
@@ -471,42 +468,29 @@
       "name": "Doplňky",
       "products": [
         {
-          "id": "triathlon-book",
+          "id": "triathlon-book-how",
           "name": "Jak na triatlon (a jiné vytrvalostní sporty)",
           "price": "399 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Druhé rozšířené vydání (440 stran) je souborem odborných článků pro triatlonová a běžecká média. Je určena nejen triatletům, ale své si v ní najdou vyznavači všech vytrvalostních sportů od běhu, přes cyklistiku až třeba po běžecké lyžování. Najdete zde návody jak trénovat, stravovat se, regenerovat, závodit, něco o vybavení a spoustu dalšího.... O výtisk s věnováním si můžete napsat na petr@vabrousek.cz",
-          "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
-          ]
+          "description": ["Druhé rozšířené vydání (440 stran) je souborem odborných článků pro triatlonová a běžecká média. Je určena nejen triatletům, ale své si v ní najdou vyznavači všech vytrvalostních sportů od běhu, přes cyklistiku až třeba po běžecké lyžování. Najdete zde návody jak trénovat, stravovat se, regenerovat, závodit, něco o vybavení a spoustu dalšího.... O výtisk s věnováním si můžete napsat na petr@vabrousek.cz"],
+          "details": []
         },
 
         {
-          "id": "triathlon-book",
+          "id": "triathlon-book-226",
           "name": "TRIATLON - 226 OTÁZEK A ODPOVĚDÍ",
           "price": "399 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
-          ]
+          "description": ["226 – to je součet kilometrů, který musí zdolat každý účastník dlouhého triatlonu, tedy ironmanu. A stejný počet otázek na všechna úskalí sportu tvořeného plaváním, cyklistikou a během najdete v této jedinečné publikaci. Na všechny odpovídá Petr Vabroušek, přední triatlonista se stovkami dlouhých triatlonů i dalších extrémních závodů na kontě. Metodika tréninku, vybavení, stravování, mentální příprava i samotné závodění – to vše vás čeká v jediné příručce, kterou pro úspěšné zvládnutí triatlonu potřebujete."]
         },
 
         {
-          "id": "transition-backapck",
+          "id": "transition-backpack",
           "name": "Batoh Transition",
-          "price": "399 Kč",
+          "price": "1990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
-          ]
+          "description": ["Batoh konstruovaný právě pro triatlety. Jeho objem je dostatečný k tomu, abyste v něm přisli na start se vším potřebným. Má oddělenou nepromokavou část pro umístění mokrého neoprenu, bot či dresu. Samozřejmostí jsou dvě kapsy na bidony a celá řada vnitřních i vnějších kapes. Už nikdy nebudete nic hledat. Jako neocenitelný pomocník slouží i při létání – spolehlivě pojme až 15kg nákladu a ještě nikdy ho neodmítli vzít na palubu."],
+          "details": []
         },
 
          {
@@ -514,25 +498,8 @@
           "name": "Thermal čepice",
           "price": "1090 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
-          ]
-        },
-
-        {
-          "id": "thermal-cap",
-          "name": "Thermal čepice",
-          "price": "1090 Kč",
-          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
-          ]
+          "description": "Hlava, chodidla a dlaně ztrácí v chladné vodě enormní množství tepla. Pokud je zakryjete, budete teplotu vody vnímat o 3-4°C výše. Dodává se ve velikostech S-M-L.",
+          "details": []
         },
 
         {
@@ -540,11 +507,9 @@
           "name": "Thermal ponožky",
           "price": "1090 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Hlava, chodidla a dlaně ztrácí v chladné vodě enormní množství tepla. Pokud je zakryjete, budete teplotu vody vnímat o 3-4°C výše. Neoprenové ponožky lze také dobře využít pro ochranu chodidel při vstupu do vody po ostrém povrchu." ],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+          
           ]
         },
 
@@ -553,11 +518,8 @@
           "name": "Thermal rukavice",
           "price": "1090 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Hlava, chodidla a dlaně ztrácí v chladné vodě enormní množství tepla. Pokud je zakryjete, budete teplotu vody vnímat o 3-4°C výše. Neoprenové ponožky lze také dobře využít pro ochranu chodidel při vstupu do vody po ostrém povrchu.​"],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
           ]
         },
 
@@ -566,11 +528,15 @@
           "name": "Thermal čelenka",
           "price": "590 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": [
+
+            "Cíleně vás zahřeje tam, kde je to nejvíce potřeba. Skvěle pokrývá čelo i uši, abyste lépe snesli kontakt s ledovou vodou (nebo třeba mrazem na kole či při běhu). Neomezuje vás popruh pod bradou. Čelenku ideálně kombinujte s kvalitní silikonovou plaveckou čepicí (rovněž v nabídce za 150,- Kč). V případě hodně studené vody (pod 12-14 stupňů) i s klascikou Thermal čepicí.",
+
+"Vyrobena z kvalitního Yamamoto neoprenu v kombinaci s pohodlnou hřejivou zirkonovou vrstvou (stejně jako Thermal Helix nebo Thermal Reaction).",
+"Jedna univerzální velikost sedí všem."
+          ],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+          
           ]
         },
 
@@ -579,11 +545,16 @@
           "name": "Bezpečnostní bojka",
           "price": "590 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": [
+            "Nikdy na venkovních plochách neplavte úplně sami. Díky bezpečnostní bojce budete ve vodě lépe viditelní ze břehu i pro případný lodní provoz.", 
+            "Vemte si vše důležité snadno a bezpečně s sebou. Telefon, klíče, peníze, trocha oblečení,... To vše může při vašem plaveckém tréninku být s Vámi. Celý vnitřní prostor bojky je přístupný pro vaše věci. Jednoduše ho zavřete a dofouknete podle potřeby."
+          ],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            "100% Nylon",
+            "Výrazná oranžová barva",
+            "Plně vodotěsný prostor",
+            "Obsahuje nastavitelný opasek a popruh",
+            "Rozměr 60x30cm (vyfouknutá)"
           ]
         },
 
@@ -592,11 +563,9 @@
           "name": "Pás na číslo",
           "price": "290 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": "Populární \"přehazovačka\" slouží k upevnění startovního čísla. Při jízdě na kole jej podle pravidel přetočíte na záda, na běh potom dopředu. Nemusíte si závodní dres nebo triko propíchávat špendlíky a stačí použít jen jedno číslo na celý závod. Vhodné také pro běžecké a cyklistické závody.​",
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            
           ]
         },
 
@@ -605,24 +574,20 @@
           "name": "Pás na čip",
           "price": "290 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Neoprenový pásek pro pohodlné uchycení čipu časomíry. Už žádné rozedřené kotníky a potrhané kompresky…​"],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
           ]
         },
 
         {
           "id": "spikes-belt",
           "name": "Návlek na tretry",
-          "price": "290 Kč",
+          "price": "490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": [
+            "Vyrážíte na trénink za pěkného počasí, které se ale může změnit k horšímu a nechcete se kvůli tomu nazouvat do klasických cyklistických návleků? Čeká Vás závod v chladu a dešti, nechete přijet do druhého depa se zmrzlými prsty na nohou a nemůžete v depu ztrácet čas nazouváním návleků? Pro tyto situace jsou tady cyklistické mininávleky Blue Seventy. Ochrání proti vlhku a zimě choulostivou oblast přední části chodidla a vůbec nebrání nazouvání a vyzouvání cyklotreter za jízdy.", "„Dodáváme ve dvou velikostech", " ​S (do EUR 42)", "​L (od EUR 42)​"
+        ],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
           ]
         },
 
@@ -631,24 +596,31 @@
           "name": "Kšilt",
           "price": "290 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Skvělý doplněk pro běh v létě. chtání obličej před sluncem. Pro Blueseventy vyrábí specialista na běžecké čepice, americká firma Headsweats, z coolmax materiálu s vysokou životností.", "Barva černá nebo bílá​"],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+           
+          ]
+        },
+
+          {
+          "id": "triatlon-camps",
+          "name": "Triatlonové kempy",
+          "price": "0 Kč",
+          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
+          "description": ["V průběhu roku se můžete zůčastnit několika mých triatlonových kempů, které jsou určeny úplným začátečníkům i ostříleným Ironmanům. V květnu a říjnu na tratích IRONMAN 70.3 Zell am See, Rakousko v Brucku."],
+          "details": [
+           
           ]
         },
 
          {
-          "id": "dakr-poukz",
+          "id": "darkovy-poukaz",
           "name": "Dárkový poukaz",
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Na přání vám přípravíme a pošleme dárkový poukaz pro libovolnou příležitost (vánoce, narozeniny, účast na vysněném závodu, ...). I podkladovou fotografii a text si můžete libovolně zvolit. Více na petr@vabrousek.cz."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            
           ]
         },
 
@@ -657,38 +629,29 @@
           "name": "Swimrun lýtkové návleky",
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Lýtkové návleky pro swimrun závody jsou vyrobeny ze silného 7mm neoprenu na přední části a 5mm neoprenu na zadní. Slouží k výraznému odlehčení nohou (obutých při závodech swimrun v botech) při plavání. Můžete se tak soustředit pouze na plavání pažemi (ideálně s packami Blueseventy).",
+"Jsou skvělým doplňkem neoprenu Alliance pro závody swimrun. Ve vodě výrazně nesou a na běhu neomezují. Jsou odolné pro náročné výlezy z vody a pro prodírání nízkým podrostem při běhu. Skvěle ochrání vaše SLS3 kompresní podkolenky.",
+"Lze využít i při tréninku pro vylepšení polohy těla ve vodě. Ve spojení s Core shorts téměř nahradí neopren, aniž byste se při tréninku přehřívali."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+"Skvěle nadnášející a proti odření odolný 7mm neopren na přením panelu",
+"5mm zadní panel a 3mm spodní panel pro neomezený běžecký pohyb", "Skvělé pro trénink a závody swimrun", "2 velikosti: S a L"
           ]
         },
 
 
-         {
-          "id": "triatlon-camps",
-          "name": "Triatlonové kempy",
-          "price": "0 Kč",
-          "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
-          "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
-          ]
-        },
+       
 
          {
           "id": "synaergy",
           "name": "Packly synergy",
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Klasický desetiletími prověřený tvar ideální pro bazénové tréninky i závody swimrun. Ideálně rozmístěné otvory nechávají protéct omezené množství vody pro lepší vnímání vody a nabízejí více možností pro upevnění silikonových popruhů. Skvělá pomůcka pro rozvoj síly a fyzičky v bazénu. Nezbytnost pro závody swimrun. Dostupné ve 2 velikostech."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+           
+           "SMALL - Vhodné pro začátečníky a většinu žen a dětí. 17x14cm",
+           "MEDIUM - Vhodné pro muže a pokročilé. 21×18 cm"
+
           ]
         },
 
@@ -697,11 +660,9 @@
           "name": "Pull-buoy synergy",
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Synergie Pull-buoy vylepšuje polohu těla ve vodě při plavání. Můžete se tak lépe soustředit na práci paží a rotaci těla. Ideální doplněk pro závody swimrun. Vyroben ze 100% EVA pěny."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+          
           ]
         },
 
@@ -710,11 +671,9 @@
           "name": "Plavecká deska synergy",
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description": ["Klasická tréninková pomůcka pro plavecký kop a sílu nohou. Udržuje tělo zpevněné a vyvýšené pro snadný nádech. Deska je vyrobena ze 100% EVA pěny."],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
+            
           ]
         },
 
@@ -723,11 +682,8 @@
           "name": "Lepidlo",
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
-          "description": "Vision nabízí široké zorné pole a pohodlné těsnění pro dlouhé plavecké tréninky.",
+          "description":["Lepidlo pro snadné a rychlé opravy drobných thrlinek v neoprenových oblecích. Potřete lehce oba spoje a po 30ti vteřinách pevně přitlačte. "],
           "details": [
-            "Panoramatická čočka pro lepší rozhled.",
-            "UV ochrana a anti-fog vrstva.",
-            "Měkké silikonové těsnění proti zatékání vody."
           ]
         }
       ]
