@@ -6,28 +6,28 @@ let links = [
   {text: "Doplňky", url: "https://filipvabrousek.github.io/sls-beta/products?cat=amenities"},
   {text: "Triatlonové kombinézy", url: "https://filipvabrousek.github.io/sls-beta/products?cat=triskins"}
 ];
-
+//http://localhost:2000/products?cat=wetsuits
 // To link wrapper in dropdown: z-index: 9999px
-    class NavLink extends Base {
-        constructor(obj){
-            super();
-            this.text = obj.text;
-            this.url = obj.url
-        }
+class NavLink extends Base {
+  constructor(obj) {
+    super();
+    this.text = obj.text;
+    this.url = obj.url
+  }
 
-        render(){
-           return new Link().set({
-    text: this.text,
-    bold: true,
-    url: this.url,
-    fluidc: "S6", // add exact
-     hover: {
+  render() {
+    return new Link().set({
+      text: this.text,
+      bold: true,
+      url: this.url,
+      fluidc: "S6", // add exact
+      hover: {
         color: "#3498db"
-        
-    }
-        });
 
-    }
+      }
+    });
+
+  }
 }
 
 

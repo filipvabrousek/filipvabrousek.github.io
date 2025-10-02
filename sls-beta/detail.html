@@ -58,7 +58,7 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
           new Image().set({
             type: "img",
             width: "50%",
-            url: this.obj.url,
+            url: this.obj.images[0],
             vtn: this.obj.name
           }),
           new Wrapper().set({
@@ -91,7 +91,7 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
             })
           }
           )),
-          
+
            /* new Text(this.obj.description).set({
               font: "Montserrat",
               exact: "1.2rem",

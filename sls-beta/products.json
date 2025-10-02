@@ -22,9 +22,9 @@
           ],
           "images": [
 
-    "p/helix-thermal-002.jpg",
-    "p/helix-thermal-003.jpg",
-    "p/helix-thermal-004.png"
+    "p/helix-thermal-001.jpg",
+    "p/helix-thermal-002.png"
+  
           ]
         },
 
@@ -68,11 +68,11 @@
           ],
          "images": [
 
+    "p/helix-001.jpg",
     "p/helix-002.jpg",
     "p/helix-003.jpg",
-    "p/helix-004.jpg",
-    "p/helix-005.jpg",
-    "p/helix-006.jpg"
+    "p/helix-004.jpg"
+   
   ]
         },
 
@@ -109,13 +109,11 @@
   "1,5mm panely pod koleny umožňují snadné a rychlé vysvlečení neoprenu pro úsporu času v prvním depu. Zesílený šev také umožňuje zkrácení nohavic pokud vám to vyhovuje."
           ],
             "images": [
-
+    "p/reaction-001.jpg",
     "p/reaction-002.jpg",
     "p/reaction-003.jpg",
     "p/reaction-004.jpg",
-    "p/reaction-005.jpg",
-    "p/reaction-006.jpg",
-    "p/reaction-007.jpg"
+    "p/reaction-005.jpg"
   ]
         },
 
@@ -230,7 +228,7 @@
 
 
         {
-          "id": "reaction",
+          "id": "reaction-thermal",
           "name": "Reaction Thermal",
           "price": "25999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpg",
@@ -247,10 +245,13 @@
     "ŽENSKÉ SPECIFICKÉ VELIKOSTI Tak jako všechny neopreny Blueseventy i Thermal Reaction nabízí celou škálu specifických ženských velikostí."
           ],
            "images": [
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpg?width=160",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpg?width=160",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpg",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpg?width=160"
+           "p/reaction-thermal-001.jpg",
+            "p/reaction-thermal-002.jpg",
+            "p/reaction-thermal-003.jpg",
+             "p/reaction-thermal-004.jpg",
+             "p/reaction-thermal-005.jpg",
+              "p/reaction-thermal-006.jpg",
+               "p/reaction-thermal-007.jpg"
           ]
         },
 
@@ -259,7 +260,7 @@
           "name": "Alliance",
           "price": "25999 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i24_w1500.jpg",
-          "description": ["Alliance je oblek speciálně vyvinutý pro nově vznikající sport - SwimRun. Je výsledkem tří let intenzivního testování na závodních tratích a je dotažen do nejmenších detailů. Skok do vody, rychlé plavání, výběh z vody a pohodlný běh - na to vše bylo při jeho konstrukci myšleno.", "SWIMRUN je sportem dvojic a je velmi prospěšné, když k sobě najdete někoho podobně rychlého ve vodě i při běhu. Nejsnadněji ho pro libovolný závodnajdete na www.swimrunworld.co a v aplikaci Swimrun World v AppStore."],
+          "description": ["Alliance je oblek speciálně vyvinutý pro nově vznikající sport - SwimRun. Je výsledkem tří let intenzivního testování na závodních tratích a je dotažen do nejmenších detailů. Skok do vody, rychlé plavání, výběh z vody a pohodlný běh - na to vše bylo při jeho konstrukci myšleno.", "SWIMRUN je sportem dvojic a je velmi prospěšné, když k sobě najdete někoho podobně rychlého ve vodě i při běhu. Nejsnadněji ho pro libovolný závod najdete  v aplikaci Swimrun World v AppStore."],
           "details": [
 "malé i velké kapsy pro uložení vybavení a výživy",
 "očka na karabinu pro spojení obou závodníků",
@@ -268,11 +269,9 @@
 "rukávy je možno libovolně zastřihnout, aniž by hrozilo rozlepení"
           ],
            "images": [
-
-    "p/allliance-pro-styl-prsa-a-swimrun-002.jpg",
-    "p/allliance-pro-styl-prsa-a-swimrun-003.jpg",
-    "p/allliance-pro-styl-prsa-a-swimrun-004.png",
-    "p/allliance-pro-styl-prsa-a-swimrun-005.png"
+    "p/allliance-pro-styl-prsa-a-swimrun-001.jpg",
+    "p/allliance-pro-styl-prsa-a-swimrun-002.png",
+    "p/allliance-pro-styl-prsa-a-swimrun-003.png"
           ]
         },
 
@@ -463,7 +462,7 @@
 
            "images": [
 
-    "p/elite-trisuit-002.jpg"
+    "p/elite-trisuit-001.jpg"
   ]
         },
 
@@ -483,9 +482,12 @@
           ],
 
            "images": [
-    "p/tx-2000-003.jpg",
-    "p/tx-2000-002.jpg",
-    "p/tx-2000-004.jpg"
+    "p/tx-2000-001.jpeg",
+    "p/tx-2000-002.jpeg",
+    "p/tx-2000-003.jpeg",
+    "p/tx-2000-004.jpeg",
+    "p/tx-2000-005.jpeg",
+    "p/tx-2000-006.jpeg"
 
   ]
 
@@ -528,7 +530,7 @@
           ],
 
            "images": [
-    "p/tx-1000-004.jpg",
+    "p/tx-1000-001.jpg",
 
     "p/tx-1000-002.jpg",
     "p/tx-1000-003.jpg"
@@ -556,11 +558,10 @@
           ],
 
            "images": [
-    "p/pz4tx-002.jpg",
-    "p/pz4tx-003.jpg",
-    "p/pz4tx-004.jpg",
-    "p/pz4tx-005.jpg",
-
+    "p/PZ4TX-PLUS-001.jpg",
+    "p/PZ4TX-PLUS-002.jpg",
+   "p/PZ4TX-PLUS-003.jpg",
+   "p/PZ4TX-PLUS-004.jpg",
     "p/pz4tx-006.jpg"
   ]
         },
@@ -576,7 +577,16 @@
     "Zahnuté a upravené okraje minimalizují možnost vzniku odřenin",
     "Švy upravené ultrazvukem pro hladký hydrofobní povrch",
     "Nízký koeficient odporu"
-          ]
+          ],
+
+             "images": [
+    "p/pz4tx-002.jpg",
+    "p/pz4tx-003.jpg",
+    "p/pz4tx-004.jpg",
+    "p/pz4tx-005.jpg",
+
+    "p/pz4tx-006.jpg"
+  ]
         }
       ]
       },
@@ -595,9 +605,9 @@
 
            "images": [
 
-    "p/jak-na-triatlon-a-jin-vytrvalostn-sporty-002.jpg",
-    "p/jak-na-triatlon-a-jin-vytrvalostn-sporty-003.jpg",
-    "p/jak-na-triatlon-a-jin-vytrvalostn-sporty-004.jpg"
+    "p/jak-na-triatlon-a-jin-vytrvalostn-sporty-001.jpg",
+    "p/jak-na-triatlon-a-jin-vytrvalostn-sporty-002.jpg"
+   
   ]
         },
 
@@ -609,7 +619,7 @@
           "description": ["226 – to je součet kilometrů, který musí zdolat každý účastník dlouhého triatlonu, tedy ironmanu. A stejný počet otázek na všechna úskalí sportu tvořeného plaváním, cyklistikou a během najdete v této jedinečné publikaci. Na všechny odpovídá Petr Vabroušek, přední triatlonista se stovkami dlouhých triatlonů i dalších extrémních závodů na kontě. Metodika tréninku, vybavení, stravování, mentální příprava i samotné závodění – to vše vás čeká v jediné příručce, kterou pro úspěšné zvládnutí triatlonu potřebujete."],
  "images": [
 
-    "p/triatlon-226-ot-zek-a-odpov-d-002.jpg"
+    "p/226.jpg"
   ]
           
         },
@@ -638,7 +648,7 @@
           "details": [],
           "images": [
 
-    "p/thermal-epice-002.jpg"
+    "p/thermal-cepice.jpg"
   ]
         },
 
@@ -670,7 +680,7 @@
           ],
           "images": [
 
-    "p/thermal-rukavice-002.jpg"
+    "p/thermal-rukavice.jpg"
   ]
         },
 
@@ -720,11 +730,10 @@
 
            "images": [
 
+    "p/bezpe-nostn-bojka-001.png",
     "p/bezpe-nostn-bojka-002.png",
-    "p/bezpe-nostn-bojka-003.png",
-    "p/bezpe-nostn-bojka-004.jpg",
-    "p/bezpe-nostn-bojka-005.jpg",
-    "p/bezpe-nostn-bojka-006.png"
+    "p/bezpe-nostn-bojka-003.jpg",
+    "p/bezpe-nostn-bojka-004.jpg"
   ]
         },
 
@@ -740,7 +749,7 @@
 
            "images": [
 
-    "p/p-s-na-slo-002.jpg"
+    "p/pas-na-cislo.jpg"
   ]
         },
 
@@ -751,6 +760,9 @@
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Neoprenový pásek pro pohodlné uchycení čipu časomíry. Už žádné rozedřené kotníky a potrhané kompresky…​"],
           "details": [
+          ],
+          "images":[
+            "p/pas-na-cip.jpg"
           ]
         },
 
@@ -767,7 +779,7 @@
 
            "images": [
 
-    "p/n-vleky-na-tretry-002.jpg"
+    "p/navleky-tr.jpg"
   ]
         },
 
@@ -818,12 +830,12 @@
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Na přání vám přípravíme a pošleme dárkový poukaz pro libovolnou příležitost (vánoce, narozeniny, účast na vysněném závodu, ...). I podkladovou fotografii a text si můžete libovolně zvolit. Více na petr@vabrousek.cz."],
           "details": [
-            
+           
           ],
 
            "images": [
 
-    "p/d-rkov-poukaz-002.jpg"
+     "p/dark-pouz.jpeg"
   ]
           
         },
@@ -841,8 +853,7 @@
 "5mm zadní panel a 3mm spodní panel pro neomezený běžecký pohyb", "Skvělé pro trénink a závody swimrun", "2 velikosti: S a L"
           ],
  "images": [
-
-    "p/swimrun-l-tkov-neoprenov-n-vleky-002.jpg"
+    "p/l-navk.jpg"
   ]
 
         },
@@ -865,7 +876,7 @@
 
            "images": [
 
-    "p/packy-synergie-002.jpg"
+    "p/synergy.jpg"
   ]
         },
 
@@ -915,7 +926,7 @@
           ],
            "images": [
 
-    "p/lepidlo-002.jpg"
+    "p/glue.jpg"
   ]
         }
       ]
