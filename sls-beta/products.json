@@ -195,10 +195,12 @@
               "L 145-158cm 40-51kg"
           ],
            "images": [
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i27_w1164.jpeg?width=160",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i25_w1500.jpeg",
-            "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p1_i23_w1500.jpeg?width=160"
+           "p/torpedo-d-tsk-001.png",
+           "p/torpedo-d-tsk-002.jpeg",
+           "p/torpedo-d-tsk-003.jpeg",
+           "p/torpedo-d-tsk-004.jpeg",
+           "p/torpedo-d-tsk-005.jpeg",
+           "p/torpedo-d-tsk-006.jpeg"
           ]
 
         },
@@ -323,7 +325,20 @@
     "Prémiový polykarbonát, anti-fog čočky nabízejí ostrou viditelnost nad vodou i pod vodou.",
     "Obsahuje 4 vyměnitelné nosníky pro optimální fit.",
     "Neobsahuje PVC ani Latex."
-          ]
+          ],
+
+           "images": [
+    "p/contour-001.png",
+    "p/contour-002.jpeg",
+    "p/contour-003.jpeg",
+    "p/contour-004.jpeg",
+    "p/contour-005.jpeg",
+    "p/contour-006.jpeg",
+    "p/contour-007.jpeg",
+    "p/contour-008.jpeg",
+    "p/contour-009.jpeg",
+    "p/contour-010.jpeg"
+  ]
         },
          {
           "id": "flow",
@@ -422,6 +437,13 @@
 "Elastická",
 "Rychleschnoucí",
 "Se zipem vzadu odpovídající ITU pravidlům"
+          ],
+
+          "images": [
+               "p/tx-3000-001.png",
+    "p/tx-3000-002.jpeg",
+    "p/tx-3000-003.jpeg",
+    "p/tx-3000-004.jpeg"
           ]
         },
 
@@ -514,7 +536,13 @@
           "price": "1990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": ["Batoh konstruovaný právě pro triatlety. Jeho objem je dostatečný k tomu, abyste v něm přisli na start se vším potřebným. Má oddělenou nepromokavou část pro umístění mokrého neoprenu, bot či dresu. Samozřejmostí jsou dvě kapsy na bidony a celá řada vnitřních i vnějších kapes. Už nikdy nebudete nic hledat. Jako neocenitelný pomocník slouží i při létání – spolehlivě pojme až 15kg nákladu a ještě nikdy ho neodmítli vzít na palubu."],
-          "details": []
+          "details": [],
+          "images": [
+     "p/batoh-transition-001.png",
+    "p/batoh-transition-002.jpeg",
+    "p/batoh-transition-003.jpeg",
+    "p/batoh-transition-004.jpeg"
+  ]
         },
 
          {
@@ -623,7 +651,17 @@
           "description": ["Skvělý doplněk pro běh v létě. chtání obličej před sluncem. Pro Blueseventy vyrábí specialista na běžecké čepice, americká firma Headsweats, z coolmax materiálu s vysokou životností.", "Barva černá nebo bílá​"],
           "details": [
            
-          ]
+          ],
+
+           "images": [
+    "p/k-ilt-001.png",
+    "p/k-ilt-002.jpeg",
+    "p/k-ilt-003.jpeg",
+    "p/k-ilt-004.jpeg",
+    "p/k-ilt-005.jpeg",
+    "p/k-ilt-006.jpeg"
+  ]
+          
         },
 
           {
@@ -632,9 +670,17 @@
           "price": "0 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpeg",
           "description": ["V průběhu roku se můžete zůčastnit několika mých triatlonových kempů, které jsou určeny úplným začátečníkům i ostříleným Ironmanům. V květnu a říjnu na tratích IRONMAN 70.3 Zell am See, Rakousko v Brucku."],
-          "details": [
-           
-          ]
+          "images": [
+    "p/triatlonov-kempy-001.png",
+    "p/triatlonov-kempy-002.jpeg",
+    "p/triatlonov-kempy-003.jpeg",
+    "p/triatlonov-kempy-004.jpeg",
+    "p/triatlonov-kempy-005.jpeg",
+    "p/triatlonov-kempy-006.jpeg",
+    "p/triatlonov-kempy-007.jpeg",
+    "p/triatlonov-kempy-008.jpeg",
+    "p/triatlonov-kempy-009.jpeg"
+  ]
         },
 
          {
