@@ -404,11 +404,10 @@
 
           "images": [
 
-    "p/z-vodn-plavky-nero-002.jpg",
-    "p/z-vodn-plavky-nero-003.jpg",
-    "p/z-vodn-plavky-nero-004.jpg",
-    "p/z-vodn-plavky-nero-005.jpg",
-    "p/z-vodn-plavky-nero-006.jpg"
+    "p/nero-1.jpg",
+   "p/nero-2.jpg",
+   "p/nero-3.jpg",
+   "p/nero-4.jpg"
   ]
         }
       ]
@@ -435,15 +434,17 @@
           ],
 
            "images": [
+    "p/tx2000-aero-kombin-za-001.jpg",
     "p/tx2000-aero-kombin-za-002.jpg",
     "p/tx2000-aero-kombin-za-003.jpg",
     "p/tx2000-aero-kombin-za-004.jpg",
-
-    "p/tx2000-aero-kombin-za-008.jpg",
     "p/tx2000-aero-kombin-za-005.jpg",
     "p/tx2000-aero-kombin-za-006.jpg",
-    "p/tx2000-aero-kombin-za-009.png",
     "p/tx2000-aero-kombin-za-007.jpg"
+   
+
+  
+       
   ]
         },
 
@@ -483,11 +484,11 @@
 
            "images": [
     "p/tx-2000-001.jpeg",
-    "p/tx-2000-002.jpeg",
-    "p/tx-2000-003.jpeg",
-    "p/tx-2000-004.jpeg",
-    "p/tx-2000-005.jpeg",
-    "p/tx-2000-006.jpeg"
+        "p/tx-2000-002.jpeg",
+            "p/tx-2000-003.jpeg",
+                "p/tx-2000-004.jpeg",
+            "p/tx-2000-005.jpeg",
+                  "p/tx-2000-006.jpeg"
 
   ]
 
