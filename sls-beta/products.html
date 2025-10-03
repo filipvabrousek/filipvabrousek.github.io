@@ -99,8 +99,9 @@ import {Blue70Button} from "./components/blue70Button.js";
               new Text(this.obj.price).set({
                 weight: "bold",
                 color: "black",
-                exact: "1.1rem",
-                pad: [{b: "0.7rem"}]
+                exact: "1.1rem", 
+                pad: [{b: "0.7rem"}],
+                isHidden: this.obj.price === "n/a"
               }),
             ]),
              

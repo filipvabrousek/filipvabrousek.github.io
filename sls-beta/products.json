@@ -585,7 +585,6 @@
     "p/pz4tx-003.jpg",
     "p/pz4tx-004.jpg",
     "p/pz4tx-005.jpg",
-
     "p/pz4tx-006.jpg"
   ]
         }
@@ -656,7 +655,7 @@
         {
           "id": "thermal-socks",
           "name": "Thermal ponožky",
-          "price": "1090 Kč",
+          "price": "1,090 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Hlava, chodidla a dlaně ztrácí v chladné vodě enormní množství tepla. Pokud je zakryjete, budete teplotu vody vnímat o 3-4°C výše. Neoprenové ponožky lze také dobře využít pro ochranu chodidel při vstupu do vody po ostrém povrchu." ],
           "details": [
@@ -674,7 +673,7 @@
          {
           "id": "thermal-gloves",
           "name": "Thermal rukavice",
-          "price": "1090 Kč",
+          "price": "1,090 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Hlava, chodidla a dlaně ztrácí v chladné vodě enormní množství tepla. Pokud je zakryjete, budete teplotu vody vnímat o 3-4°C výše. Neoprenové ponožky lze také dobře využít pro ochranu chodidel při vstupu do vody po ostrém povrchu.​"],
           "details": [
@@ -715,7 +714,7 @@
           {
           "id": "safety-buoy",
           "name": "Bezpečnostní bojka",
-          "price": "590 Kč",
+          "price": "990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": [
             "Nikdy na venkovních plochách neplavte úplně sami. Díky bezpečnostní bojce budete ve vodě lépe viditelní ze břehu i pro případný lodní provoz.", 
@@ -757,7 +756,7 @@
          {
           "id": "chip-belt",
           "name": "Pás na čip",
-          "price": "290 Kč",
+          "price": "190 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Neoprenový pásek pro pohodlné uchycení čipu časomíry. Už žádné rozedřené kotníky a potrhané kompresky…​"],
           "details": [
@@ -787,7 +786,7 @@
         {
           "id": "chilt",
           "name": "Kšilt",
-          "price": "290 Kč",
+          "price": "490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Skvělý doplněk pro běh v létě. chtání obličej před sluncem. Pro Blueseventy vyrábí specialista na běžecké čepice, americká firma Headsweats, z coolmax materiálu s vysokou životností.", "Barva černá nebo bílá​"],
           "details": [
@@ -808,7 +807,7 @@
           {
           "id": "triatlon-camps",
           "name": "Triatlonové kempy",
-          "price": "0 Kč",
+          "price": "n/a",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["V průběhu roku se můžete zůčastnit několika mých triatlonových kempů, které jsou určeny úplným začátečníkům i ostříleným Ironmanům. V květnu a říjnu na tratích IRONMAN 70.3 Zell am See, Rakousko v Brucku."],
           "images": [
@@ -827,7 +826,7 @@
          {
           "id": "darkovy-poukaz",
           "name": "Dárkový poukaz",
-          "price": "0 Kč",
+          "price": "n/a",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Na přání vám přípravíme a pošleme dárkový poukaz pro libovolnou příležitost (vánoce, narozeniny, účast na vysněném závodu, ...). I podkladovou fotografii a text si můžete libovolně zvolit. Více na petr@vabrousek.cz."],
           "details": [
@@ -844,7 +843,7 @@
          {
           "id": "swimrun-lytk-navl",
           "name": "Swimrun lýtkové návleky",
-          "price": "0 Kč",
+          "price": "990 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Lýtkové návleky pro swimrun závody jsou vyrobeny ze silného 7mm neoprenu na přední části a 5mm neoprenu na zadní. Slouží k výraznému odlehčení nohou (obutých při závodech swimrun v botech) při plavání. Můžete se tak soustředit pouze na plavání pažemi (ideálně s packami Blueseventy).",
 "Jsou skvělým doplňkem neoprenu Alliance pro závody swimrun. Ve vodě výrazně nesou a na běhu neomezují. Jsou odolné pro náročné výlezy z vody a pro prodírání nízkým podrostem při běhu. Skvěle ochrání vaše SLS3 kompresní podkolenky.",
@@ -865,7 +864,7 @@
          {
           "id": "synergy",
           "name": "Packy synergy",
-          "price": "0 Kč",
+          "price": "490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Klasický desetiletími prověřený tvar ideální pro bazénové tréninky i závody swimrun. Ideálně rozmístěné otvory nechávají protéct omezené množství vody pro lepší vnímání vody a nabízejí více možností pro upevnění silikonových popruhů. Skvělá pomůcka pro rozvoj síly a fyzičky v bazénu. Nezbytnost pro závody swimrun. Dostupné ve 2 velikostech."],
           "details": [
@@ -883,8 +882,8 @@
 
         {
           "id": "pullboy",
-          "name": "Pull-buoy synergy",
-          "price": "0 Kč",
+          "name": "Pull-buoy Synergie",
+          "price": "490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Synergie Pull-buoy vylepšuje polohu těla ve vodě při plavání. Můžete se tak lépe soustředit na práci paží a rotaci těla. Ideální doplněk pro závody swimrun. Vyroben ze 100% EVA pěny."],
           "details": [
@@ -893,16 +892,16 @@
 
            "images": [
 
+    "p/pull-buoy-synergie-001.jpg",
     "p/pull-buoy-synergie-002.jpg",
-    "p/pull-buoy-synergie-003.jpg",
-    "p/pull-buoy-synergie-004.jpg"
+    "p/pull-buoy-synergie-003.jpg"
   ]
         },
 
          {
           "id": "synergy-desk-swim",
-          "name": "Plavecká deska synergy",
-          "price": "0 Kč",
+          "name": "Plavecká deska Synergie",
+          "price": "490 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description": ["Klasická tréninková pomůcka pro plavecký kop a sílu nohou. Udržuje tělo zpevněné a vyvýšené pro snadný nádech. Deska je vyrobena ze 100% EVA pěny."],
           "details": [
@@ -911,16 +910,16 @@
 
           "images": [
 
+    "p/plaveck-deska-synergie-001.jpg",
     "p/plaveck-deska-synergie-002.jpg",
-    "p/plaveck-deska-synergie-003.jpg",
-    "p/plaveck-deska-synergie-004.jpg"
+    "p/plaveck-deska-synergie-003.jpg"
   ]
         },
 
           {
           "id": "glue",
           "name": "Lepidlo",
-          "price": "0 Kč",
+          "price": "190 Kč",
           "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/s660476911256653682_p38_i1_w480.jpg",
           "description":["Lepidlo pro snadné a rychlé opravy drobných thrlinek v neoprenových oblecích. Potřete lehce oba spoje a po 30ti vteřinách pevně přitlačte. "],
           "details": [

@@ -73,12 +73,13 @@ const id = urlParams.get("id"); // e.g. detail.html?id=helix
               weight: "bold",
               exact: "2rem"
             }),
-            new Text(this.obj.price).set({
+             new Text(this.obj.price).set({
               font: "Montserrat",
               exact: "1.6rem",
               color: "#3498Db",
               weight: "bold",
-              pad: [{ tb: "1rem" }]
+              pad: [{ tb: "1rem" }],
+              isHidden: this.obj.price === "n/a" // 121740
             }), // http://localhost:2000/detail?id=helix
 
             new Wrapper()
