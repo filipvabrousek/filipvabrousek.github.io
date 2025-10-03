@@ -39,7 +39,8 @@
           .add([
             new Image().set({
               type: "img",
-              width: "100%",
+              width: "300px",
+              isFull: true,
               url: this.obj.url,
               vtn: this.obj.name
             }),
@@ -49,7 +50,8 @@
               new Text(this.obj.name).set({
                 color: "black",
                 weight: "bold",
-                size: "S5"
+                exact: "1.6rem",
+                pad: [{tb: "0.3rem"}]
               })
             ])
           ]);

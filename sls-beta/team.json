@@ -1,37 +1,15 @@
 [
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  },
-
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  },
-
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  },
-
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  },
-
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  },
-
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  },
-
-  {
-    "name": "Petr Vabroušek",
-    "url": "https://blue70.weebly.com/uploads/4/0/5/5/40554337/published/l.jpeg?1511248389"
-  }
-
+  { "name": "David Jílek", "url": "team/david-jilek.jpeg" },
+  { "name": "Lukáš Krpec", "url": "team/lukas-krpec.jpeg" },
+  { "name": "Radek Bursa", "url": "team/radek-bursa.png" },
+  { "name": "Filip Ospalý", "url": "team/filip-ospaly.jpg" },
+  { "name": "Martin Vinař", "url": "team/martin-vinar.jpg" },
+  { "name": "Radka Vodičková", "url": "team/radka-vodickova.jpg" },
+  { "name": "Jakub Langhammer", "url": "team/jakub-langhammer.jpg" },
+  { "name": "Ondřej Kubo", "url": "team/ondrej-kubo.jpeg" },
+  { "name": "Yveta Hlaváčová", "url": "team/yveta-hlavacova.jpeg" },
+  { "name": "Josef Svoboda", "url": "team/josef-svoboda.jpeg" },
+  { "name": "Pavel Paták", "url": "team/pavel-patak.jpeg" },
+  { "name": "Lenka Králová", "url": "team/lenka-kralova.png" },
+  { "name": "Petr Vabroušek", "url": "team/petr-vabrousek.jpeg" }
 ]
