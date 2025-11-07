@@ -371,7 +371,7 @@ class AppShowcase extends HTMLElement {
                     }
 
                     if (window.matchMedia("(max-width: 430px)").matches){
-                      mina = mina * 1.25;
+                      mina = mina * .82; // 1.25
                       //alert("//")
                     }
 
