@@ -1354,7 +1354,7 @@ flex-direction: row;
     }
 
     .gifa {
-    border: 3px solid green;
+    /*border: 3px solid green;*/
     position: absolute;
     top: 0;
     z-index: -1;
