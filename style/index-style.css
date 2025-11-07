@@ -1363,12 +1363,19 @@ flex-direction: row;
     object-fit: contain;   /* 🔹 Ensure full image fits */
   }
 
+ 
+
+
 @media (max-device-width: 430px) {
 
     .firstImage {
        /* display: none; */
         margin-left: 15rem !important;
     }
+
+     .gifa {
+    display: none;
+  }
    
 
 
