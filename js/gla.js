@@ -9,7 +9,8 @@ if (isMobile) { // if (false) to temp test mobile optimisation everywhere
   video.style.display = 'block';
   canvas.style.display = 'none';
 } else {
-   // alert("hioh")
+    alert("hioh")
+    alert(navigator.userAgent);
 video.style.display = 'none';
 
 const canvas = document.querySelector('#gla');
