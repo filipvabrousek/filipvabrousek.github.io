@@ -23,9 +23,11 @@ const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 
 camera.position.set(0, 0, 10);
 scene.add(camera);
 
-const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: 'low-power' });
 renderer.setSize(sizes.width, sizes.height);
-renderer.setPixelRatio(window.devicePixelRatio);
+//renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+
 
 // Blob properties
 const blobRadius = 4.0;
@@ -253,7 +255,7 @@ void main() {
 });
 
 // Blob geometry
-const blobGeometry = new THREE.SphereGeometry(blobRadius, 300, 300);
+const blobGeometry = new THREE.SphereGeometry(blobRadius, /*300, 300*/ 80, 80);
 blobGeometry.computeTangents();
 const blob = new THREE.Mesh(blobGeometry, blobMaterial);
 scene.add(blob);
