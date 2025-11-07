@@ -1359,6 +1359,8 @@ flex-direction: row;
     top: 0;
     z-index: -1;
     height: 450px;
+    width: auto;           /* 🔹 Keep aspect ratio */
+    object-fit: contain;   /* 🔹 Ensure full image fits */
   }
 
 @media (max-device-width: 430px) {
