@@ -1363,8 +1363,11 @@ flex-direction: row;
     object-fit: contain;   /* 🔹 Ensure full image fits */
   }
 
- 
-
+ @media (min-device-width: 430px) {
+ .gifa {
+    display: none;
+  }
+}
 
 @media (max-device-width: 430px) {
 
@@ -1373,9 +1376,7 @@ flex-direction: row;
         margin-left: 15rem !important;
     }
 
-     .gifa {
-    display: none;
-  }
+    
    
 
 
