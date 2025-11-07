@@ -219,11 +219,22 @@
     </canvas>
     </div>
 
-
+<!---
     <script type="module" src="js/gla.js"></script>
-  
+  --->
 
-  <!----
+
+    <script type="module">
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.querySelector('#blob-video').style.display = 'block';
+    document.querySelector('#gla').remove();
+  } else {
+    import('js/gla.js');  // desktop-only module
+  }
+</script>
+
+
 <video
   id="blob-video"
   playsinline
@@ -234,7 +245,7 @@
   poster="blob-fallback.jpg"
   src="img/blob-loop-safe.mp4">
 </video>
---->
+
 
 <style>
   video {
