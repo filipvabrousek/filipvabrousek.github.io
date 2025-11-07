@@ -230,8 +230,14 @@
    // document.querySelector('#blob-video').style.display = 'block';
     document.querySelector('#gla').remove();
   } else {
-    alert(navigator.userAgent)
-    import('js/gla.js');  // desktop-only module
+    
+
+    let media = window.matchMedia("(min-device-width: 430px)");
+    if (media.matches) {
+      alert(navigator.userAgent)
+ import('js/gla.js');  // desktop-only module
+    }
+   
   }
 </script>
 
