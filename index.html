@@ -246,6 +246,19 @@
   src="img/blob-loop-safe.mp4">
 </video>
 
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const video = document.getElementById('blob-video');
+    try {
+      await video.play();
+      console.log('Autoplay success!');
+    } catch (e) {
+     alert('Autoplay prevented:', e);
+      // Optionally show a play button here
+    }
+  });
+</script>
+
 
 <style>
   video {
