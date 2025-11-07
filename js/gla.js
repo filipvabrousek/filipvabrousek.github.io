@@ -1,20 +1,21 @@
-import * as THREE from 'three';
+(async () => {
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  const video = document.querySelector('#blob-video');
+  const canvas = document.querySelector('#gla');
 
-
-
-const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-
-const video = document.querySelector("video");
-if (isMobile) { // if (false) to temp test mobile optimisation everywhere
-  video.style.display = 'block';
-  canvas.style.display = 'none';
-} else {
-    alert("hioh")
-    alert(navigator.userAgent);
+  if (isMobile) {
+    // --- MOBILE: show the video fallback and remove canvas (no WebGL)
+    video.style.display = 'block';
+    // Remove the canvas so no one accidentally creates a WebGL context
+    if (canvas) canvas.remove();
+    console.log('Mobile detected — using video fallback, skipping Three.js');
+    alert("PP")
+    return; // exit: no Three.js is loaded or run
+  }
 video.style.display = 'none';
 
-const canvas = document.querySelector('#gla');
 
+const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xecf0f1); // 225617 very cool!
 
@@ -379,4 +380,4 @@ blobProperties.u_time.value = elapsedTime;*/
 
 animate();
 
-}
+})();
