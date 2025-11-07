@@ -229,17 +229,31 @@
   if (isMobile) {
    // document.querySelector('#blob-video').style.display = 'block';
     document.querySelector('#gla').remove();
+    
   } else {
     
 
     let media = window.matchMedia("(min-device-width: 430px)");
     if (media.matches) {
-      alert(navigator.userAgent)
+      alert(navigator.userAgent);
  import('./js/gla.js');  // desktop-only module
     }
    
   }
 </script>
+
+<style>
+
+  @media (min-device-width: 431px) {
+     .gifa {
+    display: none;
+  }
+  }
+
+ 
+
+</style>
+<img class="gifa" src="img/output.gif"/>
 
 <!---
 <video
@@ -257,7 +271,7 @@
 
 
 <style>
-  video {
+  video, .gifa {
     border: 3px solid green;
     position: absolute;
     top: 0;
