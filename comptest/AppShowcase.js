@@ -335,7 +335,7 @@ class AppShowcase extends HTMLElement {
               break;
 
               case 'app-desc':
-                this.shadowRoot.querySelector('.desc').textContent = newVal;
+               // this.shadowRoot.querySelector('.desc').textContent = newVal;
 
               case 'app-img':
                 console.log(`aValue is ${newVal}`);
