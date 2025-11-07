@@ -1,5 +1,17 @@
 import * as THREE from 'three';
 
+
+
+const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+const video = document.querySelector("video");
+if (isMobile) { // if (false) to temp test mobile optimisation everywhere
+  video.style.display = 'block';
+  canvas.style.display = 'none';
+} else {
+   // alert("hioh")
+video.style.display = 'none';
+
 const canvas = document.querySelector('#gla');
 
 const scene = new THREE.Scene();
@@ -28,6 +40,40 @@ renderer.setSize(sizes.width, sizes.height);
 //renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
+
+
+
+// ------------ record video
+// === Record blob animation to a video ===
+/*
+// Duration of loop in seconds
+const RECORD_DURATION = 10;
+
+// Prepare MediaRecorder
+const stream = renderer.domElement.captureStream(60); // 60 FPS
+const chunks = [];
+const recorder = new MediaRecorder(stream, {
+  mimeType: 'video/webm; codecs=vp9' // Safari prefers vp8 or h264, Chrome likes vp9
+});
+
+recorder.ondataavailable = e => chunks.push(e.data);
+recorder.onstop = e => {
+  const blob = new Blob(chunks, { type: 'video/webm' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'blob-loop.webm';
+  a.click();
+  console.log('Recording complete!');
+};
+
+// Start and stop automatically
+recorder.start();
+setTimeout(() => recorder.stop(), RECORD_DURATION * 1000);
+*/
+
+
+//   ------------- video recorder
 
 // Blob properties
 const blobRadius = 4.0;
@@ -301,6 +347,13 @@ function animate() {
     requestAnimationFrame(animate);
 
     const currentTime = performance.now() / 1000;
+
+    /*const loopDuration = 10.0; // seconds
+const elapsedTime = (currentTime - startTime) % loopDuration;
+blobProperties.u_time.value = elapsedTime;*/
+
+
+
     const elapsedTime = currentTime - startTime;
     blobProperties.u_time.value = elapsedTime;
 
@@ -325,3 +378,4 @@ function animate() {
 
 animate();
 
+}
