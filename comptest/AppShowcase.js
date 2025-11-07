@@ -15,7 +15,7 @@ template.innerHTML = `
 <img src="images/runny-orig.png" class="app-imga" />
 <h2 class="titles"></h2>
 </div>
-<p class="desc"></p>
+
 <div class="add"></div>
 
 <div class="oneMoreOverlay modernSection">
@@ -24,6 +24,8 @@ template.innerHTML = `
   <div class="blobImage blobImageRunny"></div>
 
 <div id="runnyOverlay">
+
+
 
 <div id="runnysa" class="leftIcon leftIconRunny">
   <div class="sidesImages">
@@ -96,6 +98,13 @@ margin-left: 2rem;
 }
 
 
+@media (max-width: 70rem){
+.titles {
+  font-size: 3rem;
+}
+}
+
+
 * {
 margin: 0;
 }
@@ -153,7 +162,7 @@ position: absolute;
  .cover {
  overflow-x: scroll;
             display: flex;
-           transform: rotate(-3deg);
+
             justify-content: flex-start;
             width: 90%;
             margin-left: auto;
@@ -184,6 +193,21 @@ position: absolute;
         color: gray;
         } 
 
+
+
+
+@media (max-device-width: 430px) {
+
+            #flexa {
+        flex-direction: column;
+    }
+
+        #flexa img {
+        margin-top: 6rem;
+    }
+
+  
+}
      
 </style>
 
@@ -296,6 +320,12 @@ class AppShowcase extends HTMLElement {
                   h1.appendChild(wbr);
                   console.log("LAPPO")
                 }
+
+                 if (this.er === "SPATIAL-GRAVITY" && l === "L"){
+                  let wbr = document.createElement("br");
+                  h1.appendChild(wbr);
+                  console.log("LAPPO")
+                }
                });
 
               
@@ -340,6 +370,10 @@ class AppShowcase extends HTMLElement {
                       mina = mina * 0.85;
                     }
 
+                    if (window.matchMedia("(max-width: 430px)").matches){
+                      mina = mina * 1.1;
+                      //alert("//")
+                    }
 
                     this.fireAtRange = {from: mina, to: maxa};
                     break;
@@ -406,7 +440,7 @@ class AppShowcase extends HTMLElement {
         let progress = this.mapRange(window.scrollY, 0, 150, 0, 100);
         console.warn("PROG:" + progress);
       //  this.appimga.style.opacity = 1;
-        this.desc.style.opacity = progress / 100;
+      //  this.desc.style.opacity = progress / 100;
 
         let el = this.shadowRoot.querySelector(`#A`);
    
@@ -447,6 +481,11 @@ class AppShowcase extends HTMLElement {
       this.shadowRoot.querySelector("#I").style.color = "transparent";
     }
 
+    // 05/11/25 235651
+    if (this.er === "SPATIAL-GRAVITY") { // is ok
+      this.shadowRoot.querySelector("#I").style.display = "none" //color = "transparent";
+    }
+
 
     if (this.er === "RUNNY"){
       console.log("For runnya");
@@ -478,7 +517,7 @@ let adjustedMaxDelay = Math.min(maxDelay, 1 / wordLength); // Scale delay based 
   if (rotationAngle > 0){
     // alert(this.er);
 
-    if (this.er === "SPATIAL-NETWORK"){
+  /*  if (this.er === "SPATIAL-NETWORK"){
       el.style.color = "#1abc9c";
     } if (this.er === "RELAYS"){
       el.style.color = "#3498db";
@@ -486,7 +525,9 @@ let adjustedMaxDelay = Math.min(maxDelay, 1 / wordLength); // Scale delay based 
       el.style.color = "#4EABE8";
     }   else if (this.er === "RUNNY") {
       el.style.color = "#1abc9c";
-    }
+    }*/
+
+      el.style.color = "white";
     
    // el.style.color = "black";
   } else {
@@ -570,6 +611,11 @@ let adjustedMaxDelay = Math.min(maxDelay, 1 / wordLength); // Scale delay based 
          //   console.log("SCROLL-FACTOR:" + scroll);
             this.blobImg.style.borderRadius = `${interpolatedBorderRadius[0]}% ${interpolatedBorderRadius[1]}% ${interpolatedBorderRadius[2]}% ${interpolatedBorderRadius[3]}% / ${interpolatedBorderRadius[0]}% ${interpolatedBorderRadius[1]}% ${interpolatedBorderRadius[2]}% ${interpolatedBorderRadius[3]}%`;
         //  }
+
+
+
+        // TEMP HIDE ?
+        this.blobImg.style.display = "none";
 
 
         this.appMinusConstant = this.imageRange.min;

@@ -1,3 +1,240 @@
+
+        import * as THREE from 'three';
+
+        // === 1. IMAGEDISTORTIONEFFECT CLASS DEFINITION ===
+
+        class ImageDistortionEffect {
+            constructor(canvasSelector, options = {}) {
+                this.canvas = document.querySelector(canvasSelector);
+                if (!this.canvas) throw new Error("Canvas element not found.");
+
+                // Default Settings (Adjusted for extreme stretch/jiggle)
+                this.settings = {
+                    width: 6, 
+                    height: 4.5, 
+                    imageUrls: options.imageUrls || [],
+
+                    smoothing: 0.08, 
+                    distortionDecay: 0.85, 
+                    distortionReactivity: 0.15, 
+                    
+                    maxDistortion: 1.5, 
+                    MAX_TARGET_DISTORTION: 1.2, 
+                    ...options
+                };
+
+                // State
+                this.scrollY = window.scrollY; 
+                this.lastScrollY = window.scrollY; 
+                this.targetDistortion = 0;
+                this.currentDistortion = 0;
+
+                // Three.js Objects
+                this.mesh = null; 
+                this.renderer = null;
+                this.scene = null;
+                this.camera = null;
+                this.clock = new THREE.Clock();
+
+                this.initThree();
+                this.initImage();
+                this.initEvents();
+                this.animate();
+            }
+
+            initThree() {
+                this.renderer = new THREE.WebGLRenderer({ 
+                    canvas: this.canvas,
+                    antialias: true 
+                });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
+
+                this.scene = new THREE.Scene();
+                this.scene.background = new THREE.Color(0xf0f0f0); 
+
+                this.camera = new THREE.PerspectiveCamera(
+                    75, 
+                    window.innerWidth / window.innerHeight, 
+                    0.1, 
+                    1000 
+                );
+                this.camera.position.z = 5; 
+
+                this.textureLoader = new THREE.TextureLoader();
+                this.pageScrollRangeY = document.body.scrollHeight - window.innerHeight;
+            }
+
+            // --- Single Image Creation ---
+
+            correctColorSpace(texture) {
+                texture.colorSpace = THREE.SRGBColorSpace;
+                return texture;
+            }
+
+            initImage() {
+                const geometry = new THREE.PlaneGeometry(
+                    this.settings.width, 
+                    this.settings.height, 
+                    96, // Increased segments for smoother extreme bend
+                    32  
+                );
+
+                const material = new THREE.MeshBasicMaterial({ color: 0x333333 }); 
+                this.mesh = new THREE.Mesh(geometry, material);
+
+                this.mesh.position.set(0, 0, 0); 
+                
+                this.mesh.userData.originalPositions = geometry.attributes.position.array.slice();
+
+                let textureUrl = this.settings.imageUrls[0] || "https://images.unsplash.com/photo-1550953683857-ab459207e2c9?w=1080&h=720&fit=crop";
+                
+                this.textureLoader.load(textureUrl, (texture) => {
+                    this.correctColorSpace(texture);
+                    this.mesh.material.map = texture;
+                    this.mesh.material.color.set(0xffffff); 
+                    this.mesh.material.needsUpdate = true;
+                    
+                    // Aspect ratio adjustment 
+                    const aspect = texture.image.width / texture.image.height;
+                    const planeAspect = this.settings.width / this.settings.height;
+                    if (aspect > planeAspect) {
+                        this.mesh.scale.y = (planeAspect / aspect);
+                    } else {
+                        this.mesh.scale.x = (aspect / planeAspect);
+                    }
+                }, undefined, (error) => {
+                    console.error('Texture failed to load:', textureUrl, error);
+                });
+
+                this.scene.add(this.mesh);
+            }
+
+            // --- Distortion Logic (Diagonal Asymmetrical Bend) ---
+
+            updateCurve(mesh, distortionFactor) {
+                const geometry = mesh.geometry;
+                const originalPositions = mesh.userData.originalPositions;
+                const livePositions = geometry.attributes.position.array;
+
+                const maxCurvature = distortionFactor * this.settings.maxDistortion; 
+                // Set the total radius to the diagonal distance from center to corner
+                const diagonalRadius = Math.sqrt(
+                    (this.settings.width / 2) ** 2 + (this.settings.height / 2) ** 2
+                );
+
+                for (let i = 0; i < originalPositions.length; i += 3) {
+                    const ox = originalPositions[i]; // Local X position
+                    const oy = originalPositions[i + 1]; // Local Y position
+                    
+                    // 1. Calculate a raw combined distance factor (closer to a diagonal center)
+                    // The distance to a line y = -x is proportional to (x+y)
+                    // We use (ox + oy) for a diagonal axis and scale it by the radius
+                    const distFactor = Math.abs(ox + oy) / (diagonalRadius * 2); 
+                    
+                    // 2. Introduce asymmetry and make the distortion strongest at the corners
+                    // We use the distance from the actual center (0, 0) for the main magnitude.
+                    const radialDist = Math.sqrt(ox * ox + oy * oy);
+                    let normalizedDist = radialDist / diagonalRadius;
+                    normalizedDist = Math.max(0, 1 - normalizedDist);
+                    
+                    // Use a curve factor that peaks at the edges and center, but is applied diagonally
+                    const baseCurveFactor = Math.pow(Math.sin(normalizedDist * Math.PI), 1.5);
+
+                    // 3. Apply Asymmetry and Direction
+                    // The 'tilt' factor determines which corners bend the most and in what direction.
+                    // (ox + oy) is positive in the top-right half and negative in the bottom-left half.
+                    // Using this signed value creates the asymmetry.
+                    const asymmetryFactor = (ox + oy) / diagonalRadius;
+                    
+                    // We modulate the curve magnitude using the base curve and the asymmetry factor
+                    // This creates a twisting, asymmetrical bend strongest along the diagonal
+                    const finalMagnitude = baseCurveFactor * Math.abs(asymmetryFactor);
+                    
+                    // The Z-Offset applies a twist where one half pushes forward and the other pulls back.
+                    // The sign of 'asymmetryFactor' determines the direction (push/pull)
+                    const zOffset = finalMagnitude * maxCurvature * Math.sign(asymmetryFactor); 
+
+                    // Apply bend to Z-axis
+                    livePositions[i + 2] = zOffset; 
+                }
+
+                geometry.attributes.position.needsUpdate = true;
+                geometry.computeVertexNormals(); 
+            }
+
+            // --- Event Handlers ---
+
+            handleScroll = () => {
+                const currentScrollY = window.scrollY;
+                const scrollDelta = currentScrollY - this.lastScrollY;
+                this.lastScrollY = currentScrollY;
+                
+                this.scrollY = currentScrollY; 
+
+                let newDistortion = Math.abs(scrollDelta) * 0.05 * this.settings.distortionReactivity; 
+                this.targetDistortion += Math.min(newDistortion, this.settings.MAX_TARGET_DISTORTION * 0.1); 
+            }
+
+            handleWheel = (e) => {
+                let newDistortion = Math.abs(e.deltaY) * 0.001 * this.settings.distortionReactivity;
+                this.targetDistortion += Math.min(newDistortion, this.settings.MAX_TARGET_DISTORTION * 0.01);
+            }
+            
+            handleResize = () => {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                this.pageScrollRangeY = document.body.scrollHeight - window.innerHeight;
+            }
+
+            initEvents() {
+                window.addEventListener('scroll', this.handleScroll);
+                window.addEventListener('wheel', this.handleWheel, { passive: true }); 
+                window.addEventListener('resize', this.handleResize);
+            }
+
+            // --- Animation Loop ---
+
+            animate = () => {
+                requestAnimationFrame(this.animate);
+                const deltaTime = this.clock.getDelta(); 
+                const lastScrollY = this.scrollY; 
+
+                const velocity = Math.abs(this.scrollY - lastScrollY) / deltaTime; 
+
+                const isScrolling = velocity > 0.01;
+                
+                if (!isScrolling) {
+                    this.targetDistortion *= this.settings.distortionDecay;
+                }
+                
+                this.targetDistortion = Math.min(this.targetDistortion, this.settings.MAX_TARGET_DISTORTION);
+
+                this.currentDistortion += (this.targetDistortion - this.currentDistortion) * this.settings.smoothing;
+                this.currentDistortion = Math.max(0, this.currentDistortion); 
+                
+                // Apply distortion to the single mesh
+                this.updateCurve(this.mesh, this.currentDistortion); 
+
+                this.renderer.render(this.scene, this.camera);
+            }
+        }
+
+        // === 2. INITIALIZATION (Start the Effect) ===
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const singleImageUrl = [
+               "https://plus.unsplash.com/premium_photo-1761924582709-2c26c01d289a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2729"
+            ];
+
+            const myEffect = new ImageDistortionEffect('#webgl-canvas', {
+                imageUrls: singleImageUrl,
+            });
+        });
+
+
 const templatea = document.createElement("template");
 templatea.innerHTML = `
 
@@ -16,8 +253,8 @@ templatea.innerHTML = `
     }
 
 .cover > img {
-  border-radius: 1rem;
-  margin: 1rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
   }
 
 
@@ -25,15 +262,15 @@ templatea.innerHTML = `
   .cover {
   overflow-x: scroll;
              display: flex;
-            transform: rotate(-3deg);
+          
              justify-content: flex-start;
             /* width: 90%; */
              margin-left: auto;
               margin-right: auto;
-             height: 700px;
+            /* height: 700px;*/
              grid-area: 1 / 1;
              z-index: 1;
-             margin-top: -21rem;
+           
            
              
          }
@@ -93,7 +330,7 @@ if (this.appName === "Relays"){
     const scrollLeftValue = (clampedScrollY / maxScrollY) * maxScrollLeft;
     
     // Set the scrollLeft property to offset the contents of the container
-    this.cover.scrollLeft = scrollLeftValue;
+    //this.cover.scrollLeft = scrollLeftValue;
 
 
 
@@ -131,9 +368,9 @@ if (this.minusConstant === undefined){
     }
 
 
-    this.cover.children[0].style.transform = `scale(${mapped}) rotate(-${mappedLeft}deg)`;
-    this.cover.children[1].style.transform = `scale(${mapped}) rotate(-${mappedLeft}deg)`;
-    this.cover.children[2].style.transform = `scale(${mapped}) rotate(-${mappedLeft}deg)`;;
+    this.cover.children[0].style.transform = `scale(${mapped})`;
+    this.cover.children[1].style.transform = `scale(${mapped})`;
+    this.cover.children[2].style.transform = `scale(${mapped})`;;
    //this.cover.children[1].style.transform = `scale(${scrollLeftValue/100 * 0.8})`;
    // this.cover.children[2].style.transform = `scale(${scrollLeftValue/100 * 0.8})`;
 

@@ -1,7 +1,7 @@
 const bl = document.querySelector(".boldLarge");
 const isSaf = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-
+    document.querySelector("motion-text").style.opacity = 0;
+S("#motion1").style.display = "flex";
 let media = window.matchMedia("(min-device-width: 500px)");
 if (isSaf && media.matches){
     bl.style.paddingTop = "12rem";
@@ -324,9 +324,141 @@ function getFinalOffset(el){
     // 22:19:05 Okay, I am done
     // 10/04/2023
 
+   function mapValue(x, inMin, inMax, outMin, outMax) {
+  return outMin + ((x - inMin) * (outMax - outMin)) / (inMax - inMin);
+}
+
+    function moveScaleOnScroll() {
+  if (S(".floatContent") === null || SA(".noScale").length === 0) return;
+
+  // --- Base configuration ---
+  let scrollLimit = 100;
+  if (window.innerWidth > 1999) scrollLimit = 0;
+  const end = scrollLimit + 100;
+  const isWide = window.innerWidth > 1999;
+  const scrollRotationLimit = isWide ? 450 : 767;
+
+  const scrollY = window.scrollY;
+
+  // --- Phase 1: Scale & fade .noScale elements ---
+  SA(".noScale").forEach((el, i) => {
+    const offset = (isWide ? 31 : 50) * i;
+    const conv = smartRange(scrollY, { min: scrollLimit + offset, max: end + offset }, { min: 0, max: 1 });
+    const clamped = Math.max(0, Math.min(1, conv));
+
+    if (scrollY > scrollLimit + offset) {
+      el.style.transform = `scale(${clamped}) translateY(-${clamped * 10}px)`;
+      el.style.opacity = clamped;
+    } else {
+      el.style.transform = `scale(0) translateY(-10px)`;
+      el.style.opacity = 0;
+    }
+  });
+
+  // --- Phase 2: Paragraph rotation ---
+  const convRotation = Math.max(
+    0,
+    Math.min(1, smartRange(scrollY, { min: scrollRotationLimit, max: scrollRotationLimit + 130 }, { min: 0, max: 1 }))
+  );
+  const rotationDeg = 90 * convRotation;
+  S("#prelastP").style.transform = `rotate3d(1, 0, 0, ${rotationDeg}deg)`;
+  S("#lastP").style.transform = `rotate3d(1, 0, 0, ${rotationDeg}deg)`;
+
+  // --- Phase 3: Motion rotation ---
+  if (scrollY > scrollRotationLimit + 131) {
+    const convMotionRotation = Math.max(
+      0,
+      Math.min(1, smartRange(scrollY, { min: scrollRotationLimit + 131, max: scrollRotationLimit + 131 + 260 }, { min: 0, max: 1 }))
+    );
+    const motionDeg = 270 + convMotionRotation * 90;
+    S("#motion1").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
+    S("#motion2").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
+
+    // --- Phase 4: Scale blackout + fade ---
+    if (scrollY > scrollRotationLimit + 131 + 260) {
+        const en = 500; // 400
+     
+     
+        const convScaleBlackout = smartRange(scrollY, 
+            { min: 1170, 
+            max: 1200 }, 
+            { min: 1, max: 3.1 });
+
+
+              const offsetX = smartRange(scrollY, 
+            { min: 1300, 
+            max: 1609 }, 
+            { min: 0, max: 1200 });
+      
+
+ 
+
+      const convScaleOffset = smartRange(scrollY,
+         { min: scrollRotationLimit + 131, max: scrollRotationLimit + 190 },
+         { min: 1, max: 100 });
+
+
+      const convOpacity = Math.max(0, Math.min(1, smartRange(scrollY, { min: scrollRotationLimit + 131 + 260, max: scrollRotationLimit + 131 + en }, { min: 0, max: 1 })));
+      const convOpacitya = Math.max(0, Math.min(1, smartRange(scrollY, { min: scrollRotationLimit + 131 + 260, max: scrollRotationLimit + 131 + en - 100 }, { min: 0, max: 1 })));
+
+    //  S("motion-text").style.transform = `scale(${mapValue(convScaleBlackout, 1, 3.1, 3.1, 0.7)}) translateY(${convScaleOffset})`;
+    const el = document.querySelectorAll("motion-text")[0];
+const svg = el.shadowRoot.querySelector("svg");
+svg.style.transformOrigin = "center";
+
+if (window.innerWidth > 600){
+svg.style.transform = `scale(${mapValue(convScaleBlackout, 1, 3.1, 3.1, 0.7)}) translateY(${convScaleOffset}px) translateX(${offsetX}px)`;
+}
+
+
+
+    const ela = document.querySelectorAll("motion-text")[1];
+const svga = ela.shadowRoot.querySelector("svg");
+svga.style.transformOrigin = "center";
+
+if (window.innerWidth > 600){
+svga.style.transform = `scale(${mapValue(convScaleBlackout, 1, 3.1, 3.1, 0.7)}) translateY(${convScaleOffset + 200}px) translateX(-${offsetX}px)`;
+}
+
+
+      S("#motion1").style.opacity = `${1 - convOpacity}`;
+      S("#motion2").style.opacity = `${1 - convOpacitya}`;
+     // S("#motion1").style.filter = `blur(${(convOpacity)}px)`;
+      
+
+      document.querySelectorAll(".bluens").forEach(el => el.style.opacity = 1 - convOpacitya);
+
+      const clampedOffset = Math.max(0, Math.min(convScaleOffset, 150));
+      //S("#m1").style.transform = `translateY(-${clampedOffset}px)`;
+      //S("#m3").style.transform = `translateY(-${clampedOffset}px)`;
+      //S("#m5").style.transform = `translateY(-${clampedOffset}px)`;
+
+    } else {
+      // Reset blackout section when outside its range
+     // S("#motion1").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
+     // S("#motion1").style.opacity = `1`;
+     // S("#motion2").style.opacity = `1`;
+     // S("#m1").style.transform = `translateY(0)`;
+     // S("#m3").style.transform = `translateY(0)`;
+     // S("#m5").style.transform = `translateY(0)`;
+      document.querySelectorAll(".bluens").forEach(el => el.style.opacity = 1);
+    }
+
+  } else {
+    // Reset rotation section before motion
+    S("#motion1").style.transform = `rotate3d(1, 0, 0, 270deg)`;
+    S("#motion2").style.transform = `rotate3d(1, 0, 0, 270deg)`;
+    //S("#m1").style.transform = `translateY(0)`;
+    //S("#m3").style.transform = `translateY(0)`;
+  }
+
+  // Keep aboutWrapper visible
+  S(".aboutWrapper").style.opacity = "1";
+}
+
 
 // Check the direction and reverse it
-function moveScaleOnScroll(){
+function moveScaleOnScrolla(){
 if (S(".floatContent") === null || SA(".noScale").length === 0){
     return;
 }
@@ -385,7 +517,10 @@ if (window.scrollY > scrollRotationLimit){
 if (window.scrollY > scrollRotationLimit + 131){
 
 
-         let convMotionRotation = smartRange(window.scrollY, {min: scrollRotationLimit + 131, max: scrollRotationLimit + 131 + 260}, {min: 0, max: 1});
+         let convMotionRotation = smartRange(window.scrollY, 
+             {min: scrollRotationLimit + 131, max: scrollRotationLimit + 131 + 260},
+             {min: 0, max: 1}
+            );
 console.log("SMARTR");
 console.log(convMotionRotation);
 
@@ -394,96 +529,56 @@ let motionDeg = 270 + convMotionRotation * 90; // Thanks GPT
 S("#motion1").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
 S("#motion2").style.transform = `rotate3d(1, 0, 0, ${motionDeg}deg)`;
         
+if (window.scrollY > scrollRotationLimit + 131 + 260){
+console.log("LNOW");
+
+
+         let convScaleBlackout = smartRange(window.scrollY, 
+             {min: scrollRotationLimit + 131 + 260, max: scrollRotationLimit + 131 + 400},
+             {min: 1, max: 20}
+            );
+
+             let convScaleOffset = smartRange(window.scrollY, 
+             {min: scrollRotationLimit + 131 + 260, max: scrollRotationLimit + 131 + 400},
+             {min: 1, max: 150}
+            );
+
+               let convOpacity = smartRange(window.scrollY, 
+             {min: scrollRotationLimit + 131 + 260, max: scrollRotationLimit + 131 + 400},
+             {min: 0, max: 1}
+            );
+
+             let convOpacitya = smartRange(window.scrollY, 
+             {min: scrollRotationLimit + 131 + 260, max: scrollRotationLimit + 131 + 300},
+             {min: 0, max: 1}
+            );
+
+S("#motion1").style.transform = `scale(${convScaleBlackout}) translateY(${convScaleOffset}px) rotateZ(${1 - convOpacity * 100}deg)`;
+S("#motion1").style.opacity = `${1 - convOpacity}`;
+
+
+document.querySelectorAll(".bluens").forEach((el) => {
+    el.style.opacity = 1 - convOpacitya;
+     
+});
+
+//document.querySelector(".boldLarge:not(#motion1)").style.transform = `scale(${1 - convOpacitya})`;
+
+document.querySelector("#motion2").style.opacity = 1 - convOpacitya;
+
+//S("#m1").style.display = "block";
+//S("#m2").style.display = "block";
+//S("#m3").style.display = "block";
+S("#m1").style.transform = `translateY(-${convScaleOffset}px)`;
+S("#m3").style.transform = `translateY(-${convScaleOffset}px)`;
+}
+
+
 
 } else {
              S("#motion1").style.transform = ` rotate3d(1, 0, 0, 270deg)`;
             S("#motion2").style.transform = ` rotate3d(1, 0, 0, 270deg)`;
 }
-
-        /*
-    if (window.scrollY > scrollRotationLimit + 140){
-
-        let convRotation = convertRange(window.scrollY, {min: scrollRotationLimit + 140, max: scrollRotationLimit + 140 + 100}, {min: 0, max: 1});
-        convrotation = convRotation < 0 ? 0 : convRotation;
-        let fraction = 90 - (90 * convRotation);
-
-
-        if (fraction != 90){
-            S("#motion1").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
-            S("#motion2").style.transform = ` rotate3d(1, 0, 0, ${fraction}deg)`;
-        }
-    }*/
-
-      /*  
-    if (scrollRotationLimit + 400){
-        let percentageInScrollableRange = convertRange(window.scrollY, {min: scrollRotationLimit + 400, max: scrollRotationLimit + 400 + 150}, {min: 0, max: 1});
-
-        const final = getFinalOffset(S("#motion1"));
-        const final2 = getFinalOffset(S("#motion2"));
-        const offset = percentageInScrollableRange * final;
-        const offset2 = percentageInScrollableRange * final2;
-
-        let isMobile = window.matchMedia("(max-device-width: 415px)").matches;
-
-        let isSafarii = (navigator.vendor.match(/apple/i) &&
-        !navigator.userAgent.match(/crios/i) &&
-        !navigator.userAgent.match(/fxios/i) &&
-        !navigator.userAgent.match(/Opera|OPT\//) ) || window.navigator.userAgent.indexOf("Edg") > -1;;
-
-        
-        if (!isMobile){
-
-        if (isSafarii){
-            if (offset2 * 5 < 209){
-                S("#motion1").style.transform = `translate(${offset}px, ${offset * 1.2}px)`;
-                S("#motion2").style.transform = `translate(${offset2}px, ${offset2 * 5}px)`;
-                S("#motion1").style.transform += `scale(${isMobile ? 1.1 * percentageInScrollableRange : (1 + 2 * percentageInScrollableRange)})`;
-
-                offsetSaved = offset;
-                offset2Saved = offset2;
-                percentageInScrollableRangeSAVED = percentageInScrollableRange;
-
-            } else {
-
-                S("#motion1").style.transform = `translate(${offsetSaved}px, ${offsetSaved * 1.2}px)`;
-                S("#motion2").style.transform = `translate(${offset2Saved}px, ${offset2Saved * 5}px)`;
-                S("#motion1").style.transform += `scale(${isMobile ? 1.1 * percentageInScrollableRangeSAVED : (1 + 2 * percentageInScrollableRangeSAVED)})`;
-
-                // freeze at current position
-            }
-        } else {
-            S("#motion1").style.transform = `translate(${offset}px, ${offset * 1.2}px)`;
-            S("#motion2").style.transform = `translate(${offset2}px, ${offset2 * 5}px)`;
-            S("#motion1").style.transform += `scale(${isMobile ? 1.1 * percentageInScrollableRange : (1 + 2 * percentageInScrollableRange)})`;
-        }
-
-
-       
-
-        }
-        // Deleteing .onTopMotion fixes design problem
-
-       // S("#motion1").style.webkitTextStroke = "2px green";
-      
-
-
-       // 21:51:44
-
-       if (!isMobile){
-        S("#motion1").style.webkitTextFillColor = "transparent";
-
-        if (percentageInScrollableRange > 0.07){
-            S("#motion1").style.webkitTextStrokeWidth = "2px";
-            S("#motion1").style.webkitTextFillColor = "transparent";
-            S("#motion1").style.webkitTextStrokeColor = "#3498Db";
-    } else {
-        S("#motion1").style.webkitTextFillColor = "";
-        S("#motion1").style.webkitTextStrokeWidth = "0px";
-    }
-
-}
-        
-    }*/
 
 
        

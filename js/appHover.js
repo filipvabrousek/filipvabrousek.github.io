@@ -153,26 +153,26 @@ const swimrunnyLimit = isSafarii ? 5800 * 0.85 : 5800;
     window.addEventListener("scroll", () => {
         if (window.scrollY > relaysLimit && allowHover && options.li === "#relaysa"){
             allowHover = false;
-            S("#relaysLarge").style.opacity = 1;
-            S("#relaysLarge").style.transform = "translateY(0px)";
-            S(".relaysStroked").style.display = "none";
+           // S("#relaysLarge").style.opacity = 1;
+           // S("#relaysLarge").style.transform = "translateY(0px)";
+           // S(".relaysStroked").style.display = "none";
 
-            mouseOverAction();
+         //   mouseOverAction();
         }
 
         if (window.scrollY > evenyLimit && allowHoverEveny && options.li === "#evenysa"){
             allowHoverEveny = false;
-            mouseOverAction();
+          //  mouseOverAction();
         }
 
         if (window.scrollY >  runnyLimit && allowHoverRunny && options.li === "#runnysa"){
             allowHoverRunny = false;
-            mouseOverAction();
+           // mouseOverAction();
         }
 
         if (window.scrollY > swimrunnyLimit && allowHoverSwimrunny && options.li === "#swimrunnysa"){
             allowHoverSwimrunny = false;
-            mouseOverAction();
+           // mouseOverAction();
         }
     });
 

@@ -735,6 +735,30 @@ img {
    
 } 
 
+.pol {
+	margin-left: 3rem;
+}
+
+ @media (max-device-width: 500px){
+       /* app-showcase, screen-showcase-new {
+            display: none;
+        }*/
+
+        .onlyMobile {
+            display: block;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+		.pol {
+			margin-left: 1.6rem;
+		}
+       /* .pol {
+            display: none;
+        }*/
+    }
 
 
 html, body {

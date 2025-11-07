@@ -9,11 +9,63 @@
     background-position: center;
     transition: 1s;
     position: absolute;
-   /* animation: blob 3.7s linear infinite;*/
+    display: none;
+}
+
+#prelastP, #lastP {
+    margin-top: 0;
+     margin-bottom: 0;
 }
 
 #runnyLarge {
     color: #1abc9c;
+}
+
+.upperBlob,
+.upperRightBlob,
+.upperLeftBlob {
+    display: none;
+  transform: scale(0) translate(0, 0);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out; /* subtle fade+scale */
+
+}
+
+.onTopMotion {
+    transform: translateY(-3px);
+}
+
+#motion1, #motion2 {
+  transform: rotate3d(1, 0, 0, -90deg);
+  margin-top: -0.17rem;
+}
+
+#motion2 {
+    display: none;
+}
+
+.apps {
+    max-width: 2200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(4, 46, 114);
+}
+
+
+.apps {
+    color: white;
+}
+
+/*#motion-text {
+    transform: scale(3.2);
+}*/
+
+motion-text:nth-child(2) { 
+    margin-top: 8rem;
+}
+
+motion-text {
+   
 }
 
 .weird {
@@ -26,6 +78,11 @@
     }
 }
 
+@media (min-width: 3000px) {
+    iframe {
+        height: 2400px;
+    }
+}
 
 
 #evenyLarge {
@@ -789,7 +846,7 @@ border-radius: 1em;
     align-items: center;
 
     z-index: 1;
-    width: 60%;
+  /*  width: 60%; */
     margin-left: 20%;
     /*transform: scale(0);*/
     opacity: 0.0;
@@ -854,7 +911,7 @@ border-radius: 1em;
 
 .boldLarge {
 
-margin-top: 8rem;
+margin-top: 8rem; /*was 10 rem*/
 margin-bottom: 5em; /*Danger line*/
 }
 
@@ -912,6 +969,390 @@ width: 84%;
 }
 /*04/04/2023 22:14:16*/
 
+
+/*---------- from index.html*/
+
+.ero, .erolg {
+  display: none;
+}
+
+
+  .ero {
+    margin-top: 1rem;
+    width: 2100;
+    height: auto;
+    z-index: -2;
+    margin-left: -50%;
+    position: absolute; /*162533*/
+    
+  }
+
+
+  .erolg {
+    margin-top: 1rem;
+    width: 2100;
+    height: auto;
+    z-index: -2;
+    margin-left: 30%;
+    position: absolute; /*162533*/
+  }
+
+
+
+  @media (max-device-width: 430px) {
+    .erolg {
+      margin-left: 0;
+    }
+  }
+
+  /* 16:59:34 Nice lines 03/04/2023 */
+
+
+   #gla {
+        width: 100%;
+        height: 800px;
+       /* border: 3px solid green;*/ /*225433 very nice 04/11/25*/
+        position: absolute;
+        top: 0;
+        z-index: -3;
+      }
+
+      @media (min-width: 3000px){ /*234119 ok 06/11/25*/
+        #gla {
+        width: 900px;
+        height: 800px;
+       
+      }
+    }
+
+    .onTopMotion {
+  display: grid;
+
+}
+
+.onTopMotion div {
+ grid-area: 1/1;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+
+.scale {
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+  background-size: 300% 100%;
+  background-position-x: calc(100% - var(--percentage));
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin-top: 7px;
+
+  color: rgb(11 108 173);
+}
+
+    #gla-next {
+            width: 900px;
+        height: 800px;
+       /* border: 3px solid green;*/ /*225433 very nice 04/11/25*/
+        position: absolute;
+        top: 1200px;
+        z-index: -3;
+          }
+
+          .crp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          #gla-next {
+            /*border: 3px solid orange;*/
+          }
+
+
+          /*231910 nice*/
+          /*Make blobs smaller in 4K*/
+
+          .appCentered {
+  display: flex;
+flex-direction: row;
+/*justify-content: center;*/
+/*justify-content: center; THIS IS THE CULPRIT*/
+  
+}
+
+.appMarginAuto {
+  width: 400px;
+  margin-left: calc(50% - 200px);
+}
+
+
+   .supspace {
+          height: 300px;
+        }
+
+        @media(max-device-width: 430px) {
+          .supspace {
+          height: 0px;
+         }
+        }
+
+
+             .sliderao {
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            /*flex-direction: row-reverse;*/
+           /* align-items: flex-start;
+            justify-content: flex-start;*/
+        }
+
+        body {
+        height: 10000;
+        background: #ecf0f1;
+        overflow-x: hidden;
+      /*Simple view for mobile so it is quick!!!*/
+    }
+
+  
+   
+    #spacer {
+        height: 400px;
+    }
+ 
+  
+
+    .onlyMobile {
+            display: none;
+        }
+
+
+   
+
+
+   
+
+   
+
+   /* .overlaid screen-showcase-new {
+        margin-top: -1rem;
+    }*/
+
+   
+
+    .add {
+        height: 300;
+    }
+
+   
+ /*  app-showcase {
+    display: none;
+   }*/
+    /* on mobile 23:47:44*/
+
+    .pol {
+      
+        font-family: Arial;
+        /*font-size: 1.6rem;*/
+        font-weight: bold;
+        max-width: 40rem; /*was max*/
+    }
+
+    /*523 x 932 weird*/
+    .appstore {
+        width: 10rem;
+    }
+
+    mobile-view {
+        display: block;
+        margin-top: 10rem;
+    }
+
+
+   /* .l {
+        margin-top: 24rem;
+    }*/
+
+      .feature {
+    width: 400px;
+  }
+
+
+  .largeLetter {
+      margin:0;
+      padding: 0;
+      pointer-events: none;
+    }
+
+    .weird span {
+      display: block;
+      margin: 0.3rem;
+    }
+
+
+    .weird {
+      display: flex;
+      margin-top: 8rem;
+    }
+
+    #weirdWrapper {
+     
+ display: flex;
+ align-items: center;
+    }
+
+
+  
+
+
+    .js-app {
+      margin-bottom: 3rem;
+    }
+ 
+   /*532 * 932 weird delete blue from everything*/
+   
+
+    @media screen and (min-device-width: 430px) {
+      
+      .js-app > h3,  .js-app > p, .caption {
+      color: rgb(67, 67, 67);
+    }
+
+    /*.hideOnMobile {
+      display: none;
+    }*/
+
+
+      
+    #back {
+      background: #106a9b;
+      border-radius: 100%;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+    }
+
+  /*  .firstTitle {
+      margin-top: 40rem;
+    }*/
+
+    .graphicTitle {
+      color: #106a9b;
+      font-size: 4rem;
+     
+    }
+
+    .graphicTitle{
+       -webkit-text-stroke: #3498db;
+      -webkit-text-stroke-color: #106a9b;
+      -webkit-text-stroke-width: 3px;
+       -webkit-text-fill-color: transparent;
+    }
+
+    .footer-t, .footer-em {
+     /* color: white;*/
+    }
+
+    iframe {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 1rem;
+    }
+
+    .largeLetter {
+      display: block;
+      color: 106a9b;
+      z-index: 19;
+      position: relative;
+    }
+
+    iframe {
+      z-index: 1;
+    }
+  
+  }
+
+
+
+      @media (max-device-width: 430px) {
+        .weird, #weirdWrapper {
+        display: none;
+      }
+
+      iframe {
+     width: 100%;
+    }
+  }
+    
+
+    .usides {
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+  } 
+
+  .clean {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+
+    .caption {
+    font-family: "Helvetica Neue";
+    text-align: center;
+   
+    font-weight: bold;
+  }
+
+  .houdiniIcon {
+    border-radius: 0.4rem;
+    width: 50px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  #onTopFloat {
+  display: grid;
+}
+
+#firstPage {
+  grid-area: 1/1;
+}
+
+.appsWrapper {
+  /*position: absolute;
+    top: 300px;
+    opacity: 0.0;*/
+}
+
+.secondSectionHidden {
+  color: gainsboro;
+  width: 100%;
+}
+
+#thirdContentHidden {
+  opacity: 0;
+  grid-area: 1/1;
+}
+
+.filipName {
+  width: 100%;
+}
+
+  #back {
+    display: none;
+  }
+
+
+/*---------- from index.html*/
+  .feature {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    }
+
 @media (max-device-width: 430px) {
 
     .firstImage {
@@ -920,8 +1361,13 @@ width: 84%;
     }
    
 
+
+ 
+
+
     .dontShowMobile {
-        display: none;
+       /* display: none;*/
+       border: 3px solid orange;
     }
 
     .superSpace {
@@ -991,6 +1437,8 @@ width: 84%;
         align-items: center;
         flex-direction: column;
         height: 150px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
 
