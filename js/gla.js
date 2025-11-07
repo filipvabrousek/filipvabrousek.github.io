@@ -5,14 +5,25 @@
 
   if (isMobile) {
     // --- MOBILE: show the video fallback and remove canvas (no WebGL)
+   
+    if (video){
+
+    
     video.style.display = 'block';
+    }
     // Remove the canvas so no one accidentally creates a WebGL context
     if (canvas) canvas.remove();
     console.log('Mobile detected — using video fallback, skipping Three.js');
     alert("PP")
     return; // exit: no Three.js is loaded or run
   }
+
+
+  if (video){
+
+  
 video.style.display = 'none';
+  }
 
 
 const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js');
