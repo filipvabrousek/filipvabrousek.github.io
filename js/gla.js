@@ -14,7 +14,7 @@
     // Remove the canvas so no one accidentally creates a WebGL context
     if (canvas) canvas.remove();
     console.log('Mobile detected — using video fallback, skipping Three.js');
-    alert("PP")
+    // alert("PP")
     return; // exit: no Three.js is loaded or run
   }
 
