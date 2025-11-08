@@ -48,7 +48,27 @@
     max-width: 2200px;
     margin-left: auto;
     margin-right: auto;
-    background: rgb(4, 46, 114);
+   /* background: rgb(4, 46, 114);*/
+}
+
+.spatial-network-section {
+    background: #04665e;
+}
+
+.relays-section {
+    background: #043866;
+}
+
+.runny-section {
+    background: #04665e;
+}
+
+.eveny-section {
+    background: #0857a0;
+}
+
+.spatial-gravity-section {
+    background: #bc601aff;
 }
 
 
