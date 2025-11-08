@@ -517,7 +517,7 @@ let adjustedMaxDelay = Math.min(maxDelay, 1 / wordLength); // Scale delay based 
   if (rotationAngle > 0){
     // alert(this.er);
 
-  /*  if (this.er === "SPATIAL-NETWORK"){
+    if (this.er === "SPATIAL-NETWORK"){
       el.style.color = "#1abc9c";
     } if (this.er === "RELAYS"){
       el.style.color = "#3498db";
@@ -525,9 +525,11 @@ let adjustedMaxDelay = Math.min(maxDelay, 1 / wordLength); // Scale delay based 
       el.style.color = "#4EABE8";
     }   else if (this.er === "RUNNY") {
       el.style.color = "#1abc9c";
-    }*/
+    }  else if (this.er === "SPATIAL-GRAVITY") {
+      el.style.color = "#daa025ff";
+    }
 
-      el.style.color = "white";
+    //  el.style.color = "white";
     
    // el.style.color = "black";
   } else {
